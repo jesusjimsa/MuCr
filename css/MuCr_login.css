@@ -408,17 +408,18 @@
 	color:#197fa3;
 }
 
-
 #alineado{
 	text-align: center;
 	font-size:40px;
 }
+
 .artista_selecionado .epoca{
 	position: relative;
 	left:1%;
 	width:30%;
 	height:10%;
 }
+
 .artista_selecionado .ciudades{
 	position:relative;
 		overflow-y: scroll;
@@ -426,11 +427,13 @@
 	bottom:	10%;
 
 }
+
 .artista_selecionado .ciudades img{
 	height:20px;
 	width:20px;
 
 }
+
 .artista_selecionado .busqueda_por_ciudades{
 	position: relative;
 	bottom: 10%;
@@ -438,6 +441,7 @@
 	width: 20%;
 	height:20%
 }
+
 .tituconciertos{
 	border-radius: 28px 0px 0px 28px;
 	background-color:#197fa3;
@@ -474,33 +478,31 @@
 	height:43%;
 }
 
-
 #sinpuntos{
 	position: relative;
 	right:8%;
 	list-style-type: none;
 }
+
 #puntos{
 	list-style-type:circle;
 }
+
 /*solo funciona en Chrome*/
-	::-webkit-scrollbar-track
-{
+::-webkit-scrollbar-track{
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 	background-color: #F5F5F5;
 	border-radius: 28px 28px 28px 28px;
 
 }
 
-::-webkit-scrollbar
-{
+::-webkit-scrollbar{
 	width: 10px;
 	background-color: #F5F5F5;
 	border-radius: 28px 28px 28px 28px;
 }
 
-::-webkit-scrollbar-thumb
-{
+::-webkit-scrollbar-thumb{
 	border-radius: 10px;
 	background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.44, rgb(122,153,217)),color-stop(0.72, rgb(73,125,189)),color-stop(0.86, rgb(28,58,148)));
 }
