@@ -16,6 +16,15 @@
 	background-color: #464646;
 }
 
+.stage3{
+	background-image:URL("../img/fondo2.jpg");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-color: #464646;
+}
+
 .info{
 	background-color: rgba(77, 77, 77, 0.90);
 	position: absolute;
@@ -38,7 +47,6 @@
 	padding: 3%;
 	width: 95%;
 	text-align: center;
-
 }
 
 .btn-group .boton-right1{
@@ -100,7 +108,6 @@
 	max-height: 5%;
 	max-width: 20%;
 	top:15%;
-
 }
 
 .milibreria img{
@@ -224,7 +231,6 @@
 	height: 400px;
 	bottom: 50%;
 	overflow-y: scroll;
-
 }
 
 .musica img{
@@ -386,6 +392,32 @@
 	position: fixed;
 	right: 5.05%;
 	top: 62.58%;
+}
+
+.artista_lista{
+	position: fixed;
+	border-radius: 0px 0px 28px 28px;
+	background-color:rgba(77, 77, 77,0.97);
+	width: 13%;
+	height: 80%;
+	top:17%;
+	left:20%;
+	display: grid;
+}
+
+.artista_lista .artista_principal{
+	position: fixed;
+	width: 13%
+}
+
+.artista_lista .artistas_Secundarios{
+	position:relative;
+	height: 300px;
+	overflow-y: auto;
+	top:46%;
+	right:17%;
+	text-align: center;
+	color: white;
 }
 
 .artista_lista .artistas_Secundarios img{
