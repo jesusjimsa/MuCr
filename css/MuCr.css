@@ -24,6 +24,15 @@
 	background-size: cover;
 	background-color: #464646;
 }
+.stage4{
+	background-image:URL("../img/fondo1.jpg");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-color: #464646;
+}
+
 
 .info{
 	background-color: rgba(77, 77, 77, 0.90);
@@ -250,6 +259,94 @@
 	top:20%;
 	bottom:10%;
 }
+
+
+.musica .reconocimiento{
+	position: relative;
+	top:80%;
+	color:red;
+	font-style: italic;
+	font-family: monospace;
+	text-align: center;
+}
+
+#ajustesimagen{
+	position: relative;
+	border-radius: 200px 200px 200px 200px;
+	max-height:20%;
+	max-width:20%;
+	left:5%;
+	top:5%;
+	background-color: white;
+}
+
+#boton2{
+	border-radius: 200px 200px 200px 200px;
+	position: relative;
+	height:10%;
+	width:80%;
+	background-color: #197fa3;
+	color:white;
+	border-color:#197fa3;
+}
+
+#boton3{
+	border-radius: 200px 200px 200px 200px;
+	position: relative;
+	top:20%;
+	left:20%;
+	border-color: red;
+	background-color: red;
+	color:white;
+	width:50%;
+	height:10%;
+}
+.ajustes_principal .nombre{
+		position:relative;
+		top:5%;
+		left:16%;
+		color:white;
+		font-size:100px;
+}
+
+.ajustes_principal .cambiarimagen{
+		position:relative;
+		top:10%;
+		right:11%;
+		color:white;
+}
+.ajustes_principal .cambiarcontrasena{
+		position:relative;
+		top:10%;
+		left:30%;
+		height:50%;
+		width:30%;
+		text-align: center;
+		color:white;
+}
+.ajustes_principal .region{
+	position: relative;
+	top:10%;
+	left:30%;
+	text-align: center;
+	color:white;
+	width:30%;
+
+}
+
+
+.ajustes_principal{
+position: fixed;
+background-color:rgba(77, 77, 77,0.97);
+top:7%;
+width:50%;
+height: 90%;
+left:30%;
+overflow-y: scroll;
+overflow-x: hidden;
+
+}
+
 
 
 .genre{
@@ -800,6 +897,11 @@
 	height:43%;
 }
 
+
+
+
+
+
 #sinpuntos{
 	position: relative;
 	right:8%;
@@ -827,7 +929,9 @@
 	border-radius: 10px;
 	background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.44, rgb(122,153,217)),color-stop(0.72, rgb(73,125,189)),color-stop(0.86, rgb(28,58,148)));
 }
-
+#cuadrado{
+	border-radius: 0px 0px 0px 0px;
+}
 img{
 	position: relative;
 	max-width: 100%;
