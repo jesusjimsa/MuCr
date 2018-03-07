@@ -24,6 +24,7 @@
 	background-size: cover;
 	background-color: #464646;
 }
+
 .stage4{
 	background-image:URL("../img/fondo1.jpg");
 	background-position: center center;
@@ -32,7 +33,6 @@
 	background-size: cover;
 	background-color: #464646;
 }
-
 
 .info{
 	background-color: rgba(77, 77, 77, 0.90);
@@ -96,7 +96,6 @@
     float: left;
 	width: 50%;
 }
-
 
 /* Clear floats (clearfix hack) */
 .btn-group:after {
@@ -247,7 +246,6 @@
 	max-height: 20%;
 }
 
-
 .musica{
 	background-color: rgba(77, 77, 77, 0.97);
 	border-radius: 0px 28px 28px 0px;
@@ -259,7 +257,6 @@
 	top:20%;
 	bottom:10%;
 }
-
 
 .musica .reconocimiento{
 	position: relative;
@@ -301,6 +298,7 @@
 	width:50%;
 	height:10%;
 }
+
 .ajustes_principal .nombre{
 		position:relative;
 		top:5%;
@@ -315,6 +313,7 @@
 		right:11%;
 		color:white;
 }
+
 .ajustes_principal .cambiarcontrasena{
 		position:relative;
 		top:10%;
@@ -324,6 +323,7 @@
 		text-align: center;
 		color:white;
 }
+
 .ajustes_principal .region{
 	position: relative;
 	top:10%;
@@ -334,20 +334,16 @@
 
 }
 
-
 .ajustes_principal{
-position: fixed;
-background-color:rgba(77, 77, 77,0.97);
-top:7%;
-width:50%;
-height: 90%;
-left:30%;
-overflow-y: scroll;
-overflow-x: hidden;
-
+	position: fixed;
+	background-color:rgba(77, 77, 77,0.97);
+	top:7%;
+	width:50%;
+	height: 90%;
+	left:30%;
+	overflow-y: scroll;
+	overflow-x: hidden;
 }
-
-
 
 .genre{
 	position: fixed;
@@ -897,11 +893,6 @@ overflow-x: hidden;
 	height:43%;
 }
 
-
-
-
-
-
 #sinpuntos{
 	position: relative;
 	right:8%;
@@ -929,9 +920,11 @@ overflow-x: hidden;
 	border-radius: 10px;
 	background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.44, rgb(122,153,217)),color-stop(0.72, rgb(73,125,189)),color-stop(0.86, rgb(28,58,148)));
 }
+
 #cuadrado{
 	border-radius: 0px 0px 0px 0px;
 }
+
 img{
 	position: relative;
 	max-width: 100%;
