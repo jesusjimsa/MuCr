@@ -276,122 +276,412 @@
 	top:20%;
 	left:22%;
 	padding:16.75%;
-	width:1000%;
-	/* display: grid;
-	grid-template-rows: repeat(3,30%);
-	grid-template-columns: 30% 30%; */
+	width:38.7%;
 }
 
-.grid-container .contenedor img{
+.grid-container .item1{
 	height: 176px;
-}
-
-.grid-container .contenedor .item1{
+	width: 176px;
+	background-image: url("../img/covers/abbey.jpg");
 	position: fixed;
 	right: 65.8%;
 	top: 20%;
 }
 
-.grid-container .contenedor .item2{
+.grid-container .item2{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/covers/berry.png");
 	position: fixed;
-	right: 53.65%;
+	right: 53.8%;
 	top: 20%;
 }
 
-.grid-container .contenedor .item3{
+.grid-container .item3{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/covers/bleed.jpg");
 	position: fixed;
-	right: 41.5%;
+	right: 41.8%;
 	top: 20%;
 }
 
-.grid-container .contenedor .item4{
+.grid-container .item4{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/covers/blue.jpg");
 	position: fixed;
-	right: 29.35%;
+	right: 29.8%;
 	top: 20%;
 }
 
-.grid-container .contenedor .item5{
+.grid-container .item5{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/covers/creole.jpg");
 	position: fixed;
-	right: 17.2%;
+	right: 17.8%;
 	top: 20%;
 }
 
-.grid-container .contenedor .item6{
+.grid-container .item6{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/covers/diamonds.jpg");
 	position: fixed;
-	right: 5.05%;
+	right: 5.8%;
 	top: 20%;
 }
 
-.grid-container .contenedor .item7{
+.grid-container .item7{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/covers/games.jpg");
 	position: fixed;
 	right: 65.8%;
-	top: 41.34%;
+	top: 41%;
 }
 
-.grid-container .contenedor .item8{
+.grid-container .item8{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/covers/highway.jpg");
 	position: fixed;
-	right: 53.65%;
-	top: 41.34%;
+	right: 53.8%;
+	top: 41%;
 }
 
-.grid-container .contenedor .item9{
+.grid-container .item9{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/covers/idiot.jpg");
 	position: fixed;
-	right: 41.5%;
-	top: 41.34%;
+	right: 41.8%;
+	top: 41%;
 }
 
-.grid-container .contenedor .item10{
+.grid-container .item10{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/covers/nevermind.jpg");
 	position: fixed;
-	right: 29.35%;
-	top: 41.34%;
+	right: 29.8%;
+	top: 41%;
 }
 
-.grid-container .contenedor .item11{
+.grid-container .item11{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/covers/next.jpg");
 	position: fixed;
-	right: 17.2%;
-	top: 41.34%;
+	right: 17.8%;
+	top: 41%;
 }
 
-.grid-container .contenedor .item12{
+.grid-container .item12{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/covers/opera.png");
 	position: fixed;
-	right: 5.05%;
-	top: 41.34%;
+	right: 5.8%;
+	top: 41%;
 }
 
-.grid-container .contenedor .item13{
+.grid-container .item13{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/covers/pass.jpg");
 	position: fixed;
 	right: 65.8%;
-	top: 62.58%;
+	top: 62.4%;
 }
 
-.grid-container .contenedor .item14{
+.grid-container .item14{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/covers/ringo.jpg");
 	position: fixed;
-	right: 53.65%;
-	top: 62.58%;
+	right: 53.8%;
+	top: 62.4%;
 }
 
-.grid-container .contenedor .item15{
+.grid-container .item15{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/covers/run.jpg");
 	position: fixed;
-	right: 41.5%;
-	top: 62.58%;
+	right: 41.8%;
+	top: 62.4%;
 }
 
-.grid-container .contenedor .item16{
+.grid-container .item16{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/covers/shape.jpg");
 	position: fixed;
-	right: 29.35%;
-	top: 62.58%;
+	right: 29.8%;
+	top: 62.4%;
 }
 
-.grid-container .contenedor .item17{
+.grid-container .item17{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/covers/stardust.jpg");
 	position: fixed;
-	right: 17.2%;
-	top: 62.58%;
+	right: 17.8%;
+	top: 62.4%;
 }
 
-.grid-container .contenedor .item18{
+.grid-container .item18{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/covers/straits.jpg");
 	position: fixed;
-	right: 5.05%;
-	top: 62.58%;
+	right: 5.8%;
+	top: 62.4%;
+}
+
+.close{
+	height: 15px;
+	position: absolute;
+	left: 85%;
+	bottom: 89%;
+	cursor: pointer;
+	opacity: 0;
+}
+
+.love{
+	height: 25px;
+	position: absolute;
+	left: 80%;
+	bottom: 5%;
+	cursor: pointer;
+	opacity: 0;
+}
+
+.add{
+	height: 20px;
+	position: absolute;
+	left: 68%;
+	bottom: 6%;
+	cursor: pointer;
+	opacity: 0;
+}
+
+.grid-container .item1:hover .close{
+	opacity: 1;
+}
+
+.grid-container .item1:hover .love{
+	opacity: 1;
+}
+
+.grid-container .item1:hover .add{
+	opacity: 1;
+}
+
+.grid-container .item2:hover .close{
+	opacity: 1;
+}
+
+.grid-container .item2:hover .love{
+	opacity: 1;
+}
+
+.grid-container .item2:hover .add{
+	opacity: 1;
+}
+
+.grid-container .item3:hover .close{
+	opacity: 1;
+}
+
+.grid-container .item3:hover .love{
+	opacity: 1;
+}
+
+.grid-container .item3:hover .add{
+	opacity: 1;
+}
+
+.grid-container .item4:hover .close{
+	opacity: 1;
+}
+
+.grid-container .item4:hover .love{
+	opacity: 1;
+}
+
+.grid-container .item4:hover .add{
+	opacity: 1;
+}
+
+.grid-container .item5:hover .close{
+	opacity: 1;
+}
+
+.grid-container .item5:hover .love{
+	opacity: 1;
+}
+
+.grid-container .item5:hover .add{
+	opacity: 1;
+}
+
+.grid-container .item6:hover .close{
+	opacity: 1;
+}
+
+.grid-container .item6:hover .love{
+	opacity: 1;
+}
+
+.grid-container .item6:hover .add{
+	opacity: 1;
+}
+
+.grid-container .item7:hover .close{
+	opacity: 1;
+}
+
+.grid-container .item7:hover .love{
+	opacity: 1;
+}
+
+.grid-container .item7:hover .add{
+	opacity: 1;
+}
+
+.grid-container .item8:hover .close{
+	opacity: 1;
+}
+
+.grid-container .item8:hover .love{
+	opacity: 1;
+}
+
+.grid-container .item8:hover .add{
+	opacity: 1;
+}
+
+.grid-container .item9:hover .close{
+	opacity: 1;
+}
+
+.grid-container .item9:hover .love{
+	opacity: 1;
+}
+
+.grid-container .item9:hover .add{
+	opacity: 1;
+}
+
+.grid-container .item10:hover .close{
+	opacity: 1;
+}
+
+.grid-container .item10:hover .love{
+	opacity: 1;
+}
+
+.grid-container .item10:hover .add{
+	opacity: 1;
+}
+
+.grid-container .item11:hover .close{
+	opacity: 1;
+}
+
+.grid-container .item11:hover .love{
+	opacity: 1;
+}
+
+.grid-container .item11:hover .add{
+	opacity: 1;
+}
+
+.grid-container .item12:hover .close{
+	opacity: 1;
+}
+
+.grid-container .item12:hover .love{
+	opacity: 1;
+}
+
+.grid-container .item12:hover .add{
+	opacity: 1;
+}
+
+.grid-container .item13:hover .close{
+	opacity: 1;
+}
+
+.grid-container .item13:hover .love{
+	opacity: 1;
+}
+
+.grid-container .item13:hover .add{
+	opacity: 1;
+}
+
+.grid-container .item14:hover .close{
+	opacity: 1;
+}
+
+.grid-container .item14:hover .love{
+	opacity: 1;
+}
+
+.grid-container .item14:hover .add{
+	opacity: 1;
+}
+
+.grid-container .item15:hover .close{
+	opacity: 1;
+}
+
+.grid-container .item15:hover .love{
+	opacity: 1;
+}
+
+.grid-container .item15:hover .add{
+	opacity: 1;
+}
+
+.grid-container .item16:hover .close{
+	opacity: 1;
+}
+
+.grid-container .item16:hover .love{
+	opacity: 1;
+}
+
+.grid-container .item16:hover .add{
+	opacity: 1;
+}
+
+.grid-container .item17:hover .close{
+	opacity: 1;
+}
+
+.grid-container .item17:hover .love{
+	opacity: 1;
+}
+
+.grid-container .item17:hover .add{
+	opacity: 1;
+}
+
+.grid-container .item18:hover .close{
+	opacity: 1;
+}
+
+.grid-container .item18:hover .love{
+	opacity: 1;
+}
+
+.grid-container .item18:hover .add{
+	opacity: 1;
 }
 
 .artista_lista{
