@@ -1,5 +1,5 @@
 .stage1{
-	background-image:URL("../img/fondo4.jpg");
+	background-image:URL("../img/backgrounds/fondo4.jpg");
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -8,7 +8,7 @@
 }
 
 .stage2{
-	background-image:URL("../img/fondo3.jpg");
+	background-image:URL("../img/backgrounds/fondo3.jpg");
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -17,7 +17,7 @@
 }
 
 .stage3{
-	background-image:URL("../img/fondo2.jpg");
+	background-image:URL("../img/backgrounds/fondo2.jpg");
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -26,7 +26,16 @@
 }
 
 .stage4{
-	background-image:URL("../img/fondo1.jpg");
+	background-image:URL("../img/backgrounds/fondo1.jpg");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-color: #464646;
+}
+
+.stage5{
+	background-image:URL("../img/backgrounds/fondo5.jpg");
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -375,7 +384,7 @@
 .grid-container .item1{
 	height: 176px;
 	width: 176px;
-	background-image: url("../img/covers/abbey.jpg");
+	background-image: url("../img/covers/Rock/abbey.jpg");
 	position: fixed;
 	right: 65.8%;
 	top: 20%;
@@ -384,7 +393,7 @@
 .grid-container .item2{
 	height: 176px;
 	width: 176px;
-	background-image: url("../img/covers/berry.png");
+	background-image: url("../img/covers/Rock/berry.png");
 	position: fixed;
 	right: 53.8%;
 	top: 20%;
@@ -393,7 +402,7 @@
 .grid-container .item3{
 	height: 176px;
 	width: 176px;
-	background-image: url("../img/covers/bleed.jpg");
+	background-image: url("../img/covers/Rock/bleed.jpg");
 	position: fixed;
 	right: 41.8%;
 	top: 20%;
@@ -402,7 +411,7 @@
 .grid-container .item4{
 	height: 176px;
 	width: 176px;
-	background-image: url("../img/covers/blue.jpg");
+	background-image: url("../img/covers/Rock/blue.jpg");
 	position: fixed;
 	right: 29.8%;
 	top: 20%;
@@ -411,7 +420,7 @@
 .grid-container .item5{
 	height: 176px;
 	width: 176px;
-	background-image: url("../img/covers/creole.jpg");
+	background-image: url("../img/covers/Rock/creole.jpg");
 	position: fixed;
 	right: 17.8%;
 	top: 20%;
@@ -420,7 +429,7 @@
 .grid-container .item6{
 	height: 176px;
 	width: 176px;
-	background-image: url("../img/covers/diamonds.jpg");
+	background-image: url("../img/covers/Rock/diamonds.jpg");
 	position: fixed;
 	right: 5.8%;
 	top: 20%;
@@ -429,7 +438,7 @@
 .grid-container .item7{
 	height: 176px;
 	width: 176px;
-	background-image: url("../img/covers/games.jpg");
+	background-image: url("../img/covers/Rock/games.jpg");
 	position: fixed;
 	right: 65.8%;
 	top: 41%;
@@ -438,7 +447,7 @@
 .grid-container .item8{
 	height: 176px;
 	width: 176px;
-	background-image: url("../img/covers/highway.jpg");
+	background-image: url("../img/covers/Rock/highway.jpg");
 	position: fixed;
 	right: 53.8%;
 	top: 41%;
@@ -447,7 +456,7 @@
 .grid-container .item9{
 	height: 176px;
 	width: 176px;
-	background-image: url("../img/covers/idiot.jpg");
+	background-image: url("../img/covers/Rock/idiot.jpg");
 	position: fixed;
 	right: 41.8%;
 	top: 41%;
@@ -456,7 +465,7 @@
 .grid-container .item10{
 	height: 176px;
 	width: 176px;
-	background-image: url("../img/covers/nevermind.jpg");
+	background-image: url("../img/covers/Rock/nevermind.jpg");
 	position: fixed;
 	right: 29.8%;
 	top: 41%;
@@ -465,7 +474,7 @@
 .grid-container .item11{
 	height: 176px;
 	width: 176px;
-	background-image: url("../img/covers/next.jpg");
+	background-image: url("../img/covers/Rock/next.jpg");
 	position: fixed;
 	right: 17.8%;
 	top: 41%;
@@ -474,7 +483,7 @@
 .grid-container .item12{
 	height: 176px;
 	width: 176px;
-	background-image: url("../img/covers/opera.png");
+	background-image: url("../img/covers/Rock/opera.png");
 	position: fixed;
 	right: 5.8%;
 	top: 41%;
@@ -483,7 +492,7 @@
 .grid-container .item13{
 	height: 176px;
 	width: 176px;
-	background-image: url("../img/covers/pass.jpg");
+	background-image: url("../img/covers/Rock/pass.jpg");
 	position: fixed;
 	right: 65.8%;
 	top: 62.4%;
@@ -492,7 +501,7 @@
 .grid-container .item14{
 	height: 176px;
 	width: 176px;
-	background-image: url("../img/covers/ringo.jpg");
+	background-image: url("../img/covers/Rock/ringo.jpg");
 	position: fixed;
 	right: 53.8%;
 	top: 62.4%;
@@ -501,7 +510,7 @@
 .grid-container .item15{
 	height: 176px;
 	width: 176px;
-	background-image: url("../img/covers/run.jpg");
+	background-image: url("../img/covers/Rock/run.jpg");
 	position: fixed;
 	right: 41.8%;
 	top: 62.4%;
@@ -510,7 +519,7 @@
 .grid-container .item16{
 	height: 176px;
 	width: 176px;
-	background-image: url("../img/covers/shape.jpg");
+	background-image: url("../img/covers/Rock/shape.jpg");
 	position: fixed;
 	right: 29.8%;
 	top: 62.4%;
@@ -519,7 +528,7 @@
 .grid-container .item17{
 	height: 176px;
 	width: 176px;
-	background-image: url("../img/covers/stardust.jpg");
+	background-image: url("../img/covers/Rock/stardust.jpg");
 	position: fixed;
 	right: 17.8%;
 	top: 62.4%;
@@ -528,7 +537,7 @@
 .grid-container .item18{
 	height: 176px;
 	width: 176px;
-	background-image: url("../img/covers/straits.jpg");
+	background-image: url("../img/covers/Rock/straits.jpg");
 	position: fixed;
 	right: 5.8%;
 	top: 62.4%;
@@ -918,11 +927,381 @@
 
 ::-webkit-scrollbar-thumb{
 	border-radius: 10px;
-	background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.44, rgb(122,153,217)),color-stop(0.72, rgb(73,125,189)),color-stop(0.86, rgb(28,58,148)));
+	background-image: -webkit-gradient(linear,left bottom,left top, color-stop(0.44, rgb(122,153,217)),
+						color-stop(0.72, rgb(73,125,189)), color-stop(0.86, rgb(28,58,148)));
 }
 
 #cuadrado{
 	border-radius: 0px 0px 0px 0px;
+}
+
+.row1{
+	background-color: rgba(77, 77, 77, 0.90);
+	border-radius: 28px 28px 28px 28px;
+	position: absolute;
+	left:20%;
+	height:24%;
+	width: 75%;
+	padding: 1%;
+	margin: 0%;
+	top:10%;
+}
+
+.row1 h1{
+	position: relative;
+	top: -11%;
+	left: 1%;
+	color: white;
+	font-size: 25px;
+	font-family: monospace;
+}
+
+.row1 .recom1{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/covers/Rock/Abbey.jpg");
+	position: absolute;
+	top: 18%;
+	left: 2.5%;
+}
+
+.row1 .recom1:hover .add{
+	opacity: 1;
+}
+
+.row1 .recom1:hover .love{
+	opacity: 1;
+}
+
+.row1 .recom2{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/covers/Rock/Berry.png");
+	position: absolute;
+	top: 18%;
+	left: 18.4%;
+}
+
+.row1 .recom2:hover .add{
+	opacity: 1;
+}
+
+.row1 .recom2:hover .love{
+	opacity: 1;
+}
+
+.row1 .recom3{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/covers/Rock/Bleed.jpg");
+	position: absolute;
+	top: 18%;
+	left: 34.3%;
+}
+
+.row1 .recom3:hover .add{
+	opacity: 1;
+}
+
+.row1 .recom3:hover .love{
+	opacity: 1;
+}
+
+.row1 .recom4{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/covers/Rock/Blue.jpg");
+	position: absolute;
+	top: 18%;
+	left: 50.15%;
+}
+
+.row1 .recom4:hover .add{
+	opacity: 1;
+}
+
+.row1 .recom4:hover .love{
+	opacity: 1;
+}
+
+.row1 .recom5{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/covers/Rock/Creole.jpg");
+	position: absolute;
+	top: 18%;
+	left: 66.05%;
+}
+
+.row1 .recom5:hover .add{
+	opacity: 1;
+}
+
+.row1 .recom5:hover .love{
+	opacity: 1;
+}
+
+.row1 .recom6{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/covers/Rock/Diamonds.jpg");
+	position: absolute;
+	top: 18%;
+	left: 81.93%;
+}
+
+.row1 .recom6:hover .add{
+	opacity: 1;
+}
+
+.row1 .recom6:hover .love{
+	opacity: 1;
+}
+
+.row2{
+	background-color: rgba(77, 77, 77, 0.90);
+	border-radius: 28px 28px 28px 28px;
+	position: absolute;
+	left:20%;
+	height:24%;
+	width: 75%;
+	padding: 1%;
+	margin: 0%;
+	top:40%;
+}
+
+.row2 h1{
+	position: relative;
+	top: -11%;
+	left: 1%;
+	color: white;
+	font-size: 25px;
+	font-family: monospace;
+}
+
+.row2 .jazz1{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/covers/Jazz/Best.jpg");
+	position: absolute;
+	top: 18%;
+	left: 2.5%;
+}
+
+.row2 .jazz1:hover .add{
+	opacity: 1;
+}
+
+.row2 .jazz1:hover .love{
+	opacity: 1;
+}
+
+.row2 .jazz2{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/covers/Jazz/Illusion.jpg");
+	position: absolute;
+	top: 18%;
+	left: 18.4%;
+}
+
+.row2 .jazz2:hover .add{
+	opacity: 1;
+}
+
+.row2 .jazz2:hover .love{
+	opacity: 1;
+}
+
+.row2 .jazz3{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/covers/Jazz/Joy.jpg");
+	position: absolute;
+	top: 18%;
+	left: 34.3%;
+}
+
+.row2 .jazz3:hover .add{
+	opacity: 1;
+}
+
+.row2 .jazz3:hover .love{
+	opacity: 1;
+}
+
+.row2 .jazz4{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/covers/Jazz/Krall.jpg");
+	position: absolute;
+	top: 18%;
+	left: 50.15%;
+}
+
+.row2 .jazz4:hover .add{
+	opacity: 1;
+}
+
+.row2 .jazz4:hover .love{
+	opacity: 1;
+}
+
+.row2 .jazz5{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/covers/Jazz/Nagula.jpg");
+	position: absolute;
+	top: 18%;
+	left: 66.05%;
+}
+
+.row2 .jazz5:hover .add{
+	opacity: 1;
+}
+
+.row2 .jazz5:hover .love{
+	opacity: 1;
+}
+
+.row2 .jazz6{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/covers/Jazz/Nothing.jpg");
+	position: absolute;
+	top: 18%;
+	left: 81.93%;
+}
+
+.row2 .jazz6:hover .add{
+	opacity: 1;
+}
+
+.row2 .jazz6:hover .love{
+	opacity: 1;
+}
+
+.row3{
+	background-color: rgba(77, 77, 77, 0.90);
+	border-radius: 28px 28px 28px 28px;
+	position: absolute;
+	left:20%;
+	height:24%;
+	width: 75%;
+	padding: 1%;
+	margin: 0%;
+	top:69%;
+}
+
+.row3 h1{
+	position: relative;
+	top: -11%;
+	left: 1%;
+	color: white;
+	font-size: 25px;
+	font-family: monospace;
+}
+
+.row3 .pop1{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/covers/Pop/Adele.png");
+	position: absolute;
+	top: 18%;
+	left: 2.5%;
+}
+
+.row3 .pop1:hover .add{
+	opacity: 1;
+}
+
+.row3 .pop1:hover .love{
+	opacity: 1;
+}
+
+.row3 .pop2{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/covers/Pop/Corra.jpg");
+	position: absolute;
+	top: 18%;
+	left: 18.4%;
+}
+
+.row3 .pop2:hover .add{
+	opacity: 1;
+}
+
+.row3 .pop2:hover .love{
+	opacity: 1;
+}
+
+.row3 .pop3{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/covers/Pop/Jukebox.png");
+	position: absolute;
+	top: 18%;
+	left: 34.3%;
+}
+
+.row3 .pop3:hover .add{
+	opacity: 1;
+}
+
+.row3 .pop3:hover .love{
+	opacity: 1;
+}
+
+.row3 .pop4{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/covers/Pop/Tell.jpg");
+	position: absolute;
+	top: 18%;
+	left: 50.15%;
+}
+
+.row3 .pop4:hover .add{
+	opacity: 1;
+}
+
+.row3 .pop4:hover .love{
+	opacity: 1;
+}
+
+.row3 .pop5{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/covers/Pop/Witness.jpg");
+	position: absolute;
+	top: 18%;
+	left: 66.05%;
+}
+
+.row3 .pop5:hover .add{
+	opacity: 1;
+}
+
+.row3 .pop5:hover .love{
+	opacity: 1;
+}
+
+.row3 .pop6{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/covers/Pop/Divide.jpg");
+	position: absolute;
+	top: 18%;
+	left: 81.93%;
+}
+
+.row3 .pop6:hover .add{
+	opacity: 1;
+}
+
+.row3 .pop6:hover .love{
+	opacity: 1;
 }
 
 img{
