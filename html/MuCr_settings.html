@@ -23,19 +23,18 @@
 			</div>
 
 			<div class="ajustes">
-				<img id="cuadrado" src="../img/home.png" alt="home" align="left" height="25px">&nbsp;Home
+				<a id="blanco" href="MuCr_main.html"><img id="cuadrado" src="../img/home.png" alt="home" align="left" height="25px">&nbsp;Home</a>
 			</div>
 		</nav>
 
 		<nav class="musica">
 			<div>
 				<div class="btn-group">
-					<a href="MuCr_collection.html">
+					<a href="MuCr_main.html">
 						<button class="boton-left1">
 							<img src="../img/music.jpg" align="left"> &nbsp;Music</button>
 					</a>
-					<button class="boton-right1">
-						<img src="../img/concierto.png" align="left"> &nbsp;Concerts</button>
+					<a href="MuCr_Concerts.html"><button class="boton-right1"><img src="../img/concierto.png" align="left"> &nbsp;Concerts</button></a>
 				</div>
 			</div>
 			<div class="reconocimiento">
@@ -43,9 +42,11 @@
 			</div>
 		</nav>
 
-		<nav class="exit_sidebar">
-			Exit
-		</nav>
+		<a href="MuCr_login.html">
+			<nav class="exit_sidebar">
+				Exit
+			</nav>
+		</a>
 
 		<div class="buscador">
 			<input type="text" class="casilla" value="search" onfocus="if (this.value=='search') this.value='';" onblur="if (this.value=='') this.value='search';"
@@ -57,7 +58,7 @@
 			<div class="nombre">jesusjimsa</div>
 			<div class="cambiarimagen">cambiar imagen</div>
 			<div class="cambiarcontrasena">
-				Change Password
+				<p>Change Password</p>
 				<p>Write your old password:
 					<input type="password" class="casilla">
 				</p>
@@ -77,7 +78,7 @@
 					<input type="text" class="casilla">
 				</p>
 			</div>
-			<input id="boton3" type="button" value="Inactive account">
+			<input id="boton3" type="button" value="Delete account">
 		</div>
 
 	</body>
