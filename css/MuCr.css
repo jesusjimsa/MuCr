@@ -1461,6 +1461,64 @@
 	opacity: 1;
 }
 
+.detailed .detailed_cover{
+	height: 69.7%;
+	width: 69.7%;
+	position: relative;
+	right: 43.2%;
+	top: -65px;
+}
+
+.detailed .album_name{
+	color: white;
+	position: absolute;
+	font-size: 400%;
+	font-family:monospace;
+	font-weight:bold;
+	bottom: 58%;
+	left: 38%;
+}
+
+.detailed .album_artist{
+	color: white;
+	position: absolute;
+	font-size: 200%;
+	font-family:monospace;
+	font-weight:bold;
+	bottom: 52%;
+	left: 38%;
+}
+
+.detailed .album_songs{
+	overflow-y: scroll;
+	color: white;
+	font-family:monospace;
+	position: absolute;
+	top: 50%;
+	bottom: 1%;
+	left: 40%;
+	font-size: 110%;
+	width: 40%;
+}
+
+.detailed .album_songs .song{
+	float: left;
+}
+
+.detailed .album_songs .song .love_song{
+	height: 5%;
+	width: 5%;
+	opacity: 0;
+	position: relative;
+	right: 10%;
+	float: right;
+	cursor: pointer;
+}
+
+.detailed .album_songs .song:hover .love_song{
+	opacity: 1;
+}
+
 img{
 	position: relative;
 	max-width: 100%;
