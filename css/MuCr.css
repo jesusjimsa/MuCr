@@ -1519,6 +1519,277 @@
 	opacity: 1;
 }
 
+.concert_title{
+	position: fixed;
+	color:rgba(25,127,163,1);
+	border-radius: 30px 30px 30px 30px;
+	font-family:monospace;
+	font-weight:bold;
+	font-size:500%;
+	position: fixed;
+	left: 22%;
+	top:2%;
+	background-color: rgba(77, 77, 77,0.97);
+	padding: 1%;
+	height: 8%;
+	text-align:center;
+}
+
+.grid-concert{
+	position: absolute;
+	background-color:rgba(77, 77, 77,0.97);
+	max-width: 39.52%;
+	max-height: 10%;
+	top:20%;
+	left:22%;
+	padding:16.75%;
+	width:38.7%;
+}
+
+.grid-concert .item1{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/concerts/artists/beatles.jpg");
+	position: fixed;
+	right: 65.8%;
+	top: 20%;
+}
+
+.grid-concert .item2{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/concerts/artists/berry.jpg");
+	position: fixed;
+	right: 53.8%;
+	top: 20%;
+}
+
+.grid-concert .item3{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/concerts/artists/bowie.jpg");
+	position: fixed;
+	right: 41.8%;
+	top: 20%;
+}
+
+.grid-concert .item4{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/concerts/artists/dylan.jpg");
+	position: fixed;
+	right: 29.8%;
+	top: 20%;
+}
+
+.grid-concert .item5{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/concerts/artists/elo.jpg");
+	position: fixed;
+	right: 17.8%;
+	top: 20%;
+}
+
+.grid-concert .item6{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/concerts/artists/elton.jpg");
+	position: fixed;
+	right: 5.8%;
+	top: 20%;
+}
+
+.grid-concert .item7{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/concerts/artists/elvis.jpg");
+	position: fixed;
+	right: 65.8%;
+	top: 41%;
+}
+
+.grid-concert .item8{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/concerts/artists/fighters.jpg");
+	position: fixed;
+	right: 53.8%;
+	top: 41%;
+}
+
+.grid-concert .item9{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/concerts/artists/green.jpg");
+	position: fixed;
+	right: 41.8%;
+	top: 41%;
+}
+
+.grid-concert .item10{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/concerts/artists/harrison.jpg");
+	position: fixed;
+	right: 29.8%;
+	top: 41%;
+}
+
+.grid-concert .item11{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/concerts/artists/lennon.jpg");
+	position: fixed;
+	right: 17.8%;
+	top: 41%;
+}
+
+.grid-concert .item12{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/concerts/artists/mccartney.jpg");
+	position: fixed;
+	right: 5.8%;
+	top: 41%;
+}
+
+.grid-concert .item13{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/concerts/artists/nirvana.jpg");
+	position: fixed;
+	right: 65.8%;
+	top: 62.4%;
+}
+
+.grid-concert .item14{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/concerts/artists/queen.jpg");
+	position: fixed;
+	right: 53.8%;
+	top: 62.4%;
+}
+
+.grid-concert .item15{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/concerts/artists/ringo.jpg");
+	position: fixed;
+	right: 41.8%;
+	top: 62.4%;
+}
+
+.grid-concert .item16{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/concerts/artists/stones.jpg");
+	position: fixed;
+	right: 29.8%;
+	top: 62.4%;
+}
+
+.grid-concert .item17{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/concerts/artists/waters.jpg");
+	position: fixed;
+	right: 17.8%;
+	top: 62.4%;
+}
+
+.grid-concert .item18{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/concerts/artists/who.jpg");
+	position: fixed;
+	right: 5.8%;
+	top: 62.4%;
+}
+
+.artist_name{
+	color: #FFFFFF;
+	text-align: center;
+	font-family: monospace;
+	font-size: 120%;
+	background-color: rgba(77, 77, 77, 0.50);
+	cursor: pointer;
+	opacity: 0;
+}
+
+.grid-concert .item1:hover .artist_name{
+	opacity: 1;
+}
+
+.grid-concert .item2:hover .artist_name{
+	opacity: 1;
+}
+
+.grid-concert .item3:hover .artist_name{
+	opacity: 1;
+}
+
+.grid-concert .item4:hover .artist_name{
+	opacity: 1;
+}
+
+.grid-concert .item5:hover .artist_name{
+	opacity: 1;
+}
+
+.grid-concert .item6:hover .artist_name{
+	opacity: 1;
+}
+
+.grid-concert .item7:hover .artist_name{
+	opacity: 1;
+}
+
+.grid-concert .item8:hover .artist_name{
+	opacity: 1;
+}
+
+.grid-concert .item9:hover .artist_name{
+	opacity: 1;
+}
+
+.grid-concert .item10:hover .artist_name{
+	opacity: 1;
+}
+
+.grid-concert .item11:hover .artist_name{
+	opacity: 1;
+}
+
+.grid-concert .item12:hover .artist_name{
+	opacity: 1;
+}
+
+.grid-concert .item13:hover .artist_name{
+	opacity: 1;
+}
+
+.grid-concert .item14:hover .artist_name{
+	opacity: 1;
+}
+
+.grid-concert .item15:hover .artist_name{
+	opacity: 1;
+}
+
+.grid-concert .item16:hover .artist_name{
+	opacity: 1;
+}
+
+.grid-concert .item17:hover .artist_name{
+	opacity: 1;
+}
+
+.grid-concert .item18:hover .artist_name{
+	opacity: 1;
+}
+
 img{
 	position: relative;
 	max-width: 100%;
