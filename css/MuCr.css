@@ -80,8 +80,20 @@
 	border-radius: 0px 200px 200px 0px;
 }
 
+.btn-group .boton-right1_in{
+	border-radius: 0px 200px 200px 0px;
+	background-color: #FFFFFF;
+	color:blue;
+}
+
 .btn-group .boton-left1{
 	border-radius: 200px 0px 0px 200px;
+}
+
+.btn-group .boton-left1_in{
+	border-radius: 200px 0px 0px 200px;
+	background-color: #FFFFFF;
+	color:blue;
 }
 
 .btn-group .boton-right2{
@@ -105,10 +117,36 @@
 	right: 1.5px;
 }
 
+.btn-group .but_my_concerts_in{
+	border-radius: 28px 0px 0px 0px;
+	position: relative;
+	top: 7.5px;
+	right: 1.5px;
+	background-color: #FFFFFF;
+	color:blue;
+}
+
 .btn-group .but_recom{
 	position: relative;
 	top: 7.5px;
 	right: 1.5px;
+}
+
+.btn-group .but_recom_in{
+	position: relative;
+	top: 7.5px;
+	right: 1.5px;
+	background-color: #FFFFFF;
+	color:blue;
+}
+
+.btn-group .but_near_in{
+	border-radius: 0px 28px 0px 0px;
+	position: relative;
+	bottom: 26px;
+	left: 286.5px;
+	background-color: #FFFFFF;
+	color:blue;
 }
 
 .btn-group .but_near{
@@ -133,24 +171,24 @@
 	font-weight: bold;
 	background-color: #197fa3;
 	border-radius: 0px 0px 0px 0px;
-    border-color: white;
-    color: white;
-    padding: 3%;
-    cursor: pointer;
-    float: left;
+	border-color: white;
+	color: white;
+	padding: 3%;
+	cursor: pointer;
+	float: left;
 	width: 50%;
 }
 
 /* Clear floats (clearfix hack) */
 .btn-group:after {
-    content:"";
-    clear: both;
-    display: table;
+	content:"";
+	clear: both;
+	display: table;
 }
 
 /* Add a background color on hover */
 .btn-group button:hover {
-    background-color: #FFFFFF;
+	background-color: #FFFFFF;
 	color:blue;
 }
 
@@ -1846,6 +1884,308 @@
 	opacity: 1;
 }
 
+.grid-recommendation{
+	position: absolute;
+	background-color:rgba(77, 77, 77,0.97);
+	max-width: 39.52%;
+	max-height: 10%;
+	top:20%;
+	left:22%;
+	padding:16.75%;
+	width:38.7%;
+}
+
+.grid-recommendation .item1{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/concerts/recommendations/audioslave.jpg");
+	position: fixed;
+	right: 65.8%;
+	top: 20%;
+}
+
+.grid-recommendation .item2{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/concerts/recommendations/blink.jpg");
+	position: fixed;
+	right: 53.8%;
+	top: 20%;
+}
+
+.grid-recommendation .item3{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/concerts/recommendations/chemical.jpg");
+	position: fixed;
+	right: 41.8%;
+	top: 20%;
+}
+
+.grid-recommendation .item4{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/concerts/recommendations/coldplay.jpg");
+	position: fixed;
+	right: 29.8%;
+	top: 20%;
+}
+
+.grid-recommendation .item5{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/concerts/recommendations/dragons.jpg");
+	position: fixed;
+	right: 17.8%;
+	top: 20%;
+}
+
+.grid-recommendation .item6{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/concerts/recommendations/evanescence.jpg");
+	position: fixed;
+	right: 5.8%;
+	top: 20%;
+}
+
+.grid-recommendation .item7{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/concerts/recommendations/fall.jpg");
+	position: fixed;
+	right: 65.8%;
+	top: 41%;
+}
+
+.grid-recommendation .item8{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/concerts/recommendations/go.jpg");
+	position: fixed;
+	right: 53.8%;
+	top: 41%;
+}
+
+.grid-recommendation .item9{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/concerts/recommendations/gorillaz.jpg");
+	position: fixed;
+	right: 41.8%;
+	top: 41%;
+}
+
+.grid-recommendation .item10{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/concerts/recommendations/hoobastank.jpg");
+	position: fixed;
+	right: 29.8%;
+	top: 41%;
+}
+
+.grid-recommendation .item11{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/concerts/recommendations/killers.jpg");
+	position: fixed;
+	right: 17.8%;
+	top: 41%;
+}
+
+.grid-recommendation .item12{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/concerts/recommendations/linkin.jpg");
+	position: fixed;
+	right: 5.8%;
+	top: 41%;
+}
+
+.grid-recommendation .item13{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/concerts/recommendations/maroon.jpg");
+	position: fixed;
+	right: 65.8%;
+	top: 62.4%;
+}
+
+.grid-recommendation .item14{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/concerts/recommendations/paramore.png");
+	position: fixed;
+	right: 53.8%;
+	top: 62.4%;
+}
+
+.grid-recommendation .item15{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/concerts/recommendations/pilots.png");
+	position: fixed;
+	right: 41.8%;
+	top: 62.4%;
+}
+
+.grid-recommendation .item16{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/concerts/recommendations/slipknot.jpg");
+	position: fixed;
+	right: 29.8%;
+	top: 62.4%;
+}
+
+.grid-recommendation .item17{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/concerts/recommendations/stripes.jpg");
+	position: fixed;
+	right: 17.8%;
+	top: 62.4%;
+}
+
+.grid-recommendation .item18{
+	height: 176px;
+	width: 176px;
+	background-image: url("../img/concerts/recommendations/top.jpg");
+	position: fixed;
+	right: 5.8%;
+	top: 62.4%;
+}
+
+.artist_name{
+	color: #FFFFFF;
+	text-align: center;
+	font-family: monospace;
+	font-size: 120%;
+	background-color: rgba(77, 77, 77, 0.50);
+	cursor: pointer;
+	opacity: 0;
+}
+
+.grid-recommendation .item1:hover .artist_name{
+	opacity: 1;
+}
+
+.grid-recommendation .item2:hover .artist_name{
+	opacity: 1;
+}
+
+.grid-recommendation .item3:hover .artist_name{
+	opacity: 1;
+}
+
+.grid-recommendation .item4:hover .artist_name{
+	opacity: 1;
+}
+
+.grid-recommendation .item5:hover .artist_name{
+	opacity: 1;
+}
+
+.grid-recommendation .item6:hover .artist_name{
+	opacity: 1;
+}
+
+.grid-recommendation .item7:hover .artist_name{
+	opacity: 1;
+}
+
+.grid-recommendation .item8:hover .artist_name{
+	opacity: 1;
+}
+
+.grid-recommendation .item9:hover .artist_name{
+	opacity: 1;
+}
+
+.grid-recommendation .item10:hover .artist_name{
+	opacity: 1;
+}
+
+.grid-recommendation .item11:hover .artist_name{
+	opacity: 1;
+}
+
+.grid-recommendation .item12:hover .artist_name{
+	opacity: 1;
+}
+
+.grid-recommendation .item13:hover .artist_name{
+	opacity: 1;
+}
+
+.grid-recommendation .item14:hover .artist_name{
+	opacity: 1;
+}
+
+.grid-recommendation .item15:hover .artist_name{
+	opacity: 1;
+}
+
+.grid-recommendation .item16:hover .artist_name{
+	opacity: 1;
+}
+
+.grid-recommendation .item17:hover .artist_name{
+	opacity: 1;
+}
+
+.grid-recommendation .item18:hover .artist_name{
+	opacity: 1;
+}
+
+.near_scroll{
+	position: absolute;
+	background-color:rgba(77, 77, 77,0.97);
+	max-width: 39.52%;
+	max-height: 10%;
+	top:20%;
+	left:22%;
+	padding:16.75%;
+	width:38.7%;
+	height: 60%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+.near_scroll .concert{
+	position: relative;
+	background-color:rgb(71, 71, 71);
+	bottom: 285%;
+	right: 42%;
+	width: 184%;
+	height: 200%;
+	margin-bottom: 2%;
+}
+
+.near_scroll .concert img{
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.near_scroll .concert .name_artist{
+	color: white;
+	font-family: monospace;
+	font-size: 35px;
+	position: relative;
+	bottom: 100%;
+	left: 13%;
+}
+
+.near_scroll .concert .location_date{
+	color: white;
+	font-family: monospace;
+	font-size: 20px;
+	position: relative;
+	bottom: 100%;
+	left: 13%;
+}
+
 .mitad_izq{
 	background-color: rgba(77, 77, 77,0.97);
 	position: fixed;
@@ -1935,45 +2275,45 @@
 }
 
 .mitad_dcha .abajo{
-top:5%;
- background-color: rgba(77, 77, 77,1);
-position:relative;
-height:10%;
-text-align: center;
-padding-top: 5%;
-color:white;
-margin-bottom: 5%;
+	top:5%;
+	background-color: rgba(77, 77, 77,1);
+	position:relative;
+	height:10%;
+	text-align: center;
+	padding-top: 5%;
+	color:white;
+	margin-bottom: 5%;
 }
 
 .mitad_dcha .abajototal{
-background-color: rgba(77, 77, 77,1);
-position:relative;
-overflow-y: scroll;
-overflow-x: hidden;
-color:white;
-top:2%;
-height:150px;
+	background-color: rgba(77, 77, 77,1);
+	position:relative;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	color:white;
+	top:2%;
+	height:150px;
 }
 
 .mitad_dcha .abajo .Addasong{
- background-color: green;
- border-radius: 28px 28px 28px 28px;
-position:relative;
-height:70%;
-width: 99%;
-text-align: center;
-color:white;
-border-color: green;
-bottom: 5%;
+	background-color: green;
+	border-radius: 28px 28px 28px 28px;
+	position:relative;
+	height:70%;
+	width: 99%;
+	text-align: center;
+	color:white;
+	border-color: green;
+	bottom: 5%;
 }
 
 .mitad_dcha .abajo .casilla1{
-position: relative;
-border-radius: 8px 8px 8px 8px;
-border-color: green;
-left:10%;
-height:30px;
-width:220px;
+	position: relative;
+	border-radius: 8px 8px 8px 8px;
+	border-color: green;
+	left:10%;
+	height:30px;
+	width:220px;
 }
 
 .mitad_dcha .submit{
@@ -2027,23 +2367,26 @@ width:220px;
 }
 
 #centrado{
-position:relative;
-border-radius: 28px 28px 28px 28px;
-top:2%;
-left:2%;
-background-color:#197fa3;
-color: white;
-max-width:50%;
-height:5%;
-text-align: center;
-padding-top: 10px;
-font-family: monospace;
-font-weight: bold;
-font-size: 20px;
+	position:relative;
+	border-radius: 28px 28px 28px 28px;
+	top:2%;
+	left:2%;
+	background-color:#197fa3;
+	color: white;
+	max-width:50%;
+	height:5%;
+	text-align: center;
+	padding-top: 10px;
+	font-family: monospace;
+	font-weight: bold;
+	font-size: 20px;
 }
+
+
 
 img{
 	position: relative;
 	max-width: 100%;
 	max-height: 100%;
 }
+
