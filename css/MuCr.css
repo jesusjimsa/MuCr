@@ -2400,10 +2400,182 @@
 }
 
 
+.autor{
+  position:fixed;
+  top:5%;
+  left:22%;
+  width:11%;
+  height:24%;
+	border-radius:200px 200px 200px 200px;
+	border-style: solid;
+    border-width: 5px;
+		border-color: #197fa3;
+}
+
+.autor img{
+	position: relative;
+	width:100%;
+	height:100%;
+	border-radius:200px 200px 200px 200px;
+}
+.name{
+	position: fixed;
+	background-color:#197fa3;
+	color: white;
+	top:10%;
+	left:35%;
+	width:15%;
+	height:5%;
+	text-align: center;
+	padding-top: 1%;
+	font-size: 40px;
+	padding-bottom: 2%;
+	font-family: monospace;
+	border-radius: 28px 28px 28px 28px;
+}
+
+
+.listaciudades{
+		background-color: rgba(77, 77, 77,0.97);
+		position:fixed;
+		top:31%;
+	  left:19%;
+	  width:80%;
+	  height:50%;
+		border-radius:28px 28px 28px 28px;
+		overflow-y: scroll;
+		overflow-x: hidden;
+}
+.listaciudades .ciudades{
+	background-color: rgba(77, 77, 77,0.97);
+	position:relative;
+	width:98%;
+	height:20%;
+	left:3px;
+	top:1%;
+	border-radius: 20px 0px 0px 20px;
+	margin-bottom: 4px;
+}
+.listaciudades .ciudades .nombre{
+background-color: rgba(77, 77, 77,1);
+position:relative;
+border-radius: 20px 0px 0px 20px;
+width: 40%;
+height:100%;
+
+}
+.listaciudades .ciudades .nombre img{
+	border-radius: 20px 0px 0px 20px;
+	position: relative;
+	width:100%;
+	height:200%;
+z-index: 0;
+}
+
+.listaciudades .ciudades .nombre .titulo{
+	position: relative;
+	z-index: 1;
+	color:white;
+	bottom:70px;
+	font-size:60px;
+	text-align: center;
+
+}
+.listaciudades .ciudades .hora{
+background-color: rgba(77, 77, 77,1);
+position: relative;
+left:43%;
+bottom: 100%;
+width:57%;
+height: 99%;
+overflow-y: scroll;
+}
+
+#time{
+	color:white;
+	position: relative;
+	left:3px;
+	top:0%;
+	font-weight: bold;
+}
+#precio{
+	color:white;
+	position:relative;
+	left:10%;
+}
+#asistir{
+	background-color:#197fa3;
+	border-radius: 28px 28px 28px 28px;
+	color:white;
+	position: relative;
+	left:20%;
+	width:20%;
+}
+#asistir img{
+	position: relative;
+	max-width: 15px;
+	max-height: 15px;
+}
+.artistarel{
+	background-color:rgba(25, 127, 163,0.97);
+	border-radius: 28px 28px 0px 0px;
+	position:fixed;
+	bottom:14%;
+	left:45%;
+	width:20%;
+	height:3%;
+	text-align: center;
+	color: white;
+	padding-top: 1px;
+}
+
+.artistarelbox{
+position:fixed;
+bottom:2%;
+left:19%;
+width:81%;
+height:12%;
+background-color:rgba(25, 127, 163,0.5);
+border-radius: 20px 20px 20px 20px;
+}
+.artistarelbox .box{
+	position:relative;
+	width:90.5px;
+	height:90.5px;
+	background-color: green;
+	margin-right: 5px;
+	float: left;
+	background-color:rgba(25, 127, 163,1);
+	border-radius: 20px 20px 20px 20px;
+}
+.artistarelbox .box .titulo{
+z-index: 100;
+background-color: rgba(25, 127, 163,0.5);
+color:white;
+position: relative;
+bottom: 70%;
+text-align: center;
+border-radius:28px 28px 28px 28px;
+cursor: pointer;
+opacity: 0;
+}
+
+ .artistarelbox .box .titulo:hover{
+	opacity: 1;
+}
+
+.artistarelbox .box img{
+width:100%;
+height: 100%;
+position: relative;
+border-radius: 20px 20px 20px 20px;
+z-index: 1;
+}
+
+
 
 img{
 	position: relative;
 	max-width: 100%;
 	max-height: 100%;
 }
-
