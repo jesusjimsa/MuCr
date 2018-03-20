@@ -1,3 +1,4 @@
+/********** Backgrounds **********/
 .stage1{
 	background-image:URL("../img/backgrounds/fondo4.jpg");
 	background-position: center center;
@@ -66,6 +67,7 @@
 	font-family:monospace;
 }
 
+/********** Text input **********/
 .casilla{
 	position: relative;
 	border-color: blue;
@@ -76,6 +78,7 @@
 	text-align: center;
 }
 
+/********** Buttons **********/
 .btn-group .boton-right1{
 	border-radius: 0px 200px 200px 0px;
 }
@@ -230,6 +233,7 @@
 	max-height: 10%;
 }
 
+/********** Sidebar **********/
 .sidebar_principal{
 	text-align: center;
 	image-orientation:left;
@@ -331,15 +335,10 @@
 	color:white;
 }
 
-/* .musica .collection h1{
-	text-decoration: underline;
-} */
-
 /*
 	@todo: Que el scroll no se salga de la barra cuando se cambia
 	el tamaño de ventana
 */
-
 .musica .collection .genres{
 	position: relative;
 	width: 100%;
@@ -374,6 +373,18 @@
 	text-align: center;
 }
 
+/********** Settings **********/
+.ajustes_principal{
+	position: fixed;
+	background-color:rgba(77, 77, 77,0.97);
+	top:7%;
+	width:50%;
+	height: 90%;
+	left:30%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
 #ajustesimagen{
 	position: relative;
 	border-radius: 200px 200px 200px 200px;
@@ -406,28 +417,28 @@
 }
 
 .ajustes_principal .nombre{
-		position:relative;
-		top:5%;
-		left:16%;
-		color:white;
-		font-size:100px;
+	position:relative;
+	top:5%;
+	left:16%;
+	color:white;
+	font-size:100px;
 }
 
 .ajustes_principal .cambiarimagen{
-		position:relative;
-		top:10%;
-		right:11%;
-		color:white;
+	position:relative;
+	top:10%;
+	right:11%;
+	color:white;
 }
 
 .ajustes_principal .cambiarcontrasena{
-		position:relative;
-		top:10%;
-		left:30%;
-		height:50%;
-		width:30%;
-		text-align: center;
-		color:white;
+	position:relative;
+	top:10%;
+	left:30%;
+	height:50%;
+	width:30%;
+	text-align: center;
+	color:white;
 }
 
 .ajustes_principal .region{
@@ -440,17 +451,7 @@
 
 }
 
-.ajustes_principal{
-	position: fixed;
-	background-color:rgba(77, 77, 77,0.97);
-	top:7%;
-	width:50%;
-	height: 90%;
-	left:30%;
-	overflow-y: scroll;
-	overflow-x: hidden;
-}
-
+/********** Collection **********/
 .genre{
 	position: fixed;
 	color:rgba(25,127,163,1);
@@ -478,6 +479,7 @@
 	width:38.7%;
 }
 
+/********** Place all items in collection **********/
 .grid-container .item1{
 	height: 176px;
 	width: 176px;
@@ -640,6 +642,7 @@
 	top: 62.4%;
 }
 
+/********** Album icons **********/
 .close{
 	height: 15px;
 	position: absolute;
@@ -680,6 +683,7 @@
 	opacity: 0;
 }
 
+/********** Hover action in collection **********/
 .grid-container .item1:hover .close{
 	opacity: 1;
 }
@@ -968,130 +972,8 @@
 	opacity: 1;
 }
 
-.artista_lista{
-	position: fixed;
-	border-radius: 0px 0px 28px 28px;
-	background-color:rgba(77, 77, 77,0.97);
-	width: 13%;
-	height: 80%;
-	top:17%;
-	left:20%;
-	display: grid;
-}
-
-.artista_lista .artista_principal{
-	position: fixed;
-	width: 13%
-}
-
-.artista_lista .artistas_Secundarios{
-	position:relative;
-	height: 300px;
-	overflow-y: auto;
-	top:46%;
-	right:17%;
-	text-align: center;
-	color: white;
-}
-
-.artista_lista .artistas_Secundarios img{
-	height:50px;
-	width:40px;
-}
-
-.artista_selecionado{
-	border-radius: 0px 28px 28px 0px;
-	position: fixed;
-	background-color:rgba(77, 77, 77,0.97);
-	top:17%;
-	left:33.3%;
-	height:36%;
-	width:50%;
-	color:white;
-}
-
 #blanco{
 	color:#197fa3;
-}
-
-#alineado{
-	text-align: center;
-	font-size:40px;
-}
-
-.artista_selecionado .epoca{
-	position: relative;
-	left:1%;
-	width:30%;
-	height:10%;
-}
-
-.artista_selecionado .ciudades{
-	position:relative;
-		overflow-y: scroll;
-	height:60%;
-	bottom:	10%;
-
-}
-
-.artista_selecionado .ciudades img{
-	height:20px;
-	width:20px;
-
-}
-
-.artista_selecionado .busqueda_por_ciudades{
-	position: relative;
-	bottom: 10%;
-	left: 70%;
-	width: 20%;
-	height:20%
-}
-
-.tituconciertos{
-	border-radius: 28px 0px 0px 28px;
-	background-color:#197fa3;
-	color:white;
-	position: fixed;
-	text-align:center;
-	color:white;
-	left:84%;
-	top:12%;
-	width:16%;
-	height:4%;
-	font-family:monospace;
-	font-weight:bold;
-}
-
-.conciertos_cerca{
-	border-radius: 28px 0px 0px 28px;
-	background-color:rgba(77, 77, 77,0.97);
-	position: fixed;
-	color:white;
-	left:84%;
-	top:17%;
-	width:16%;
-	height:36%;
-	overflow-y: scroll;
-}
-
-.calendario{
-	background-color:rgba(77, 77, 77,0.97);
-	position: fixed;
-	bottom:3%;
-	left:33.5%;
-	width: 66%;
-	height:43%;
-}
-
-#sinpuntos{
-	position: relative;
-	right:8%;
-	list-style-type: none;
-}
-
-#puntos{
-	list-style-type:circle;
 }
 
 /*solo funciona en Chrome*/
@@ -1117,15 +999,14 @@
 	border-radius: 0px 0px 0px 0px;
 }
 
+
+/******** Main Page ********/
 .row_main{
-	/* background-color: rgba(77, 77, 77, 0.90);
-	border-radius: 28px 28px 28px 28px; */
 	position: relative;
 	left:17%;
 	height:24%;
 	width: 75%;
 	padding: 1%;
-	/* margin: 0%; */
 	bottom: 6px;
 	margin-bottom: 7%;
 }
@@ -1273,27 +1154,6 @@
 	opacity: 1;
 }
 
-/* .row_main{
-	background-color: rgba(77, 77, 77, 0.90);
-	border-radius: 28px 28px 28px 28px;
-	position: absolute;
-	left:20%;
-	height:24%;
-	width: 75%;
-	padding: 1%;
-	margin: 0%;
-	top:40%;
-}
-
-.row_main h1{
-	position: relative;
-	top: -11%;
-	left: 1%;
-	color: white;
-	font-size: 25px;
-	font-family: monospace;
-} */
-
 .row_main .jazz1{
 	height: 176px;
 	width: 176px;
@@ -1419,27 +1279,6 @@
 .row_main .jazz6:hover .love{
 	opacity: 1;
 }
-
-/* .row_main{
-	background-color: rgba(77, 77, 77, 0.90);
-	border-radius: 28px 28px 28px 28px;
-	position: absolute;
-	left:20%;
-	height:24%;
-	width: 75%;
-	padding: 1%;
-	margin: 0%;
-	top:69%;
-}
-
-.row_main h1{
-	position: relative;
-	top: -11%;
-	left: 1%;
-	color: white;
-	font-size: 25px;
-	font-family: monospace;
-} */
 
 .row_main .pop1{
 	height: 176px;
@@ -1567,7 +1406,7 @@
 	opacity: 1;
 }
 
-
+/******** Detailed information for albums ********/
 .detailed .detailed_cover{
 	height: 69.7%;
 	width: 69.7%;
@@ -1630,6 +1469,7 @@
 	opacity: 1;
 }
 
+/******** Concerts pages ********/
 .concert_title{
 	position: fixed;
 	color:rgba(25,127,163,1);
@@ -1657,6 +1497,7 @@
 	width:38.7%;
 }
 
+/******** Placing artists images ********/
 .grid-concert .item1{
 	height: 176px;
 	width: 176px;
@@ -2156,6 +1997,7 @@
 	opacity: 1;
 }
 
+/******** Near concerts page ********/
 .near_scroll{
 	position: absolute;
 	background-color:rgba(77, 77, 77,0.97);
@@ -2202,6 +2044,7 @@
 	bottom: 100%;
 	left: 13%;
 }
+
 .near_scroll .concert .city_near{
 	background-color: red;
 	font-family: monospace;
@@ -2212,11 +2055,13 @@
 	width:20%;
 	z-index: 0;
 }
+
 .near_scroll .concert .city_near img{
 	height: 100%;
 	width:100%;
 	position: relative;
 }
+
 .near_scroll .concert .city_near .flag{
 	background-color: green;
 	font-family: monospace;
@@ -2229,6 +2074,7 @@
 	border-radius: 200px 200px 200px 200px;
 	border: 4px solid #000000;
 }
+
 .near_scroll .concert .city_near .titulo{
 	font-family: monospace;
 	text-align: center;
@@ -2248,7 +2094,7 @@
 	border-radius: 200px 200px 200px 200px;
 }
 
-
+/******** Add album page ********/
 .mitad_izq{
 	background-color: rgba(77, 77, 77,0.97);
 	position: fixed;
@@ -2423,7 +2269,6 @@
 	margin-bottom: 1%;
 }
 
-
 #tiempo{
 	position:absolute;
 	right:35%;
@@ -2445,17 +2290,17 @@
 	font-size: 20px;
 }
 
-
+/******** Detailed artist's concerts page *******/
 .autor{
-  position:fixed;
-  top:5%;
-  left:22%;
-  width:11%;
-  height:24%;
+	position:fixed;
+	top:5%;
+	left:22%;
+	width:11%;
+	height:24%;
 	border-radius:200px 200px 200px 200px;
 	border-style: solid;
-    border-width: 5px;
-		border-color: #197fa3;
+	border-width: 5px;
+	border-color: #197fa3;
 }
 
 .autor img{
@@ -2464,6 +2309,7 @@
 	height:100%;
 	border-radius:200px 200px 200px 200px;
 }
+
 .name{
 	position: fixed;
 	background-color:#197fa3;
@@ -2480,18 +2326,18 @@
 	border-radius: 28px 28px 28px 28px;
 }
 
-
 .listaciudades{
-		background-color: rgba(77, 77, 77,0.97);
-		position:fixed;
-		top:31%;
-	  left:19%;
-	  width:80%;
-	  height:50%;
-		border-radius:28px 28px 28px 28px;
-		overflow-y: scroll;
-		overflow-x: hidden;
+	background-color: rgba(77, 77, 77,0.97);
+	position:fixed;
+	top:31%;
+	left:19%;
+	width:80%;
+	height:50%;
+	border-radius:28px 28px 28px 28px;
+	overflow-y: scroll;
+	overflow-x: hidden;
 }
+
 .listaciudades .ciudades{
 	background-color: rgba(77, 77, 77,0.97);
 	position:relative;
@@ -2502,20 +2348,21 @@
 	border-radius: 20px 0px 0px 20px;
 	margin-bottom: 4px;
 }
-.listaciudades .ciudades .nombre{
-background-color: rgba(77, 77, 77,1);
-position:relative;
-border-radius: 20px 0px 0px 20px;
-width: 40%;
-height:100%;
 
+.listaciudades .ciudades .nombre{
+	background-color: rgba(77, 77, 77,1);
+	position:relative;
+	border-radius: 20px 0px 0px 20px;
+	width: 40%;
+	height:100%;
 }
+
 .listaciudades .ciudades .nombre img{
 	border-radius: 20px 0px 0px 20px;
 	position: relative;
 	width:100%;
 	height:200%;
-z-index: 0;
+	z-index: 0;
 }
 
 .listaciudades .ciudades .nombre .titulo{
@@ -2527,14 +2374,15 @@ z-index: 0;
 	text-align: center;
 
 }
+
 .listaciudades .ciudades .hora{
-background-color: rgba(77, 77, 77,1);
-position: relative;
-left:43%;
-bottom: 100%;
-width:57%;
-height: 99%;
-overflow-y: scroll;
+	background-color: rgba(77, 77, 77,1);
+	position: relative;
+	left:43%;
+	bottom: 100%;
+	width:57%;
+	height: 99%;
+	overflow-y: scroll;
 }
 
 #time{
@@ -2544,11 +2392,13 @@ overflow-y: scroll;
 	top:0%;
 	font-weight: bold;
 }
+
 #precio{
 	color:white;
 	position:relative;
 	left:10%;
 }
+
 #asistir{
 	background-color:#197fa3;
 	border-radius: 28px 28px 28px 28px;
@@ -2557,11 +2407,13 @@ overflow-y: scroll;
 	left:20%;
 	width:20%;
 }
+
 #asistir img{
 	position: relative;
 	max-width: 15px;
 	max-height: 15px;
 }
+
 .artistarel{
 	background-color:rgba(25, 127, 163,0.97);
 	border-radius: 28px 28px 0px 0px;
@@ -2576,14 +2428,15 @@ overflow-y: scroll;
 }
 
 .artistarelbox{
-position:fixed;
-bottom:2%;
-left:19%;
-width:81%;
-height:12%;
-background-color:rgba(25, 127, 163,0.5);
-border-radius: 20px 20px 20px 20px;
+	position:fixed;
+	bottom:2%;
+	left:19%;
+	width:81%;
+	height:12%;
+	background-color:rgba(25, 127, 163,0.5);
+	border-radius: 20px 20px 20px 20px;
 }
+
 .artistarelbox .box{
 	position:relative;
 	width:90.5px;
@@ -2594,16 +2447,17 @@ border-radius: 20px 20px 20px 20px;
 	background-color:rgba(25, 127, 163,1);
 	border-radius: 20px 20px 20px 20px;
 }
+
 .artistarelbox .box .titulo{
-z-index: 100;
-background-color: rgba(25, 127, 163,0.5);
-color:white;
-position: relative;
-bottom: 70%;
-text-align: center;
-border-radius:28px 28px 28px 28px;
-cursor: pointer;
-opacity: 0;
+	z-index: 100;
+	background-color: rgba(25, 127, 163,0.5);
+	color:white;
+	position: relative;
+	bottom: 70%;
+	text-align: center;
+	border-radius:28px 28px 28px 28px;
+	cursor: pointer;
+	opacity: 0;
 }
 
  .artistarelbox .box .titulo:hover{
@@ -2611,14 +2465,12 @@ opacity: 0;
 }
 
 .artistarelbox .box img{
-width:100%;
-height: 100%;
-position: relative;
-border-radius: 20px 20px 20px 20px;
-z-index: 1;
+	width:100%;
+	height: 100%;
+	position: relative;
+	border-radius: 20px 20px 20px 20px;
+	z-index: 1;
 }
-
-
 
 img{
 	position: relative;
