@@ -143,8 +143,8 @@
 .btn-group .but_near_in{
 	border-radius: 0px 28px 0px 0px;
 	position: relative;
-	bottom: 26px;
-	left: 286.5px;
+	bottom: 30px;
+	left: 300px;
 	background-color: #FFFFFF;
 	color:blue;
 }
@@ -152,8 +152,8 @@
 .btn-group .but_near{
 	border-radius: 0px 28px 0px 0px;
 	position: relative;
-	bottom: 26px;
-	left: 286.5px;
+	bottom: 30px;
+	left: 300px;
 }
 
 .boton{
@@ -2202,6 +2202,52 @@
 	bottom: 100%;
 	left: 13%;
 }
+.near_scroll .concert .city_near{
+	background-color: red;
+	font-family: monospace;
+	position: relative;
+	left:80%;
+	bottom: 242.5px;
+	height: 99.5%;
+	width:20%;
+	z-index: 0;
+}
+.near_scroll .concert .city_near img{
+	height: 100%;
+	width:100%;
+	position: relative;
+}
+.near_scroll .concert .city_near .flag{
+	background-color: green;
+	font-family: monospace;
+	position: relative;
+	left:63%;
+	bottom:101%;
+	height: 70px;
+	width:70px;
+	z-index: 1;
+	border-radius: 200px 200px 200px 200px;
+	border: 4px solid #000000;
+}
+.near_scroll .concert .city_near .titulo{
+	font-family: monospace;
+	text-align: center;
+	position: relative;
+	left:0px;
+	bottom: 130px;
+	color: white;
+	z-index: 2;
+	font-size:40px;
+	background-color:rgba(25, 127, 163,0.5);
+}
+
+.near_scroll .concert .city_near .flag img{
+	height: 100%;
+	width:100%;
+	position: relative;
+	border-radius: 200px 200px 200px 200px;
+}
+
 
 .mitad_izq{
 	background-color: rgba(77, 77, 77,0.97);

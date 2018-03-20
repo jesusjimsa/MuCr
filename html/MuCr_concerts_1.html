@@ -1,262 +1,971 @@
 <!DOCTYPE html>
 <html>
+	<head>
+		<meta charset="utf-8">
+		<title>MuCr - Concert</title>
+		<link rel="stylesheet" href="../css/MuCr.css">
+		<link rel="shortcut icon" href="../img/MuCr.png">
+		<html lang="en-UK">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="../js/MuCr.js"></script>
+	</head>
 
-<head>
-	<meta charset="utf-8">
-	<title>MuCr - Concert</title>
-	<link rel="stylesheet" href="../css/MuCr.css">
-	<link rel="shortcut icon" href="../img/MuCr.png">
-	<html lang="en-UK">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<script src="../js/MuCr.js"></script>
-</head>
-
-<body class="stage3">
-	<nav class="sidebar">
-		<div>
-			<img src="../img/amy.jpg" alt="Profile picture" align="left">
-		</div>
-
-		<div class="sidebar_user">
-			jesusjimsa
-		</div>
-
-		<div class="ajustes">
-			<a id="blanco" href="MuCr_settings.html">
-				<img src="../img/settings.png" alt="Settings" align="left" height="25px">&nbsp;Settings</a>
-		</div>
-	</nav>
-
-	<div class="buscador">
-		<input type="text" class="casilla" value="search" onfocus="if (this.value=='search') this.value='';" onblur="if (this.value=='') this.value='search';"
-		/>
-	</div>
-
-
-	<nav class="musica">
-		<div>
-			<div class="btn-group">
-				<a href="MuCr_main.html">
-					<button class="boton-left1">
-						<img src="../img/music.jpg" align="left"> &nbsp;Music</button>
-				</a>
-				<a href="MuCr_concert_artist.html">
-					<button class="boton-right1">
-						<img src="../img/concierto.png" align="left"> &nbsp;Concerts</button>
-				</a>
+	<body class="stage3">
+		<nav class="sidebar">
+			<div>
+				<img src="../img/amy.jpg" alt="Profile picture" align="left">
 			</div>
-		</div>
-		<div class="collection">
-			<h1>Genres</h1>
-			<div class="genres">
-				Acoustic
-				<br/> Alternative
-				<br/> Punk
-				<br/> Blues
-				<br/> Classical
-				<br/> Country
-				<br/> Folk
-				<br/> Dance
-				<br/> Electronic
-				<br/> Easy Listening
-				<br/> Gospel
-				<br/> Religious
-				<br/> Rap
-				<br/> Holiday
-				<br/> Instrumental
-				<br/> Jazz
-				<br/> Latin
-				<br/> Metal
-				<br/> Moods
-				<br/> Other
-				<br/> Pop
-				<br/> R'n'B
-				<br/>
-				<a id="blanco" href="MuCr_collection.html">Rock
-					<br/>
-				</a>
-				Soundtrack
-				<br/> World
-				<br/>
-			</div>
-		</div>
-	</nav>
 
-	<a href="MuCr_login.html">
-		<nav class="exit_sidebar">
-			Exit
+			<div class="sidebar_user">
+				jesusjimsa
+			</div>
+
+			<div class="ajustes">
+				<a id="blanco" href="MuCr_settings.html"><img src="../img/icons/settings.png" alt="Settings" align="left" height="25px">&nbsp;Settings</a>
+			</div>
 		</nav>
-	</a>
 
-	<div class="genre">
-		Concerts
-	</div>
-
-
-	<div class="artista_lista">
-		<div class="artista_principal">
-			<img src="../img/concerts/posters/bowie.jpg">
+		<div class="buscador">
+			<input type="text" class="casilla" value="search" onfocus="if (this.value=='search') this.value='';" onblur="if (this.value=='') this.value='search';" />
 		</div>
 
-		<div class="artistas_Secundarios">
-			<ol>
-				<img src="../img/concerts/posters/abba.jpg" align="left">ABBA
-				<br>
-				<br>
-				<br>
-				<img src="../img/concerts/posters/beatles.jpg" align="left">Beatles
-				<br>
-				<br>
-				<br>
-				<img src="../img/concerts/posters/bob_marley.jpg" align="left">Bob Marley
-				<br>
-				<br>
-				<br>
-				<a id="blanco" href="MuCr_Concerts.html">
-					<img src="../img/concerts/posters/roger_water.jpg" align="left">Roger Waters</a>
-				<br>
-				<br>
-				<br>
-				<img src="../img/concerts/posters/foo_fighters.jpg" align="left">Foo Fighter
-				<br>
-				<br>
-				<br>
-				<img src="../img/concerts/posters/michael_jackson.jpg" align="left">Michael Jackson
-				<br>
-				<br>
-				<br>
-				<img src="../img/concerts/posters/nirvana.jpg" align="left">Nirvana
-				<br>
-				<br>
-				<br>
-				<img src="../img/concerts/posters/pink_floyd.jpg" align="left">Pink Floyd
-				<br>
-				<br>
-				<br>
-				<img src="../img/concerts/posters/ramones.jpg" align="left">Ramones
-				<br>
-				<br>
-				<br>
-				<img src="../img/concerts/posters/rolling_stones.jpg" align="left">Rolling Stones
-				<br>
-				<br>
-				<br>
-				<img src="../img/concerts/posters/the_doors.png" align="left">the Doors
-				<br>
-				<br>
-				<br>
-				<img src="../img/concerts/posters/general.jpg" align="left">Chungitos
-				<br>
-				<br>
-		</div>
-	</div>
 
-	<div class="artista_selecionado">
-		<div id="alineado">David Bowie</div>
-		<div class="epoca">
-			<input type="month" class="casilla">
-		</div>
-		<div class="busqueda_por_ciudades">
-			<input type="text" class="casilla" value="city/country/continent" onfocus="if (this.value=='city/country/continent') this.value='';"
-			 onblur="if (this.value=='') this.value='city/country/continent';" />
-		</div>
-		<div class="ciudades">
-			<ol id="puntos">
-				<li>Barcelona
-					<img src="../img/visto.png" align="right">
-					<img src="../img/escuchado.png" align="right">
-				</li>
-				<br>
-				<li>Madrid
-					<img src="../img/visto.png" align="right">
-					<img src="../img/escuchado.png" align="right">
-				</li>
-				<br>
-				<li>Londres
-					<img src="../img/visto.png" align="right">
-					<img src="../img/escuchado.png" align="right">
-				</li>
-				<br>
-				<li>Amsterdam
-					<img src="../img/visto.png" align="right">
-					<img src="../img/escuchado.png" align="right">
-				</li>
-				<br>
-				<li>Bucuresti
-					<img src="../img/visto.png" align="right">
-					<img src="../img/escuchado.png" align="right">
-				</li>
-				<br>
-				<li>Atenas
-					<img src="../img/visto.png" align="right">
-					<img src="../img/escuchado.png" align="right">
-				</li>
-				<br>
-				<li>Estambul
-					<img src="../img/visto.png" align="right">
-					<img src="../img/escuchado.png" align="right">
-				</li>
-				<br>
-				<li>Palestina
-					<img src="../img/visto.png" align="right">
-					<img src="../img/escuchado.png" align="right">
-				</li>
-				<br>
-				<li>Egipto
-					<img src="../img/visto.png" align="right">
-					<img src="../img/escuchado.png" align="right">
-				</li>
-				<br>
-				<li>Dubai
-					<img src="../img/visto.png" align="right">
-					<img src="../img/escuchado.png" align="right">
-				</li>
-				<br>
-				<li>Nueva Delhi
-					<img src="../img/visto.png" align="right">
-					<img src="../img/escuchado.png" align="right">
-				</li>
-				<br>
-				<li>Beijin
-					<img src="../img/visto.png" align="right">
-					<img src="../img/escuchado.png" align="right">
-				</li>
-				<br>
-				<li>Tokyo
-					<img src="../img/visto.png" align="right">
-					<img src="../img/escuchado.png" align="right">
-				</li>
-				<br>
-			</ol>
-		</div>
-	</div>
+		<nav class="musica">
+			<div>
+				<div class="btn-group">
+	 				<a href="MuCr_main.html"><button class="boton-left1"><img src="../img/icons/music.jpg" align="left"> &nbsp;Music</button></a>
+	 				<a href="MuCr_concert_artist.html"><button class="boton-right1" ><img src="../img/icons/concierto.png" align="left"> &nbsp;Concerts</button></a>
+	 			</div>
+			</div>
+			<div class="collection">
+				<h1>Genres</h1>
+				<div class="genres">
+					Acoustic<br/>
+					Alternative<br/>
+					Punk<br/>
+					Blues<br/>
+					Classical<br/>
+					Country<br/>
+					Folk<br/>
+					Dance<br/>
+					Electronic<br/>
+					Easy Listening<br/>
+					Gospel<br/>
+					Religious<br/>
+					Rap<br/>
+					Holiday<br/>
+					Instrumental<br/>
+					Jazz<br/>
+					Latin<br/>
+					Metal<br/>
+					Moods<br/>
+					Other<br/>
+					Pop<br/>
+					R'n'B<br/>
+					<a id="blanco" href="MuCr_collection.html">Rock<br/></a>
+					Soundtrack<br/>
+					World<br/>
+				</div>
+			</div>
+		</nav>
 
-	<div class="tituconciertos">
-		Conciertos Cercas
-	</div>
+		<a href="MuCr_login.html">
+			<nav class="exit_sidebar">
+				Exit
+			</nav>
+		</a>
 
-	<div class="conciertos_cerca">
-		<ul id="sinpuntos">
-			<li>12/03 &nbsp;Bucurest &nbsp;INNA</li>
-			<li>14/03 &nbsp;Cluj-Napoca &nbsp;INNA</li>
-			<li>16/03 &nbsp;Suceava &nbsp;Shakira</li>
-			<li>18/03 &nbsp;Iasi &nbsp;Los Chungitos</li>
-			<li>20/03 &nbsp;Focsani &nbsp;INNA</li>
-			<li>24/03 &nbsp;Bucurest &nbsp;Shakira</li>
-			<li>30/03 &nbsp;Bucurest &nbsp;Susana</li>
-			<li>31/03 &nbsp;Iasi &nbsp;Shakira</li>
-			<li>01/04 &nbsp;Bucurest &nbsp;Shakira</li>
-			<li>02/04 &nbsp;Bucurest &nbsp;Andreu</li>
-			<li>03/04 &nbsp;Bucurest &nbsp;Dimitri</li>
-			<li>04/04 &nbsp;Bucurest &nbsp;Tomy</li>
-			<li>07/04 &nbsp;Bucurest &nbsp;Katy Perry</li>
-			<li>10/04 &nbsp;IAsi &nbsp;Andreu</li>
+		<div class="autor">
+			<img src="../img/covers/pop/Adele.png">
+		</div>
+		<div class="name">
+			Adele
+		</div>
 
-			<ul>
-	</div>
-	<div class="calendario">
-		Calendario en implementacion
-	</div>
-</body>
+		<div class="listaciudades">
+			<div class="ciudades">
+				<div class="nombre">
+					<img src="../img/ciudades/paris.jpg">
+					<div class="titulo">PARIS</div>
+				</div>
+				<div class="hora">
+					<ul>
+					<li>
+					<span id="time">23.01.2017</span>
+					 <span id="precio">80$</span>
+					 <button id="asistir">
+						 <img src="../img/icons/visto.png" align="center">&nbsp;&nbsp;seen
+					 </button>
+					  <button id="asistir">
+							<img src="../img/icons/like.jpg" align="center">&nbsp;&nbsp;Like
+						</button>
+						<button id="asistir">
+							<img src="../img/icons/dont.png" align="center">&nbsp;&nbsp;Don't like
+						</button>
+					</li>
+					<li>
+					<span id="time">23.01.2017</span>
+					 <span id="precio">80$</span>
+					 <button id="asistir">
+						 <img src="../img/icons/visto.png" align="center">&nbsp;&nbsp;seen
+					 </button>
+					  <button id="asistir">
+							<img src="../img/icons/like.jpg" align="center">&nbsp;&nbsp;Like
+						</button>
+						<button id="asistir">
+							<img src="../img/icons/dont.png" align="center">&nbsp;&nbsp;Don't like
+						</button>
+					</li>
+					<li>
+					<span id="time">23.01.2017</span>
+					 <span id="precio">80$</span>
+					 <button id="asistir">
+						 <img src="../img/icons/visto.png" align="center">&nbsp;&nbsp;seen
+					 </button>
+					  <button id="asistir">
+							<img src="../img/icons/like.jpg" align="center">&nbsp;&nbsp;Like
+						</button>
+						<button id="asistir">
+							<img src="../img/icons/dont.png" align="center">&nbsp;&nbsp;Don't like
+						</button>
+					</li>
+					<li>
+					<span id="time">23.01.2017</span>
+					 <span id="precio">80$</span>
+					 <button id="asistir">
+						 <img src="../img/icons/visto.png" align="center">&nbsp;&nbsp;seen
+					 </button>
+					  <button id="asistir">
+							<img src="../img/icons/like.jpg" align="center">&nbsp;&nbsp;Like
+						</button>
+						<button id="asistir">
+							<img src="../img/icons/dont.png" align="center">&nbsp;&nbsp;Don't like
+						</button>
+					</li>
+					<li>
+					<span id="time">23.01.2017</span>
+					 <span id="precio">80$</span>
+					 <button id="asistir">
+						 <img src="../img/icons/visto.png" align="center">&nbsp;&nbsp;seen
+					 </button>
+					  <button id="asistir">
+							<img src="../img/icons/like.jpg" align="center">&nbsp;&nbsp;Like
+						</button>
+						<button id="asistir">
+							<img src="../img/icons/dont.png" align="center">&nbsp;&nbsp;Don't like
+						</button>
+					</li>
+					<li>
+					<span id="time">23.01.2017</span>
+					 <span id="precio">80$</span>
+					 <button id="asistir">
+						 <img src="../img/icons/visto.png" align="center">&nbsp;&nbsp;seen
+					 </button>
+					  <button id="asistir">
+							<img src="../img/icons/like.jpg" align="center">&nbsp;&nbsp;Like
+						</button>
+						<button id="asistir">
+							<img src="../img/icons/dont.png" align="center">&nbsp;&nbsp;Don't like
+						</button>
+					</li>
+						</ul>
+				</div>
+
+			</div>
+			<div class="ciudades">
+				<div class="nombre"><img src="../img/ciudades/madrid.jpg"><div class="titulo">MADRID</div></div>
+				<div class="hora">
+					<ul>
+					<li>
+					<span id="time">23.01.2017</span>
+					 <span id="precio">80$</span>
+					 <button id="asistir">
+						 <img src="../img/icons/visto.png" align="center">&nbsp;&nbsp;seen
+					 </button>
+						<button id="asistir">
+							<img src="../img/icons/like.jpg" align="center">&nbsp;&nbsp;Like
+						</button>
+						<button id="asistir">
+							<img src="../img/icons/dont.png" align="center">&nbsp;&nbsp;Don't like
+						</button>
+					</li>
+					<li>
+					<span id="time">23.01.2017</span>
+					 <span id="precio">80$</span>
+					 <button id="asistir">
+						 <img src="../img/icons/visto.png" align="center">&nbsp;&nbsp;seen
+					 </button>
+						<button id="asistir">
+							<img src="../img/icons/like.jpg" align="center">&nbsp;&nbsp;Like
+						</button>
+						<button id="asistir">
+							<img src="../img/icons/dont.png" align="center">&nbsp;&nbsp;Don't like
+						</button>
+					</li>
+					<li>
+					<span id="time">23.01.2017</span>
+					 <span id="precio">80$</span>
+					 <button id="asistir">
+						 <img src="../img/icons/visto.png" align="center">&nbsp;&nbsp;seen
+					 </button>
+						<button id="asistir">
+							<img src="../img/icons/like.jpg" align="center">&nbsp;&nbsp;Like
+						</button>
+						<button id="asistir">
+							<img src="../img/icons/dont.png" align="center">&nbsp;&nbsp;Don't like
+						</button>
+					</li>
+					<li>
+					<span id="time">23.01.2017</span>
+					 <span id="precio">80$</span>
+					 <button id="asistir">
+						 <img src="../img/icons/visto.png" align="center">&nbsp;&nbsp;seen
+					 </button>
+						<button id="asistir">
+							<img src="../img/icons/like.jpg" align="center">&nbsp;&nbsp;Like
+						</button>
+						<button id="asistir">
+							<img src="../img/icons/dont.png" align="center">&nbsp;&nbsp;Don't like
+						</button>
+					</li>
+					<li>
+					<span id="time">23.01.2017</span>
+					 <span id="precio">80$</span>
+					 <button id="asistir">
+						 <img src="../img/icons/visto.png" align="center">&nbsp;&nbsp;seen
+					 </button>
+						<button id="asistir">
+							<img src="../img/icons/like.jpg" align="center">&nbsp;&nbsp;Like
+						</button>
+						<button id="asistir">
+							<img src="../img/icons/dont.png" align="center">&nbsp;&nbsp;Don't like
+						</button>
+					</li>
+					<li>
+					<span id="time">23.01.2017</span>
+					 <span id="precio">80$</span>
+					 <button id="asistir">
+						 <img src="../img/icons/visto.png" align="center">&nbsp;&nbsp;seen
+					 </button>
+						<button id="asistir">
+							<img src="../img/icons/like.jpg" align="center">&nbsp;&nbsp;Like
+						</button>
+						<button id="asistir">
+							<img src="../img/icons/dont.png" align="center">&nbsp;&nbsp;Don't like
+						</button>
+					</li>
+						</ul>
+				</div>
+
+			</div>
+			<div class="ciudades"><div class="nombre"><img src="../img/ciudades/berlin.jpg"><div class="titulo">BERLIN</div></div>
+			<div class="hora">
+				<ul>
+				<li>
+				<span id="time">23.01.2017</span>
+				 <span id="precio">80$</span>
+				 <button id="asistir">
+					 <img src="../img/icons/visto.png" align="center">&nbsp;&nbsp;seen
+				 </button>
+					<button id="asistir">
+						<img src="../img/icons/like.jpg" align="center">&nbsp;&nbsp;Like
+					</button>
+					<button id="asistir">
+						<img src="../img/icons/dont.png" align="center">&nbsp;&nbsp;Don't like
+					</button>
+				</li>
+				<li>
+				<span id="time">23.01.2017</span>
+				 <span id="precio">80$</span>
+				 <button id="asistir">
+					 <img src="../img/icons/visto.png" align="center">&nbsp;&nbsp;seen
+				 </button>
+					<button id="asistir">
+						<img src="../img/icons/like.jpg" align="center">&nbsp;&nbsp;Like
+					</button>
+					<button id="asistir">
+						<img src="../img/icons/dont.png" align="center">&nbsp;&nbsp;Don't like
+					</button>
+				</li>
+				<li>
+				<span id="time">23.01.2017</span>
+				 <span id="precio">80$</span>
+				 <button id="asistir">
+					 <img src="../img/icons/visto.png" align="center">&nbsp;&nbsp;seen
+				 </button>
+					<button id="asistir">
+						<img src="../img/icons/like.jpg" align="center">&nbsp;&nbsp;Like
+					</button>
+					<button id="asistir">
+						<img src="../img/icons/dont.png" align="center">&nbsp;&nbsp;Don't like
+					</button>
+				</li>
+				<li>
+				<span id="time">23.01.2017</span>
+				 <span id="precio">80$</span>
+				 <button id="asistir">
+					 <img src="../img/icons/visto.png" align="center">&nbsp;&nbsp;seen
+				 </button>
+					<button id="asistir">
+						<img src="../img/icons/like.jpg" align="center">&nbsp;&nbsp;Like
+					</button>
+					<button id="asistir">
+						<img src="../img/icons/dont.png" align="center">&nbsp;&nbsp;Don't like
+					</button>
+				</li>
+				<li>
+				<span id="time">23.01.2017</span>
+				 <span id="precio">80$</span>
+				 <button id="asistir">
+					 <img src="../img/icons/visto.png" align="center">&nbsp;&nbsp;seen
+				 </button>
+					<button id="asistir">
+						<img src="../img/icons/like.jpg" align="center">&nbsp;&nbsp;Like
+					</button>
+					<button id="asistir">
+						<img src="../img/icons/dont.png" align="center">&nbsp;&nbsp;Don't like
+					</button>
+				</li>
+				<li>
+				<span id="time">23.01.2017</span>
+				 <span id="precio">80$</span>
+				 <button id="asistir">
+					 <img src="../img/icons/visto.png" align="center">&nbsp;&nbsp;seen
+				 </button>
+					<button id="asistir">
+						<img src="../img/icons/like.jpg" align="center">&nbsp;&nbsp;Like
+					</button>
+					<button id="asistir">
+						<img src="../img/icons/dont.png" align="center">&nbsp;&nbsp;Don't like
+					</button>
+				</li>
+					</ul>
+			</div>
+
+			</div>
+
+			<div class="ciudades"><div class="nombre"><img src="../img/ciudades/barcelona.jpg"><div class="titulo">BARCELONA</div></div>
+			<div class="hora">
+				<ul>
+				<li>
+				<span id="time">23.01.2017</span>
+				 <span id="precio">80$</span>
+				 <button id="asistir">
+					 <img src="../img/icons/visto.png" align="center">&nbsp;&nbsp;seen
+				 </button>
+					<button id="asistir">
+						<img src="../img/icons/like.jpg" align="center">&nbsp;&nbsp;Like
+					</button>
+					<button id="asistir">
+						<img src="../img/icons/dont.png" align="center">&nbsp;&nbsp;Don't like
+					</button>
+				</li>
+				<li>
+				<span id="time">23.01.2017</span>
+				 <span id="precio">80$</span>
+				 <button id="asistir">
+					 <img src="../img/icons/visto.png" align="center">&nbsp;&nbsp;seen
+				 </button>
+					<button id="asistir">
+						<img src="../img/icons/like.jpg" align="center">&nbsp;&nbsp;Like
+					</button>
+					<button id="asistir">
+						<img src="../img/icons/dont.png" align="center">&nbsp;&nbsp;Don't like
+					</button>
+				</li>
+				<li>
+				<span id="time">23.01.2017</span>
+				 <span id="precio">80$</span>
+				 <button id="asistir">
+					 <img src="../img/icons/visto.png" align="center">&nbsp;&nbsp;seen
+				 </button>
+					<button id="asistir">
+						<img src="../img/icons/like.jpg" align="center">&nbsp;&nbsp;Like
+					</button>
+					<button id="asistir">
+						<img src="../img/icons/dont.png" align="center">&nbsp;&nbsp;Don't like
+					</button>
+				</li>
+				<li>
+				<span id="time">23.01.2017</span>
+				 <span id="precio">80$</span>
+				 <button id="asistir">
+					 <img src="../img/icons/visto.png" align="center">&nbsp;&nbsp;seen
+				 </button>
+					<button id="asistir">
+						<img src="../img/icons/like.jpg" align="center">&nbsp;&nbsp;Like
+					</button>
+					<button id="asistir">
+						<img src="../img/icons/dont.png" align="center">&nbsp;&nbsp;Don't like
+					</button>
+				</li>
+				<li>
+				<span id="time">23.01.2017</span>
+				 <span id="precio">80$</span>
+				 <button id="asistir">
+					 <img src="../img/icons/visto.png" align="center">&nbsp;&nbsp;seen
+				 </button>
+					<button id="asistir">
+						<img src="../img/icons/like.jpg" align="center">&nbsp;&nbsp;Like
+					</button>
+					<button id="asistir">
+						<img src="../img/icons/dont.png" align="center">&nbsp;&nbsp;Don't like
+					</button>
+				</li>
+				<li>
+				<span id="time">23.01.2017</span>
+				 <span id="precio">80$</span>
+				 <button id="asistir">
+					 <img src="../img/icons/visto.png" align="center">&nbsp;&nbsp;seen
+				 </button>
+					<button id="asistir">
+						<img src="../img/icons/like.jpg" align="center">&nbsp;&nbsp;Like
+					</button>
+					<button id="asistir">
+						<img src="../img/icons/dont.png" align="center">&nbsp;&nbsp;Don't like
+					</button>
+				</li>
+					</ul>
+			</div>
+
+			</div>
+
+			<div class="ciudades"><div class="nombre"><img src="../img/ciudades/tokyo.jpg"><div class="titulo">TOKYO</div></div>
+			<div class="hora">
+				<ul>
+				<li>
+				<span id="time">23.01.2017</span>
+				 <span id="precio">80$</span>
+				 <button id="asistir">
+					 <img src="../img/icons/visto.png" align="center">&nbsp;&nbsp;seen
+				 </button>
+					<button id="asistir">
+						<img src="../img/icons/like.jpg" align="center">&nbsp;&nbsp;Like
+					</button>
+					<button id="asistir">
+						<img src="../img/icons/dont.png" align="center">&nbsp;&nbsp;Don't like
+					</button>
+				</li>
+				<li>
+				<span id="time">23.01.2017</span>
+				 <span id="precio">80$</span>
+				 <button id="asistir">
+					 <img src="../img/icons/visto.png" align="center">&nbsp;&nbsp;seen
+				 </button>
+					<button id="asistir">
+						<img src="../img/icons/like.jpg" align="center">&nbsp;&nbsp;Like
+					</button>
+					<button id="asistir">
+						<img src="../img/icons/dont.png" align="center">&nbsp;&nbsp;Don't like
+					</button>
+				</li>
+				<li>
+				<span id="time">23.01.2017</span>
+				 <span id="precio">80$</span>
+				 <button id="asistir">
+					 <img src="../img/icons/visto.png" align="center">&nbsp;&nbsp;seen
+				 </button>
+					<button id="asistir">
+						<img src="../img/icons/like.jpg" align="center">&nbsp;&nbsp;Like
+					</button>
+					<button id="asistir">
+						<img src="../img/icons/dont.png" align="center">&nbsp;&nbsp;Don't like
+					</button>
+				</li>
+				<li>
+				<span id="time">23.01.2017</span>
+				 <span id="precio">80$</span>
+				 <button id="asistir">
+					 <img src="../img/icons/visto.png" align="center">&nbsp;&nbsp;seen
+				 </button>
+					<button id="asistir">
+						<img src="../img/icons/like.jpg" align="center">&nbsp;&nbsp;Like
+					</button>
+					<button id="asistir">
+						<img src="../img/icons/dont.png" align="center">&nbsp;&nbsp;Don't like
+					</button>
+				</li>
+				<li>
+				<span id="time">23.01.2017</span>
+				 <span id="precio">80$</span>
+				 <button id="asistir">
+					 <img src="../img/icons/visto.png" align="center">&nbsp;&nbsp;seen
+				 </button>
+					<button id="asistir">
+						<img src="../img/icons/like.jpg" align="center">&nbsp;&nbsp;Like
+					</button>
+					<button id="asistir">
+						<img src="../img/icons/dont.png" align="center">&nbsp;&nbsp;Don't like
+					</button>
+				</li>
+				<li>
+				<span id="time">23.01.2017</span>
+				 <span id="precio">80$</span>
+				 <button id="asistir">
+					 <img src="../img/icons/visto.png" align="center">&nbsp;&nbsp;seen
+				 </button>
+					<button id="asistir">
+						<img src="../img/icons/like.jpg" align="center">&nbsp;&nbsp;Like
+					</button>
+					<button id="asistir">
+						<img src="../img/icons/dont.png" align="center">&nbsp;&nbsp;Don't like
+					</button>
+				</li>
+					</ul>
+			</div>
+
+			</div>
+			<div class="ciudades"><div class="nombre"><img src="../img/ciudades/bucuresti.jpg"><div class="titulo">BUCHAREST</div></div>
+			<div class="hora">
+				<ul>
+				<li>
+				<span id="time">23.01.2017</span>
+				 <span id="precio">80$</span>
+				 <button id="asistir">
+					 <img src="../img/icons/visto.png" align="center">&nbsp;&nbsp;seen
+				 </button>
+					<button id="asistir">
+						<img src="../img/icons/like.jpg" align="center">&nbsp;&nbsp;Like
+					</button>
+					<button id="asistir">
+						<img src="../img/icons/dont.png" align="center">&nbsp;&nbsp;Don't like
+					</button>
+				</li>
+				<li>
+				<span id="time">23.01.2017</span>
+				 <span id="precio">80$</span>
+				 <button id="asistir">
+					 <img src="../img/icons/visto.png" align="center">&nbsp;&nbsp;seen
+				 </button>
+					<button id="asistir">
+						<img src="../img/icons/like.jpg" align="center">&nbsp;&nbsp;Like
+					</button>
+					<button id="asistir">
+						<img src="../img/icons/dont.png" align="center">&nbsp;&nbsp;Don't like
+					</button>
+				</li>
+				<li>
+				<span id="time">23.01.2017</span>
+				 <span id="precio">80$</span>
+				 <button id="asistir">
+					 <img src="../img/icons/visto.png" align="center">&nbsp;&nbsp;seen
+				 </button>
+					<button id="asistir">
+						<img src="../img/icons/like.jpg" align="center">&nbsp;&nbsp;Like
+					</button>
+					<button id="asistir">
+						<img src="../img/icons/dont.png" align="center">&nbsp;&nbsp;Don't like
+					</button>
+				</li>
+				<li>
+				<span id="time">23.01.2017</span>
+				 <span id="precio">80$</span>
+				 <button id="asistir">
+					 <img src="../img/icons/visto.png" align="center">&nbsp;&nbsp;seen
+				 </button>
+					<button id="asistir">
+						<img src="../img/icons/like.jpg" align="center">&nbsp;&nbsp;Like
+					</button>
+					<button id="asistir">
+						<img src="../img/icons/dont.png" align="center">&nbsp;&nbsp;Don't like
+					</button>
+				</li>
+				<li>
+				<span id="time">23.01.2017</span>
+				 <span id="precio">80$</span>
+				 <button id="asistir">
+					 <img src="../img/icons/visto.png" align="center">&nbsp;&nbsp;seen
+				 </button>
+					<button id="asistir">
+						<img src="../img/icons/like.jpg" align="center">&nbsp;&nbsp;Like
+					</button>
+					<button id="asistir">
+						<img src="../img/icons/dont.png" align="center">&nbsp;&nbsp;Don't like
+					</button>
+				</li>
+				<li>
+				<span id="time">23.01.2017</span>
+				 <span id="precio">80$</span>
+				 <button id="asistir">
+					 <img src="../img/icons/visto.png" align="center">&nbsp;&nbsp;seen
+				 </button>
+					<button id="asistir">
+						<img src="../img/icons/like.jpg" align="center">&nbsp;&nbsp;Like
+					</button>
+					<button id="asistir">
+						<img src="../img/icons/dont.png" align="center">&nbsp;&nbsp;Don't like
+					</button>
+				</li>
+					</ul>
+			</div>
+
+			</div>
+
+			<div class="ciudades"><div class="nombre"><img src="../img/ciudades/praha.jpg"><div class="titulo">PRAHA</div></div>
+			<div class="hora">
+				<ul>
+				<li>
+				<span id="time">23.01.2017</span>
+				 <span id="precio">80$</span>
+				 <button id="asistir">
+					 <img src="../img/icons/visto.png" align="center">&nbsp;&nbsp;seen
+				 </button>
+					<button id="asistir">
+						<img src="../img/icons/like.jpg" align="center">&nbsp;&nbsp;Like
+					</button>
+					<button id="asistir">
+						<img src="../img/icons/dont.png" align="center">&nbsp;&nbsp;Don't like
+					</button>
+				</li>
+				<li>
+				<span id="time">23.01.2017</span>
+				 <span id="precio">80$</span>
+				 <button id="asistir">
+					 <img src="../img/icons/visto.png" align="center">&nbsp;&nbsp;seen
+				 </button>
+					<button id="asistir">
+						<img src="../img/icons/like.jpg" align="center">&nbsp;&nbsp;Like
+					</button>
+					<button id="asistir">
+						<img src="../img/icons/dont.png" align="center">&nbsp;&nbsp;Don't like
+					</button>
+				</li>
+				<li>
+				<span id="time">23.01.2017</span>
+				 <span id="precio">80$</span>
+				 <button id="asistir">
+					 <img src="../img/icons/visto.png" align="center">&nbsp;&nbsp;seen
+				 </button>
+					<button id="asistir">
+						<img src="../img/icons/like.jpg" align="center">&nbsp;&nbsp;Like
+					</button>
+					<button id="asistir">
+						<img src="../img/icons/dont.png" align="center">&nbsp;&nbsp;Don't like
+					</button>
+				</li>
+				<li>
+				<span id="time">23.01.2017</span>
+				 <span id="precio">80$</span>
+				 <button id="asistir">
+					 <img src="../img/icons/visto.png" align="center">&nbsp;&nbsp;seen
+				 </button>
+					<button id="asistir">
+						<img src="../img/icons/like.jpg" align="center">&nbsp;&nbsp;Like
+					</button>
+					<button id="asistir">
+						<img src="../img/icons/dont.png" align="center">&nbsp;&nbsp;Don't like
+					</button>
+				</li>
+				<li>
+				<span id="time">23.01.2017</span>
+				 <span id="precio">80$</span>
+				 <button id="asistir">
+					 <img src="../img/icons/visto.png" align="center">&nbsp;&nbsp;seen
+				 </button>
+					<button id="asistir">
+						<img src="../img/icons/like.jpg" align="center">&nbsp;&nbsp;Like
+					</button>
+					<button id="asistir">
+						<img src="../img/icons/dont.png" align="center">&nbsp;&nbsp;Don't like
+					</button>
+				</li>
+				<li>
+				<span id="time">23.01.2017</span>
+				 <span id="precio">80$</span>
+				 <button id="asistir">
+					 <img src="../img/icons/visto.png" align="center">&nbsp;&nbsp;seen
+				 </button>
+					<button id="asistir">
+						<img src="../img/icons/like.jpg" align="center">&nbsp;&nbsp;Like
+					</button>
+					<button id="asistir">
+						<img src="../img/icons/dont.png" align="center">&nbsp;&nbsp;Don't like
+					</button>
+				</li>
+					</ul>
+			</div>
+
+			</div>
+
+			<div class="ciudades"><div class="nombre"><img src="../img/ciudades/london.jpg"><div class="titulo">LONDON</div></div>
+			<div class="hora">
+				<ul>
+				<li>
+				<span id="time">23.01.2017</span>
+				 <span id="precio">80$</span>
+				 <button id="asistir">
+					 <img src="../img/icons/visto.png" align="center">&nbsp;&nbsp;seen
+				 </button>
+					<button id="asistir">
+						<img src="../img/icons/like.jpg" align="center">&nbsp;&nbsp;Like
+					</button>
+					<button id="asistir">
+						<img src="../img/icons/dont.png" align="center">&nbsp;&nbsp;Don't like
+					</button>
+				</li>
+				<li>
+				<span id="time">23.01.2017</span>
+				 <span id="precio">80$</span>
+				 <button id="asistir">
+					 <img src="../img/icons/visto.png" align="center">&nbsp;&nbsp;seen
+				 </button>
+					<button id="asistir">
+						<img src="../img/icons/like.jpg" align="center">&nbsp;&nbsp;Like
+					</button>
+					<button id="asistir">
+						<img src="../img/icons/dont.png" align="center">&nbsp;&nbsp;Don't like
+					</button>
+				</li>
+				<li>
+				<span id="time">23.01.2017</span>
+				 <span id="precio">80$</span>
+				 <button id="asistir">
+					 <img src="../img/icons/visto.png" align="center">&nbsp;&nbsp;seen
+				 </button>
+					<button id="asistir">
+						<img src="../img/icons/like.jpg" align="center">&nbsp;&nbsp;Like
+					</button>
+					<button id="asistir">
+						<img src="../img/icons/dont.png" align="center">&nbsp;&nbsp;Don't like
+					</button>
+				</li>
+				<li>
+				<span id="time">23.01.2017</span>
+				 <span id="precio">80$</span>
+				 <button id="asistir">
+					 <img src="../img/icons/visto.png" align="center">&nbsp;&nbsp;seen
+				 </button>
+					<button id="asistir">
+						<img src="../img/icons/like.jpg" align="center">&nbsp;&nbsp;Like
+					</button>
+					<button id="asistir">
+						<img src="../img/icons/dont.png" align="center">&nbsp;&nbsp;Don't like
+					</button>
+				</li>
+				<li>
+				<span id="time">23.01.2017</span>
+				 <span id="precio">80$</span>
+				 <button id="asistir">
+					 <img src="../img/icons/visto.png" align="center">&nbsp;&nbsp;seen
+				 </button>
+					<button id="asistir">
+						<img src="../img/icons/like.jpg" align="center">&nbsp;&nbsp;Like
+					</button>
+					<button id="asistir">
+						<img src="../img/icons/dont.png" align="center">&nbsp;&nbsp;Don't like
+					</button>
+				</li>
+				<li>
+				<span id="time">23.01.2017</span>
+				 <span id="precio">80$</span>
+				 <button id="asistir">
+					 <img src="../img/icons/visto.png" align="center">&nbsp;&nbsp;seen
+				 </button>
+					<button id="asistir">
+						<img src="../img/icons/like.jpg" align="center">&nbsp;&nbsp;Like
+					</button>
+					<button id="asistir">
+						<img src="../img/icons/dont.png" align="center">&nbsp;&nbsp;Don't like
+					</button>
+				</li>
+					</ul>
+			</div>
+
+			</div>
+
+			<div class="ciudades"><div class="nombre"><img src="../img/ciudades/istambul.jpg"><div class="titulo">ISTAMBUL</div></div>
+			<div class="hora">
+				<ul>
+				<li>
+				<span id="time">23.01.2017</span>
+				 <span id="precio">80$</span>
+				 <button id="asistir">
+					 <img src="../img/icons/visto.png" align="center">&nbsp;&nbsp;seen
+				 </button>
+					<button id="asistir">
+						<img src="../img/icons/like.jpg" align="center">&nbsp;&nbsp;Like
+					</button>
+					<button id="asistir">
+						<img src="../img/icons/dont.png" align="center">&nbsp;&nbsp;Don't like
+					</button>
+				</li>
+				<li>
+				<span id="time">23.01.2017</span>
+				 <span id="precio">80$</span>
+				 <button id="asistir">
+					 <img src="../img/icons/visto.png" align="center">&nbsp;&nbsp;seen
+				 </button>
+					<button id="asistir">
+						<img src="../img/icons/like.jpg" align="center">&nbsp;&nbsp;Like
+					</button>
+					<button id="asistir">
+						<img src="../img/icons/dont.png" align="center">&nbsp;&nbsp;Don't like
+					</button>
+				</li>
+				<li>
+				<span id="time">23.01.2017</span>
+				 <span id="precio">80$</span>
+				 <button id="asistir">
+					 <img src="../img/icons/visto.png" align="center">&nbsp;&nbsp;seen
+				 </button>
+					<button id="asistir">
+						<img src="../img/icons/like.jpg" align="center">&nbsp;&nbsp;Like
+					</button>
+					<button id="asistir">
+						<img src="../img/icons/dont.png" align="center">&nbsp;&nbsp;Don't like
+					</button>
+				</li>
+				<li>
+				<span id="time">23.01.2017</span>
+				 <span id="precio">80$</span>
+				 <button id="asistir">
+					 <img src="../img/icons/visto.png" align="center">&nbsp;&nbsp;seen
+				 </button>
+					<button id="asistir">
+						<img src="../img/icons/like.jpg" align="center">&nbsp;&nbsp;Like
+					</button>
+					<button id="asistir">
+						<img src="../img/icons/dont.png" align="center">&nbsp;&nbsp;Don't like
+					</button>
+				</li>
+				<li>
+				<span id="time">23.01.2017</span>
+				 <span id="precio">80$</span>
+				 <button id="asistir">
+					 <img src="../img/icons/visto.png" align="center">&nbsp;&nbsp;seen
+				 </button>
+					<button id="asistir">
+						<img src="../img/icons/like.jpg" align="center">&nbsp;&nbsp;Like
+					</button>
+					<button id="asistir">
+						<img src="../img/icons/dont.png" align="center">&nbsp;&nbsp;Don't like
+					</button>
+				</li>
+				<li>
+				<span id="time">23.01.2017</span>
+				 <span id="precio">80$</span>
+				 <button id="asistir">
+					 <img src="../img/icons/visto.png" align="center">&nbsp;&nbsp;seen
+				 </button>
+					<button id="asistir">
+						<img src="../img/icons/like.jpg" align="center">&nbsp;&nbsp;Like
+					</button>
+					<button id="asistir">
+						<img src="../img/icons/dont.png" align="center">&nbsp;&nbsp;Don't like
+					</button>
+				</li>
+					</ul>
+			</div>
+
+			</div>
+
+			<div class="ciudades"><div class="nombre"><img src="../img/ciudades/beijin.jpg"><div class="titulo">BEIJIN</div></div>
+			<div class="hora">
+				<ul>
+				<li>
+				<span id="time">23.01.2017</span>
+				 <span id="precio">80$</span>
+				 <button id="asistir">
+					 <img src="../img/icons/visto.png" align="center">&nbsp;&nbsp;seen
+				 </button>
+					<button id="asistir">
+						<img src="../img/icons/like.jpg" align="center">&nbsp;&nbsp;Like
+					</button>
+					<button id="asistir">
+						<img src="../img/icons/dont.png" align="center">&nbsp;&nbsp;Don't like
+					</button>
+				</li>
+				<li>
+				<span id="time">23.01.2017</span>
+				 <span id="precio">80$</span>
+				 <button id="asistir">
+					 <img src="../img/icons/visto.png" align="center">&nbsp;&nbsp;seen
+				 </button>
+					<button id="asistir">
+						<img src="../img/icons/like.jpg" align="center">&nbsp;&nbsp;Like
+					</button>
+					<button id="asistir">
+						<img src="../img/icons/dont.png" align="center">&nbsp;&nbsp;Don't like
+					</button>
+				</li>
+				<li>
+				<span id="time">23.01.2017</span>
+				 <span id="precio">80$</span>
+				 <button id="asistir">
+					 <img src="../img/icons/visto.png" align="center">&nbsp;&nbsp;seen
+				 </button>
+					<button id="asistir">
+						<img src="../img/icons/like.jpg" align="center">&nbsp;&nbsp;Like
+					</button>
+					<button id="asistir">
+						<img src="../img/icons/dont.png" align="center">&nbsp;&nbsp;Don't like
+					</button>
+				</li>
+				<li>
+				<span id="time">23.01.2017</span>
+				 <span id="precio">80$</span>
+				 <button id="asistir">
+					 <img src="../img/icons/visto.png" align="center">&nbsp;&nbsp;seen
+				 </button>
+					<button id="asistir">
+						<img src="../img/icons/like.jpg" align="center">&nbsp;&nbsp;Like
+					</button>
+					<button id="asistir">
+						<img src="../img/icons/dont.png" align="center">&nbsp;&nbsp;Don't like
+					</button>
+				</li>
+				<li>
+				<span id="time">23.01.2017</span>
+				 <span id="precio">80$</span>
+				 <button id="asistir">
+					 <img src="../img/icons/visto.png" align="center">&nbsp;&nbsp;seen
+				 </button>
+					<button id="asistir">
+						<img src="../img/icons/like.jpg" align="center">&nbsp;&nbsp;Like
+					</button>
+					<button id="asistir">
+						<img src="../img/icons/dont.png" align="center">&nbsp;&nbsp;Don't like
+					</button>
+				</li>
+				<li>
+				<span id="time">23.01.2017</span>
+				 <span id="precio">80$</span>
+				 <button id="asistir">
+					 <img src="../img/icons/visto.png" align="center">&nbsp;&nbsp;seen
+				 </button>
+					<button id="asistir">
+						<img src="../img/icons/like.jpg" align="center">&nbsp;&nbsp;Like
+					</button>
+					<button id="asistir">
+						<img src="../img/icons/dont.png" align="center">&nbsp;&nbsp;Don't like
+					</button>
+				</li>
+					</ul>
+			</div>
+
+			</div>
+
+		</div>
+
+		<div class="artistarel">
+			Related artists
+		</div>
+		<div class="artistarelbox">
+			<div class="box"><img src="../img/covers/dance/axwell_ingrosso.jpg"> <div class="titulo">Axwell & Ingrosso</div></div>
+			<div class="box"><img src="../img/covers/dance/chainsmokers.jpg"> <div class="titulo">The chainsmokers</div></div>
+			<div class="box"><img src="../img/covers/Pop/beyonce.jpg"><div class="titulo">Beyonce</div></div>
+			<div class="box"><img src="../img/covers/Pop/rihanna.jpg"><div class="titulo">Rihanna</div></div>
+			<div class="box"><img src="../img/covers/Pop/shakira.jpg"><div class="titulo">Shakira</div></div>
+			<div class="box"><img src="../img/covers/Pop/Taylor_Swift.jpg"><div class="titulo">Taylor Swift</div></div>
+			<a href="MuCr_Concerts.html"><div class="box"><img src="../img/covers/Pop/coldplay.jpg"><div class="titulo">Coldplay</div></div></a>
+			<div class="box"><img src="../img/covers/Pop/maroon5.jpg"><div class="titulo">Maroon 5</div></div>
+			<div class="box"><img src="../img/covers/Pop/katyPerry.jpg"><div class="titulo">Katy Perry</div></div>
+			<div class="box"><img src="../img/covers/Pop/NickyMinaj.jpg"><div class="titulo">Nicky Minaj</div></div>
+			<div class="box"><img src="../img/covers/Pop/ArianaGrande.jpg"><div class="titulo">Ariana Grande</div></div>
+			<div class="box"><img src="../img/covers/Pop/weeknd.jpg"><div class="titulo">Weeknd</div></div>
+				<div class="box"><img src="../img/covers/Pop/demiLovato.png"><div class="titulo">Demi Lovato</div></div>
+		</div>
+
+	</body>
 
 </html>
