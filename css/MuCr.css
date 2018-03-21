@@ -2337,14 +2337,16 @@
 	overflow-y: hidden;
 	overflow-x: hidden;
 }
+
 .listaciudades .continentes{
-	background-color: rgba(0,0,0,0)
+	background-color: rgba(0,0,0,0);
 	position:relative;
 	top:0px;
 	border-radius:28px 28px 0px 0px;
 	height:15%;
 	width: 100%;
 }
+
 .listaciudades .continentes .cont{
 	background-color: #197fa3;
 	position: relative;
@@ -2358,45 +2360,48 @@
 	margin-left: 1%;
 	text-align: center;
 	padding-top: 1%;
-	font-size: 20px;
+	font-size: 18px;
 	color: white;
 	font-weight: bold;
 }
 
-.listaciudades .ciudades{
+.listaciudades .countries{
 	position:relative;
 	border-radius:0px 0px 0px 28px;
 	top:0px;
 	left:0px;
 	height:85%;
-	width: 15%;
+	width: 15.5%;
 }
-.listaciudades .ciudades .flag{
-position:relative;
-height:31px;
-width:31px;
-top:3%;
-left:1%;
-border-radius: 200px 200px 200px 200px;
-float: left;
-border:1px solid #000000;
-margin-left: 1%;
-margin-bottom: 2%;
+
+.listaciudades .countries .flag{
+	position:relative;
+	height:31px;
+	width:31px;
+	top:3%;
+	left:1%;
+	border-radius: 200px 200px 200px 200px;
+	float: left;
+	border:1px solid #000000;
+	margin-left: 1%;
+	margin-bottom: 2%;
 }
-.listaciudades .ciudades .flag img{
+
+.listaciudades .countries .flag img{
 	height: 100%;
 	width:100%;
 	position: relative;
 	border-radius: 200px 200px 200px 200px;
 	z-index: 0;
 }
-.listaciudades .ciudades .flag .titulo{
+
+.listaciudades .countries .flag .titulo{
 	position: relative;
 	background-color: #197fa3;
 	color:white;
 	height: 70%;
 	width:100%;
-	bottom: 35px;
+	bottom: 36px;
 	z-index: 1;
 	border-radius: 200px 200px 200px 200px;
 	text-align: center;
@@ -2404,60 +2409,65 @@ margin-bottom: 2%;
 	font-size: 10px;
 	font-weight: bold;
 	opacity: 0;
+	cursor: pointer;
 }
 
-.listaciudades .ciudades .flag .titulo:hover {
-opacity: 1;
+.listaciudades .countries .flag .titulo:hover {
+	opacity: 1;
 }
 
 .listaciudades .horarios{
 	position:relative;
 	border-radius:0px 0px 28px 0px;
 	bottom:85%;
-	left:15%;
+	left:16%;
 	height:85%;
-	width: 85%;
+	width: 84%;
 	overflow-y: scroll;
 }
+
 .listaciudades .horarios .hora{
-background-color: rgba(77,77,77,1);
-top:1%;
-position: relative;
-left:1px;
-height: 10%;
-width:99.5%;
-margin-bottom: 1%;
+	background-color: rgba(77,77,77,1);
+	top:1%;
+	position: relative;
+	left:1px;
+	height: 10%;
+	width:99.5%;
+	margin-bottom: 1%;
 }
+
 .listaciudades .horarios .hora .nombre{
-position: relative;
-background-color:rgba(77,77,77,1);
-color:white;
-left:5px;
-top:0px;
-height: 99%;
-width:20%;
-text-align: center;
-padding-top: 1px;
-font-size:30px;
+	position: relative;
+	background-color:rgba(77,77,77,1);
+	color:white;
+	left:5px;
+	top:0px;
+	height: 99%;
+	width:20%;
+	text-align: center;
+	padding-top: 1px;
+	font-size:30px;
 }
+
 .listaciudades .horarios .imagen{
 	position: relative;
-	left:20.5%;
+	left:24%;
 	bottom:33px;
 	height: 101%;
 	width:13%;
 	border-radius: 20px 20px 20px;
 }
+
 .listaciudades .horarios .imagen img{
-position: relative;
-height:100%;
-width:100%;
-border-radius: 20px 20px 20px;
-}
-.listaciudades .horarios .time{
-	background-color: black;
 	position: relative;
-	left:35%;
+	height:100%;
+	width:100%;
+	border-radius: 20px 20px 20px;
+}
+
+.listaciudades .horarios .time{
+	position: relative;
+	left:39%;
 	height: 89%;
 	width:20%;
 	bottom:66px;
@@ -2466,13 +2476,11 @@ border-radius: 20px 20px 20px;
 	padding-top:2px;
 	font-weight: bold;
 	font-size: 25px;
-	border-radius: 20px 20px 20px 20px;
-	border:2px solid #197fa3;
 }
+
 .listaciudades .horarios .price{
-	background-color:black;
 	position: relative;
-	left:57%;
+	left:61%;
 	height: 91%;
 	width:10%;
 	bottom:99px;
@@ -2481,9 +2489,8 @@ border-radius: 20px 20px 20px;
 	padding-top:2px;
 	font-weight: bold;
 	font-size: 25px;
-	border-radius: 20px 20px 20px 20px;
-	border:2px solid #197fa3;
 }
+
 .listaciudades .horarios .asistir{
 	position:relative;
 	background-color: green;
@@ -2520,6 +2527,8 @@ border-radius: 20px 20px 20px;
 
 .artistarelbox .box{
 	position:relative;
+	top: 5%;
+	left: 1.2%;
 	width:90.5px;
 	height:90.5px;
 	background-color: green;
@@ -2541,7 +2550,7 @@ border-radius: 20px 20px 20px;
 	opacity: 0;
 }
 
- .artistarelbox .box .titulo:hover{
+ .artistarelbox .box:hover .titulo{
 	opacity: 1;
 }
 
