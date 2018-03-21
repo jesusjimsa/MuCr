@@ -339,14 +339,18 @@
 	@todo: Que el scroll no se salga de la barra cuando se cambia
 	el tamaño de ventana
 */
-.musica .collection .genres{
-	position: relative;
-	width: 100%;
+.musica .collection .orden{
+	position: fixed;
+	width: 13.15%;
 	height: 400px;
-	bottom: 50%;
+	bottom: 12.2%;
+	left:1.65%;
 	overflow-y: scroll;
 }
-
+.musica .collection .orden .genres{
+	position: relative;
+	text-align: center;
+}
 .musica img{
 	max-width: 20%;
 	max-height: 20%;
@@ -2567,3 +2571,60 @@ img{
 	max-width: 100%;
 	max-height: 100%;
 }
+
+/* Dropdown Button */
+.musica .collection .dropbtn {
+	 background-color: #197fa3;
+	 position: relative;
+	 color: white;
+	 padding: 16px;
+	 font-size: 16px;
+	 border: none;
+	 cursor: pointer;
+	 border-radius: 28px 28px 28px 28px;
+	 left:5%;
+	 top:5px;
+	 width: 200px;
+}
+
+/* Dropdown button on hover & focus */
+.musica .collection .dropbtn:hover, .dropbtn:focus {
+	 background-color: white;
+	 color:blue;
+	 border-radius: 28px 28px 0px 0px;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.musica .collection .dropdown {
+	 position: relative;
+	 display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.musica .collection .dropdown-content {
+	 display: none;
+	 position: relative;
+	 background-color:#197fa3;
+	 left:5%;
+	 top:5px;
+	 width: 200px;
+	 text-align: center;
+	 z-index: 1;
+}
+
+/* Links inside the dropdown */
+.musica .collection .dropdown-content .box {
+	 color: white;
+	 position: relative;
+	 display: block;
+	 border-style: solid;
+ 	border-width: 1px;
+ 	border-color: white;
+
+}
+
+/* Change color of dropdown links on hover */
+.musica .collection .dropdown-content a:hover {background-color: #ddd}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.musica .collection .show {display:block;}
