@@ -1,12 +1,4 @@
 /********** Backgrounds **********/
-.stage1{
-	background-image:URL("../img/backgrounds/fondo4.jpg");
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: cover;
-	background-color: #464646;
-}
 
 .stage2{
 	background-image:URL("../img/backgrounds/fondo3.jpg");
@@ -53,7 +45,7 @@
 	background-color: #464646;
 }
 
-.info{
+#info{
 	background-color: rgba(77, 77, 77, 0.90);
 	position: absolute;
 	right:0px;
