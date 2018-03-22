@@ -362,8 +362,6 @@
 	bottom:10%;
 }
 
-
-
 /********** Settings **********/
 .orgrupo{
 	position:fixed;
@@ -374,6 +372,7 @@
 	background-color: rgba(77,77,77,0.9);
 
 }
+
 .orgrupo .titulo{
 	color:white;
 	position: relative;
@@ -386,6 +385,7 @@
 	padding-top: 3%;
 	border-radius: 28px 28px 28px 28px;
 }
+
 .orgrupo .main{
 	position: relative;
 	top:3%;
@@ -395,6 +395,7 @@
 	overflow-y: scroll;
 	overflow-x:hidden;
 }
+
 .orgrupo .main .especifico{
 	position: relative;
 	background-color: rgba(77,77,77,1);
@@ -404,6 +405,7 @@
 	top:2px;
 	left:2px;
 }
+
 .orgrupo .main .especifico .textillo{
 	position: relative;
 	left:5%;
@@ -414,6 +416,7 @@
 	text-align: center;
 	padding-top:2%;
 }
+
 .orgrupo .main .especifico .cajetilla{
 	position: relative;
 	left:60%;
@@ -422,28 +425,29 @@
 }
 
 .musica .titulo_grupos{
-position: fixed;
-background-color:#197fb5;
-height: 5%;
-top:27.75%;
-left:2px;
-width:16%;
-border-radius: 28px 0px 0px 28px;
-color:white;
-text-align: center;
-padding-top: 7px;
-z-index: 1;
+	position: fixed;
+	background-color:#197fb5;
+	height: 5%;
+	top:27.75%;
+	left:2px;
+	width:16%;
+	border-radius: 28px 0px 0px 28px;
+	color:white;
+	text-align: center;
+	padding-top: 7px;
+	z-index: 1;
 }
 
 .musica .grupos{
 	position:fixed;
 	height: 55%;
-	top:33%;
-	left:2px;
+	top:34%;
+	left:9px;
 	width:16%;
 	overflow-y: scroll;
 	overflow-x: hidden;
 }
+
 .musica .grupos .grupis{
 	position: relative;
 	top:3px;
@@ -454,15 +458,17 @@ z-index: 1;
 	border-bottom: 2px solid #000000;
 	border-radius: 100px 0px 0px 100px;
 }
+
 .musica .grupos .grupis .imagenes{
-		position: relative;
-		height:45px;
-		width:45px;
-		left:3px;
-		border-radius: 100px 100px 100px 100px;
-		top:1px;
-		border:2px solid #000000;
+	position: relative;
+	height:45px;
+	width:45px;
+	left:3px;
+	border-radius: 100px 100px 100px 100px;
+	top:1px;
+	border:2px solid #000000;
 }
+
 .musica .grupos .grupis .imagenes img{
 	min-width: 100%;
 	min-height: 100%;
@@ -491,10 +497,11 @@ z-index: 1;
 	overflow-x: hidden;
 	border-radius: 100px 0px 0px 0px;
 }
+
 .reconocimiento {
 	background-color: rgba(77,77,77,0.97);
 	position: fixed;
-	top:87%;
+	top:88.8%;
 	right:0px;
 	padding-right:110px;
 	padding-left: 110px;
