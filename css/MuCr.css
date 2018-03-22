@@ -718,7 +718,7 @@
 	bottom:98%;
 	left:41%;
 	border-radius: 28px 28px 28px 28px;
-	border:5px solid #000000;
+	border:3px solid #000000;
 	text-align: center;
 	color:white;
 	padding-top: 1%;
@@ -734,7 +734,7 @@
 	bottom:98%;
 	left:41%;
 	border-radius: 28px 28px 28px 28px;
-	border:5px solid #000000;
+	border:3px solid #000000;
 	text-align: center;
 	color:black;
 	padding-top: 1%;
@@ -745,13 +745,27 @@
 .seleccionado .album_artist{
 	position: relative;
 	background-color:#197fa3;
-	height:6%;
+	height:5%;
 	width:20%;
-	bottom:110%;
+	bottom:113%;
 	left:75%;
 	padding-top: 1%;
 	border-radius: 28px 28px 28px 28px;
-	border:5px solid #000000;
+	border:3px solid #000000;
+	text-align: center;
+	color: white;
+}
+
+.seleccionado .album_type{
+	position: relative;
+	height:5%;
+	width:20%;
+	bottom:112%;
+	left:75%;
+	padding-top: 1%;
+	background-color:#197fa3;
+	border-radius: 28px 28px 28px 28px;
+	border:3px solid #000000;
 	text-align: center;
 	color: white;
 }
