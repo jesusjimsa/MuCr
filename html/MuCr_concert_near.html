@@ -1,188 +1,213 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title>MuCr - Concerts</title>
-		<link rel="stylesheet" href="../css/MuCr.css">
-		<link rel="shortcut icon" href="../img/MuCr.png">
-		<html lang="en-UK">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<script src="../js/MuCr.js"></script>
-	</head>
+<html lang="en-UK">
 
-	<body class="stage3">
-		<nav class="sidebar">
-			<div>
-				<img src="../img/amy.jpg" alt="Profile picture" align="left">
-			</div>
+<head>
+	<meta charset="utf-8">
+	<title>MuCr - Concerts</title>
+	<link rel="stylesheet" href="../css/MuCr.css">
+	<link rel="shortcut icon" href="../img/MuCr.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="../js/MuCr.js"></script>
+</head>
 
-			<div class="sidebar_user">
-				jesusjimsa
-			</div>
-
-			<div class="ajustes">
-				<a id="blanco" href="MuCr_settings.html"><img src="../img/icons/settings.png" alt="Settings" align="left" height="25px">&nbsp;Settings</a>
-			</div>
-		</nav>
-
-		<div class="buscador">
-			<input type="text" class="casilla" value="search" onfocus="if (this.value=='search') this.value='';" onblur="if (this.value=='') this.value='search';" />
+<body class="stage3">
+	<nav class="sidebar">
+		<div>
+			<img src="../img/amy.jpg" alt="Profile picture" align="left">
 		</div>
 
-		<nav class="musica">
-			<div>
-				<div class="btn-group">
-					<a href="MuCr_main.html"><button class="boton-left1"><img src="../img/icons/music.jpg" align="left"> &nbsp;Music</button></a>
-					<button class="boton-right1_in"><img src="../img/icons/concierto.png" align="left"> &nbsp;Concerts</button>
-				</div>
-			</div>
-
-			<div class="collection">
-
-				<div class="dropdown">
-					<button onclick="myFunction()" class="dropbtn">Sorted by</button>
-					<div id="myDropdown" class="dropdown-content">
-						<div class="box">music style</div>
-						<div class="box">artists</div>
-						<div class="box">geographic location</div>
-						<div class="box">Deluxe</div>
-						</div>
-					</div>
-					<div class="orden">
-				<div class="genres">
-					Acoustic<br/>
-					Alternative<br/>
-					Punk<br/>
-					Blues<br/>
-					Classical<br/>
-					Country<br/>
-					Folk<br/>
-					<a id="blanco" href="MuCr_collection.html">Rock<br/></a>
-					Dance<br/>
-					Electronic<br/>
-					Easy Listening<br/>
-					Gospel<br/>
-					Religious<br/>
-					Rap<br/>
-					Holiday<br/>
-					Instrumental<br/>
-					Jazz<br/>
-					Latin<br/>
-					Metal<br/>
-					Moods<br/>
-					Other<br/>
-					Pop<br/>
-					R'n'B<br/>
-					Soundtrack<br/>
-					World<br/>
-				</div>
-			</div>
-			</div>
-		</nav>
-
-
-		<a href="MuCr_login.html">
-			<nav class="exit_sidebar">
-				Exit
-			</nav>
-		</a>
-
-		<div class="concert_title">
-			Concerts
+		<div class="sidebar_user">
+			jesusjimsa
 		</div>
 
-		<div class="milibreria_concerts">
+		<div class="ajustes">
+			<a id="blanco" href="MuCr_settings.html">
+				<img src="../img/icons/settings.png" alt="Settings" align="left" height="25px">&nbsp;Settings</a>
+		</div>
+	</nav>
+
+	<div class="buscador">
+		<input type="text" class="casilla" value="search" onfocus="if (this.value=='search') this.value='';" onblur="if (this.value=='') this.value='search';"
+		/>
+	</div>
+
+	<nav class="musica">
+		<div>
 			<div class="btn-group">
-				<a href="MuCr_concert_artist.html">
-					<button class="but_my_concerts">
-						<img src="../img/icons/tickets_icon.png" align="left"> &nbsp;My concerts
-					</button>
+				<a href="MuCr_main.html">
+					<button class="boton-left1">
+						<img src="../img/icons/music.jpg" align="left"> &nbsp;Music</button>
 				</a>
-				<a href="MuCr_concert_recom.html">
-					<button class="but_recom">
-						<img src="../img/icons/recommendation_icon.png" align="left"> &nbsp;Recommendations
-					</button>
-				</a>
-				<button class="but_near_in">
-					<img src="../img/icons/pushpin_icon.png" align="left"> &nbsp;Near
+				<button class="boton-right1_in">
+					<img src="../img/icons/concierto.png" align="left"> &nbsp;Concerts</button>
+			</div>
+		</div>
+
+		<div class="collection">
+
+			<div class="dropdown">
+				<button onclick="myFunction()" class="dropbtn">Sorted by</button>
+				<div id="myDropdown" class="dropdown-content">
+					<div class="box">music style</div>
+					<div class="box">artists</div>
+					<div class="box">geographic location</div>
+					<div class="box">Deluxe</div>
+				</div>
+			</div>
+			<div class="orden">
+				<div class="genres">
+					Acoustic
+					<br/> Alternative
+					<br/> Punk
+					<br/> Blues
+					<br/> Classical
+					<br/> Country
+					<br/> Folk
+					<br/>
+					<a id="blanco" href="MuCr_collection.html">Rock
+						<br/>
+					</a>
+					Dance
+					<br/> Electronic
+					<br/> Easy Listening
+					<br/> Gospel
+					<br/> Religious
+					<br/> Rap
+					<br/> Holiday
+					<br/> Instrumental
+					<br/> Jazz
+					<br/> Latin
+					<br/> Metal
+					<br/> Moods
+					<br/> Other
+					<br/> Pop
+					<br/> R'n'B
+					<br/> Soundtrack
+					<br/> World
+					<br/>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+
+	<a href="MuCr_login.html">
+		<nav class="exit_sidebar">
+			Exit
+		</nav>
+	</a>
+
+	<div class="concert_title">
+		Concerts
+	</div>
+
+	<div class="milibreria_concerts">
+		<div class="btn-group">
+			<a href="MuCr_concert_artist.html">
+				<button class="but_my_concerts">
+					<img src="../img/icons/tickets_icon.png" align="left"> &nbsp;My concerts
 				</button>
+			</a>
+			<a href="MuCr_concert_recom.html">
+				<button class="but_recom">
+					<img src="../img/icons/recommendation_icon.png" align="left"> &nbsp;Recommendations
+				</button>
+			</a>
+			<button class="but_near_in">
+				<img src="../img/icons/pushpin_icon.png" align="left"> &nbsp;Near
+			</button>
+		</div>
+	</div>
+
+	<div class="near_scroll">
+		<div class="concert">
+			<img src="../img/concerts/posters/bowie.jpg" alt="David Bowie">
+			<div class="name_artist">
+				David Bowie
+			</div>
+			<div class="location_date">
+				10 April 2018</br>
+				Cheapest: 80€
+			</div>
+			<div class="city_near">
+				<img src="../img/ciudades/iasi.jpg">
+				<div class="flag">
+					<img src="../img/flags/rom.png">
+				</div>
+				<div class="titulo">IASI</div>
+			</div>
+
+		</div>
+		<div class="concert">
+			<img src="../img/concerts/posters/McCartney.jpg" alt="Paul McCartney">
+			<div class="name_artist">
+				Paul McCartney
+			</div>
+			<div class="location_date">
+				29 May 2018</br>
+				Cheapest: 80€
+			</div>
+			<div class="city_near">
+				<img src="../img/ciudades/budapest.jpg">
+				<div class="flag">
+					<img src="../img/flags/hun.jpg">
+				</div>
+				<div class="titulo">BUDAPEST</div>
 			</div>
 		</div>
-
-		<div class="near_scroll">
-			<div class="concert">
-				<img src="../img/concerts/posters/bowie.jpg" alt="David Bowie">
-				<div class="name_artist">
-					David Bowie
-				</div>
-				<div class="location_date">
-					10 April 2018</br>
-					Cheapest: 80€
-				</div>
-				<div class="city_near"><img src="../img/ciudades/iasi.jpg">
-					<div class="flag"><img src="../img/flags/rom.png"></div>
-					<div class="titulo">IASI</div>
-				</div>
-
+		<div class="concert">
+			<img src="../img/concerts/posters/foo_fighters.jpg" alt="Foo Fighters">
+			<div class="name_artist">
+				Foo Fighters
 			</div>
-			<div class="concert">
-				<img src="../img/concerts/posters/McCartney.jpg" alt="Paul McCartney">
-				<div class="name_artist">
-					Paul McCartney
-				</div>
-				<div class="location_date">
-					29 May 2018</br>
-					Cheapest: 80€
-				</div>
-				<div class="city_near"><img src="../img/ciudades/budapest.jpg">
-					<div class="flag"><img src="../img/flags/hun.jpg"></div>
-					<div class="titulo">BUDAPEST</div>
-				</div>
+			<div class="location_date">
+				16 June 2018</br>
+				Cheapest: 80€
 			</div>
-			<div class="concert">
-				<img src="../img/concerts/posters/foo_fighters.jpg" alt="Foo Fighters">
-				<div class="name_artist">
-					Foo Fighters
+			<div class="city_near">
+				<img src="../img/ciudades/Bucuresti.jpg">
+				<div class="flag">
+					<img src="../img/flags/rom.png">
 				</div>
-				<div class="location_date">
-					16 June 2018</br>
-					Cheapest: 80€
-				</div>
-				<div class="city_near"><img src="../img/ciudades/Bucuresti.jpg">
-					<div class="flag"><img src="../img/flags/rom.png"></div>
-					<div class="titulo">BUCHAREST</div>
-				</div>
-			</div>
-			<div class="concert">
-				<img src="../img/concerts/posters/rolling_stones.jpg" alt="The Rolling Stones">
-				<div class="name_artist">
-					The Rolling Stones
-				</div>
-				<div class="location_date">
-					18 June 2018</br>
-					Cheapest: 80€
-				</div>
-				<div class="city_near"><img src="../img/ciudades/cluj.jpg">
-					<div class="flag"><img src="../img/flags/rom.png"></div>
-					<div class="titulo">CLUJ</div>
-				</div>
-			</div>
-			<div class="concert">
-				<img src="../img/concerts/posters/general.jpg" alt="Basic">
-				<div class="name_artist">
-					Paco paquez
-				</div>
-				<div class="location_date">
-					5 August 2018</br>
-					Cheapest: 2€
-				</div>
-				<div class="city_near"><img src="../img/ciudades/chisinau.jpg">
-					<div class="flag"><img src="../img/flags/mol.png"></div>
-					<div class="titulo">CHISINAU</div>
-				</div>
+				<div class="titulo">BUCHAREST</div>
 			</div>
 		</div>
+		<div class="concert">
+			<img src="../img/concerts/posters/rolling_stones.jpg" alt="The Rolling Stones">
+			<div class="name_artist">
+				The Rolling Stones
+			</div>
+			<div class="location_date">
+				18 June 2018</br>
+				Cheapest: 80€
+			</div>
+			<div class="city_near">
+				<img src="../img/ciudades/cluj.jpg">
+				<div class="flag">
+					<img src="../img/flags/rom.png">
+				</div>
+				<div class="titulo">CLUJ</div>
+			</div>
+		</div>
+		<div class="concert">
+			<img src="../img/concerts/posters/general.jpg" alt="Basic">
+			<div class="name_artist">
+				Paco paquez
+			</div>
+			<div class="location_date">
+				5 August 2018</br>
+				Cheapest: 2€
+			</div>
+			<div class="city_near">
+				<img src="../img/ciudades/chisinau.jpg">
+				<div class="flag">
+					<img src="../img/flags/mol.png">
+				</div>
+				<div class="titulo">CHISINAU</div>
+			</div>
+		</div>
+	</div>
 
-	</body>
+</body>
 
 </html>

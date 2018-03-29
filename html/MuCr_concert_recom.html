@@ -1,173 +1,183 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title>MuCr - Concerts</title>
-		<link rel="stylesheet" href="../css/MuCr.css">
-		<link rel="shortcut icon" href="../img/MuCr.png">
-		<html lang="en-UK">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<script src="../js/MuCr.js"></script>
-	</head>
+<html lang="en-UK">
 
-	<body class="stage3">
-		<nav class="sidebar">
-			<div>
-				<img src="../img/amy.jpg" alt="Profile picture" align="left">
-			</div>
+<head>
+	<meta charset="utf-8">
+	<title>MuCr - Concerts</title>
+	<link rel="stylesheet" href="../css/MuCr.css">
+	<link rel="shortcut icon" href="../img/MuCr.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="../js/MuCr.js"></script>
+</head>
 
-			<div class="sidebar_user">
-				jesusjimsa
-			</div>
-
-			<div class="ajustes">
-				<a id="blanco" href="MuCr_settings.html"><img src="../img/icons/settings.png" alt="Settings" align="left" height="25px">&nbsp;Settings</a>
-			</div>
-		</nav>
-
-		<div class="buscador">
-			<input type="text" class="casilla" value="search" onfocus="if (this.value=='search') this.value='';" onblur="if (this.value=='') this.value='search';" />
+<body class="stage3">
+	<nav class="sidebar">
+		<div>
+			<img src="../img/amy.jpg" alt="Profile picture" align="left">
 		</div>
 
-		<nav class="musica">
-			<div>
-				<div class="btn-group">
-					<a href="MuCr_main.html"><button class="boton-left1"><img src="../img/icons/music.jpg" align="left"> &nbsp;Music</button></a>
-					<button class="boton-right1_in"><img src="../img/icons/concierto.png" align="left"> &nbsp;Concerts</button>
-				</div>
-			</div>
-
-			<div class="collection">
-
-				<div class="dropdown">
-					<button onclick="myFunction()" class="dropbtn">Sorted by</button>
-					<div id="myDropdown" class="dropdown-content">
-						<div class="box">music style</div>
-						<div class="box">artists</div>
-						<div class="box">geographic location</div>
-						<div class="box">Deluxe</div>
-						</div>
-					</div>
-					<div class="orden">
-				<div class="genres">
-					Acoustic<br/>
-					Alternative<br/>
-					Punk<br/>
-					Blues<br/>
-					Classical<br/>
-					Country<br/>
-					Folk<br/>
-					<a id="blanco" href="MuCr_collection.html">Rock<br/></a>
-					Dance<br/>
-					Electronic<br/>
-					Easy Listening<br/>
-					Gospel<br/>
-					Religious<br/>
-					Rap<br/>
-					Holiday<br/>
-					Instrumental<br/>
-					Jazz<br/>
-					Latin<br/>
-					Metal<br/>
-					Moods<br/>
-					Other<br/>
-					Pop<br/>
-					R'n'B<br/>
-					Soundtrack<br/>
-					World<br/>
-				</div>
-			</div>
-			</div>
-		</nav>
-
-
-		<a href="MuCr_login.html">
-			<nav class="exit_sidebar">
-				Exit
-			</nav>
-		</a>
-
-		<div class="concert_title">
-			Concerts
+		<div class="sidebar_user">
+			jesusjimsa
 		</div>
 
-		<div class="milibreria_concerts">
+		<div class="ajustes">
+			<a id="blanco" href="MuCr_settings.html">
+				<img src="../img/icons/settings.png" alt="Settings" align="left" height="25px">&nbsp;Settings</a>
+		</div>
+	</nav>
+
+	<div class="buscador">
+		<input type="text" class="casilla" value="search" onfocus="if (this.value=='search') this.value='';" onblur="if (this.value=='') this.value='search';"
+		/>
+	</div>
+
+	<nav class="musica">
+		<div>
 			<div class="btn-group">
-				<a href="MuCr_concert_artist.html">
-					<button class="but_my_concerts">
-						<img src="../img/icons/tickets_icon.png" align="left"> &nbsp;My concerts
-					</button>
+				<a href="MuCr_main.html">
+					<button class="boton-left1">
+						<img src="../img/icons/music.jpg" align="left"> &nbsp;Music</button>
 				</a>
-				<button class="but_recom_in">
-					<img src="../img/icons/recommendation_icon.png" align="left"> &nbsp;Recommendations
-				</button>
-				<a href="MuCr_concert_near.html">
-					<button class="but_near">
-						<img src="../img/icons/pushpin_icon.png" align="left"> &nbsp;Near
-					</button>
-				</a>
+				<button class="boton-right1_in">
+					<img src="../img/icons/concierto.png" align="left"> &nbsp;Concerts</button>
 			</div>
 		</div>
 
-		<div class="grid-recommendation">
-			<div class="item1">
-				<div class="artist_name">Audioslave</div>
+		<div class="collection">
+
+			<div class="dropdown">
+				<button onclick="myFunction()" class="dropbtn">Sorted by</button>
+				<div id="myDropdown" class="dropdown-content">
+					<div class="box">music style</div>
+					<div class="box">artists</div>
+					<div class="box">geographic location</div>
+					<div class="box">Deluxe</div>
+				</div>
 			</div>
-			<div class="item2">
-				<div class="artist_name">Blink-182</div>
+			<div class="orden">
+				<div class="genres">
+					Acoustic
+					<br/> Alternative
+					<br/> Punk
+					<br/> Blues
+					<br/> Classical
+					<br/> Country
+					<br/> Folk
+					<br/>
+					<a id="blanco" href="MuCr_collection.html">Rock
+						<br/>
+					</a>
+					Dance
+					<br/> Electronic
+					<br/> Easy Listening
+					<br/> Gospel
+					<br/> Religious
+					<br/> Rap
+					<br/> Holiday
+					<br/> Instrumental
+					<br/> Jazz
+					<br/> Latin
+					<br/> Metal
+					<br/> Moods
+					<br/> Other
+					<br/> Pop
+					<br/> R'n'B
+					<br/> Soundtrack
+					<br/> World
+					<br/>
+				</div>
 			</div>
-			<div class="item3">
-				<div class="artist_name">My Chemical Romance</div>
-			</div>
-				<a href="MuCr_Concerts.html">
+		</div>
+	</nav>
+
+
+	<a href="MuCr_login.html">
+		<nav class="exit_sidebar">
+			Exit
+		</nav>
+	</a>
+
+	<div class="concert_title">
+		Concerts
+	</div>
+
+	<div class="milibreria_concerts">
+		<div class="btn-group">
+			<a href="MuCr_concert_artist.html">
+				<button class="but_my_concerts">
+					<img src="../img/icons/tickets_icon.png" align="left"> &nbsp;My concerts
+				</button>
+			</a>
+			<button class="but_recom_in">
+				<img src="../img/icons/recommendation_icon.png" align="left"> &nbsp;Recommendations
+			</button>
+			<a href="MuCr_concert_near.html">
+				<button class="but_near">
+					<img src="../img/icons/pushpin_icon.png" align="left"> &nbsp;Near
+				</button>
+			</a>
+		</div>
+	</div>
+
+	<div class="grid-recommendation">
+		<div class="item1">
+			<div class="artist_name">Audioslave</div>
+		</div>
+		<div class="item2">
+			<div class="artist_name">Blink-182</div>
+		</div>
+		<div class="item3">
+			<div class="artist_name">My Chemical Romance</div>
+		</div>
+		<a href="MuCr_Concerts.html">
 			<div class="item4">
 				<div class="artist_name">Coldplay</div>
 			</div>
-			</a>
-			<div class="item5">
-				<div class="artist_name">Imagine Dragons</div>
-			</div>
-			<div class="item6">
-				<div class="artist_name">Evanescence</div>
-			</div>
-			<div class="item7">
-				<div class="artist_name">Fall Out Boy</div>
-			</div>
-			<div class="item8">
-				<div class="artist_name">OK GO</div>
-			</div>
-			<div class="item9">
-				<div class="artist_name">Gorillaz</div>
-			</div>
-			<div class="item10">
-				<div class="artist_name">Hoobastank</div>
-			</div>
-			<div class="item11">
-				<div class="artist_name">The Killers</div>
-			</div>
-			<div class="item12">
-				<div class="artist_name">Linkin Park</div>
-			</div>
-			<div class="item13">
-				<div class="artist_name">Maroon 5</div>
-			</div>
-			<div class="item14">
-				<div class="artist_name">Paramore</div>
-			</div>
-			<div class="item15">
-				<div class="artist_name">Twenty One Pilots</div>
-			</div>
-			<div class="item16">
-				<div class="artist_name">Slipknot</div>
-			</div>
-			<div class="item17">
-				<div class="artist_name">The White Stripes</div>
-			</div>
-			<div class="item18">
-				<div class="artist_name">ZZ Top</div>
-			</div>
+		</a>
+		<div class="item5">
+			<div class="artist_name">Imagine Dragons</div>
 		</div>
+		<div class="item6">
+			<div class="artist_name">Evanescence</div>
+		</div>
+		<div class="item7">
+			<div class="artist_name">Fall Out Boy</div>
+		</div>
+		<div class="item8">
+			<div class="artist_name">OK GO</div>
+		</div>
+		<div class="item9">
+			<div class="artist_name">Gorillaz</div>
+		</div>
+		<div class="item10">
+			<div class="artist_name">Hoobastank</div>
+		</div>
+		<div class="item11">
+			<div class="artist_name">The Killers</div>
+		</div>
+		<div class="item12">
+			<div class="artist_name">Linkin Park</div>
+		</div>
+		<div class="item13">
+			<div class="artist_name">Maroon 5</div>
+		</div>
+		<div class="item14">
+			<div class="artist_name">Paramore</div>
+		</div>
+		<div class="item15">
+			<div class="artist_name">Twenty One Pilots</div>
+		</div>
+		<div class="item16">
+			<div class="artist_name">Slipknot</div>
+		</div>
+		<div class="item17">
+			<div class="artist_name">The White Stripes</div>
+		</div>
+		<div class="item18">
+			<div class="artist_name">ZZ Top</div>
+		</div>
+	</div>
 
-	</body>
+</body>
 
 </html>

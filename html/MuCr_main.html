@@ -1,218 +1,338 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title>MuCr</title>
-		<link rel="stylesheet" href="../css/MuCr.css">
-		<link rel="shortcut icon" href="../img/MuCr.png">
-		<html lang="en-UK">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<script src="../js/MuCr.js"></script>
-	</head>
-	<body class="stage5">
-		<nav class="sidebar">
-			<div>
-				<img src="../img/amy.jpg" alt="Profile picture" align="left">
-			</div>
+<html lang="en-UK">
 
-			<div class="sidebar_user">
-				jesusjimsa
-			</div>
+<head>
+	<meta charset="utf-8">
+	<title>MuCr</title>
+	<link rel="stylesheet" href="../css/MuCr.css">
+	<link rel="shortcut icon" href="../img/MuCr.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="../js/MuCr.js"></script>
+</head>
 
-			<div class="ajustes">
-				<a id="blanco" href="MuCr_settings.html"><img src="../img/icons/settings.png" alt="Settings" align="left" height="25px">&nbsp;Settings</a>
-			</div>
-		</nav>
-
-		<div class="buscador">
-			<input type="text" class="casilla" value="search" onfocus="if (this.value=='search') this.value='';" onblur="if (this.value=='') this.value='search';" />
+<body class="stage5">
+	<nav class="sidebar">
+		<div>
+			<img src="../img/amy.jpg" alt="Profile picture" align="left">
 		</div>
 
-		<nav class="musica">
-			<div>
-				<div class="btn-group">
-					<button class="boton-left1_in"><img src="../img/icons/music.jpg" align="left"> &nbsp;Music</button>
-	 				<a href="MuCr_concert_artist.html"><button class="boton-right1"><img src="../img/icons/concierto.png" align="left"> &nbsp;Concerts</button></a>
-	 			</div>
+		<div class="sidebar_user">
+			jesusjimsa
+		</div>
+
+		<div class="ajustes">
+			<a id="blanco" href="MuCr_settings.html">
+				<img src="../img/icons/settings.png" alt="Settings" align="left" height="25px">&nbsp;Settings</a>
+		</div>
+	</nav>
+
+	<div class="buscador">
+		<input type="text" class="casilla" value="search" onfocus="if (this.value=='search') this.value='';" onblur="if (this.value=='') this.value='search';"
+		/>
+	</div>
+
+	<nav class="musica">
+		<div>
+			<div class="btn-group">
+				<button class="boton-left1_in">
+					<img src="../img/icons/music.jpg" align="left"> &nbsp;Music</button>
+				<a href="MuCr_concert_artist.html">
+					<button class="boton-right1">
+						<img src="../img/icons/concierto.png" align="left"> &nbsp;Concerts</button>
+				</a>
 			</div>
+		</div>
 
-			<div class="collection">
+		<div class="collection">
 
-				<div class="dropdown">
- 					<button onclick="myFunction()" class="dropbtn">Sorted by</button>
- 					<div id="myDropdown" class="dropdown-content">
-	 					<div class="box">music style</div>
-					 	<div class="box">artists</div>
-						<div class="box">geographic location</div>
- 						</div>
-					</div>
-					<div class="orden">
+			<div class="dropdown">
+				<button onclick="myFunction()" class="dropbtn">Sorted by</button>
+				<div id="myDropdown" class="dropdown-content">
+					<div class="box">music style</div>
+					<div class="box">artists</div>
+					<div class="box">geographic location</div>
+				</div>
+			</div>
+			<div class="orden">
 				<div class="genres">
-					Acoustic<br/>
-					Alternative<br/>
-					Punk<br/>
-					Blues<br/>
-					Classical<br/>
-					Country<br/>
-					Folk<br/>
-					<a id="blanco" href="MuCr_collection.html">Rock<br/></a>
-					Dance<br/>
-					Electronic<br/>
-					Easy Listening<br/>
-					Gospel<br/>
-					Religious<br/>
-					Rap<br/>
-					Holiday<br/>
-					Instrumental<br/>
-					Jazz<br/>
-					Latin<br/>
-					Metal<br/>
-					Moods<br/>
-					Other<br/>
-					Pop<br/>
-					R'n'B<br/>
-					Soundtrack<br/>
-					World<br/>
+					Acoustic
+					<br/> Alternative
+					<br/> Punk
+					<br/> Blues
+					<br/> Classical
+					<br/> Country
+					<br/> Folk
+					<br/>
+					<a id="blanco" href="MuCr_collection.html">Rock
+						<br/>
+					</a>
+					Dance
+					<br/> Electronic
+					<br/> Easy Listening
+					<br/> Gospel
+					<br/> Religious
+					<br/> Rap
+					<br/> Holiday
+					<br/> Instrumental
+					<br/> Jazz
+					<br/> Latin
+					<br/> Metal
+					<br/> Moods
+					<br/> Other
+					<br/> Pop
+					<br/> R'n'B
+					<br/> Soundtrack
+					<br/> World
+					<br/>
 				</div>
 			</div>
-			</div>
+		</div>
+	</nav>
+
+	<a href="MuCr_login.html">
+		<nav class="exit_sidebar">
+			Exit
 		</nav>
+	</a>
 
-		<a href="MuCr_login.html">
-			<nav class="exit_sidebar">
-				Exit
-			</nav>
+	<div class="genre_main">Recommendations</div>
+
+	<div class="row_main">
+		<div class="recom1">
+			<img src="../img/covers/Rock/Berry.png">
+			<div class="close">
+				<img src="../img/icons/close.png" alt="close">
+			</div>
+			<div class="add">
+				<img src="../img/icons/add.png" alt="add">
+			</div>
+			<div class="love">
+				<img src="../img/icons/heart.png" alt="love">
+			</div>
+		</div>
+		<div class="recom1">
+			<img src="../img/covers/Rock/Abbey.jpg">
+			<div class="close">
+				<img src="../img/icons/close.png" alt="close">
+			</div>
+			<div class="add">
+				<img src="../img/icons/add.png" alt="add">
+			</div>
+			<div class="love">
+				<img src="../img/icons/heart.png" alt="love">
+			</div>
+		</div>
+		<div class="recom1">
+			<img src="../img/covers/Rock/acdc.jpg">
+			<div class="close">
+				<img src="../img/icons/close.png" alt="close">
+			</div>
+			<div class="add">
+				<img src="../img/icons/add.png" alt="add">
+			</div>
+			<div class="love">
+				<img src="../img/icons/heart.png" alt="love">
+			</div>
+		</div>
+		<div class="recom1">
+			<img src="../img/covers/Rock/pfloyd.jpg">
+			<div class="close">
+				<img src="../img/icons/close.png" alt="close">
+			</div>
+			<div class="add">
+				<img src="../img/icons/add.png" alt="add">
+			</div>
+			<div class="love">
+				<img src="../img/icons/heart.png" alt="love">
+			</div>
+		</div>
+		<div class="recom1">
+			<img src="../img/covers/Rock/scorpion.jpg">
+			<div class="close">
+				<img src="../img/icons/close.png" alt="close">
+			</div>
+			<div class="add">
+				<img src="../img/icons/add.png" alt="add">
+			</div>
+			<div class="love">
+				<img src="../img/icons/heart.png" alt="love">
+			</div>
+		</div>
+		<div class="recom1">
+			<img src="../img/covers/Rock/europe.jpg">
+			<div class="close">
+				<img src="../img/icons/close.png" alt="close">
+			</div>
+			<div class="add">
+				<img src="../img/icons/add.png" alt="add">
+			</div>
+			<div class="love">
+				<img src="../img/icons/heart.png" alt="love">
+			</div>
+		</div>
+	</div>
+
+	<div class="genre_main">Jazz</div>
+
+	<div class="row_main">
+		<div class="recom1">
+			<img src="../img/covers/Jazz/Best.jpg">
+			<div class="close">
+				<img src="../img/icons/close.png" alt="close">
+			</div>
+			<div class="add">
+				<img src="../img/icons/add.png" alt="add">
+			</div>
+			<div class="love">
+				<img src="../img/icons/heart.png" alt="love">
+			</div>
+		</div>
+		<div class="recom1">
+			<img src="../img/covers/Jazz/Illusion.jpg">
+			<div class="close">
+				<img src="../img/icons/close.png" alt="close">
+			</div>
+			<div class="add">
+				<img src="../img/icons/add.png" alt="add">
+			</div>
+			<div class="love">
+				<img src="../img/icons/heart.png" alt="love">
+			</div>
+		</div>
+		<div class="recom1">
+			<img src="../img/covers/Jazz/Joy.jpg">
+			<div class="close">
+				<img src="../img/icons/close.png" alt="close">
+			</div>
+			<div class="add">
+				<img src="../img/icons/add.png" alt="add">
+			</div>
+			<div class="love">
+				<img src="../img/icons/heart.png" alt="love">
+			</div>
+		</div>
+		<div class="recom1">
+			<img src="../img/covers/Jazz/Krall.jpg">
+			<div class="close">
+				<img src="../img/icons/close.png" alt="close">
+			</div>
+			<div class="add">
+				<img src="../img/icons/add.png" alt="add">
+			</div>
+			<div class="love">
+				<img src="../img/icons/heart.png" alt="love">
+			</div>
+		</div>
+		<div class="recom1">
+			<img src="../img/covers/Jazz/Nagula.jpg">
+			<div class="close">
+				<img src="../img/icons/close.png" alt="close">
+			</div>
+			<div class="add">
+				<img src="../img/icons/add.png" alt="add">
+			</div>
+			<div class="love">
+				<img src="../img/icons/heart.png" alt="love">
+			</div>
+		</div>
+		<div class="recom1">
+			<img src="../img/covers/Jazz/Nothing.jpg">
+			<div class="close">
+				<img src="../img/icons/close.png" alt="close">
+			</div>
+			<div class="add">
+				<img src="../img/icons/add.png" alt="add">
+			</div>
+			<div class="love">
+				<img src="../img/icons/heart.png" alt="love">
+			</div>
+		</div>
+	</div>
+
+	<div class="genre_main">Pop</div>
+
+	<div class="row_main">
+		<div class="recom1">
+			<img src="../img/covers/Pop/Adele.png">
+			<div class="close">
+				<img src="../img/icons/close.png" alt="close">
+			</div>
+			<div class="add">
+				<img src="../img/icons/add.png" alt="add">
+			</div>
+			<div class="love">
+				<img src="../img/icons/heart.png" alt="love">
+			</div>
+		</div>
+		<div class="recom1">
+			<img src="../img/covers/Pop/Corra.jpg">
+			<div class="close">
+				<img src="../img/icons/close.png" alt="close">
+			</div>
+			<div class="add">
+				<img src="../img/icons/add.png" alt="add">
+			</div>
+			<div class="love">
+				<img src="../img/icons/heart.png" alt="love">
+			</div>
+		</div>
+		<div class="recom1">
+			<img src="../img/covers/Pop/Jukebox.png">
+			<div class="close">
+				<img src="../img/icons/close.png" alt="close">
+			</div>
+			<div class="add">
+				<img src="../img/icons/add.png" alt="add">
+			</div>
+			<div class="love">
+				<img src="../img/icons/heart.png" alt="love">
+			</div>
+		</div>
+		<div class="recom1">
+			<img src="../img/covers/Pop/Tell.jpg">
+			<div class="close">
+				<img src="../img/icons/close.png" alt="close">
+			</div>
+			<div class="add">
+				<img src="../img/icons/add.png" alt="add">
+			</div>
+			<div class="love">
+				<img src="../img/icons/heart.png" alt="love">
+			</div>
+		</div>
+		<div class="recom1">
+			<img src="../img/covers/Pop/Witness.jpg">
+			<div class="close">
+				<img src="../img/icons/close.png" alt="close">
+			</div>
+			<div class="add">
+				<img src="../img/icons/add.png" alt="add">
+			</div>
+			<div class="love">
+				<img src="../img/icons/heart.png" alt="love">
+			</div>
+		</div>
+		<div class="recom1">
+			<img src="../img/covers/Pop/Divide.jpg">
+			<div class="close">
+				<img src="../img/icons/close.png" alt="close">
+			</div>
+			<div class="add">
+				<img src="../img/icons/add.png" alt="add">
+			</div>
+			<div class="love">
+				<img src="../img/icons/heart.png" alt="love">
+			</div>
+		</div>
+	</div>
+
+	<div class="btn-group">
+		<a href="MuCr_mymusic.html">
+			<button class="button_studio">
+				&nbsp;Your Studio
+			</button>
 		</a>
+	</div>
+</body>
 
-		<div class="genre_main">Recommendations</div>
-		
-		<div class="row_main">
-			<div class="recom1">
-				<img src="../img/covers/Rock/Berry.png">
-				<div class="close"><img src="../img/icons/close.png" alt="close"></div>
-				<div class="add"><img src="../img/icons/add.png" alt="add"></div>
-				<div class="love"><img src="../img/icons/heart.png" alt="love"></div>
-			</div>
-			<div class="recom1">
-				<img src="../img/covers/Rock/Abbey.jpg">
-				<div class="close"><img src="../img/icons/close.png" alt="close"></div>
-				<div class="add"><img src="../img/icons/add.png" alt="add"></div>
-				<div class="love"><img src="../img/icons/heart.png" alt="love"></div>
-			</div>
-			<div class="recom1">
-				<img src="../img/covers/Rock/acdc.jpg">
-				<div class="close"><img src="../img/icons/close.png" alt="close"></div>
-				<div class="add"><img src="../img/icons/add.png" alt="add"></div>
-				<div class="love"><img src="../img/icons/heart.png" alt="love"></div>
-			</div>
-			<div class="recom1">
-				<img src="../img/covers/Rock/pfloyd.jpg">
-				<div class="close"><img src="../img/icons/close.png" alt="close"></div>
-				<div class="add"><img src="../img/icons/add.png" alt="add"></div>
-				<div class="love"><img src="../img/icons/heart.png" alt="love"></div>
-			</div>
-			<div class="recom1">
-				<img src="../img/covers/Rock/scorpion.jpg">
-				<div class="close"><img src="../img/icons/close.png" alt="close"></div>
-				<div class="add"><img src="../img/icons/add.png" alt="add"></div>
-				<div class="love"><img src="../img/icons/heart.png" alt="love"></div>
-			</div>
-			<div class="recom1">
-				<img src="../img/covers/Rock/europe.jpg">
-				<div class="close"><img src="../img/icons/close.png" alt="close"></div>
-				<div class="add"><img src="../img/icons/add.png" alt="add"></div>
-				<div class="love"><img src="../img/icons/heart.png" alt="love"></div>
-			</div>
-		</div>
-
-		<div class="genre_main">Jazz</div>
-
-		<div class="row_main">
-				<div class="recom1">
-					<img src="../img/covers/Jazz/Best.jpg">
-					<div class="close"><img src="../img/icons/close.png" alt="close"></div>
-					<div class="add"><img src="../img/icons/add.png" alt="add"></div>
-					<div class="love"><img src="../img/icons/heart.png" alt="love"></div>
-				</div>
-				<div class="recom1">
-					<img src="../img/covers/Jazz/Illusion.jpg">
-					<div class="close"><img src="../img/icons/close.png" alt="close"></div>
-					<div class="add"><img src="../img/icons/add.png" alt="add"></div>
-					<div class="love"><img src="../img/icons/heart.png" alt="love"></div>
-				</div>
-				<div class="recom1">
-					<img src="../img/covers/Jazz/Joy.jpg">
-					<div class="close"><img src="../img/icons/close.png" alt="close"></div>
-					<div class="add"><img src="../img/icons/add.png" alt="add"></div>
-					<div class="love"><img src="../img/icons/heart.png" alt="love"></div>
-				</div>
-				<div class="recom1">
-					<img src="../img/covers/Jazz/Krall.jpg">
-					<div class="close"><img src="../img/icons/close.png" alt="close"></div>
-					<div class="add"><img src="../img/icons/add.png" alt="add"></div>
-					<div class="love"><img src="../img/icons/heart.png" alt="love"></div>
-				</div>
-				<div class="recom1">
-						<img src="../img/covers/Jazz/Nagula.jpg">
-					<div class="close"><img src="../img/icons/close.png" alt="close"></div>
-					<div class="add"><img src="../img/icons/add.png" alt="add"></div>
-					<div class="love"><img src="../img/icons/heart.png" alt="love"></div>
-				</div>
-				<div class="recom1">
-					<img src="../img/covers/Jazz/Nothing.jpg">
-					<div class="close"><img src="../img/icons/close.png" alt="close"></div>
-					<div class="add"><img src="../img/icons/add.png" alt="add"></div>
-					<div class="love"><img src="../img/icons/heart.png" alt="love"></div>
-				</div>
-		</div>
-
-		<div class="genre_main">Pop</div>
-
-		<div class="row_main">
-				<div class="recom1">
-					<img src="../img/covers/Pop/Adele.png">
-					<div class="close"><img src="../img/icons/close.png" alt="close"></div>
-					<div class="add"><img src="../img/icons/add.png" alt="add"></div>
-					<div class="love"><img src="../img/icons/heart.png" alt="love"></div>
-				</div>
-				<div class="recom1">
-					<img src="../img/covers/Pop/Corra.jpg">
-					<div class="close"><img src="../img/icons/close.png" alt="close"></div>
-					<div class="add"><img src="../img/icons/add.png" alt="add"></div>
-					<div class="love"><img src="../img/icons/heart.png" alt="love"></div>
-				</div>
-				<div class="recom1">
-					<img src="../img/covers/Pop/Jukebox.png">
-					<div class="close"><img src="../img/icons/close.png" alt="close"></div>
-					<div class="add"><img src="../img/icons/add.png" alt="add"></div>
-					<div class="love"><img src="../img/icons/heart.png" alt="love"></div>
-				</div>
-				<div class="recom1">
-					<img src="../img/covers/Pop/Tell.jpg">
-					<div class="close"><img src="../img/icons/close.png" alt="close"></div>
-					<div class="add"><img src="../img/icons/add.png" alt="add"></div>
-					<div class="love"><img src="../img/icons/heart.png" alt="love"></div>
-				</div>
-				<div class="recom1">
-					<img src="../img/covers/Pop/Witness.jpg">
-					<div class="close"><img src="../img/icons/close.png" alt="close"></div>
-					<div class="add"><img src="../img/icons/add.png" alt="add"></div>
-					<div class="love"><img src="../img/icons/heart.png" alt="love"></div>
-				</div>
-				<div class="recom1">
-					<img src="../img/covers/Pop/Divide.jpg">
-					<div class="close"><img src="../img/icons/close.png" alt="close"></div>
-					<div class="add"><img src="../img/icons/add.png" alt="add"></div>
-					<div class="love"><img src="../img/icons/heart.png" alt="love"></div>
-				</div>
-		</div>
-
-		<div class="btn-group">
-			<a href="MuCr_mymusic.html">
-				<button class="button_studio">
-					&nbsp;Your Studio
-				</button>
-			</a>
-		</div>
-	</body>
 </html>
