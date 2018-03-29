@@ -234,6 +234,10 @@
 	font-weight:bold
 }
 
+.sidebar_principal img{
+	float: left;
+}
+
 .sidebar_user{
 	position: relative;
 	text-align: center;
