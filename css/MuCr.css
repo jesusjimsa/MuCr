@@ -75,6 +75,10 @@
 	border-radius: 0px 200px 200px 0px;
 }
 
+.btn-group .boton-right1 img{
+	float: left;
+}
+
 .btn-group .boton-right1_in{
 	border-radius: 0px 200px 200px 0px;
 	background-color: #FFFFFF;
@@ -89,6 +93,15 @@
 	border-radius: 200px 0px 0px 200px;
 	background-color: #FFFFFF;
 	color:blue;
+	/* background-image: url("../img/icons/music.jpg");
+	background-repeat: no-repeat;
+	background-position: left;
+	padding-left: 2px;
+	padding-right: 2px; */
+}
+
+.btn-group .boton-left1_in img{
+	float: left;
 }
 
 .btn-group .boton-right2{
@@ -258,6 +271,11 @@
 	line-height: 20px;
 }
 
+.sidebar .ajustes img{
+	height: 25px;
+	float: left;
+}
+
 .sidebar{
 	background-color: rgba(77, 77, 77, 0.90);
 	border-radius: 0px 28px 28px 0px;
@@ -276,6 +294,7 @@
 	max-height: 30%;
 	border-radius: 200px 200px 200px 200px;
 	bottom:auto;
+	float: left;
 }
 
 .musica .principal{
@@ -690,7 +709,7 @@
 	opacity: 1;
 }
 
-#blanco{
+.blanco{
 	color:#197fa3;
 }
 
