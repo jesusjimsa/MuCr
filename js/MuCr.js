@@ -34,7 +34,7 @@ function fondoBody() {
 	var numero = Math.floor(Math.random() * fondos.length)
 	cambiarnombre(numero)
 	var image = fondos[numero]
-	
+
 	document.body.style.backgroundImage = "url(" + image + ")";
 	document.body.style.backgroundRepeat = "no-repeat";
 	document.body.style.backgroundSize = "cover";
