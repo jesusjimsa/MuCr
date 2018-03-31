@@ -13,7 +13,7 @@
 <body class="stage3">
 	<nav class="sidebar">
 		<div>
-			<img src="../img/amy.jpg" alt="Profile picture" align="left">
+			<img src="../img/amy.jpg" alt="Profile picture" >
 		</div>
 
 		<div class="sidebar_user">
@@ -21,8 +21,8 @@
 		</div>
 
 		<div class="ajustes">
-			<a id="blanco" href="MuCr_settings.html">
-				<img src="../img/icons/settings.png" alt="Settings" align="left" height="25px">&nbsp;Settings</a>
+			<a class="blanco" href="MuCr_settings.html">
+				<img src="../img/icons/settings.png" alt="Settings">&nbsp;Settings</a>
 		</div>
 	</nav>
 
@@ -34,12 +34,12 @@
 	<nav class="musica">
 		<div>
 			<div class="btn-group">
-				<a href="MuCr_main.html">
-					<button class="boton-left1">
-						<img src="../img/icons/music.jpg" align="left"> &nbsp;Music</button>
-				</a>
+
+					<button class="boton-left1" onclick="window.location.href='MuCr_main.html'">
+						<img src="../img/icons/music.jpg" alt="music_icon" > &nbsp;Music</button>
+
 				<button class="boton-right1_in">
-					<img src="../img/icons/concierto.png" align="left"> &nbsp;Concerts</button>
+					<img src="../img/icons/concierto.png" alt="concert_icon"> &nbsp;Concerts</button>
 			</div>
 		</div>
 
@@ -64,7 +64,7 @@
 					<br/> Country
 					<br/> Folk
 					<br/>
-					<a id="blanco" href="MuCr_collection.html">Rock
+					<a class="blanco" href="MuCr_collection.html">Rock
 						<br/>
 					</a>
 					Dance
@@ -103,19 +103,20 @@
 
 	<div class="milibreria_concerts">
 		<div class="btn-group">
-			<a href="MuCr_concert_artist.html">
-				<button class="but_my_concerts">
-					<img src="../img/icons/tickets_icon.png" align="left"> &nbsp;My concerts
+
+				<button class="but_my_concerts" onclick="window.location.href='MuCr_concert_artist.html'">
+					<img src="../img/icons/tickets_icon.png"  alt="tickets_icon"> &nbsp;My concerts
 				</button>
-			</a>
+
+
 			<button class="but_recom_in">
-				<img src="../img/icons/recommendation_icon.png" align="left"> &nbsp;Recommendations
+				<img src="../img/icons/recommendation_icon.png" alt="recomendation_icon"> &nbsp;Recommendations
 			</button>
-			<a href="MuCr_concert_near.html">
-				<button class="but_near">
-					<img src="../img/icons/pushpin_icon.png" align="left"> &nbsp;Near
+
+				<button class="but_near" onclick="window.location.href='MuCr_concert_near.html'">
+					<img src="../img/icons/pushpin_icon.png"  alt="pushpin_icon"> &nbsp;Near
 				</button>
-			</a>
+
 		</div>
 	</div>
 
