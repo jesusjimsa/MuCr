@@ -1648,7 +1648,7 @@ float:left;
 	overflow-x: hidden;
 }
 
-#deletesong{
+.deletesong{
 	position: absolute;
 	background-color: red;
 	color:white;
@@ -1773,12 +1773,12 @@ float:left;
 	margin-bottom: 1%;
 }
 
-#tiempo{
+.tiempo{
 	position:absolute;
 	right:35%;
 }
 
-#centrado{
+.centrado{
 	position:relative;
 	border-radius: 28px 28px 28px 28px;
 	top:2%;
