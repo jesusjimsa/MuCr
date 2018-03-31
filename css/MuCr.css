@@ -85,6 +85,10 @@
 	color:blue;
 }
 
+.btn-group .boton-right1_in img{
+	float: left;
+}
+
 .btn-group .boton-left1{
 	border-radius: 200px 0px 0px 200px;
 }
@@ -133,11 +137,18 @@
 	background-color: #FFFFFF;
 	color:blue;
 }
+.btn-group .but_my_concerts_in img{
+	float:left;
+}
 
 .btn-group .but_recom{
 	position: relative;
 	top: 7.5px;
 	right: 1.5px;
+}
+.btn-group .but_recom img{
+float:left;
+
 }
 
 .btn-group .but_recom_in{
@@ -147,7 +158,9 @@
 	background-color: #FFFFFF;
 	color:blue;
 }
-
+.btn-group .but_recom_in img{
+float:left;
+}
 .btn-group .but_near_in{
 	border-radius: 0px 28px 0px 0px;
 	position: relative;
@@ -156,14 +169,18 @@
 	background-color: #FFFFFF;
 	color:blue;
 }
-
+.btn-group .but_near_in img{
+float:left;
+}
 .btn-group .but_near{
 	border-radius: 0px 28px 0px 0px;
 	position: relative;
 	bottom: 26px;
 	left: 285px;
 }
-
+.btn-group .but_near img{
+float:left;
+}
 .boton{
 	color:white;
 	border-radius: 200px 200px 200px 200px;
@@ -271,6 +288,10 @@
 	line-height: 20px;
 }
 
+.sidebar .ajustes .blanco{
+	color:#197fa3;
+}
+
 .sidebar .ajustes img{
 	height: 25px;
 	float: left;
@@ -367,6 +388,9 @@
 	text-align: center;
 }
 
+.musica .collection .orden .genres .blanco{
+	color:#197fa3;
+}
 .musica img{
 	max-width: 20%;
 	max-height: 20%;
@@ -709,9 +733,6 @@
 	opacity: 1;
 }
 
-.blanco{
-	color:#197fa3;
-}
 
 /*solo funciona en Chrome*/
 ::-webkit-scrollbar-track{
