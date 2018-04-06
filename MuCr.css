@@ -47,15 +47,15 @@
 
 #info{
 	background-color: rgba(77, 77, 77, 0.90);
-	position: fixed;
+	position: absolute;
 	right:0px;
-	height:1%;
-	width: 20%;
-	padding: 1%;
+	height:5px;
+	width: 250px;
+	padding: 20px;
 	margin: 0px;
-	bottom:5%;
+	bottom:20px;
 	color: #FFFFFF;
-	font-size: 0.75vw;
+	font-size: 10px;
 	font-family:monospace;
 }
 
@@ -63,14 +63,11 @@
 .casilla{
 	position: relative;
 	border-color: blue;
-	border-width: 0.25vw;
 	right:20%;
 	left:0%;
 	padding: 3%;
-	width: 13vw;
-	height: 2vh;
+	width: 95%;
 	text-align: center;
-	font-size: 1.2vmin;
 }
 
 /********** Buttons **********/
@@ -186,19 +183,14 @@ float:left;
 }
 .boton{
 	color:white;
-	border-radius: 20vw 20vw 20vw 20vw;
+	border-radius: 200px 200px 200px 200px;
 	position: relative;
 	border-color: blue;
-	border-width: 0.15vw;
 	background-color: blue;
 	padding: 3%;
-	width: 15vw;
-	height:4vh;
-	font-size: 1vw;
+	width: 99%;
 }
-.musica p{
-font-size: 1vw;
-}
+
 .btn-group button {
 	font-family: monospace;
 	font-weight: bold;
@@ -265,52 +257,15 @@ font-size: 1vw;
 
 /********** Sidebar **********/
 .sidebar_principal{
-	position: absolute;
+	text-align: center;
 	color: #FFFFFF;
 	font-size: 400%;
 	font-family:monospace;
 	font-weight:bold
 }
 
-.sidebar_principal .encabezado{
-position: fixed;
-left:0.25%;
-top:3%;
-max-width: 90%;
-max-height: 90%;
-width:15%;
-height:11%;
-}
-
-.sidebar_principal .imagen {
-	position:fixed;
-	top:3.5%;
-	left:0.5%;
-	width:5%;
-	height: 10%;
-	max-width: 100%;
-	max-height: 100%;
-}
-
-.sidebar_principal .titulo {
-	position:fixed;
-	top:3.5%;
-	left:6%;
-	padding-left: 1%;
-	width:10%;
-	height: 10%;
-	max-width: 100%;
-	max-height: 100%;
-	font-size: 2vw;
-	padding-top: 1.5%;
-}
-
-
-.sidebar_principal .imagen img{
-min-width: 100%;
-max-width: 100%;
-min-height: 100%;
-max-height: 100%;
+.sidebar_principal img{
+	float: left;
 }
 
 .sidebar_user{
@@ -344,7 +299,7 @@ max-height: 100%;
 
 .sidebar{
 	background-color: rgba(77, 77, 77, 0.90);
-	border-radius: 0px 2vw 2vw 0px;
+	border-radius: 0px 28px 28px 0px;
 	position: fixed;
 	left:0%;
 	height:10%;
@@ -352,7 +307,6 @@ max-height: 100%;
 	padding: 1%;
 	margin: 0%;
 	top:2%;
-	font-size:8px;
 }
 
 .sidebar img{
@@ -367,26 +321,10 @@ max-height: 100%;
 .musica .principal{
 	text-align: center;
 	color: #FFFFFF;
-	font-size: 1vw;
+	font-size: 100%;
 	font-family:monospace;
 	font-weight:bold;
-	position: relative;
-	height: 90%;
-	width:100%;
-	max-width:100%;
-	max-height: 90%;
 }
-.musica .principal h1{
-	top:0vw;
-	font-size: 3vmin;
-	position: relative;
-}
-.musica .principal p{
-
-	font-size: 2vmin;
-	position: relative;
-}
-
 
 .exit_sidebar{
 	position: fixed;
@@ -460,12 +398,11 @@ max-height: 100%;
 
 .musica{
 	background-color: rgba(77, 77, 77, 0.97);
-	border-radius: 0px 2vw 2vw 0px;
+	border-radius: 0px 28px 28px 0px;
 	position: fixed;
 	left:0%;
-	width: 15vw;
+	width: 15%;
 	padding: 1%;
-	height: 70vh;
 	margin: 0%;
 	top:20%;
 	bottom:10%;
