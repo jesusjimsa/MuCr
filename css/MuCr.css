@@ -67,7 +67,7 @@
 	right:20%;
 	left:0%;
 	padding: 3%;
-	width: 13vw;
+	width: 70%;
 	height: 2vh;
 	text-align: center;
 	font-size: 1.2vmin;
@@ -191,8 +191,9 @@ float:left;
 	border-color: blue;
 	border-width: 0.15vw;
 	background-color: blue;
-	padding: 3%;
-	width: 15vw;
+	padding-bottom: 1%;
+	padding-top: 1%;
+	width: 90%;
 	height:4vh;
 	font-size: 1vw;
 }
@@ -281,7 +282,18 @@ max-height: 90%;
 width:15%;
 height:11%;
 }
-
+@media all and (max-width: 600px){
+.sidebar_principal .imagen {
+	position:fixed;
+	top:2.95%;
+	left:1.5%;
+	width:10%;
+	height: 10%;
+	max-width: 100%;
+	max-height: 100%;
+}
+}
+@media all and (min-width: 600px){
 .sidebar_principal .imagen {
 	position:fixed;
 	top:3.5%;
@@ -291,11 +303,26 @@ height:11%;
 	max-width: 100%;
 	max-height: 100%;
 }
-
+}
+@media all and (max-width: 600px){
 .sidebar_principal .titulo {
-	position:fixed;
-	top:3.5%;
-	left:6%;
+	position:relative;
+	top:25%;
+	left:90%;
+	padding-left: 1%;
+	width:10%;
+	height: 10%;
+	max-width: 100%;
+	max-height: 100%;
+	font-size: 4vw;
+	padding-top: 1.5%;
+}
+}
+@media all and (min-width: 600px){
+.sidebar_principal .titulo {
+	position:relative;
+	top:30%;
+	left:40%;
 	padding-left: 1%;
 	width:10%;
 	height: 10%;
@@ -304,7 +331,7 @@ height:11%;
 	font-size: 2vw;
 	padding-top: 1.5%;
 }
-
+}
 
 .sidebar_principal .imagen img{
 min-width: 100%;
@@ -342,19 +369,34 @@ max-height: 100%;
 	float: left;
 }
 
-.sidebar{
-	background-color: rgba(77, 77, 77, 0.90);
-	border-radius: 0px 2vw 2vw 0px;
-	position: fixed;
-	left:0%;
-	height:10%;
-	width: 15%;
-	padding: 1%;
-	margin: 0%;
-	top:2%;
-	font-size:8px;
+@media all and (max-width: 600px){
+	.sidebar{
+		background-color: rgba(77, 77, 77, 0.90);
+		border-radius: 0px 2vw 2vw 0px;
+		position: fixed;
+		left:0%;
+		height:10%;
+		width: 35%;
+		padding: 1%;
+		margin: 0%;
+		top:2%;
+		font-size:8px;
+	}
 }
-
+@media all and (min-width: 600px){
+	.sidebar{
+		background-color: rgba(77, 77, 77, 0.90);
+		border-radius: 0px 2vw 2vw 0px;
+		position: fixed;
+		left:0%;
+		height:10%;
+		width: 15%;
+		padding: 1%;
+		margin: 0%;
+		top:2%;
+		font-size:8px;
+	}
+}
 .sidebar img{
 	position: relative;
 	max-width: 30%;
@@ -458,19 +500,34 @@ max-height: 100%;
 	max-height: 20%;
 }
 
-.musica{
-	background-color: rgba(77, 77, 77, 0.97);
-	border-radius: 0px 2vw 2vw 0px;
-	position: fixed;
-	left:0%;
-	width: 15vw;
-	padding: 1%;
-	height: 70vh;
-	margin: 0%;
-	top:20%;
-	bottom:10%;
+@media all and (max-width: 600px){
+	.musica{
+		background-color: rgba(77, 77, 77, 0.97);
+		border-radius: 0px 2vw 2vw 0px;
+		position: fixed;
+		left:0%;
+		width: 35vw;
+		padding: 1%;
+		height: 70vh;
+		margin: 0%;
+		top:20%;
+		bottom:10%;
+	}
 }
-
+@media all and (min-width: 600px){
+	.musica{
+		background-color: rgba(77, 77, 77, 0.97);
+		border-radius: 0px 2vw 2vw 0px;
+		position: fixed;
+		left:0%;
+		width: 15vw;
+		padding: 1%;
+		height: 70vh;
+		margin: 0%;
+		top:20%;
+		bottom:10%;
+	}
+}
 /********** Settings **********/
 .orgrupo{
 	position:fixed;
