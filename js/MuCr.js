@@ -6,7 +6,7 @@ function myFunction() {
 
 // Close the dropdown menu if the user clicks outside of it
 window.onclick = function (event) {
-	if (!event.target.matches('.dropbtn')) {
+	if (!event.target.matches(".dropbtn")) {
 
 		var dropdowns = document.getElementsByClassName("dropdown-content");
 		var i;
@@ -14,8 +14,8 @@ window.onclick = function (event) {
 		for (i = 0; i < dropdowns.length; i++) {
 			var openDropdown = dropdowns[i];
 
-			if (openDropdown.classList.contains('show')) {
-				openDropdown.classList.remove('show');
+			if (openDropdown.classList.contains("show")) {
+				openDropdown.classList.remove("show");
 			}
 		}
 	}
@@ -40,4 +40,79 @@ function fondoBody() {
 	document.body.style.backgroundSize = "cover";
 	document.body.style.backgroundPosition = "bottom center";
 	document.body.style.backgroundAttachment = "fixed";
+}
+
+
+
+//FUncion para poner nuevos albumes y nuevos estilos
+function elegiralbum(){
+var sol="<img src=\"img/covers/Jazz/Best.jpg\" alt=\"Album cover\">";
+return sol
+}
+
+
+
+function pintarcuadrado(numeroC){
+	var sol=""
+	while(numeroC>0){
+	sol=sol+"<div class=\"recom1\">"
+	+elegiralbum()
+	+"<div class=\"close\">"+
+	"<img src=\"img/icons/close.png\" alt=\"close\">"
+	+"</div>"+
+	"<div class=\"add\">"
+	+"<img src=\"img/icons/add.png\" alt=\"add\">"+
+	"</div>"+
+	"<div class=\"love\">"+
+	"<img src=\"img/icons/heart.png\" alt=\"love\">"+
+	"</div>"+
+	"</div>";
+	numeroC--
+}
+return sol;
+}
+
+
+function pintarlista(numero,numeroC){
+		var documento=document.getElementsByClassName("contenedor");
+		while(numero>0){
+				document.innerHTML="<div class=\"fila\">"+
+				"<div class=\"title\">TITULO</div>"+
+				"<div class=\"row_main\">"+
+											pintarcuadrado(numeroC)
+											+"</div>"+
+											"</div>"+
+											"</div>"
+				;
+
+		numero--
+	}
+
+
+}
+
+
+
+
+function listas(){
+	var contenedor_height= document.getElementsByClassName("contenedor").offsetHeigh;
+	var fila_height= document.getElementsByClassName("fila").offsetHeigh;
+	var fila_margin=document.getElementByByClassName("fila").style.marginTop;
+	var fila_size=fila_height+fila_margin;
+	var i;var tam=0;
+	for (i = 0; i <contenedor_height;i=i+fila_size) {
+			tam++;
+	}
+	var tam1=0;
+	var fila_width= document.getElementsByClassName("fila").offsetWidth;
+	var recom_margin=document.getElementByByClassName("recom1").style.marginRight;
+	var recom_wiwdth=document.getElementByByClassName("recom1").style.offsetWidth;
+	var recom_size=recom_margin+recom_wiwdth;
+	for (i = 0; i <fila_width;i=i+recom_size) {
+			tam1++;
+	}
+
+	pintarlista(tam,tam1);
+
+
 }
