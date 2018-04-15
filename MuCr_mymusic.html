@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>MuCr - Your Studio</title>
+	<link rel="stylesheet" href="MuCr.css">
+	<link rel="shortcut icon" href="img/MuCr.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="../js/MuCr.js"></script>
+</head>
+
+<body class="stage6">
+	<nav class="sidebar">
+		<div>
+			<img src="img/amy.jpg" alt="Profile picture">
+		</div>
+
+		<div class="sidebar_user">
+			jesusjimsa
+		</div>
+
+		<div class="ajustes">
+			<a class="blanco" href="MuCr_settings.html">
+				<img src="img/icons/settings.png" alt="Settings">&nbsp;Settings</a>
+		</div>
+	</nav>
+
+	<div class="buscador">
+		<input type="text" class="casilla" value="search" onfocus="if (this.value=='search') this.value='';" onblur="if (this.value=='') this.value='search';"
+		/>
+	</div>
+
+	<nav class="musica">
+		<div>
+			<div class="btn-group">
+
+					<button class="boton-left1_in" onclick="window.location.href='MuCr_main.html'">
+						<img src="img/icons/music.jpg" alt="music_icon"> &nbsp;Music</button>
+
+
+					<button class="boton-right1"  onclick="window.location.href='MuCr_concert_artist.html'">
+						<img src="img/icons/concierto.png" alt="concert_icon"> &nbsp;Concerts</button>
+
+			</div>
+		</div>
+
+		<div class="collection">
+
+			<div class="dropdown">
+				<button onclick="myFunction()" class="dropbtn">Sorted by</button>
+				<div id="myDropdown" class="dropdown-content">
+					<div class="box">music style</div>
+					<div class="box">artists</div>
+					<div class="box">geographic location</div>
+					<div class="box">Deluxe</div>
+				</div>
+			</div>
+			<div class="orden">
+				<div class="genres">
+					Acoustic
+					<br/> Alternative
+					<br/> Punk
+					<br/> Blues
+					<br/> Classical
+					<br/> Country
+					<br/> Folk
+					<br/>
+					<a class="blanco" href="MuCr_collection.html">Rock
+						<br/>
+					</a>
+					Dance
+					<br/> Electronic
+					<br/> Easy Listening
+					<br/> Gospel
+					<br/> Religious
+					<br/> Rap
+					<br/> Holiday
+					<br/> Instrumental
+					<br/> Jazz
+					<br/> Latin
+					<br/> Metal
+					<br/> Moods
+					<br/> Other
+					<br/> Pop
+					<br/> R'n'B
+					<br/> Soundtrack
+					<br/> World
+					<br/>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+
+	<a href="index.html">
+		<nav class="exit_sidebar">
+			Exit
+		</nav>
+	</a>
+
+	<div class="genre">
+		Your Studio
+	</div>
+	<div class="mitad_izq">
+		<div class="centrado">Your Contributions</div>
+		<div class="newstudio">
+			<img src="img/amaral/amaral.jpg" alt="grupo">
+			<div class="listado">
+				<ul>
+					<li><h1>Estrellas en el mar1</h1></li>
+					<li>Sin ti no soy nada
+						<span class="tiempo">3:45</span>
+						<button class="deletesong">delete song</button>
+					</li>
+					<li>Te necesito
+						<span class="tiempo">3:45</span>
+						<button class="deletesong">delete song</button>
+					</li>
+					<li>Toda la noche en la calle
+						<span class="tiempo">3:45</span>
+						<button class="deletesong">delete song</button>
+					</li>
+					<li>Moriría por vos
+						<span class="tiempo">3:45</span>
+						<button class="deletesong">delete song</button>
+					</li>
+					<li>Estrella de mar
+						<span class="tiempo">3:45</span>
+						<button class="deletesong">delete song</button>
+					</li>
+					<li>Salir corriendo
+						<span class="tiempo">3:45</span>
+						<button class="deletesong">delete song</button>
+					</li>
+					<li>Sin ti no soy nada
+						<span class="tiempo">3:45</span>
+						<button class="deletesong">delete song</button>
+					</li>
+					<li>Te necesito
+						<span class="tiempo">3:45</span>
+						<button class="deletesong">delete song</button>
+					</li>
+					<li>Toda la noche en la calle
+						<span class="tiempo">3:45</span>
+						<button class="deletesong">delete song</button>
+					</li>
+					<li>Moriría por vos
+						<span class="tiempo">3:45</span>
+						<button class="deletesong">delete song</button>
+					</li>
+					<li>Estrella de mar
+						<span class="tiempo">3:45</span>
+						<button class="deletesong">delete song</button>
+					</li>
+					<li>Salir corriendo
+						<span class="tiempo">3:45</span>
+						<button class="deletesong">delete song</button>
+					</li>
+					<li>
+							<button class="addsong" onclick="window.location.href='MuCr_mymusic_addsongs.html'">add a song</button>
+
+					</li>
+				</ul>
+
+			</div>
+			<button class="deletealbum">Delete album</button>
+		</div>
+
+		<div class="newstudio">
+			<img src="img/amaral/amaral2.jpg"  alt="album">
+			<div class="listado">
+				<ul>
+					<li><h1>Estrellas en el mar2</h1></li>
+					<li>Sin ti no soy nada
+						<span class="tiempo">3:45</span>
+						<button class="deletesong">delete song</button>
+					</li>
+					<li>Te necesito
+						<span class="tiempo">3:45</span>
+						<button class="deletesong">delete song</button>
+					</li>
+					<li>Toda la noche en la calle
+						<span class="tiempo">3:45</span>
+						<button class="deletesong">delete song</button>
+					</li>
+					<li>Moriría por vos
+						<span class="tiempo">3:45</span>
+						<button class="deletesong">delete song</button>
+					</li>
+					<li>Estrella de mar
+						<span class="tiempo">3:45</span>
+						<button class="deletesong">delete song</button>
+					</li>
+					<li>Salir corriendo
+						<span class="tiempo">3:45</span>
+						<button class="deletesong">delete song</button>
+					</li>
+					<li>Sin ti no soy nada
+						<span class="tiempo">3:45</span>
+						<button class="deletesong">delete song</button>
+					</li>
+					<li>Te necesito
+						<span class="tiempo">3:45</span>
+						<button class="deletesong">delete song</button>
+					</li>
+					<li>Toda la noche en la calle
+						<span class="tiempo">3:45</span>
+						<button class="deletesong">delete song</button>
+					</li>
+					<li>Moriría por vos
+						<span class="tiempo">3:45</span>
+						<button class="deletesong">delete song</button>
+					</li>
+					<li>Estrella de mar
+						<span class="tiempo">3:45</span>
+						<button class="deletesong">delete song</button>
+					</li>
+					<li>Salir corriendo
+						<span class="tiempo">3:45</span>
+						<button class="deletesong">delete song</button>
+					</li>
+					<li>
+
+							<button class="addsong" onclick="window.location.href='MuCr_mymusic_addsongs.html'">add a song</button>
+
+					</li>
+				</ul>
+
+			</div>
+			<button class="deletealbum">Delete album</button>
+		</div>
+		<div class="newstudio">
+			<img src="img/amaral/amaral3.jpg"  alt="album">
+			<div class="listado">
+				<ul>
+					<li><h1>Estrellas en el mar3</h1></li>
+					<li>Sin ti no soy nada
+						<span class="tiempo">3:45</span>
+						<button class="deletesong">delete song</button>
+					</li>
+					<li>Te necesito
+						<span class="tiempo">3:45</span>
+						<button class="deletesong">delete song</button>
+					</li>
+					<li>Toda la noche en la calle
+						<span class="tiempo">3:45</span>
+						<button class="deletesong">delete song</button>
+					</li>
+					<li>Moriría por vos
+						<span class="tiempo">3:45</span>
+						<button class="deletesong">delete song</button>
+					</li>
+					<li>Estrella de mar
+						<span class="tiempo">3:45</span>
+						<button class="deletesong">delete song</button>
+					</li>
+					<li>Salir corriendo
+						<span class="tiempo">3:45</span>
+						<button class="deletesong">delete song</button>
+					</li>
+					<li>Sin ti no soy nada
+						<span class="tiempo">3:45</span>
+						<button class="deletesong">delete song</button>
+					</li>
+					<li>Te necesito
+						<span class="tiempo">3:45</span>
+						<button class="deletesong">delete song</button>
+					</li>
+					<li>Toda la noche en la calle
+						<span class="tiempo">3:45</span>
+						<button class="deletesong">delete song</button>
+					</li>
+					<li>Moriría por vos
+						<span class="tiempo">3:45</span>
+						<button class="deletesong">delete song</button>
+					</li>
+					<li>Estrella de mar
+						<span class="tiempo">3:45</span>
+						<button class="deletesong">delete song</button>
+					</li>
+					<li>Salir corriendo
+						<span class="tiempo">3:45</span>
+						<button class="deletesong">delete song</button>
+					</li>
+					<li>
+
+							<button class="addsong" onclick="window.location.href='MuCr_mymusic_addsongs.html'">add a song</button>
+
+					</li>
+				</ul>
+
+			</div>
+			<button class="deletealbum">Delete album</button>
+		</div>
+		<div class="newstudio">
+			<img src="img/amaral/amaral4.jpg" alt="album">
+			<div class="listado">
+				<ul>
+					<li><h1>Estrellas en el mar4</h1></li>
+					<li>Sin ti no soy nada
+						<span class="tiempo">3:45</span>
+						<button class="deletesong">delete song</button>
+					</li>
+					<li>Te necesito
+						<span class="tiempo">3:45</span>
+						<button class="deletesong">delete song</button>
+					</li>
+					<li>Toda la noche en la calle
+						<span class="tiempo">3:45</span>
+						<button class="deletesong">delete song</button>
+					</li>
+					<li>Moriría por vos
+						<span class="tiempo">3:45</span>
+						<button class="deletesong">delete song</button>
+					</li>
+					<li>Estrella de mar
+						<span class="tiempo">3:45</span>
+						<button class="deletesong">delete song</button>
+					</li>
+					<li>Salir corriendo
+						<span class="tiempo">3:45</span>
+						<button class="deletesong">delete song</button>
+					</li>
+					<li>Sin ti no soy nada
+						<span class="tiempo">3:45</span>
+						<button class="deletesong">delete song</button>
+					</li>
+					<li>Te necesito
+						<span class="tiempo">3:45</span>
+						<button class="deletesong">delete song</button>
+					</li>
+					<li>Toda la noche en la calle
+						<span class="tiempo">3:45</span>
+						<button class="deletesong">delete song</button>
+					</li>
+					<li>Moriría por vos
+						<span class="tiempo">3:45</span>
+						<button class="deletesong">delete song</button>
+					</li>
+					<li>Estrella de mar
+						<span class="tiempo">3:45</span>
+						<button class="deletesong">delete song</button>
+					</li>
+					<li>Salir corriendo
+						<span class="tiempo">3:45</span>
+						<button class="deletesong">delete song</button>
+					</li>
+					<li>
+							<button class="addsong" onclick="window.location.href='MuCr_mymusic_addsongs.html'">add a song</button>
+					</li>
+				</ul>
+
+			</div>
+			<button class="deletealbum">Delete album</button>
+		</div>
+		<div class="newstudio">
+			<img src="img/amaral/amaral5.jpg"  alt="album">
+			<div class="listado">
+				<ul>
+					<li><h1>Estrellas en el mar5</h1></li>
+					<li>Sin ti no soy nada
+						<span class="tiempo">3:45</span>
+						<button class="deletesong">delete song</button>
+					</li>
+					<li>Te necesito
+						<span class="tiempo">3:45</span>
+						<button class="deletesong">delete song</button>
+					</li>
+					<li>Toda la noche en la calle
+						<span class="tiempo">3:45</span>
+						<button class="deletesong">delete song</button>
+					</li>
+					<li>Moriría por vos
+						<span class="tiempo">3:45</span>
+						<button class="deletesong">delete song</button>
+					</li>
+					<li>Estrella de mar
+						<span class="tiempo">3:45</span>
+						<button class="deletesong">delete song</button>
+					</li>
+					<li>Salir corriendo
+						<span class="tiempo">3:45</span>
+						<button class="deletesong">delete song</button>
+					</li>
+					<li>Sin ti no soy nada
+						<span class="tiempo">3:45</span>
+						<button class="deletesong">delete song</button>
+					</li>
+					<li>Te necesito
+						<span class="tiempo">3:45</span>
+						<button class="deletesong">delete song</button>
+					</li>
+					<li>Toda la noche en la calle
+						<span class="tiempo">3:45</span>
+						<button class="deletesong">delete song</button>
+					</li>
+					<li>Moriría por vos
+						<span class="tiempo">3:45</span>
+						<button class="deletesong">delete song</button>
+					</li>
+					<li>Estrella de mar
+						<span class="tiempo">3:45</span>
+						<button class="deletesong">delete song</button>
+					</li>
+					<li>Salir corriendo
+						<span class="tiempo">3:45</span>
+						<button class="deletesong">delete song</button>
+					</li>
+					<li>
+
+							<button class="addsong" onclick="window.location.href='MuCr_mymusic_addsongs.html'">add a song</button>
+
+				</ul>
+
+			</div>
+			<button class="deletealbum">Delete album</button>
+		</div>
+	</div>
+	<div class="mitad_dcha">
+		<div class="centrado">Upload a new album</div>
+		<div class="abajo">
+			The Title of the album:
+			<input type=text class="casilla1">
+		</div>
+		<div class="abajo">
+			Select a Cover:
+			<input type="file">
+		</div>
+		<div class="abajo">
+
+				<button class="Addasong" onclick="window.location.href='MuCr_mymusic_addsongs.html'">Add Songs</button>
+
+		</div>
+		<div class="abajototal">
+			<ul>
+				<li>Sin ti no soy nada
+					<span class="tiempo">3:45</span>
+					<button class="deletesong">delete song</button>
+				</li>
+				<li>Te necesito
+					<span class="tiempo">3:45</span>
+					<button class="deletesong">delete song</button>
+				</li>
+				<li>Toda la noche en la calle
+					<span class="tiempo">3:45</span>
+					<button class="deletesong">delete song</button>
+				</li>
+				<li>Moriría por vos
+					<span class="tiempo">3:45</span>
+					<button class="deletesong">delete song</button>
+				</li>
+				<li>Estrella de mar
+					<span class="tiempo">3:45</span>
+					<button class="deletesong">delete song</button>
+				</li>
+				<li>Salir corriendo
+					<span class="tiempo">3:45</span>
+					<button class="deletesong">delete song</button>
+				</li>
+				<li>Sin ti no soy nada
+					<span class="tiempo">3:45</span>
+					<button class="deletesong">delete song</button>
+				</li>
+				<li>Te necesito
+					<span class="tiempo">3:45</span>
+					<button class="deletesong">delete song</button>
+				</li>
+				<li>Toda la noche en la calle
+					<span class="tiempo">3:45</span>
+					<button class="deletesong">delete song</button>
+				</li>
+				<li>Moriría por vos
+					<span class="tiempo">3:45</span>
+					<button class="deletesong">delete song</button>
+				</li>
+				<li>Estrella de mar
+					<span class="tiempo">3:45</span>
+					<button class="deletesong">delete song</button>
+				</li>
+				<li>Salir corriendo
+					<span class="tiempo">3:45</span>
+					<button class="deletesong">delete song</button>
+				</li>
+			</ul>
+
+		</div>
+		<button class="submit">Submit </button>
+	</div>
+</body>
+
+</html>

@@ -22,7 +22,7 @@ window.onclick = function (event) {
 }
 
 
-var fondos = ["../img/backgrounds/welcome/fondo1.jpg", "../img/backgrounds/welcome/fondo2.jpg", "../img/backgrounds/welcome/fondo3.jpg", "../img/backgrounds/welcome/fondo4.jpg", "../img/backgrounds/welcome/fondo5.jpg", "../img/backgrounds/welcome/fondo6.jpg",]
+var fondos = ["img/backgrounds/welcome/fondo1.jpg", "img/backgrounds/welcome/fondo2.jpg", "img/backgrounds/welcome/fondo3.jpg", "img/backgrounds/welcome/fondo4.jpg", "img/backgrounds/welcome/fondo5.jpg", "img/backgrounds/welcome/fondo6.jpg",]
 var informa = ["Palau de la Música Catalana, Spain", "Teatro Romano de Mérida, Spain", "Dreambeach Festival in Almeria, Spain", "Tomorrowland in BOOM, Belgica", "Opera House in Sydney, Australia", "Opera House in Vienna, Austria","Ultra miami, Florida"]
 
 function cambiarnombre(numero) {
