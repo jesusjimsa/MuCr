@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+id="fila"<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -10,38 +10,35 @@
 	<script src="js/MuCr.js"></script>
 </head>
 
-<body class="stage5">
+<body class="stage5"  onload="listas()">
 	<nav class="sidebar">
-		<div>
-			<img src="img/amy.jpg" alt="Profile picture">
-		</div>
-
-		<div class="sidebar_user">
-			jesusjimsa
-		</div>
-
-		<div class="ajustes">
-			<a class="blanco" href="MuCr_settings.html">
-				<img src="img/icons/settings.png" alt="Settings">&nbsp;Settings</a>
-		</div>
+			<div class="user">
+					<div class="imagen">  <img src="img/amy.jpg" alt="Profile picture"></div>
+					<div class="titulo">jesusjimsa</div>
+			</div>
+				<a class="blanco" href="MuCr_settings.html">
+			<div class="options">
+					<img src="img/icons/settings.png" alt="Settings">Ajustes
+			</div>
+			</a>
 	</nav>
 
 	<div class="buscador">
-		<input type="text" class="casilla" value="search" onfocus="if (this.value=='search') this.value='';" onblur="if (this.value=='') this.value='search';"
+		<input type="text" class="casillaES" value="search" onfocus="if (this.value=='search') this.value='';" onblur="if (this.value=='') this.value='search';"
 		/>
 	</div>
 
 	<nav class="musica">
-		<div>
-			<div class="btn-group">
-				<button class="boton-left1_in">
-					<img src="img/icons/music.jpg" alt="Music icon"> &nbsp;Music</button>
-
-					<button class="boton-right1" onclick="window.location.href='MuCr_concert_artist.html'">
-						<img src="img/icons/concierto.png" alt="Concert icon"> &nbsp;Concerts</button>
+		<a href="MuCr_main.html	">
+			<div class="boton_derecha">
+					<img src="img/icons/music.jpg" alt="Music icon">Music
 			</div>
-		</div>
-
+		</a>
+		<a href="MuCr_concert_artist.html">
+			<div class="boton_izquierda">
+					  <img src="img/icons/concierto.png" alt="Concert icon">Concerts
+			</div>
+		</a>
 		<div class="collection">
 
 			<div class="dropdown">
@@ -53,38 +50,30 @@
 				</div>
 			</div>
 			<div class="orden">
-				<div class="genres">
-					Acoustic
-					<br/> Alternative
-					<br/> Punk
-					<br/> Blues
-					<br/> Classical
-					<br/> Country
-					<br/> Folk
-					<br/>
-					<a class="blanco" href="MuCr_collection.html">Rock
-						<br/>
-					</a>
-					Dance
-					<br/> Electronic
-					<br/> Easy Listening
-					<br/> Gospel
-					<br/> Religious
-					<br/> Rap
-					<br/> Holiday
-					<br/> Instrumental
-					<br/> Jazz
-					<br/> Latin
-					<br/> Metal
-					<br/> Moods
-					<br/> Other
-					<br/> Pop
-					<br/> R'n'B
-					<br/> Soundtrack
-					<br/> World
-					<br/>
-				</div>
-			</div>
+					<div class="especialized">Alternative</div>
+					<div class="especialized">Punk</div>
+					<a class="blanco" href="MuCr_collection.html"><div class="especialized">Rock</div></a>
+					<div class="especialized"> Blues</div>
+				 <div class="especialized"> Classical</div>
+				 <div class="especialized"> Country</div>
+				  <div class="especialized">Folk</div>
+					<div class="especialized">Dance</div>
+					<div class="especialized"> Electronic</div>
+				<div class="especialized"> Easy Listening</div>
+					<div class="especialized"> Gospel</div>
+					<div class="especialized"> Religious</div>
+				<div class="especialized"> Rap</div>
+					<div class="especialized"> Holiday</div>
+					<div class="especialized"> Instrumental</div>
+					<div class="especialized"> Jazz</div>
+				<div class="especialized"> Latin</div>
+					<div class="especialized"> Metal</div>
+				<div class="especialized"> Moods</div>
+					<div class="especialized"> Pop</div>
+					<div class="especialized"> Other</div>
+					<div class="especialized"> R'n'B</div>
+					<div class="especialized"> Soundtrack</div>
+					<div class="especialized"> World</div>
 		</div>
 	</nav>
 
@@ -93,91 +82,12 @@
 			<img src="img/icons/close.png" alt="close">
 		</nav>
 	</a>
-		<div class="contenedor" onLoad="javascript:listas();">
-			<div class="contenedor">
-			  <div class="fila">
-			      <div class="title">TIRULO</div>
-			      <div class="row_main">
-			        <div class="recom1">
-			          <img src="img/covers/Jazz/Best.jpg" alt="Album cover">
-			          <div class="close">
-			            <img src="img/icons/close.png" alt="close">
-			          </div>
-			          <div class="add">
-			            <img src="img/icons/add.png" alt="add">
-			          </div>
-			          <div class="love">
-			            <img src="img/icons/heart.png" alt="love">
-			          </div>
-			        </div>
-			        <div class="recom1">
-			          <img src="img/covers/Jazz/Illusion.jpg" alt="Album cover">
-			          <div class="close">
-			            <img src="img/icons/close.png" alt="close">
-			          </div>
-			          <div class="add">
-			            <img src="img/icons/add.png" alt="add">
-			          </div>
-			          <div class="love">
-			            <img src="img/icons/heart.png" alt="love">
-			          </div>
-			        </div>
-			        <div class="recom1">
-			          <img src="img/covers/Jazz/Joy.jpg" alt="Album cover">
-			          <div class="close">
-			            <img src="img/icons/close.png" alt="close">
-			          </div>
-			          <div class="add">
-			            <img src="img/icons/add.png" alt="add">
-			          </div>
-			          <div class="love">
-			            <img src="img/icons/heart.png" alt="love">
-			          </div>
-			        </div>
-			        <div class="recom1">
-			          <img src="img/covers/Jazz/Krall.jpg" alt="Album cover">
-			          <div class="close">
-			            <img src="img/icons/close.png" alt="close">
-			          </div>
-			          <div class="add">
-			            <img src="img/icons/add.png" alt="add">
-			          </div>
-			          <div class="love">
-			            <img src="img/icons/heart.png" alt="love">
-			          </div>
-			        </div>
-			        <div class="recom1">
-			          <img src="img/covers/Jazz/Nagula.jpg" alt="Album cover">
-			          <div class="close">
-			            <img src="img/icons/close.png" alt="close">
-			          </div>
-			          <div class="add">
-			            <img src="img/icons/add.png" alt="add">
-			          </div>
-			          <div class="love">
-			            <img src="img/icons/heart.png" alt="love">
-			          </div>
-			        </div>
-			        <div class="recom1">
-			          <img src="img/covers/Jazz/Nothing.jpg" alt="Album cover">
-			          <div class="close">
-			            <img src="img/icons/close.png" alt="close">
-			          </div>
-			          <div class="add">
-			            <img src="img/icons/add.png" alt="add">
-			          </div>
-			          <div class="love">
-			            <img src="img/icons/heart.png" alt="love">
-			          </div>
-			        </div>
-			      </div>
-			  </div>
-			  <div class="fila">
 
-			  </div>
-			</div>
+		<div id="contenedor">
 
 		</div>
+
+
 
 
 			<button class="button_studio" onclick="window.location.href='MuCr_mymusic.html'">

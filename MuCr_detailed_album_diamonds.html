@@ -7,52 +7,38 @@
 	<link rel="stylesheet" href="MuCr.css">
 	<link rel="shortcut icon" href="img/MuCr.png">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<script src="../js/MuCr.js"></script>
+	<script src="js/MuCr.js"></script>
 </head>
 
 <body class="stage2">
 	<nav class="sidebar">
-		<div>
-			<img src="img/amy.jpg" alt="Profile picture">
-		</div>
-
-		<div class="sidebar_user">
-			jesusjimsa
-		</div>
-
-		<div class="ajustes">
-			<a class="blanco" href="MuCr_settings.html">
-				<img src="img/icons/settings.png" alt="Settings">&nbsp;Settings</a>
-		</div>
+			<div class="user">
+					<div class="imagen">  <img src="img/amy.jpg" alt="Profile picture"></div>
+					<div class="titulo">jesusjimsa</div>
+			</div>
+				<a class="blanco" href="MuCr_settings.html">
+			<div class="options">
+					<img src="img/icons/settings.png" alt="Settings">Ajustes
+			</div>
+			</a>
 	</nav>
 
 	<div class="buscador">
-		<input type="text" class="casilla" value="search" onfocus="if (this.value=='search') this.value='';" onblur="if (this.value=='') this.value='search';"
+		<input type="text" class="casillaES" value="search" onfocus="if (this.value=='search') this.value='';" onblur="if (this.value=='') this.value='search';"
 		/>
 	</div>
 
-	<div class="milibreria">
-		<div class="btn-group">
-			<button class="boton-left2">
-				<img src="img/icons/milibreria.png" alt="milibreria_icon"> My library</button>
-			<button class="boton-right2">
-				<img src="img/icons/add.png" alt="addicon"> &nbsp;Others</button>
-		</div>
-	</div>
-
 	<nav class="musica">
-		<div>
-			<div class="btn-group">
-
-					<button class="boton-left1_in" onclick="window.location.href='MuCr_main.html'">
-						<img src="img/icons/music.jpg" alt="music_icon"> &nbsp;Music</button>
-
-					<button class="boton-right1" onclick="window.location.href='MuCr_concert_artist.html'">
-						<img src="img/icons/concierto.png" alt="concert_icon"> &nbsp;Concerts</button>
-
+		<a href="MuCr_main.html">
+			<div class="boton_derecha">
+					<img src="img/icons/music.jpg" alt="Music icon">Music
 			</div>
-		</div>
-
+		</a>
+		<a href="MuCr_concert_artist.html">
+			<div class="boton_izquierda">
+						<img src="img/icons/concierto.png" alt="Concert icon">Concerts
+			</div>
+		</a>
 		<div class="collection">
 
 			<div class="dropdown">
@@ -61,42 +47,33 @@
 					<div class="box">music style</div>
 					<div class="box">artists</div>
 					<div class="box">geographic location</div>
-					<div class="box">Deluxe</div>
 				</div>
 			</div>
 			<div class="orden">
-				<div class="genres">
-					Acoustic
-					<br/> Alternative
-					<br/> Punk
-					<br/> Blues
-					<br/> Classical
-					<br/> Country
-					<br/> Folk
-					<br/>
-					<a class="blanco" href="MuCr_collection.html">Rock
-						<br/>
-					</a>
-					Dance
-					<br/> Electronic
-					<br/> Easy Listening
-					<br/> Gospel
-					<br/> Religious
-					<br/> Rap
-					<br/> Holiday
-					<br/> Instrumental
-					<br/> Jazz
-					<br/> Latin
-					<br/> Metal
-					<br/> Moods
-					<br/> Other
-					<br/> Pop
-					<br/> R'n'B
-					<br/> Soundtrack
-					<br/> World
-					<br/>
-				</div>
-			</div>
+					<div class="especialized">Alternative</div>
+					<div class="especialized">Punk</div>
+					<a class="blanco" href="MuCr_collection.html"><div class="especialized">Rock</div></a>
+					<div class="especialized"> Blues</div>
+				 <div class="especialized"> Classical</div>
+				 <div class="especialized"> Country</div>
+				  <div class="especialized">Folk</div>
+					<div class="especialized">Dance</div>
+					<div class="especialized"> Electronic</div>
+				<div class="especialized"> Easy Listening</div>
+					<div class="especialized"> Gospel</div>
+					<div class="especialized"> Religious</div>
+				<div class="especialized"> Rap</div>
+					<div class="especialized"> Holiday</div>
+					<div class="especialized"> Instrumental</div>
+					<div class="especialized"> Jazz</div>
+				<div class="especialized"> Latin</div>
+					<div class="especialized"> Metal</div>
+				<div class="especialized"> Moods</div>
+					<div class="especialized"> Pop</div>
+					<div class="especialized"> Other</div>
+					<div class="especialized"> R'n'B</div>
+					<div class="especialized"> Soundtrack</div>
+					<div class="especialized"> World</div>
 		</div>
 	</nav>
 

@@ -7,38 +7,34 @@
 	<link rel="stylesheet" href="MuCr.css">
 	<link rel="shortcut icon" href="img/MuCr.png">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<script src="../js/MuCr.js"></script>
+	<script src="js/MuCr.js"></script>
 </head>
 
 <body class="stage4">
-
 	<nav class="sidebar">
-		<div>
-			<img src="img/MuCr.png" alt="MuCr">
-		</div>
-
-		<div class="sidebar_user">
-			MuCr
-		</div>
-
-		<div class="ajustes">
-			<a class="blanco" href="MuCr_main.html">
-				<img id="cuadrado" src="img/icons/home.png" alt="home">&nbsp;Home</a>
-		</div>
+			<div class="user">
+					<div class="imagen">  	<img src="img/MuCr.png" alt="MuCr"></div>
+					<div class="titulo">LIRA</div>
+			</div>
+				<a class="blanco" href="MuCr_main.html">
+			<div class="options">
+						<img id="cuadrado" src="img/icons/home.png" alt="home">Home
+			</div>
+			</a>
 	</nav>
 
+
 	<nav class="musica">
-		<div>
-			<div class="btn-group">
-
-					<button class="boton-left1" onclick="window.location.href='MuCr_main.html'">
-						<img src="img/icons/music.jpg" alt="music_icon"> &nbsp;Music</button>
-
-
-					<button class="boton-right1" onclick="window.location.href='MuCr_Concerts.html'">
-						<img src="img/icons/concierto.png" alt="concert_icon"> &nbsp;Concerts</button>
-
+		<a href="MuCr_main.html">
+			<div class="boton_derecha">
+					<img src="img/icons/music.jpg" alt="Music icon">Music
 			</div>
+		</a>
+		<a href="MuCr_concert_artist.html">
+			<div class="boton_izquierda">
+						<img src="img/icons/concierto.png" alt="Concert icon">Concerts
+			</div>
+		</a>
 			<div class="titulo_grupos">Log in as:</div>
 			<div class="grupos">
 				<div class="grupis">
@@ -114,7 +110,7 @@
 	</a>
 
 	<div class="buscador">
-		<input type="text" class="casilla" value="search" onfocus="if (this.value=='search') this.value='';" onblur="if (this.value=='') this.value='search';"
+		<input type="text" class="casillaES" value="search" onfocus="if (this.value=='search') this.value='';" onblur="if (this.value=='') this.value='search';"
 		/>
 	</div>
 

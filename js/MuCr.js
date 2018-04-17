@@ -74,27 +74,29 @@ return sol;
 
 
 function pintarlista(numero,numeroC){
-		var documento=document.getElementsByClassName("contenedor");
-		while(numero>0){
-				document.innerHTML="<div class=\"fila\">"+
-				"<div class=\"title\">TITULO</div>"+
-				"<div class=\"row_main\">"+
-											pintarcuadrado(numeroC)
-											+"</div>"+
-											"</div>"+
-											"</div>"
-				;
 
-		numero--
+		var respuesta = document.getElementById("contenedor");
+		while(numero>0){
+			var newDiv = document.createElement(div);
+			newDiv.id= "lista";
+			respuesta.appendto(newID);
+
+		numero--;
 	}
 
 
 }
 
-
+function funcion2(){
+var capa = document.getElementById("contenedor");
+var h1 = document.createElement("h1");
+h1.innerHTML = texto;
+capa.appendChild(h1);}
 
 
 function listas(){
+	pintarlista(3,4);
+/*
 	var contenedor_height= document.getElementsByClassName("contenedor").offsetHeigh;
 	var fila_height= document.getElementsByClassName("fila").offsetHeigh;
 	var fila_margin=document.getElementByByClassName("fila").style.marginTop;
@@ -113,6 +115,6 @@ function listas(){
 	}
 
 	pintarlista(tam,tam1);
-
+*/
 
 }
