@@ -766,6 +766,265 @@ cursor: pointer;
 	font-size:1vw;
 }
 
+.musica .titulo_grupos{
+	position: fixed;
+	background-color:#197fb5;
+	height: 3%;
+	top:29.5%;
+	left:0.5%;
+	width:16%;
+	border-radius: 5vmin 0px 0px 5vmin;
+	color:white;
+	text-align: center;
+	padding-top: 0.5%;
+	z-index: 1;
+	font-size:2vmin;
+}
+
+.musica .grupos{
+	position:fixed;
+	height: 55%;
+	top:34%;
+	left:0.5%;
+	width:16%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+.musica .grupos .grupis{
+	position: relative;
+	top:0.5%;
+	left:1%;
+	width: 95%;
+	height:12%;
+	background-color: #197fa3;
+	border-bottom: 0.25vmin solid #000000;
+	border-radius: 5vmin 0px 0px 5vmin;
+}
+
+.musica .grupos .grupis .imagenes{
+	position: relative;
+	height:90%;
+	width:20%;
+	left:0.25%;
+	border-radius: 5vmin 5vmin 5vmin 5vmin;
+	top:0.5%;
+	border:0.35vmin solid #000000;
+}
+
+.musica .grupos .grupis .imagenes img{
+	min-width: 100%;
+	min-height: 100%;
+	border-radius: 5vmin 5vmin 5vmin 5vmin;
+}
+
+
+.musica .grupos .grupis .nome{
+	position: relative;
+	left:30%;
+	bottom:90%;
+	color:white;
+	height:80%;
+	width:60%;
+	text-align: center;
+	padding-top: 4%;
+	font-size: 1vw;
+}
+
+
+.ajustes_principal{
+	position: fixed;
+	background-color:rgba(77, 77, 77,0.97);
+	top:2%;
+	width:50%;
+	height: 95%;
+	left:20%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	border-radius: 15vmin 0px 0px 0px;
+}
+
+.ajustes_principal .nombre{
+	position:relative;
+	top:5%;
+	left:16%;
+	color:white;
+	font-size:7vw;
+}
+
+
+.ajustes_principal .cambiarimagen{
+	position:relative;
+	top:10%;
+	left:4%;
+	color:white;
+	background: blue;
+	width:21%;
+	text-align: center;
+	border-radius: 5vmin 5vmin 5vmin 5vmin;
+	padding-bottom: 2%;
+	font-size: 2vmin;
+}
+
+.ajustes_principal .cambiarcontrasena{
+	position:relative;
+	top:10%;
+	left:30%;
+	height:50%;
+	width:30%;
+	text-align: center;
+	color:white;
+	font-size: 1vmin;
+}
+.ajustes_principal .region{
+	position: relative;
+	top:1%;
+	left:30%;
+	text-align: center;
+	color:white;
+	width:30%;
+}
+.ajustes_principal .region p{
+	position:relative;
+	font-size: 1vw;
+
+}
+
+
+
+
+.ajustes_principal .boton3{
+	border-radius: 5vmin 5vmin 5vmin 5vmin;
+	position: relative;
+	left:20%;
+	border-color: red;
+	background-color: red;
+	color:white;
+	width:50%;
+	height:5%;
+	font-size: 2vmin;
+}
+
+.orgrupo{
+	position:fixed;
+	height:75%;
+	width:28%;
+	left:71%;
+	top:10%;
+	background-color: rgba(77,77,77,0.9);
+
+}
+
+
+
+.orgrupo .titulo{
+	color:white;
+	position: relative;
+	top:2%;
+	left:15%;
+	background-color:#197fa3;
+	text-align: center;
+	height:5%;
+	width:70%;
+	padding-top: 5%;
+	border-radius: 5vmin 5vmin 5vmin 5vmin;
+	font-size: 2vmin;
+}
+.orgrupo .main{
+	position: relative;
+	top:3%;
+	height:85%;
+	width:97%;
+	left:1%;;
+	overflow-y: scroll;
+	overflow-x:hidden;
+}
+
+
+.orgrupo .main .especifico{
+	position: relative;
+	background-color: rgba(77,77,77,1);
+	width:97%;
+	height:20%;
+	margin-bottom: 2%;
+	top:0.5%;
+	left:0.5%;
+	font-size: 1vw;
+}
+
+.orgrupo .main .especifico .textillo{
+	position: relative;
+	left:5%;
+	top:20%;
+	width:50%;
+	height:50%;
+	color:white;
+	text-align: center;
+	padding-top:2%;
+}
+.orgrupo .main .especifico .cajetilla{
+	position: relative;
+	left:60%;
+	bottom:30%;
+
+}
+
+
+.reconocimiento {
+	background-color: rgba(77,77,77,0.97);
+	position: fixed;
+	top:88.8%;
+	right:0%;
+	height:10%;
+	width:28%;
+	color:red;
+	font-style: italic;
+	font-family: monospace;
+	text-align: center;
+	font-size: 2vmin;
+}
+
+.addersong{
+	position: fixed;
+	top:29%;
+	height:20%;
+	width:79%;
+	background-color:rgba(25, 127, 163,0.97);
+	left:20%;
+	border-radius: 5vmin 5vmin 5vmin 5vmin;
+	border: 1vmin solid #FFFFFF;
+	color:white;
+	text-align: center;
+}
+.addersong p{
+	position: relative;
+	font-size: 2vmin;
+
+}
+
+
+.addersong .casilla3{
+	left:15%;
+	position:relative;
+	background-color: black;
+	color:white;
+	width: 50%;
+}
+
+.addersong .submit{
+	top:5%;
+	position:relative;
+	height:20%;
+	width:80%;
+	color:blue;
+	background-color: white;
+	border-color: blue;
+	border-radius: 5vmin 5vmin 5vmin 5vmin;
+	margin-bottom: 1%;
+	font-size: 2vmin;
+}
+
+
 /**************************************AJUSTADO*************************************************/
 /***********************************RESPONSIVENES UP*******************************************/
 
@@ -884,153 +1143,22 @@ cursor: pointer;
 
 
 /********** Settings **********/
-.orgrupo{
-	position:fixed;
-	height:75%;
-	width:28%;
-	left:71%;
-	top:10%;
-	background-color: rgba(77,77,77,0.9);
 
-}
 
-.orgrupo .titulo{
-	color:white;
-	position: relative;
-	top:2%;
-	left:15%;
-	background-color:#197fa3;
-	text-align: center;
-	height:8%;
-	width:70%;
-	padding-top: 3%;
-	border-radius: 28px 28px 28px 28px;
-}
 
-.orgrupo .main{
-	position: relative;
-	top:3%;
-	height:85%;
-	width:97%;
-	left:7px;
-	overflow-y: scroll;
-	overflow-x:hidden;
-}
 
-.orgrupo .main .especifico{
-	position: relative;
-	background-color: rgba(77,77,77,1);
-	width:97%;
-	height:20%;
-	margin-bottom: 2%;
-	top:2px;
-	left:2px;
-}
 
-.orgrupo .main .especifico .textillo{
-	position: relative;
-	left:5%;
-	top:20%;
-	width:50%;
-	height:50%;
-	color:white;
-	text-align: center;
-	padding-top:2%;
-}
 
-.orgrupo .main .especifico .cajetilla{
-	position: relative;
-	left:60%;
-	bottom:30%;
 
-}
 
-.musica .titulo_grupos{
-	position: fixed;
-	background-color:#197fb5;
-	height: 3%;
-	top:29.5%;
-	left:2px;
-	width:16%;
-	border-radius: 28px 0px 0px 28px;
-	color:white;
-	text-align: center;
-	padding-top: 7px;
-	z-index: 1;
-}
 
-.musica .grupos{
-	position:fixed;
-	height: 55%;
-	top:34%;
-	left:9px;
-	width:16%;
-	overflow-y: scroll;
-	overflow-x: hidden;
-}
 
-.musica .grupos .grupis{
-	position: relative;
-	top:3px;
-	left:2px;
-	width: 95%;
-	height:50px;
-	background-color: #197fa3;
-	border-bottom: 2px solid #000000;
-	border-radius: 100px 0px 0px 100px;
-}
 
-.musica .grupos .grupis .imagenes{
-	position: relative;
-	height:45px;
-	width:45px;
-	left:3px;
-	border-radius: 100px 100px 100px 100px;
-	top:1px;
-	border:2px solid #000000;
-}
 
-.musica .grupos .grupis .imagenes img{
-	min-width: 100%;
-	min-height: 100%;
-	border-radius: 100px 100px 100px 100px
-}
 
-.musica .grupos .grupis .nome{
-	position: relative;
-	left:70px;
-	bottom:42px;
-	color:white;
-	height:80%;
-	width:60%;
-	text-align: center;
-	padding-top: 4%;
-}
 
-.ajustes_principal{
-	position: fixed;
-	background-color:rgba(77, 77, 77,0.97);
-	top:2%;
-	width:50%;
-	height: 95%;
-	left:20%;
-	overflow-y: scroll;
-	overflow-x: hidden;
-	border-radius: 100px 0px 0px 0px;
-}
 
-.reconocimiento {
-	background-color: rgba(77,77,77,0.97);
-	position: fixed;
-	top:88.8%;
-	right:0px;
-	padding-right:110px;
-	padding-left: 110px;
-	color:red;
-	font-style: italic;
-	font-family: monospace;
-	text-align: center;
-}
+
 
 #ajustesimagen{
 	position: relative;
@@ -1053,51 +1181,14 @@ cursor: pointer;
 	border-color:#197fa3;
 }
 
-.ajustes_principal .boton3{
-	border-radius: 200px 200px 200px 200px;
-	position: relative;
-	left:20%;
-	border-color: red;
-	background-color: red;
-	color:white;
-	width:50%;
-	height:5%;
-}
 
-.ajustes_principal .nombre{
-	position:relative;
-	top:5%;
-	left:16%;
-	color:white;
-	font-size:100px;
-}
 
-.ajustes_principal .cambiarimagen{
-	position:relative;
-	top:10%;
-	right:11%;
-	color:white;
-}
 
-.ajustes_principal .cambiarcontrasena{
-	position:relative;
-	top:10%;
-	left:30%;
-	height:50%;
-	width:30%;
-	text-align: center;
-	color:white;
-}
 
-.ajustes_principal .region{
-	position: relative;
-	top:1%;
-	left:30%;
-	text-align: center;
-	color:white;
-	width:30%;
 
-}
+
+
+
 
 /********** Collection **********/
 
@@ -2009,38 +2100,7 @@ cursor: pointer;
 
 
 
-.addersong{
-	position: fixed;
-	top:29%;
-	height:20%;
-	width:79%;
-	background-color:rgba(25, 127, 163,0.97);
-	left:20%;
-	border-radius: 42px 42px 42px 42px;
-	border: 5px solid #FFFFFF;
-	color:white;
-	text-align: center;
-}
 
-.addersong .casilla3{
-	left:15%;
-	position:relative;
-	background-color: black;
-	color:white;
-	width: 50%;
-}
-
-.addersong .submit{
-	top:20px;
-	position:relative;
-	height:20%;
-	width:80%;
-	color:blue;
-	background-color: white;
-	border-color: blue;
-	border-radius: 28px 28px 28px 28px;
-	margin-bottom: 1%;
-}
 
 
 
