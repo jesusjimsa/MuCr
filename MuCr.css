@@ -916,9 +916,6 @@ cursor: pointer;
 
 }
 
-
-
-
 .ajustes_principal .boton3{
 	border-radius: 5vmin 5vmin 5vmin 5vmin;
 	position: relative;
@@ -1298,8 +1295,8 @@ cursor: pointer;
 /********** Place all items in collection **********/
 .grid-container .itemo{
 	position: relative;
-	height: 176px;
-	width: 176px;
+	height: 34.2%;
+	width: 15.1%;
 	left: 0px;
 	top: 0px;
 	background-color: #197fa3;
@@ -1308,8 +1305,8 @@ cursor: pointer;
 
 .grid-container .itemo img{
 	position: relative;
-	width:100%;
-	height:100%;
+	max-width:100%;
+	max-height:100%;
 }
 
 /********** Album icons **********/
@@ -1576,8 +1573,8 @@ cursor: pointer;
 
 .grid-concert .itemo{
 	position: relative;
-	height: 176px;
-	width: 176px;
+	height: 34.2%;
+	width: 15.1%;
 	left: 0px;
 	top: 0px;
 	background-color: #197ea3;
@@ -1587,8 +1584,8 @@ cursor: pointer;
 
 .grid-concert .itemo img{
 	position: relative;
-	width:100%;
-	height:100%;
+	max-width:100%;
+	max-height:100%;
 }
 
 .grid-concert .itemo .artist_name{
