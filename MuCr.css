@@ -1085,7 +1085,7 @@ cursor: pointer;
 .milibreria_concerts{
 	position: fixed;
 	top: 15.3%;
-	left: 19.9%;
+	left: 22%;
 	width: 70%;
 }
 
@@ -1198,7 +1198,6 @@ cursor: pointer;
 	float: left;
 }
 
-
 }
 .sidebar img{
 	position: relative;
@@ -1208,11 +1207,6 @@ cursor: pointer;
 	bottom:auto;
 	float: left;
 }
-
-
-
-
-
 
 .musica .collection{
 	color:white;
@@ -1235,22 +1229,6 @@ cursor: pointer;
 
 /********** Settings **********/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #ajustesimagen{
 	position: relative;
 	border-radius: 200px 200px 200px 200px;
@@ -1272,15 +1250,6 @@ cursor: pointer;
 	border-color:#197fa3;
 }
 
-
-
-
-
-
-
-
-
-
 /********** Collection **********/
 
 
@@ -1299,20 +1268,22 @@ cursor: pointer;
 	width: 15.1%;
 	left: 0px;
 	top: 0px;
-	background-color: #197fa3;
+	/* background-color: #197ea3; */
 	float:left;
+	z-index: 0;
+	margin-right: -2px;
 }
 
 .grid-container .itemo img{
-	position: relative;
+	/* position: relative; */
 	max-width:100%;
 	max-height:100%;
 }
 
 /********** Album icons **********/
 .grid-container .itemo .close img{
-	height: 20px;
-	width:20px;
+	height: 10%;
+	width:10%;
 	position: absolute;
 	left: 85%;
 	bottom: 85%;
@@ -1322,8 +1293,8 @@ cursor: pointer;
 }
 
 .grid-container .itemo .add img{
-	height: 25px;
-	width:25px;
+	height: 15%;
+	width:15%;
 	position: absolute;
 	right: 82%;
 	bottom: 83%;
@@ -1334,8 +1305,8 @@ cursor: pointer;
 }
 
 .grid-container .itemo .love img{
-	height: 30px;
-	width:30px;
+	height: 18%;
+	width:18%;
 	position: absolute;
 	left: 80%;
 	bottom: 7px;
@@ -1349,11 +1320,11 @@ cursor: pointer;
 	position: relative;
 	background-color: red;
 	color: #FFFFFF;
-	left: 30px;
-	bottom: 30px;
-	height: 20px;
+	left: 30%;
+	bottom: 20%;
+	height: 12%;
 	text-align: center;
-	width:100px;
+	width: 30%;
 	background-color: rgba(77, 77, 77, 0.50);
 	cursor: pointer;
 	z-index: 1;
@@ -1376,7 +1347,6 @@ cursor: pointer;
 .grid-container .itemo:hover .type{
 	opacity: 1;
 }
-
 
 /*solo funciona en Chrome*/
 ::-webkit-scrollbar-track{
@@ -1433,34 +1403,46 @@ cursor: pointer;
 	top:15%;
 }
 
-.seleccionado{
+.grid-container .itemo .close_album{
+	position: relative;
+	height: 100%;
+	width: 99%;
+	left: 0px;
+	top: 0px;
+	background-color: #197ea3;
+	float:left;
+	z-index: 0;
+	margin-right: -2px;
+}
+
+.grid-container .seleccionado{
 	position: fixed;
-	top:41.3%;
+	top:44%;
 	left:20%;
-	height:55%;
-	width:73.4%;
+	height:51%;
+	width:72.5%;
 	background-color: rgba(77,77,77,0.9);
 }
 
-.seleccionado .imagen{
-	position:relative;
+/* .grid-container .seleccionado .imagen{
+	position:fixed;
 	height:100%;
-	width:40%;
+	width:10%;
+} */
+
+.grid-container .seleccionado .imagen img{
+	max-width: 51%;
+	max-height: 51%;
+	position: fixed;
 }
 
-.seleccionado .imagen img{
-	width: 100%;
-	height: 100%;
-	position: relative;
-}
-
-.seleccionado .titulo_normal{
-	position: relative;
+.grid-container .seleccionado .titulo_normal{
+	position: fixed;
 	background-color:#197fa3;
-	height: 10%;
-	width:30%;
-	bottom:98%;
-	left:41%;
+	height: 6%;
+	width: 25%;
+	bottom: 47%;
+	left: 47%;
 	border-radius: 28px 28px 28px 28px;
 	border:3px solid #000000;
 	text-align: center;
@@ -1470,13 +1452,13 @@ cursor: pointer;
 	font-size: 20px;
 }
 
-.seleccionado .titulo_especial{
-	position: relative;
+.grid-container .seleccionado .titulo_especial{
+	position: fixed;
 	background-color:gold;
-	height: 10%;
-	width:30%;
-	bottom:98%;
-	left:41%;
+	height: 6%;
+	width: 25%;
+	bottom: 47%;
+	left: 47%;
 	border-radius: 28px 28px 28px 28px;
 	border:3px solid #000000;
 	text-align: center;
@@ -1486,46 +1468,48 @@ cursor: pointer;
 	font-size: 30px;
 }
 
-.seleccionado .album_artist{
-	position: relative;
+.grid-container .seleccionado .album_artist{
+	position: fixed;
 	background-color:#197fa3;
-	height:5%;
-	width:20%;
-	bottom:113%;
+	height:3%;
+	width:15%;
+	bottom:50%;
 	left:75%;
 	padding-top: 1%;
 	border-radius: 28px 28px 28px 28px;
 	border:3px solid #000000;
 	text-align: center;
 	color: white;
+	line-height: 0.5em;
 }
 
-.seleccionado .album_type{
-	position: relative;
-	height:5%;
-	width:20%;
-	bottom:112%;
-	left:75%;
+.grid-container .seleccionado .album_type{
+	position: fixed;
+	height:3%;
+	width:15%;
+	bottom: 44%;
+	left: 75%;
 	padding-top: 1%;
 	background-color:#197fa3;
 	border-radius: 28px 28px 28px 28px;
 	border:3px solid #000000;
 	text-align: center;
 	color: white;
+	line-height: 0.5em;
 }
 
-.seleccionado .listofsongs{
-	position:fixed;
-	top:52%;
-	left:49.4%;
+.grid-container .seleccionado .listofsongs{
 	background-color:rgba(77,77,77,0.5);
-	height: 365px;
-	width:634px;
+	position:fixed;
+	top:57%;
+	left:46%;
+	height: 38%;
+	width: 46%;
 	overflow-y: scroll;
 	overflow-x: hidden;
 }
 
-.seleccionado .listofsongs .songs{
+.grid-container .seleccionado .listofsongs .songs{
 	position: relative;
 	height: 7%;
 	width:99%;
@@ -1537,7 +1521,7 @@ cursor: pointer;
 	color: white;
 }
 
-.seleccionado .listofsongs .songs .love_song img{
+.grid-container .seleccionado .listofsongs .songs .love_song img{
 	position: relative;
 	width: 30px;
 	height: 100%;
@@ -1550,24 +1534,25 @@ cursor: pointer;
 /******** Concerts pages ********/
 .concert_title{
 	position: fixed;
-	color:rgba(25,127,163,1);
 	border-radius: 30px 30px 30px 30px;
-	font-family:monospace;
-	font-weight:bold;
-	font-size:500%;
 	position: fixed;
 	left: 22%;
-	top:2%;
+	top: 2%;
 	background-color: rgba(77, 77, 77,0.97);
 	padding: 1%;
 	height: 8%;
 	text-align: center;
+	font-family:monospace;
+	font-weight:bold;
+	font-size: 9vmin;
+	color:rgba(25,127,163,1);
+	line-height: 0.7em;
 }
 
 .grid-concert{
 	position: fixed;
-	top: 20%;
-	left: 20%;
+	top: 19%;
+	left: 22%;
 	width: 73.35%;
 }
 
@@ -1577,9 +1562,10 @@ cursor: pointer;
 	width: 15.1%;
 	left: 0px;
 	top: 0px;
-	background-color: #197ea3;
+	/* background-color: #197ea3; */
 	float:left;
 	z-index: 0;
+	margin-bottom: -5px;
 }
 
 .grid-concert .itemo img{
@@ -1616,14 +1602,14 @@ cursor: pointer;
 	overflow-y: scroll;
 	overflow-x: hidden;
 	position: fixed;
-	top: 20%;
-	left: 20%;
+	top: 19%;
+	left: 22%;
 }
 
 .near_scroll .concert{
 	position: relative;
 	background-color:rgb(71, 71, 71);
-	bottom: 48%;
+	bottom: 300%;
 	right: 42%;
 	width: 184%;
 	height: 200%;
@@ -1658,7 +1644,7 @@ cursor: pointer;
 	font-family: monospace;
 	position: relative;
 	left:80%;
-	bottom: 161%;
+	bottom: 157%;
 	height: 99.5%;
 	width:20%;
 	z-index: 0;
@@ -1703,27 +1689,6 @@ cursor: pointer;
 }
 
 /******** Add album page ********/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /******** Detailed artist's concerts page *******/
 .autor{
