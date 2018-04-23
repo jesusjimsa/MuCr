@@ -11,77 +11,93 @@
 </head>
 
 <body class="stage3">
-	<a href="MuCr_main.html	">
-		<div class="boton_derecha">
-				<img src="img/icons/music.jpg" alt="Music icon">Music
+	<nav class="sidebar">
+		<div class="user">
+			<div class="imagen">
+				<img src="img/amy.jpg" alt="Profile picture">
+			</div>
+			<div class="titulo">jesusjimsa</div>
 		</div>
-	</a>
-	<a href="MuCr_concert_artist.html">
-		<div class="boton_izquierda">
-					<img src="img/icons/concierto.png" alt="Concert icon">Concerts
-		</div>
-	</a>
-	<div class="collection">
+		<a class="blanco" href="MuCr_settings.html">
+			<div class="options">
+				<img src="img/icons/settings.png" alt="Settings">Ajustes
+			</div>
+		</a>
+	</nav>
 
-		<div class="dropdown">
-			<button onclick="myFunction()" class="dropbtn">Sorted by</button>
+	<div class="buscador">
+		<input type="text" class="casillaES" value="search" onfocus="if (this.value=='search') this.value='';" onblur="if (this.value=='') this.value='search';"
+		/>
+	</div>
+
+	<nav class="musica">
+		<a href="MuCr_main.html	">
+			<div class="boton_derecha">
+				<img src="img/icons/music.jpg" alt="Music icon">Music
+			</div>
+		</a>
+		<a href="MuCr_concert_artist.html">
+			<div class="boton_izquierda">
+				<img src="img/icons/concierto.png" alt="Concert icon">Concerts
+			</div>
+		</a>
+		<div class="collection">
+
+			<div class="dropdown">
+				<button onclick="myFunction()" class="dropbtn">Sorted by</button>
 			</div>
 
-		<div class="orden">
-			<div class="especialized_back">New Seacrh</div>
+			<div class="orden">
+				<div class="especialized_back">New Seacrh</div>
 				<div class="especialized">Alternative</div>
 				<div class="especialized">Punk</div>
-				<a class="blanco" href="MuCr_collection.html"><div class="especialized">Rock</div></a>
+				<a class="blanco" href="MuCr_collection.html">
+					<div class="especialized">Rock</div>
+				</a>
 				<div class="especialized"> Blues</div>
-			 <div class="especialized"> Classical</div>
-			 <div class="especialized"> Country</div>
+				<div class="especialized"> Classical</div>
+				<div class="especialized"> Country</div>
 				<div class="especialized">Folk</div>
 				<div class="especialized">Dance</div>
 				<div class="especialized"> Electronic</div>
-			<div class="especialized"> Easy Listening</div>
+				<div class="especialized"> Easy Listening</div>
 				<div class="especialized"> Gospel</div>
 				<div class="especialized"> Religious</div>
-			<div class="especialized"> Rap</div>
+				<div class="especialized"> Rap</div>
 				<div class="especialized"> Holiday</div>
 				<div class="especialized"> Instrumental</div>
 				<div class="especialized"> Jazz</div>
-			<div class="especialized"> Latin</div>
+				<div class="especialized"> Latin</div>
 				<div class="especialized"> Metal</div>
-			<div class="especialized"> Moods</div>
+				<div class="especialized"> Moods</div>
 				<div class="especialized"> Pop</div>
 				<div class="especialized"> Other</div>
 				<div class="especialized"> R'n'B</div>
 				<div class="especialized"> Soundtrack</div>
 				<div class="especialized"> World</div>
-	</div>
-</nav>
-
-<a href="index.html">
-	<nav class="exit_sidebar">
-		<img src="img/icons/close.png" alt="close">
+			</div>
 	</nav>
-</a>
+
+	<a href="index.html">
+		<nav class="exit_sidebar">
+			<img src="img/icons/close.png" alt="close">
+		</nav>
+	</a>
 
 	<div class="concert_title">
 		Concerts
 	</div>
 
 	<div class="milibreria_concerts">
-		<div class="btn-group">
-
-				<button class="but_my_concerts" onclick="window.location.href='MuCr_concert_artist.html'">
-					<img src="img/icons/tickets_icon.png" alt="ticket_icon"> &nbsp;My concerts
-				</button>
-
-
-				<button class="but_recom" onclick="window.location.href='MuCr_concert_recom.html'">
-					<img src="img/icons/recommendation_icon.png" alt="recommendation_icon"> &nbsp;Recommendations
-				</button>
-
+			<button class="but_my_concerts" onclick="window.location.href='MuCr_concert_artist.html'">
+				<img src="img/icons/tickets_icon.png" alt="ticket_icon"> &nbsp;My concerts
+			</button>
+			<button class="but_recom" onclick="window.location.href='MuCr_concert_recom.html'">
+				<img src="img/icons/recommendation_icon.png" alt="recommendation_icon"> &nbsp;Recommendations
+			</button>
 			<button class="but_near_in">
 				<img src="img/icons/pushpin_icon.png" alt="pushpin_icon"> &nbsp;Near
 			</button>
-		</div>
 	</div>
 
 	<div class="near_scroll">
@@ -91,8 +107,8 @@
 				David Bowie
 			</div>
 			<div class="location_date">
-				10 April 2018<br/>
-				Cheapest: 80€
+				10 April 2018
+				<br/> Cheapest: 80€
 			</div>
 			<div class="city_near">
 				<img src="img/ciudades/iasi.jpg" alt="ciudad">
@@ -101,7 +117,6 @@
 				</div>
 				<div class="titulo">IASI</div>
 			</div>
-
 		</div>
 		<div class="concert">
 			<img src="img/concerts/posters/McCartney.jpg" alt="Paul McCartney">
@@ -109,8 +124,8 @@
 				Paul McCartney
 			</div>
 			<div class="location_date">
-				29 May 2018<br/>
-				Cheapest: 80€
+				29 May 2018
+				<br/> Cheapest: 80€
 			</div>
 			<div class="city_near">
 				<img src="img/ciudades/budapest.jpg" alt="ciudad">
@@ -126,8 +141,8 @@
 				Foo Fighters
 			</div>
 			<div class="location_date">
-				16 June 2018<br/>
-				Cheapest: 80€
+				16 June 2018
+				<br/> Cheapest: 80€
 			</div>
 			<div class="city_near">
 				<img src="img/ciudades/Bucuresti.jpg" alt="ciudad">
@@ -143,8 +158,8 @@
 				The Rolling Stones
 			</div>
 			<div class="location_date">
-				18 June 2018<br/>
-				Cheapest: 80€
+				18 June 2018
+				<br/> Cheapest: 80€
 			</div>
 			<div class="city_near">
 				<img src="img/ciudades/cluj.jpg" alt="ciudad">
@@ -160,8 +175,8 @@
 				Paco paquez
 			</div>
 			<div class="location_date">
-				5 August 2018<br/>
-				Cheapest: 2€
+				5 August 2018
+				<br/> Cheapest: 2€
 			</div>
 			<div class="city_near">
 				<img src="img/ciudades/chisinau.jpg" alt="ciudad">
