@@ -941,10 +941,7 @@ cursor: pointer;
 	left:71%;
 	top:10%;
 	background-color: rgba(77,77,77,0.9);
-
 }
-
-
 
 .orgrupo .titulo{
 	color:white;
@@ -959,6 +956,7 @@ cursor: pointer;
 	border-radius: 5vmin 5vmin 5vmin 5vmin;
 	font-size: 2vmin;
 }
+
 .orgrupo .main{
 	position: relative;
 	top:3%;
@@ -968,7 +966,6 @@ cursor: pointer;
 	overflow-y: scroll;
 	overflow-x:hidden;
 }
-
 
 .orgrupo .main .especifico{
 	position: relative;
@@ -991,13 +988,12 @@ cursor: pointer;
 	text-align: center;
 	padding-top:2%;
 }
+
 .orgrupo .main .especifico .cajetilla{
 	position: relative;
 	left:60%;
 	bottom:30%;
-
 }
-
 
 .reconocimiento {
 	background-color: rgba(77,77,77,0.97);
@@ -1025,12 +1021,12 @@ cursor: pointer;
 	color:white;
 	text-align: center;
 }
+
 .addersong p{
 	position: relative;
 	font-size: 2vmin;
 
 }
-
 
 .addersong .casilla3{
 	left:15%;
