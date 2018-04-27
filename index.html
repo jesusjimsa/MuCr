@@ -26,14 +26,16 @@
 	<nav class="musica">
 		<div class="principal">
 			<h1>Sign in</h1>
-			<input name="actividad" type="email" class="casilla" value="Write your email" onfocus="if (this.value=='Write your email') this.value='';"
-			 onblur="if (this.value=='') this.value='Write your email';" />
+			<form name='registration'>
+				<input type="email" name="email" class="casilla" value="Write your email" onfocus="if (this.value=='Write your email') this.value='';"
+				 onblur="if (this.value=='') this.value='Write your email';" />
 			<p>Write your password:
-				<input type="password" class="casilla">
+				<input type="password" name="password" class="casilla">
 			</p>
-			<input type="button" class="boton" value="Enter" onclick="window.location.href='MuCr_main.html'">
-			<p></p>
+			<input type="submit" class="boton" value="Enter" onclick="formValidation()">
+		</form>
 
+			<p></p>
 			<h1>Sign up</h1>
 			<input type="email" class="casilla" value="Write your email" onfocus="if (this.value=='Write your email') this.value='';"
 			 onblur="if (this.value=='') this.value='Write your email';" />
