@@ -21,3 +21,12 @@ function fondoBody() {
 	document.body.style.backgroundPosition = "bottom center";
 	document.body.style.backgroundAttachment = "fixed";
 }
+
+
+function formValidation(){
+	var email = document.registration.email;
+	var password = document.registration.password;
+	window.location.href ="../MuCr_main.html";
+
+
+}
