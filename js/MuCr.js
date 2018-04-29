@@ -35,15 +35,41 @@ function fondoBody() {
 	document.body.style.backgroundSize = "cover";
 	document.body.style.backgroundPosition = "bottom center";
 	document.body.style.backgroundAttachment = "fixed";
-}aasdasdasdas
+}
+
+function validacionDBemail(email,password){
+	var mysql = require('mysql');
+
+
+var con = mysql.createConnection({
+  host: "127.0.0.1",
+  user: "root",
+  password: "9uk6vw6e",
+	database:"orfeo"
+});
+
+
+con.connect(function(err) {
+  if (err) throw err;
+	var orden="SELECT email FROM user WHERE email = \'"+email+"\'"
+  con.query(orden, function (err, result) {
+    if (err) throw err;
+		if(result.length==0){return 0;}
+		else{return 1;}
+    //console.log(result);
+  });
+});
+
+
+}
+
 
 function formValidation() {
 	var email = document.registration.email.value;
 	var password = document.registration.password.value;
-	var em = "email@gmail.com";
-	var pw = "password";
 
-	if ((em == email) && (pw == password)) {
+
+	if (validacionDBemail(email,password)) {
 		window.location.href = "../MuCr_main.html";
 		return true;
 	}
