@@ -1,6 +1,6 @@
 <?php
 $email=$_POST['email'];
-$password=$_POST['password'];
+$password1=$_POST['password'];
 
 $servername = "db4free.net";
 $username = "jmrodriguez";
@@ -14,22 +14,18 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT email, password FROM user";
+$sql = "SELECT * FROM user";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     // output data of each row
 	 while($row = mysqli_fetch_assoc($result)) {
 		if($row["email"]==$email){
-			if($row["password"]==$password){
+			if($row["password"]==$password1){
 				header('Location: MuCr_main.html');}
-			}
+			else{header('Location: index.html');}
 		}
+		else{header('Location: index.html');}
+	}
 }
 $conn->close();
-
-
-
-
-
-?>
