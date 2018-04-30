@@ -42,10 +42,10 @@ function validacionDBemail(email,password){
 
 
 var con = mysql.createConnection({
-  host: "127.0.0.1",
-  user: "root",
-  password: "9uk6vw6e",
-	database:"orfeo"
+  host: "https://www.db4free.net",
+  user: "jmrodriguez",
+  password:"9uk6vw6e",
+	database:"orfeo_mucr"
 });
 
 
@@ -54,8 +54,8 @@ con.connect(function(err) {
 	var orden="SELECT email FROM user WHERE email = \'"+email+"\'"
   con.query(orden, function (err, result) {
     if (err) throw err;
-		if(result.length==0){return 0;}
-		else{return 1;}
+		if(result.length==0){return false;}
+		else{return true;}
     //console.log(result);
   });
 });
