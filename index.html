@@ -30,22 +30,24 @@
 				<input type="email" name="email" class="casilla" value="Write your email" onfocus="if (this.value=='Write your email') this.value='';"
 				 onblur="if (this.value=='') this.value='Write your email';" required/>
 				<p>Write your password:
-					<input type="password" name="password" class="casilla" required>
+					<input type="password" name="password1" class="casilla" required>
 				</p>
 				<input type="submit" class="boton" value="Enter" onclick="formValidation();">
 			</FORM>
 
 			<p></p>
 			<h1>Sign up</h1>
-			<input type="email" class="casilla" value="Write your email" onfocus="if (this.value=='Write your email') this.value='';"
+			<FORM action="creation_user.php" method="post">
+			<input type="email" name= "email" class="casilla" value="Write your email" onfocus="if (this.value=='Write your email') this.value='';"
 			 onblur="if (this.value=='') this.value='Write your email';" />
 			<p>Write your password:
-				<input type="password" class="casilla">
+				<input type="password" name="password1"class="casilla">
 			</p>
 			<p>Repeat your password:
-				<input type="password" class="casilla">
+				<input type="password"  name="password2" class="casilla">
 			</p>
-			<input type="button" class="boton" value="Log in" onclick="window.location.href='MuCr_main.html'">
+			<input type="submit" class="boton" value="Log in">
+			</FORM>
 		</div>
 	</nav>
 	<div id="info"></div>
