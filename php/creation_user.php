@@ -4,19 +4,7 @@ $password1 = $_POST['password1'];
 $password2 = $_POST['password2'];
 
 if($password1 == $password2){
-	$servername = "db4free.net";
-	$username = "jmrodriguez";
-	$pass = "9uk6vw6e";
-	$dbname = "orfeo_mucr";
-
-	// Create connection
-	$conn = new mysqli($servername, $username, $pass, $dbname);
-	
-	// Check connection
-	if ($conn->connect_error) {
-		die("Connection failed: " . $conn->connect_error);
-		echo "Error conecting to database";
-	} 
+	include 'connect_db.php';	// Connect to database
 
 	$sql_check_email = "SELECT email FROM user WHERE '$email' = email" ;
 	$result = $conn->query($sql_check_email);
@@ -25,6 +13,10 @@ if($password1 == $password2){
 		$sql_insert_user = "INSERT INTO user (email, password) VALUES ('$email', '$password1')";
 
 		if ($conn->query($sql_insert_user) === TRUE){
+			// Set cookies
+			setcookie("email", $email, time() + (86400 * 30), "/");	// 86400 = 1 day
+			setcookie("password", $password1, time() + (86400 * 30), "/");	// 86400 = 1 day
+
 			header('Location: ../MuCr_main.html');
 			echo "New record created successfully";
 		}
