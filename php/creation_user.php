@@ -18,30 +18,19 @@ if($password1 == $password2){
 		echo "Error conecting to database";
 	} 
 
-	$sql = "SELECT * FROM user";
-	$result = $conn->query($sql);
-	$exist = false;
+	$sql_check_email = "SELECT email FROM user WHERE '$email' = email" ;
+	$result = $conn->query($sql_check_email);
 
-	if ($result->num_rows > 0) {
-	    // output data of each row
-		 while($row = mysqli_fetch_assoc($result)) {
-			if($row["email"] == $email){
-				//already exists this user
-				$exist = true;
-			}
-		}
-	}
+	if($result->num_rows == 0){
+		$sql_insert_user = "INSERT INTO user (email, password) VALUES ('$email', '$password1')";
 
-	if($exist == false){
-		$sql1 = "INSERT INTO user (email, password) VALUES ('$email', '$password1')";
-
-		if ($conn->query($sql1) === TRUE){
+		if ($conn->query($sql_insert_user) === TRUE){
 			header('Location: ../MuCr_main.html');
 			echo "New record created successfully";
 		}
 		else{
 			// header('Location: index.html');
-			echo "Error creating record";
+			echo "Error: " . $sql_insert_user . "<br>" . $conn->error;
 		}
 	}
 	else{
