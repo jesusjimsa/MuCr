@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="MuCr.css">
 	<link rel="shortcut icon" href="img/MuCr.png">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="js/MuCr.js"></script>
 </head>
 
@@ -26,7 +27,8 @@
 	</nav>
 
 	<div class="dora">
-		<input type="text" class="dorado" value="search" onfocus="if (this.value=='search') this.value='';" onblur="if (this.value=='') this.value='search';"/>
+		<input type="text" class="dorado" value="search" onfocus="if (this.value=='search') this.value='';" onblur="if (this.value=='') this.value='search';"
+		/>
 	</div>
 
 	<nav class="musica">
@@ -77,7 +79,7 @@
 			</div>
 	</nav>
 
-	<a href="index.html">
+	<a href="../php/delete_cookies.php">
 		<nav class="exit_sidebar">
 			<img src="img/icons/close.png" alt="close">
 		</nav>
@@ -88,15 +90,15 @@
 	</div>
 
 	<div class="milibreria_concerts">
-			<button class="but_my_concerts" onclick="window.location.href='MuCr_concert_artist.html'">
-				<img src="img/icons/tickets_icon.png" alt="ticket_icon"> &nbsp;My concerts
-			</button>
-			<button class="but_recom" onclick="window.location.href='MuCr_concert_recom.html'">
-				<img src="img/icons/recommendation_icon.png" alt="recommendation_icon"> &nbsp;Recommendations
-			</button>
-			<button class="but_near_in">
-				<img src="img/icons/pushpin_icon.png" alt="pushpin_icon"> &nbsp;Near
-			</button>
+		<button class="but_my_concerts" onclick="window.location.href='MuCr_concert_artist.html'">
+			<img src="img/icons/tickets_icon.png" alt="ticket_icon"> &nbsp;My concerts
+		</button>
+		<button class="but_recom" onclick="window.location.href='MuCr_concert_recom.html'">
+			<img src="img/icons/recommendation_icon.png" alt="recommendation_icon"> &nbsp;Recommendations
+		</button>
+		<button class="but_near_in">
+			<img src="img/icons/pushpin_icon.png" alt="pushpin_icon"> &nbsp;Near
+		</button>
 	</div>
 
 	<div class="near_scroll">
