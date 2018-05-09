@@ -123,16 +123,18 @@
 		<div class="cambiarimagen">cambiar imagen</div>
 		<div class="cambiarcontrasena">
 			<p>Change Password</p>
-			<p>Write your old password:
-				<input type="password" name="passwordold" class="casilla">
-			</p>
-			<p>Write your new password:
-				<input type="password" name="password1" class="casilla">
-			</p>
-			<p>Repeat your new password:
-				<input type="password" name="password2" class="casilla">
-			</p>
-			<input id="boton2" type="submit" value="change">
+			<FORM action="php/modification_password.php" method="post">
+				<p>Write your old password:
+					<input type="password" name="passwordold" class="casilla">
+				</p>
+				<p>Write your new password:
+					<input type="password" name="password1" class="casilla">
+				</p>
+				<p>Repeat your new password:
+					<input type="password" name="password2" class="casilla">
+				</p>
+				<input id="boton2" type="submit" value="change">
+			</FORM>
 		</div>
 		<div class="region">
 			<p>country:

@@ -1,6 +1,5 @@
 <?php
-
-$email = $_POST['email'];
+$email = $_COOKIE['email'];
 
 $passwordold = $_POST['passwordold'];
 $password1 = $_POST['password1'];
@@ -9,16 +8,18 @@ $password2 = $_POST['password2'];
 if($password1 == $password2){
 	include 'connect_db.php';	// Connect to database
 
-	$sql_check_email = "SELECT email,password FROM user WHERE '$email' = email,'$passwordold' = password" ;
+	$sql_check_email = "SELECT email, password FROM user WHERE '$email' = email,'$passwordold' = password" ;
 	$result = $conn->query($sql_check_email);
 
 	if($result->num_rows == 0){
-
-		$sql_insert_user = "INSERT INTO user ( password) VALUES ('$password1')";
+		$sql_insert_user = "INSERT INTO user(password) WHERE '$email' = email VALUES ('$password1')";
 
 		if ($conn->query($sql_insert_user) === TRUE){
+			// Delete old password cookies
+			unset($_COOKIE['password']);
+			setcookie("password", null, -1, '/');
+
 			// Set cookies
-			setcookie("email", $email, time() + (86400 * 30), "/");	// 86400 = 1 day
 			setcookie("password", $password1, time() + (86400 * 30), "/");	// 86400 = 1 day
 
 			header('Location: ../MuCr_main.html');

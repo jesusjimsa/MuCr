@@ -1,7 +1,5 @@
 <?php
-
-
-    include("geoip.inc");
+include("geoip.inc");
 function ipAddress(){
         if (!empty($_SERVER['HTTP_CLIENT_IP'])){ //Comprobar ip desde Internet compartido.
             $ip=$_SERVER['HTTP_CLIENT_IP'];
@@ -11,7 +9,7 @@ function ipAddress(){
             $ip=$_SERVER['REMOTE_ADDR'];
         }
         return $ip;
-    }
+}
 
 
 
@@ -30,13 +28,13 @@ if($password1 == $password2){
 
 	if($result->num_rows == 0){
 		$gi = geoip_open("GeoIPCity.dat",GEOIP_STANDARD);
-    $record = geoip_record_by_addr($gi,ipAddress());
+    	$record = geoip_record_by_addr($gi,ipAddress());
 		$country= $record->country_name;
 
 		$language="english";
 		$img="../img/user1.jpg";
 
-		$sql_insert_user = "INSERT INTO user (email, password,country,language,URLimage) VALUES ('$email', '$password1','$country','$language',$img)";
+		$sql_insert_user = "INSERT INTO user (email, password, country, language, URLimage) VALUES ('$email', '$password1', '$country', '$language', $img)";
 
 		if ($conn->query($sql_insert_user) === TRUE){
 			// Set cookies
