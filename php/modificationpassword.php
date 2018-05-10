@@ -1,26 +1,24 @@
 <?php
 
 $email = $_POST['email'];
+
+$passwordold = $_POST['passwordold'];
 $password1 = $_POST['password1'];
 $password2 = $_POST['password2'];
 
 if($password1 == $password2){
 	include 'connect_db.php';	// Connect to database
 
-	$sql_check_email = "SELECT email FROM user WHERE '$email' = email" ;
+	$sql_check_email = "SELECT email,password FROM user WHERE '$email' = email,'$passwordold' = password" ;
 	$result = $conn->query($sql_check_email);
 
 	if($result->num_rows == 0){
 
-		$country="unknown";
-		$language="english";
-		$img="../img/user1.jpg";
-
-		$sql_insert_user = "INSERT INTO user (email, password, country, language, URLimage) VALUES ('$email', '$password1', '$country', '$language', $img)";
+		$sql_insert_user = "UPDATE user SET password = '$password1' WHERE email = '$email'";
 
 		if ($conn->query($sql_insert_user) === TRUE){
 			// Set cookies
-			setcookie("email", $email, time() + (86400 * 30), "/");	// 86400 = 1 day
+      
 			setcookie("password", $password1, time() + (86400 * 30), "/");	// 86400 = 1 day
 
 			header('Location: ../MuCr_main.html');
