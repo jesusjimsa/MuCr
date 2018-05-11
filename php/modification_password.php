@@ -8,12 +8,12 @@ $password2 = $_POST['password2'];
 if($password1 == $password2){
 	include 'connect_db.php';	// Connect to database
 
-	$sql_check_email = "SELECT email, password FROM user WHERE '$email' = email,'$passwordold' = password" ;
+	$sql_check_email = "SELECT email, password FROM user WHERE '$email' = email and '$passwordold' = password" ;
 	$result = $conn->query($sql_check_email);
 
-	if($result->num_rows == 0){
+	if($result->num_rows == 1){
 		$sql_insert_user = "UPDATE user SET password = '$password1' WHERE email = '$email'";
-		
+
 		if ($conn->query($sql_insert_user) == TRUE){
 			// Delete old password cookies
 			unset($_COOKIE['password']);
@@ -31,7 +31,7 @@ if($password1 == $password2){
 		}
 	}
 	else{
-		header('Location: ../index.html');
+		header('Location: ../MuCr_settings.html');
 	}
 
 	$conn->close();
@@ -40,3 +40,4 @@ else{
 	header('Location: ../index.html');
 }
 ?>
+
