@@ -1,4 +1,6 @@
 <?php
+$current_user = $_COOKIE['email'];
+
 $group_name = $_POST['group_name'];
 $group_image = "../img/group.jpg";
 $group_add_user = $_POST['group_add_user'];
@@ -11,8 +13,9 @@ $result = $conn->query($sql_check_group_name);
 
 if($result->num_rows == 0){
 	$sql_insert_group = "INSERT INTO grupo(name, URLimage, style) VALUES ('$group_name', '$group_image', '$group_style')";
+	$sql_insert_user_group = "INSERT INTO U_group(user_email, group_name) VALUES ('$current_user', '$group_name')";
 
-	if ($conn->query($sql_insert_group) == TRUE){
+	if ($conn->query($sql_insert_group) == TRUE && $conn->query($sql_insert_user_group) == TRUE){
 		echo "Bien\n";
 	}
 	else{
