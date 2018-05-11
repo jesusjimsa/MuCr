@@ -148,37 +148,37 @@
 		</div>
 		<p></p>
 		<FORM action="php/delete_account.php" method="post">
-		<input class="boton3" type="submit" value="Delete account">
+			<input class="boton3" type="submit" value="Delete account">
 		</FORM>
 		<p></p>
 
 		<div class="orgrupo">
 			<div class="titulo">GROUP ADMINISTRATION</div>
-			<div class="main">
-				<div class="especifico">
-					<div class="textillo">Create new group
-						<br>choose a name:</div>
-					<input class="cajetilla" type="text">
-				</div>
-				<div class="especifico">
-					<div class="textillo">Choose a image:</div>
-					<input class="cajetilla" type="file">
-				</div>
-				<div class="especifico">
-					<div class="textillo">Select User for the group:</div>
-					<input class="cajetilla" type="text">
-				</div>
-				<div class="especifico">
-					<div class="textillo">Choose an style:</div>
-					<input class="cajetilla" type="text">
-				</div>
-				<div class="especifico">
-					<div class="textillo">Click OK to create the group:</div>
-					<input class="cajetilla" type="button" value="OK">
-				</div>
+				<FORM action="php/group_creation.php" method="post" class="main">
+					<div class="especifico">
+						<div class="textillo">Create new group
+							<br>choose a name:</div>
+						<input class="cajetilla" type="text" name="group_name">
+					</div>
+					<div class="especifico">
+						<div class="textillo">Choose a image:</div>
+						<input class="cajetilla" type="file" name="group_image">
+					</div>
+					<div class="especifico">
+						<div class="textillo">Select User for the group:</div>
+						<input class="cajetilla" type="text" name="group_add_user">
+					</div>
+					<div class="especifico">
+						<div class="textillo">Choose an style:</div>
+						<input class="cajetilla" type="text" name="group_style">
+					</div>
+					<div class="especifico">
+						<div class="textillo">Click OK to create the group:</div>
+						<input class="cajetilla" type="submit" value="OK">
+					</div>
+				</FORM>
 			</div>
 		</div>
-
 	</div>
 
 	<div class="reconocimiento">
