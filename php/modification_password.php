@@ -12,8 +12,8 @@ if($password1 == $password2){
 	$result = $conn->query($sql_check_email);
 
 	if($result->num_rows == 0){
-		$sql_insert_user = "INSERT INTO user(password) WHERE '$email' = email VALUES ('$password1')";
-
+		$sql_insert_user = "UPDATE user SET password = '$password1' WHERE email = '$email'";
+		
 		if ($conn->query($sql_insert_user) === TRUE){
 			// Delete old password cookies
 			unset($_COOKIE['password']);
