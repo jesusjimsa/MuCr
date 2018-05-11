@@ -897,11 +897,37 @@ img{
 	left:4%;
 	color:white;
 	background: blue;
-	width:21%;
-	text-align: center;
+	width:40%;
 	border-radius: 5vmin 5vmin 5vmin 5vmin;
 	padding-bottom: 2%;
 	font-size: 2vmin;
+	height: 2%;
+	text-align: left;
+}
+.ajustes_principal .cambiarimagen .texto{
+	position: relative;
+	height:100%;
+	top:35%;
+	right:45%;
+	font-size: 2vmin;
+}
+.ajustes_principal .cambiarimagen .imagenmod{
+	position:fixed;
+	height:18%;
+	width:6%;
+	bottom: 53.5%;
+	left:33%;
+}
+.ajustes_principal .cambiarimagen .ok{
+	position: fixed;
+	height:3%;
+	width:3%;
+	left:38.75%;
+	bottom:68.35%;
+	border-radius: 0vmin 2vmin 2vmin 0vmin;
+	border:0.25vmin solid #197fa3;
+	background-color: white;
+
 }
 
 .ajustes_principal .cambiarcontrasena{
@@ -909,7 +935,7 @@ img{
 	top:10%;
 	left:30%;
 	height:50%;
-	width:30%;
+	width:60%;
 	text-align: center;
 	color:white;
 	font-size: 1vmin;

@@ -120,7 +120,9 @@
 	<div class="ajustes_principal">
 		<img id="ajustesimagen" src="img/amy.jpg" alt="Profile picture">
 		<div class="nombre">jesusjimsa</div>
-		<div class="cambiarimagen">cambiar imagen</div>
+		<FORM action="php/upload_profile_image.php" method="post">
+			<div class="cambiarimagen"><div class="texto">cambiar imagen</div> <input type="file" class="imagenmod" name="ficheroIMG"><input type="submit" class="ok" value="OK"> </div>
+		</FORM>
 		<div class="cambiarcontrasena">
 			<p>Change Password</p>
 			<FORM action="php/modification_password.php" method="post">
