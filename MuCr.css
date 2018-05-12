@@ -911,7 +911,7 @@ img{
 	right:45%;
 	font-size: 2vmin;
 }
-.ajustes_principal .cambiarimagen .imagenmod{
+.ajustes_principal .cambiarimagen #imagenmod{
 	position:fixed;
 	height:18%;
 	width:6%;
