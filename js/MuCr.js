@@ -19,50 +19,34 @@ var informa = [
 	"Opera House in Vienna, Austria",
 	"Ultra miami, Florida"
 ]
-
-changeImage(archivo){
-
-
-
-}
-
-
-function open_images(number){
-if(number==0){
-	document.getElementsByClassName("modificar_imagen")[0].style.opacity="1";
-	document.getElementsByClassName("modificar_imagen")[0].style.left="22%";
-	for(var i=0;i<24;i++){
-		var j=i+1;
-		var archivo="../img/user/"+j+".png"
-		document.getElementsByClassName("image_user")[i].style.backgroundImage = "url("+archivo+ ")";
-		document.getElementsByClassName("image_user")[i].style.backgroundRepeat = "no-repeat";
-		document.getElementsByClassName("image_user")[i].style.backgroundSize = "100% 100%";
-		document.getElementsByClassName("image_user")[i].style.backgroundPosition = "bottom center";
-		document.getElementsByClassName("image_user")[i].style.backgroundAttachment = "relative";
-	}
-}
-else{
-	document.getElementsByClassName("modificar_imagen")[0].style.opacity="1";
-	document.getElementsByClassName("modificar_imagen")[0].style.left="45%";
-	for(var i=0;i<24;i++){
-		var j=i+1;
-		var archivo="../img/groups/"+j+".jpg"
-		document.getElementsByClassName("image_user")[i].style.backgroundImage = "url("+archivo+ ")";
-		document.getElementsByClassName("image_user")[i].style.backgroundRepeat = "no-repeat";
-		document.getElementsByClassName("image_user")[i].style.backgroundSize = "100% 100%";
-		document.getElementsByClassName("image_user")[i].style.backgroundPosition = "bottom center";
-		document.getElementsByClassName("image_user")[i].style.backgroundAttachment = "relative";
-	}
-}
-
-}
-
-
-function close_images(){
-document.getElementsByClassName("modificar_imagen")[0].style.opacity="0";
- }
-
-
+ 
+var music_styles = [
+	"<div class=\"especialized_back\">Back</div>",
+	"<div class=\"especialized\">Alternative</div>",
+	"<div class=\"especialized\">Punk</div>",
+	"<div class=\"especialized\">Rock</div>",
+	"<div class=\"especialized\"> Blues</div>",
+	"<div class=\"especialized\"> Classical</div>",
+	"<div class=\"especialized\"> Country</div>",
+	"<div class=\"especialized\">Folk</div>",
+	"<div class=\"especialized\">Dance</div>",
+	"<div class=\"especialized\"> Electronic</div>",
+	"<div class=\"especialized\"> Easy Listening</div>",
+	"<div class=\"especialized\"> Gospel</div>",
+	"<div class=\"especialized\"> Religious</div>",
+	"<div class=\"especialized\"> Rap</div>",
+	"<div class=\"especialized\"> Holiday</div>",
+	"<div class=\"especialized\"> Instrumental</div>",
+	"<div class=\"especialized\"> Jazz</div>",
+	"<div class=\"especialized\"> Latin</div>",
+	"<div class=\"especialized\"> Metal</div>",
+	"<div class=\"especialized\"> Moods</div>",
+	"<div class=\"especialized\"> Pop</div>",
+	"<div class=\"especialized\"> Other</div>",
+	"<div class=\"especialized\"> R'n'B</div>",
+	"<div class=\"especialized\"> Soundtrack</div>",
+	"<div class=\"especialized\"> World</div>"
+]
 
 function fondoBody() {
 	var numero = Math.floor(Math.random() * fondos.length)
@@ -74,45 +58,6 @@ function fondoBody() {
 	document.body.style.backgroundSize = "cover";
 	document.body.style.backgroundPosition = "bottom center";
 	document.body.style.backgroundAttachment = "fixed";
-}
-
-function validacionDBemail(email, password) {
-	var mysql = require('mysql');
-
-
-	var con = mysql.createConnection({
-		host: "https://www.db4free.net",
-		user: "jmrodriguez",
-		password: "9uk6vw6e",
-		database: "orfeo_mucr"
-	});
-
-
-	con.connect(function (err) {
-		if (err) throw err;
-		var orden = "SELECT email FROM user WHERE email = \'" + email + "\'"
-		con.query(orden, function (err, result) {
-			if (err) throw err;
-			if (result.length == 0) { return false; }
-			else { return true; }
-			//console.log(result);
-		});
-	});
-}
-
-function formValidation() {
-	var email = document.registration.email.value;
-	var password = document.registration.password.value;
-
-
-	if (validacionDBemail(email, password)) {
-		window.location.href = "../MuCr_main.html";
-		return true;
-	}
-	else {
-		alert("Login was unsuccessful, please check your username and password");
-		return false;
-	}
 }
 
 function getCookie(name) {
@@ -138,8 +83,54 @@ function getCookie(name) {
 function callPHPCookies() {
 	var email_cookie = getCookie("email");
 
-	if(email_cookie != null){
+	if (email_cookie != null) {
 		window.location.href = "../php/auth_cookies.php";
 	}
 }
 
+changeImage(archivo){
+
+
+
+}
+
+function open_images(number){
+  if(number==0){
+    document.getElementsByClassName("modificar_imagen")[0].style.opacity="1";
+    document.getElementsByClassName("modificar_imagen")[0].style.left="22%";
+    for(var i=0;i<24;i++){
+      var j=i+1;
+      var archivo="../img/user/"+j+".png"
+      
+      document.getElementsByClassName("image_user")[i].style.backgroundImage = "url("+archivo+ ")";
+      document.getElementsByClassName("image_user")[i].style.backgroundRepeat = "no-repeat";
+      document.getElementsByClassName("image_user")[i].style.backgroundSize = "100% 100%";
+      document.getElementsByClassName("image_user")[i].style.backgroundPosition = "bottom center";
+      document.getElementsByClassName("image_user")[i].style.backgroundAttachment = "relative";
+    }
+  }
+  else{
+    document.getElementsByClassName("modificar_imagen")[0].style.opacity="1";
+    document.getElementsByClassName("modificar_imagen")[0].style.left="45%";
+    for(var i=0;i<24;i++){
+      var j=i+1;
+      var archivo="../img/groups/"+j+".jpg"
+      document.getElementsByClassName("image_user")[i].style.backgroundImage = "url("+archivo+ ")";
+      document.getElementsByClassName("image_user")[i].style.backgroundRepeat = "no-repeat";
+      document.getElementsByClassName("image_user")[i].style.backgroundSize = "100% 100%";
+      document.getElementsByClassName("image_user")[i].style.backgroundPosition = "bottom center";
+      document.getElementsByClassName("image_user")[i].style.backgroundAttachment = "relative";
+    }
+}
+
+function close_images(){
+  document.getElementsByClassName("modificar_imagen")[0].style.opacity="0";
+ }
+
+
+
+function writeClassification() {
+	for (var i = 0; i < music_styles.length; i++) {
+		document.write(music_styles[i]);
+	}
+}
