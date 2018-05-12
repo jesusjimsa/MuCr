@@ -20,6 +20,34 @@ var informa = [
 	"Ultra miami, Florida"
 ]
 
+var music_styles = [
+	"<div class=\"especialized_back\">Back</div>",
+	"<div class=\"especialized\">Alternative</div>",
+	"<div class=\"especialized\">Punk</div>",
+	"<div class=\"especialized\">Rock</div>",
+	"<div class=\"especialized\"> Blues</div>",
+	"<div class=\"especialized\"> Classical</div>",
+	"<div class=\"especialized\"> Country</div>",
+	"<div class=\"especialized\">Folk</div>",
+	"<div class=\"especialized\">Dance</div>",
+	"<div class=\"especialized\"> Electronic</div>",
+	"<div class=\"especialized\"> Easy Listening</div>",
+	"<div class=\"especialized\"> Gospel</div>",
+	"<div class=\"especialized\"> Religious</div>",
+	"<div class=\"especialized\"> Rap</div>",
+	"<div class=\"especialized\"> Holiday</div>",
+	"<div class=\"especialized\"> Instrumental</div>",
+	"<div class=\"especialized\"> Jazz</div>",
+	"<div class=\"especialized\"> Latin</div>",
+	"<div class=\"especialized\"> Metal</div>",
+	"<div class=\"especialized\"> Moods</div>",
+	"<div class=\"especialized\"> Pop</div>",
+	"<div class=\"especialized\"> Other</div>",
+	"<div class=\"especialized\"> R'n'B</div>",
+	"<div class=\"especialized\"> Soundtrack</div>",
+	"<div class=\"especialized\"> World</div>"
+]
+
 function cambiarnombre(numero) {
 	var aux = informa[numero]
 	document.getElementById("info").innerHTML = aux
@@ -60,7 +88,13 @@ function getCookie(name) {
 function callPHPCookies() {
 	var email_cookie = getCookie("email");
 
-	if(email_cookie != null){
+	if (email_cookie != null) {
 		window.location.href = "../php/auth_cookies.php";
+	}
+}
+
+function writeClassification() {
+	for (var i = 0; i < music_styles.length; i++) {
+		document.write(music_styles[i]);
 	}
 }
