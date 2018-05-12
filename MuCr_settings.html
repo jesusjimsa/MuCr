@@ -120,10 +120,8 @@
 	<div class="ajustes_principal">
 		<img id="ajustesimagen" src="img/amy.jpg" alt="Profile picture">
 		<div class="nombre">jesusjimsa</div>
-		<FORM action="php/upload_profile_image.php" method="post" class="cambiarimagen">
-			<div class="texto">cambiar imagen</div> <input type="file" id="imagenmod" name="ficheroIMG"><input type="submit" name="ok" class="ok" value="OK"> 
-		</FORM>
-		<div class="cambiarcontrasena">
+		<input type="button" class="cambiarimagen" value="cambiar imagen" onclick="open_images(0)">
+		<div class="cambiarcontrasena" >
 			<p>Change Password</p>
 			<FORM action="php/modification_password.php" method="post">
 				<p>Write your old password:
@@ -161,8 +159,7 @@
 						<input class="cajetilla" type="text" name="group_name">
 					</div>
 					<div class="especifico">
-						<div class="textillo">Choose a image:</div>
-						<input class="cajetilla" type="file" name="group_image">
+						<input class="cajetilla3" type="button" name="group_image" value="choose a image for the group" onclick="open_images(1)">
 					</div>
 					<div class="especifico">
 						<div class="textillo">Select User for the group:</div>
@@ -181,6 +178,38 @@
 		</div>
 	</div>
 
+	<div class="modificar_imagen">
+		<div class="close1" onclick="close_images()"><img src="img/icons/close.png" alt="close"></div>
+			<div class="contenido">
+				<div class="grid">
+						<div  class="image_user"></div>
+						<div  class="image_user"></div>
+						<div  class="image_user"></div>
+						<div  class="image_user"></div>
+						<div  class="image_user"></div>
+						<div  class="image_user"></div>
+						<div  class="image_user"></div>
+						<div  class="image_user"></div>
+						<div  class="image_user"></div>
+						<div  class="image_user"></div>
+						<div  class="image_user"></div>
+						<div  class="image_user"></div>
+						<div  class="image_user"></div>
+						<div  class="image_user"></div>
+						<div  class="image_user"></div>
+						<div  class="image_user"></div>
+						<div  class="image_user"></div>
+						<div  class="image_user"></div>
+						<div  class="image_user"></div>
+						<div  class="image_user"></div>
+						<div  class="image_user"></div>
+						<div  class="image_user"></div>
+						<div  class="image_user"></div>
+						<div  class="image_user"></div>
+				</div>
+			</div>
+	</div>
+
 	<div class="reconocimiento">
 		<p>Creado por:
 			<br/>José Manuel Rodriguez Calvo
@@ -190,3 +219,4 @@
 </body>
 
 </html>
+
