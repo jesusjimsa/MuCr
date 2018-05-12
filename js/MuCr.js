@@ -37,45 +37,6 @@ function fondoBody() {
 	document.body.style.backgroundAttachment = "fixed";
 }
 
-function validacionDBemail(email, password) {
-	var mysql = require('mysql');
-
-
-	var con = mysql.createConnection({
-		host: "https://www.db4free.net",
-		user: "jmrodriguez",
-		password: "9uk6vw6e",
-		database: "orfeo_mucr"
-	});
-
-
-	con.connect(function (err) {
-		if (err) throw err;
-		var orden = "SELECT email FROM user WHERE email = \'" + email + "\'"
-		con.query(orden, function (err, result) {
-			if (err) throw err;
-			if (result.length == 0) { return false; }
-			else { return true; }
-			//console.log(result);
-		});
-	});
-}
-
-function formValidation() {
-	var email = document.registration.email.value;
-	var password = document.registration.password.value;
-
-
-	if (validacionDBemail(email, password)) {
-		window.location.href = "../MuCr_main.html";
-		return true;
-	}
-	else {
-		alert("Login was unsuccessful, please check your username and password");
-		return false;
-	}
-}
-
 function getCookie(name) {
 	var dc = document.cookie;
 	var prefix = name + "=";
