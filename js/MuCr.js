@@ -20,10 +20,24 @@ var informa = [
 	"Ultra miami, Florida"
 ]
 
-function cambiarnombre(numero) {
-	var aux = informa[numero]
-	document.getElementById("info").innerHTML = aux
+function open_images(number){
+if(number==0){
+	document.getElementsByClassName("modificar_imagen")[0].style.opacity="1";
+	
 }
+else{
+	document.getElementsByClassName("modificar_imagen")[0].style.opacity="1";
+	document.getElementsByClassName("modificar_imagen")[0].style.left="45%";
+}
+
+}
+
+
+function close_images(){
+document.getElementsByClassName("modificar_imagen")[0].style.opacity="0";
+ }
+
+
 
 function fondoBody() {
 	var numero = Math.floor(Math.random() * fondos.length)
@@ -103,3 +117,4 @@ function callPHPCookies() {
 		window.location.href = "../php/auth_cookies.php";
 	}
 }
+
