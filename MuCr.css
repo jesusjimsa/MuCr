@@ -894,42 +894,71 @@ img{
 .ajustes_principal .cambiarimagen{
 	position:relative;
 	top:10%;
-	left:4%;
+	right:15%;
 	color:white;
 	background: blue;
-	width:40%;
+	width:20%;
 	border-radius: 5vmin 5vmin 5vmin 5vmin;
 	padding-bottom: 2%;
 	font-size: 2vmin;
-	height: 2%;
-	text-align: left;
+	height: 3%;
 }
-.ajustes_principal .cambiarimagen .texto{
-	position: relative;
-	height:100%;
-	top:35%;
-	right:45%;
-	font-size: 2vmin;
-}
-.ajustes_principal .cambiarimagen #imagenmod{
-	position:fixed;
-	height:18%;
-	width:6%;
-	bottom: 53.5%;
-	left:33%;
-}
-.ajustes_principal .cambiarimagen .ok{
+
+.modificar_imagen{
 	position: fixed;
-	height:3%;
-	width:3%;
-	left:38.75%;
-	bottom:68.35%;
-	border-radius: 0vmin 2vmin 2vmin 0vmin;
-	border:0.25vmin solid #197fa3;
-	background-color: white;
+	height:50%;
+	width:30%;
+	top:33%;
+	left:22%;
+	background-color: #197fa3;
+	opacity: 0;
+}
+.modificar_imagen .close1{
+	position: relative;
+	background-color: red;
+	left: 90%;
+	top:0%;
+	height:10%;
+	width:10%;
+	border-radius: 0px 0px 0px 2vmin;
+	}
+	.modificar_imagen .close1 img{
+		position: relative;
+		height:50%;
+		width:40%;
+		top:20%;
+		left:30%;
+	}
+.modificar_imagen .contenido{
+position: relative;
+top:1%;
+height:89%;
+width:100%;
+overflow-y: scroll;
+}
+.modificar_imagen .contenido .grid{
+	position: relative;
 
+	top:0%;
+	height:100%;
+	width:99%;
 }
 
+.modificar_imagen .contenido .grid .image_user{
+	position: relative;
+	float: left;
+	height:35%;
+	width:24%;
+	background-color: white;
+	margin-right: 1%;
+	margin-bottom: 1%;
+	cursor: pointer;
+}
+
+.modificar_imagen .contenido .grid .image_user img{
+	width: 100%;
+	height: 100%;
+}
 .ajustes_principal .cambiarcontrasena{
 	position:relative;
 	top:10%;
@@ -1027,7 +1056,12 @@ img{
 	left:60%;
 	bottom:30%;
 }
+.orgrupo .main .especifico .cajetilla3{
+	position: relative;
+	left:30%;
+	top:30%;
 
+}
 .reconocimiento {
 	background-color: rgba(77,77,77,0.97);
 	position: fixed;
@@ -2041,3 +2075,4 @@ img{
 	top: 7.5px;
 	right: 61px;
 }
+

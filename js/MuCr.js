@@ -20,14 +20,39 @@ var informa = [
 	"Ultra miami, Florida"
 ]
 
+changeImage(archivo){
+
+
+
+}
+
+
 function open_images(number){
 if(number==0){
 	document.getElementsByClassName("modificar_imagen")[0].style.opacity="1";
-	
+	document.getElementsByClassName("modificar_imagen")[0].style.left="22%";
+	for(var i=0;i<24;i++){
+		var j=i+1;
+		var archivo="../img/user/"+j+".png"
+		document.getElementsByClassName("image_user")[i].style.backgroundImage = "url("+archivo+ ")";
+		document.getElementsByClassName("image_user")[i].style.backgroundRepeat = "no-repeat";
+		document.getElementsByClassName("image_user")[i].style.backgroundSize = "100% 100%";
+		document.getElementsByClassName("image_user")[i].style.backgroundPosition = "bottom center";
+		document.getElementsByClassName("image_user")[i].style.backgroundAttachment = "relative";
+	}
 }
 else{
 	document.getElementsByClassName("modificar_imagen")[0].style.opacity="1";
 	document.getElementsByClassName("modificar_imagen")[0].style.left="45%";
+	for(var i=0;i<24;i++){
+		var j=i+1;
+		var archivo="../img/groups/"+j+".jpg"
+		document.getElementsByClassName("image_user")[i].style.backgroundImage = "url("+archivo+ ")";
+		document.getElementsByClassName("image_user")[i].style.backgroundRepeat = "no-repeat";
+		document.getElementsByClassName("image_user")[i].style.backgroundSize = "100% 100%";
+		document.getElementsByClassName("image_user")[i].style.backgroundPosition = "bottom center";
+		document.getElementsByClassName("image_user")[i].style.backgroundAttachment = "relative";
+	}
 }
 
 }
