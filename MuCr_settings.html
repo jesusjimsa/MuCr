@@ -121,7 +121,7 @@
 		<img id="ajustesimagen" src="img/amy.jpg" alt="Profile picture">
 		<div class="nombre">jesusjimsa</div>
 		<input type="button" class="cambiarimagen" value="cambiar imagen" onclick="open_images(0)">
-		<div class="cambiarcontrasena" >
+		<div class="cambiarcontrasena">
 			<p>Change Password</p>
 			<FORM action="php/modification_password.php" method="post">
 				<p>Write your old password:
@@ -152,62 +152,65 @@
 
 		<div class="orgrupo">
 			<div class="titulo">GROUP ADMINISTRATION</div>
-				<FORM action="php/group_creation.php" method="post" class="main">
-					<div class="especifico">
-						<div class="textillo">Create new group
-							<br>choose a name:</div>
-						<input class="cajetilla" type="text" name="group_name">
-					</div>
-					<div class="especifico">
-						<input class="cajetilla3" type="button" name="group_image" value="choose a image for the group" onclick="open_images(1)">
-					</div>
-					<div class="especifico">
-						<div class="textillo">Select User for the group:</div>
-						<input class="cajetilla" type="text" name="group_add_user">
-					</div>
-					<div class="especifico">
-						<div class="textillo">Choose an style:</div>
-						<input class="cajetilla" type="text" name="group_style">
-					</div>
-					<div class="especifico">
-						<div class="textillo">Click OK to create the group:</div>
-						<input class="cajetilla" type="submit" value="OK">
-					</div>
-				</FORM>
-			</div>
+			<FORM action="php/group_creation.php" method="post" class="main">
+				<div class="especifico">
+					<div class="textillo">Create new group
+						<br>choose a name:</div>
+					<input class="cajetilla" type="text" name="group_name">
+				</div>
+				<div class="especifico">
+					<input class="cajetilla3" type="button" name="group_image" value="choose a image for the group" onclick="open_images(1)">
+				</div>
+				<div class="especifico">
+					<div class="textillo">Select User for the group:</div>
+					<input class="cajetilla" type="text" name="group_add_user">
+				</div>
+				<div class="especifico">
+					<div class="textillo">Choose an style:</div>
+					<input class="cajetilla" type="text" name="group_style">
+				</div>
+				<div class="especifico">
+					<div class="textillo">Click OK to create the group:</div>
+					<input class="cajetilla" type="submit" value="OK">
+				</div>
+			</FORM>
 		</div>
+	</div>
 	</div>
 
 	<div class="modificar_imagen">
-		<div class="close1" onclick="close_images()"><img src="img/icons/close.png" alt="close"></div>
-			<div class="contenido">
-				<div class="grid">
-						<div  class="image_user"></div>
-						<div  class="image_user"></div>
-						<div  class="image_user"></div>
-						<div  class="image_user"></div>
-						<div  class="image_user"></div>
-						<div  class="image_user"></div>
-						<div  class="image_user"></div>
-						<div  class="image_user"></div>
-						<div  class="image_user"></div>
-						<div  class="image_user"></div>
-						<div  class="image_user"></div>
-						<div  class="image_user"></div>
-						<div  class="image_user"></div>
-						<div  class="image_user"></div>
-						<div  class="image_user"></div>
-						<div  class="image_user"></div>
-						<div  class="image_user"></div>
-						<div  class="image_user"></div>
-						<div  class="image_user"></div>
-						<div  class="image_user"></div>
-						<div  class="image_user"></div>
-						<div  class="image_user"></div>
-						<div  class="image_user"></div>
-						<div  class="image_user"></div>
-				</div>
-			</div>
+		<div class="close1" onclick="close_images()">
+			<img src="img/icons/close.png" alt="close">
+		</div>
+		<div class="contenido">
+			<form action="php/change_user_image.php" class="grid" method="post">
+				<button type="submit" name="profile_picture" value="img/user/1.png" class="image_user"><img src="img/user/1.png" alt="1"></button>
+				<button type="submit" name="profile_picture" value="img/user/2.png" class="image_user"><img src="img/user/2.png" alt="1"></button>
+				<button type="submit" name="profile_picture" value="img/user/3.png" class="image_user"><img src="img/user/3.png" alt="1"></button>
+				<button type="submit" name="profile_picture" value="img/user/4.png" class="image_user"><img src="img/user/4.png" alt="1"></button>
+				<button type="submit" name="profile_picture" value="img/user/5.png" class="image_user"><img src="img/user/5.png" alt="1"></button>
+				<button type="submit" name="profile_picture" value="img/user/6.png" class="image_user"><img src="img/user/6.png" alt="1"></button>
+				<button type="submit" name="profile_picture" value="img/user/7.png" class="image_user"><img src="img/user/7.png" alt="1"></button>
+				<button type="submit" name="profile_picture" value="img/user/8.png" class="image_user"><img src="img/user/8.png" alt="1"></button>
+				<button type="submit" name="profile_picture" value="img/user/9.png" class="image_user"><img src="img/user/9.png" alt="1"></button>
+				<button type="submit" name="profile_picture" value="img/user/10.png" class="image_user"><img src="img/user/10.png" alt="1"></button>
+				<button type="submit" name="profile_picture" value="img/user/11.png" class="image_user"><img src="img/user/11.png" alt="1"></button>
+				<button type="submit" name="profile_picture" value="img/user/12.png" class="image_user"><img src="img/user/12.png" alt="1"></button>
+				<button type="submit" name="profile_picture" value="img/user/13.png" class="image_user"><img src="img/user/13.png" alt="1"></button>
+				<button type="submit" name="profile_picture" value="img/user/14.png" class="image_user"><img src="img/user/14.png" alt="1"></button>
+				<button type="submit" name="profile_picture" value="img/user/15.png" class="image_user"><img src="img/user/15.png" alt="1"></button>
+				<button type="submit" name="profile_picture" value="img/user/16.png" class="image_user"><img src="img/user/16.png" alt="1"></button>
+				<button type="submit" name="profile_picture" value="img/user/17.png" class="image_user"><img src="img/user/17.png" alt="1"></button>
+				<button type="submit" name="profile_picture" value="img/user/18.png" class="image_user"><img src="img/user/18.png" alt="1"></button>
+				<button type="submit" name="profile_picture" value="img/user/19.png" class="image_user"><img src="img/user/19.png" alt="1"></button>
+				<button type="submit" name="profile_picture" value="img/user/20.png" class="image_user"><img src="img/user/20.png" alt="1"></button>
+				<button type="submit" name="profile_picture" value="img/user/21.png" class="image_user"><img src="img/user/21.png" alt="1"></button>
+				<button type="submit" name="profile_picture" value="img/user/22.png" class="image_user"><img src="img/user/22.png" alt="1"></button>
+				<button type="submit" name="profile_picture" value="img/user/23.png" class="image_user"><img src="img/user/23.png" alt="1"></button>
+				<button type="submit" name="profile_picture" value="img/user/24.png" class="image_user"><img src="img/user/24.png" alt="1"></button>
+				
+			</form>
+		</div>
 	</div>
 
 	<div class="reconocimiento">
@@ -219,4 +222,3 @@
 </body>
 
 </html>
-
