@@ -30,6 +30,7 @@
 							echo $row['URLimage'];
 							ob_flush();
 							flush();
+							
 						?> 
 				alt="Profile picture">
 			</div>
