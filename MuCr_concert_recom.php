@@ -17,7 +17,11 @@
 			<div class="imagen">
 				<img src="img/amy.jpg" alt="Profile picture">
 			</div>
-			<div class="titulo">jesusjimsa</div>
+			<div class="titulo">
+				<?php
+					include 'php/write_username.php'
+				?>
+			</div>
 		</div>
 		<a class="blanco" href="MuCr_settings.php">
 			<div class="options">
