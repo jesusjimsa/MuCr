@@ -94,12 +94,12 @@ function callPHPCookies() {
 }
 
 function changeImage(archivo){
-	
+
 }
 
 function open_images(number) {
 	if (number == 0) {
-		document.getElementsByClassName("modificar_imagen")[0].style.opacity = "1";
+		document.getElementsByClassName("modificar_imagen")[0].style.display = "inherit";
 		document.getElementsByClassName("modificar_imagen")[0].style.left = "22%";
 	}
 	else {
@@ -109,7 +109,7 @@ function open_images(number) {
 }
 
 function close_images() {
-	document.getElementsByClassName("modificar_imagen")[0].style.opacity = "0";
+	document.getElementsByClassName("modificar_imagen")[0].style.display = "none";
 }
 
 function writeClassification() {

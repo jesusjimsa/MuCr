@@ -911,7 +911,7 @@ img{
 	top:33%;
 	left:22%;
 	background-color: #197fa3;
-	opacity: 0;
+	display:none;
 }
 
 .modificar_imagen .close1{
@@ -2082,4 +2082,3 @@ img{
 	top: 7.5px;
 	right: 61px;
 }
-
