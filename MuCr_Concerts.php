@@ -19,7 +19,7 @@
 			</div>
 			<div class="titulo">jesusjimsa</div>
 		</div>
-		<a class="blanco" href="MuCr_settings.html">
+		<a class="blanco" href="MuCr_settings.php">
 			<div class="options">
 				<img src="img/icons/settings.png" alt="Settings">Ajustes
 			</div>
@@ -32,12 +32,12 @@
 	</div>
 
 	<nav class="musica">
-		<a href="MuCr_main.html	">
+		<a href="MuCr_main.php	">
 			<div class="boton_derecha">
 				<img src="img/icons/music.jpg" alt="Music icon">Music
 			</div>
 		</a>
-		<a href="MuCr_concert_artist.html">
+		<a href="MuCr_concert_artist.php">
 			<div class="boton_izquierda">
 				<img src="img/icons/concierto.png" alt="Concert icon">Concerts
 			</div>
@@ -52,7 +52,7 @@
 				<div class="especialized_back">New Seacrh</div>
 				<div class="especialized">Alternative</div>
 				<div class="especialized">Punk</div>
-				<a class="blanco" href="MuCr_collection.html">
+				<a class="blanco" href="MuCr_collection.php">
 					<div class="especialized">Rock</div>
 				</a>
 				<div class="especialized"> Blues</div>
@@ -388,7 +388,7 @@
 			<img src="img/covers/Pop/Taylor_Swift.jpg" alt="artist">
 			<div class="titulo">Taylor Swift</div>
 		</div>
-		<a href="MuCr_concerts_1.html">
+		<a href="MuCr_concerts_1.php">
 			<div class="box">
 				<img src="img/covers/Pop/Adele.png" alt="artist">
 				<div class="titulo">Adele</div>
@@ -415,7 +415,7 @@
 			<div class="titulo">Weeknd</div>
 		</div>
 	</div>
-	<button class="button_studio" onclick="window.location.href='MuCr_mymusic.html'">
+	<button class="button_studio" onclick="window.location.href='MuCr_mymusic.php'">
 		&nbsp;Your Studio
 	</button>
 

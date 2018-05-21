@@ -12,7 +12,7 @@ if($result->num_rows > 0){
 	if ($conn->query($sql_insert_user) == TRUE){
 		include 'delete_cookies.php';
 
-		header('Location: ../index.html');
+		header('Location: ../index.php');
 		echo "Deleted successfully";
 	}
 	else{
@@ -21,7 +21,7 @@ if($result->num_rows > 0){
 	}
 }
 else{
-	header('Location: ../MuCr_settings.html');
+	header('Location: ../MuCr_settings.php');
 }
 
 $conn->close();

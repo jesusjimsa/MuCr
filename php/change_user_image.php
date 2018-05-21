@@ -1,5 +1,19 @@
 <?php
-$hola = $_POST['profile_picture'];
+$imgURL = $_POST['profile_picture'];
+$email = $_COOKIE['email'];
 
-echo "Eureka" . $hola . "\n";
+include 'connect_db.php';
+
+$sql_insert_img = "UPDATE user SET URLimage = '$imgURL' WHERE email = '$email'";
+
+if ($conn->query($sql_insert_img) == TRUE){
+	ob_start();
+	include 'change_Image.php';
+
+	header('Location: ../MuCr_settings.php');
+	ob_end_flush();
+}
+else{
+	header('Location: ../MuCr_settings.php');
+}
 ?>

@@ -19,7 +19,7 @@
 			</div>
 			<div class="titulo">jesusjimsa</div>
 		</div>
-		<a class="blanco" href="MuCr_settings.html">
+		<a class="blanco" href="MuCr_settings.php">
 			<div class="options">
 				<img src="img/icons/settings.png" alt="Settings">Ajustes
 			</div>
@@ -32,12 +32,12 @@
 	</div>
 
 	<nav class="musica">
-		<a href="MuCr_main.html	">
+		<a href="MuCr_main.php	">
 			<div class="boton_derecha">
 				<img src="img/icons/music.jpg" alt="Music icon">Music
 			</div>
 		</a>
-		<a href="MuCr_concert_artist.html">
+		<a href="MuCr_concert_artist.php">
 			<div class="boton_izquierda">
 				<img src="img/icons/concierto.png" alt="Concert icon">Concerts
 			</div>
@@ -52,7 +52,7 @@
 				<div class="especialized_back">New Seacrh</div>
 				<div class="especialized">Alternative</div>
 				<div class="especialized">Punk</div>
-				<a class="blanco" href="MuCr_collection.html">
+				<a class="blanco" href="MuCr_collection.php">
 					<div class="especialized">Rock</div>
 				</a>
 				<div class="especialized"> Blues</div>
@@ -90,13 +90,13 @@
 	</div>
 
 	<div class="milibreria_concerts">
-		<button class="but_my_concerts" onclick="window.location.href='MuCr_concert_artist.html'">
+		<button class="but_my_concerts" onclick="window.location.href='MuCr_concert_artist.php'">
 			<img src="img/icons/tickets_icon.png" alt="tickets_icon"> &nbsp;My concerts
 		</button>
 		<button class="but_recom_in">
 			<img src="img/icons/recommendation_icon.png" alt="recomendation_icon"> &nbsp;Recommendations
 		</button>
-		<button class="but_near" onclick="window.location.href='MuCr_concert_near.html'">
+		<button class="but_near" onclick="window.location.href='MuCr_concert_near.php'">
 			<img src="img/icons/pushpin_icon.png" alt="pushpin_icon"> &nbsp;Near
 		</button>
 	</div>
@@ -114,7 +114,7 @@
 			<div class="artist_name">My Chemical Romance</div>
 			<img src="img/concerts/recommendations/chemical.jpg" alt="My Chemical Romance">
 		</div>
-		<a href="MuCr_Concerts.html">
+		<a href="MuCr_Concerts.php">
 			<div class="itemo">
 				<div class="artist_name">Coldplay</div>
 				<img src="img/concerts/recommendations/coldplay.jpg" alt="Coldplay">

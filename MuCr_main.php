@@ -17,9 +17,26 @@
 			<div class="imagen">
 				<img src="img/amy.jpg" alt="Profile picture">
 			</div>
-			<div class="titulo">jesusjimsa</div>
+			<div class="titulo">
+				<?php
+					include 'php/connect_db.php';
+
+					$email = $_COOKIE['email'];
+
+					$sql_query = "SELECT email FROM user WHERE email = '$email'";
+
+					$result = mysqli_query($conn, $sql_query);
+					$row = mysqli_fetch_assoc($result);
+
+					list($username, $else) = explode('@', $row['email']);
+
+					echo $username;
+					ob_flush();
+					flush();
+				?>
+			</div>
 		</div>
-		<a class="blanco" href="MuCr_settings.html">
+		<a class="blanco" href="MuCr_settings.php">
 			<div class="options">
 				<img src="img/icons/settings.png" alt="Settings">Ajustes
 			</div>
@@ -32,12 +49,12 @@
 	</div>
 
 	<nav class="musica">
-		<a href="MuCr_main.html	">
+		<a href="MuCr_main.php	">
 			<div class="boton_derecha">
 				<img src="img/icons/music.jpg" alt="Music icon">Music
 			</div>
 		</a>
-		<a href="MuCr_concert_artist.html">
+		<a href="MuCr_concert_artist.php">
 			<div class="boton_izquierda">
 				<img src="img/icons/concierto.png" alt="Concert icon">Concerts
 			</div>
@@ -329,7 +346,7 @@
 		</div>
 	</div>
 
-	<button class="button_studio" onclick="window.location.href='MuCr_mymusic.html'">
+	<button class="button_studio" onclick="window.location.href='MuCr_mymusic.php'">
 		&nbsp;Your Studio
 	</button>
 </body>
