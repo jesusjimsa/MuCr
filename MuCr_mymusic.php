@@ -19,7 +19,7 @@
 			</div>
 			<div class="titulo">jesusjimsa</div>
 		</div>
-		<a class="blanco" href="MuCr_settings.html">
+		<a class="blanco" href="MuCr_settings.php">
 			<div class="options">
 				<img src="img/icons/settings.png" alt="Settings">Ajustes
 			</div>
@@ -32,12 +32,12 @@
 	</div>
 
 	<nav class="musica">
-		<a href="MuCr_main.html	">
+		<a href="MuCr_main.php	">
 			<div class="boton_derecha">
 				<img src="img/icons/music.jpg" alt="Music icon">Music
 			</div>
 		</a>
-		<a href="MuCr_concert_artist.html">
+		<a href="MuCr_concert_artist.php">
 			<div class="boton_izquierda">
 				<img src="img/icons/concierto.png" alt="Concert icon">Concerts
 			</div>
@@ -52,7 +52,7 @@
 				<div class="especialized_back">New Seacrh</div>
 				<div class="especialized">Alternative</div>
 				<div class="especialized">Punk</div>
-				<a class="blanco" href="MuCr_collection.html">
+				<a class="blanco" href="MuCr_collection.php">
 					<div class="especialized">Rock</div>
 				</a>
 				<div class="especialized"> Blues</div>
@@ -146,7 +146,7 @@
 						<button class="deletesong">delete song</button>
 					</li>
 					<li>
-						<button class="addsong" onclick="window.location.href='MuCr_mymusic_addsongs.html'">add a song</button>
+						<button class="addsong" onclick="window.location.href='MuCr_mymusic_addsongs.php'">add a song</button>
 
 					</li>
 				</ul>
@@ -212,7 +212,7 @@
 					</li>
 					<li>
 
-						<button class="addsong" onclick="window.location.href='MuCr_mymusic_addsongs.html'">add a song</button>
+						<button class="addsong" onclick="window.location.href='MuCr_mymusic_addsongs.php'">add a song</button>
 
 					</li>
 				</ul>
@@ -277,7 +277,7 @@
 					</li>
 					<li>
 
-						<button class="addsong" onclick="window.location.href='MuCr_mymusic_addsongs.html'">add a song</button>
+						<button class="addsong" onclick="window.location.href='MuCr_mymusic_addsongs.php'">add a song</button>
 
 					</li>
 				</ul>
@@ -341,7 +341,7 @@
 						<button class="deletesong">delete song</button>
 					</li>
 					<li>
-						<button class="addsong" onclick="window.location.href='MuCr_mymusic_addsongs.html'">add a song</button>
+						<button class="addsong" onclick="window.location.href='MuCr_mymusic_addsongs.php'">add a song</button>
 					</li>
 				</ul>
 
@@ -405,7 +405,7 @@
 					</li>
 					<li>
 
-						<button class="addsong" onclick="window.location.href='MuCr_mymusic_addsongs.html'">add a song</button>
+						<button class="addsong" onclick="window.location.href='MuCr_mymusic_addsongs.php'">add a song</button>
 
 				</ul>
 
@@ -425,7 +425,7 @@
 		</div>
 		<div class="abajo">
 
-			<button class="Addasong" onclick="window.location.href='MuCr_mymusic_addsongs.html'">Add Songs</button>
+			<button class="Addasong" onclick="window.location.href='MuCr_mymusic_addsongs.php'">Add Songs</button>
 
 		</div>
 		<div class="abajototal">

@@ -19,7 +19,7 @@
 			</div>
 			<div class="titulo">LIRA</div>
 		</div>
-		<a class="blanco" href="MuCr_main.html">
+		<a class="blanco" href="MuCr_main.php">
 			<div class="options">
 				<img id="cuadrado" src="img/icons/home.png" alt="home">Home
 			</div>
@@ -28,12 +28,12 @@
 
 
 	<nav class="musica">
-		<a href="MuCr_main.html">
+		<a href="MuCr_main.php">
 			<div class="boton_derecha">
 				<img src="img/icons/music.jpg" alt="Music icon">Music
 			</div>
 		</a>
-		<a href="MuCr_concert_artist.html">
+		<a href="MuCr_concert_artist.php">
 			<div class="boton_izquierda">
 				<img src="img/icons/concierto.png" alt="Concert icon">Concerts
 			</div>
@@ -118,7 +118,7 @@
 	</div>
 
 	<div class="ajustes_principal">
-		<img id="ajustesimagen" src="img/amy.jpg" alt="Profile picture">
+		<img id="ajustesimagen" src="<php echo $userimage; >      img/amy.jpg" alt="Profile picture">
 		<div class="nombre">jesusjimsa</div>
 		<input type="button" class="cambiarimagen" value="cambiar imagen" onclick="open_images(0)">
 		<div class="cambiarcontrasena">

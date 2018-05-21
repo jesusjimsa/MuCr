@@ -22,21 +22,21 @@ if($password1 == $password2){
 			// Set cookies
 			setcookie("password", $password1, time() + (86400 * 30), "/");	// 86400 = 1 day
 
-			header('Location: ../MuCr_main.html');
+			header('Location: ../MuCr_main.php');
 			echo "New record created successfully";
 		}
 		else{
-			// header('Location: index.html');
+			// header('Location: index.php');
 			echo "Error: " . $sql_insert_user . "<br>" . $conn->error;
 		}
 	}
 	else{
-		header('Location: ../MuCr_settings.html');
+		header('Location: ../MuCr_settings.php');
 	}
 
 	$conn->close();
 }
 else{
-	header('Location: ../index.html');
+	header('Location: ../index.php');
 }
 ?>

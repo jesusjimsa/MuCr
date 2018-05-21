@@ -15,7 +15,7 @@ function checkUser($email, $password1){
 			setcookie("email", $email, time() + (86400 * 30), "/");	// 86400 = 1 day
 			setcookie("password", $password1, time() + (86400 * 30), "/");	// 86400 = 1 day
 			
-			header('Location: ../MuCr_main.html');
+			header('Location: ../MuCr_main.php');
 		}
 		else{
 			echo "Hello darkness my old friend";

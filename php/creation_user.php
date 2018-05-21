@@ -21,7 +21,7 @@ if($password1 == $password2){
 			setcookie("email", $email, time() + (86400 * 30), "/");	// 86400 = 1 day
 			setcookie("password", $password1, time() + (86400 * 30), "/");	// 86400 = 1 day
 
-			header('Location: ../MuCr_main.html');
+			header('Location: ../MuCr_main.php');
 			echo "New record created successfully";
 		}
 		else{
@@ -30,12 +30,12 @@ if($password1 == $password2){
 		}
 	}
 	else{
-		header('Location: ../index.html');
+		header('Location: ../index.php');
 	}
 
 	$conn->close();
 }
 else{
-	header('Location: ../index.html');
+	header('Location: ../index.php');
 }
 ?>

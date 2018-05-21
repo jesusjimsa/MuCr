@@ -1,3 +1,11 @@
+<?php
+require_once 'app/init.php';
+require_once 'php/auth_cookies.php';
+
+$app = new App;
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,7 +19,7 @@
 	<script src="js/MuCr.js"></script>
 </head>
 
-<body onLoad="javascript:fondoBody(); callPHPCookies();">
+<body onLoad="javascript:fondoBody();">
 
 	<nav class="sidebar">
 		<div class="sidebar_principal">

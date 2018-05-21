@@ -19,7 +19,7 @@
 			</div>
 			<div class="titulo">jesusjimsa</div>
 		</div>
-		<a class="blanco" href="MuCr_settings.html">
+		<a class="blanco" href="MuCr_settings.php">
 			<div class="options">
 				<img src="img/icons/settings.png" alt="Settings">Ajustes
 			</div>
@@ -32,12 +32,12 @@
 	</div>
 
 	<nav class="musica">
-		<a href="MuCr_main.html	">
+		<a href="MuCr_main.php	">
 			<div class="boton_derecha">
 				<img src="img/icons/music.jpg" alt="Music icon">Music
 			</div>
 		</a>
-		<a href="MuCr_concert_artist.html">
+		<a href="MuCr_concert_artist.php">
 			<div class="boton_izquierda">
 				<img src="img/icons/concierto.png" alt="Concert icon">Concerts
 			</div>
@@ -52,7 +52,7 @@
 				<div class="especialized_back">New Seacrh</div>
 				<div class="especialized">Alternative</div>
 				<div class="especialized">Punk</div>
-				<a class="blanco" href="MuCr_collection.html">
+				<a class="blanco" href="MuCr_collection.php">
 					<div class="especialized">Rock</div>
 				</a>
 				<div class="especialized"> Blues</div>
@@ -386,7 +386,7 @@
 			<img src="img/covers/Pop/Taylor_Swift.jpg" alt="artista">
 			<div class="titulo">Taylor Swift</div>
 		</div>
-		<a href="MuCr_Concerts.html">
+		<a href="MuCr_Concerts.php">
 			<div class="box">
 				<img src="img/covers/Pop/coldplay.jpg" alt="artista">
 				<div class="titulo">Coldplay</div>

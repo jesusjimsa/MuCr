@@ -12,12 +12,12 @@
 </head>
 
 <body class="stage6">
-	<a href="MuCr_main.html	">
+	<a href="MuCr_main.php	">
 		<div class="boton_derecha">
 			<img src="img/icons/music.jpg" alt="Music icon">Music
 		</div>
 	</a>
-	<a href="MuCr_concert_artist.html">
+	<a href="MuCr_concert_artist.php">
 		<div class="boton_izquierda">
 			<img src="img/icons/concierto.png" alt="Concert icon">Concerts
 		</div>
@@ -38,7 +38,7 @@
 			<div class="especialized_back">New Seacrh</div>
 			<div class="especialized">Alternative</div>
 			<div class="especialized">Punk</div>
-			<a class="blanco" href="MuCr_collection.html">
+			<a class="blanco" href="MuCr_collection.php">
 				<div class="especialized">Rock</div>
 			</a>
 			<div class="especialized"> Blues</div>
@@ -132,7 +132,7 @@
 							<button class="deletesong">delete song</button>
 						</li>
 						<li>
-							<button class="addsong" onclick="window.location.href='MuCr_mymusic_addsongs.html'">add a song</button>
+							<button class="addsong" onclick="window.location.href='MuCr_mymusic_addsongs.php'">add a song</button>
 
 						</li>
 					</ul>
@@ -198,7 +198,7 @@
 						</li>
 						<li>
 
-							<button class="addsong" onclick="window.location.href='MuCr_mymusic_addsongs.html'">add a song</button>
+							<button class="addsong" onclick="window.location.href='MuCr_mymusic_addsongs.php'">add a song</button>
 
 						</li>
 					</ul>
@@ -263,7 +263,7 @@
 						</li>
 						<li>
 
-							<button class="addsong" onclick="window.location.href='MuCr_mymusic_addsongs.html'">add a song</button>
+							<button class="addsong" onclick="window.location.href='MuCr_mymusic_addsongs.php'">add a song</button>
 
 						</li>
 					</ul>
@@ -327,7 +327,7 @@
 							<button class="deletesong">delete song</button>
 						</li>
 						<li>
-							<button class="addsong" onclick="window.location.href='MuCr_mymusic_addsongs.html'">add a song</button>
+							<button class="addsong" onclick="window.location.href='MuCr_mymusic_addsongs.php'">add a song</button>
 						</li>
 					</ul>
 
@@ -391,7 +391,7 @@
 						</li>
 						<li>
 
-							<button class="addsong" onclick="window.location.href='MuCr_mymusic_addsongs.html'">add a song</button>
+							<button class="addsong" onclick="window.location.href='MuCr_mymusic_addsongs.php'">add a song</button>
 
 					</ul>
 
@@ -411,7 +411,7 @@
 			</div>
 			<div class="abajo">
 
-				<button class="Addasong" onclick="window.location.href='MuCr_mymusic_addsongs.html'">Add Songs</button>
+				<button class="Addasong" onclick="window.location.href='MuCr_mymusic_addsongs.php'">Add Songs</button>
 
 			</div>
 			<div class="abajototal">
@@ -477,10 +477,10 @@
 				<input type="file" class="casilla3" multiple>
 			</p>
 
-			<button class="submit" onclick="window.location.href='MuCr_mymusic.html'">Upload</button>
+			<button class="submit" onclick="window.location.href='MuCr_mymusic.php'">Upload</button>
 
 
-			<button class="submit" onclick="window.location.href='MuCr_mymusic.html'">Close</button>
+			<button class="submit" onclick="window.location.href='MuCr_mymusic.php'">Close</button>
 
 		</div>
 
