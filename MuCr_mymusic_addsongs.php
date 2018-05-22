@@ -36,10 +36,10 @@
 
 		<div class="orden">
 			<button class="especialized_back" )>Sort by</button>
-			<button class="especialized" class="option_sidebar" style="display:block;" onclick="writeClassification(1);">Music Style</button><!-- 0 -->
-			<button class="especialized" class="option_sidebar" style="display:block;" onclick="writeClassification(2);">Rarity</button><!-- 1 -->
+			<button class="especialized" style="display:block;" onclick="writeClassification(1);">Music Style</button><!-- 0 -->
+			<button class="especialized" style="display:block;" onclick="writeClassification(2);">Rarity</button><!-- 1 -->
 			<button class="especialized_back" style="display:none;" onclick="writeClassification(0);">Back</button>
-			<button class="especialized" class="artist_sidebar" style="display:none;">All</button><!-- 2 -->
+			<button class="especialized" style="display:none;">All</button><!-- 2 -->
 			<button class="especialized" style="display:none;">Alternative</button><!-- 3 -->
 			<button class="especialized" style="display:none;">Punk</button><!-- 4 -->
 			<button class="especialized" style="display:none;">Rock</button><!-- 5 -->
