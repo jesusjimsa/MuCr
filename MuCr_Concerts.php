@@ -103,12 +103,12 @@
 
 	<div class="listaciudades">
 		<div class="continentes">
-			<button class="cont" onclick="opencountries(africa);">AFRICA</button>
-			<button class="cont" onclick="opencountries(asia);">ASIA</button>
-			<button class="cont" onclick="opencountries(europe);">EUROPE</button>
-			<button class="cont" onclick="opencountries(namerica);">NORTH AMERICA</button>
-			<button class="cont" onclick="opencountries(oceania);">OCEANIA</button>
-			<button class="cont" onclick="opencountries(samerica);">SOUTH AMERICA</button>
+			<button class="cont" onclick="opencountries(2);">AFRICA</button>
+			<button class="cont" onclick="opencountries(6);">ASIA</button>
+			<button class="cont" onclick="opencountries(1);">EUROPE</button>
+			<button class="cont" onclick="opencountries(4);">NORTH AMERICA</button>
+			<button class="cont" onclick="opencountries(3);">OCEANIA</button>
+			<button class="cont" onclick="opencountries(5);">SOUTH AMERICA</button>
 		</div>
 
 		<div class="countries">

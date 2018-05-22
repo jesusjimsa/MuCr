@@ -1,9 +1,5 @@
 <?php
-require_once 'app/init.php';
 require_once 'php/auth_cookies.php';
-
-$app = new App;
-
 ?>
 
 <!DOCTYPE html>
