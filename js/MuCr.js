@@ -85,7 +85,7 @@ function writeClassification(option) {
 			document.getElementsByClassName("especialized")[i].style.display = "none";
 		}
 	}
-	
+
 	if (option == 1){
 		document.getElementsByClassName("especialized_back")[1].style.display = "block";
 		document.getElementsByClassName("especialized_back")[0].style.display = "none";
@@ -111,4 +111,35 @@ function writeClassification(option) {
 			document.getElementsByClassName("especialized")[i].style.display = "block";
 		}
 	}
+}
+
+function opencountries(continent){
+	if(continent=="europe"){
+		//var max=document.getElementsByClassName("flag-europe").length();
+		for(var i=0;i<10;i++){
+			document.getElementsByClassName("flag-europe").style.display="block";
+		}
+	}
+	if(continent=="africa"){
+		for(var i=0;i<10;i++){
+			document.getElementsByClassName("flag-african").style.display="block";
+		}
+	}
+	if(continent=="oceania"){
+		for(var i=0;i<10;i++){
+			document.getElementsByClassName("flag-oceania").style.display="block";
+		}
+	}
+	if(continent=="namerica"){
+		for(var i=0;i<10;i++){
+			document.getElementsByClassName("flag-namerica").style.display="block";
+		}
+	}
+	if(continent=="samerica"){
+		for(var i=0;i<10;i++){
+			document.getElementsByClassName("flag-samerica").style.display="block";
+		}
+
+	}
+
 }
