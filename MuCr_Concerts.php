@@ -103,174 +103,801 @@
 
 	<div class="listaciudades">
 		<div class="continentes">
-			<div class="cont">AFRICA</div>
-			<div class="cont">ASIA</div>
-			<div class="cont">EUROPE</div>
-			<div class="cont">NORTH AMERICA</div>
-			<div class="cont">OCEANIA</div>
-			<div class="cont">SOUTH AMERICA</div>
+			<button class="cont" onclick="opencountries(africa);">AFRICA</button>
+			<button class="cont" onclick="opencountries(asia);">ASIA</button>
+			<button class="cont" onclick="opencountries(europe);">EUROPE</button>
+			<button class="cont" onclick="opencountries(namerica);">NORTH AMERICA</button>
+			<button class="cont" onclick="opencountries(oceania);">OCEANIA</button>
+			<button class="cont" onclick="opencountries(samerica);">SOUTH AMERICA</button>
 		</div>
 
 		<div class="countries">
-			<div class="flag">
-				<img src="img/flags/alb.jpg" alt="bandera">
-				<div class="titulo">ALB</div>
+			<div class="flag-african">
+				<img src="img/flags/Africa/ao.png" alt="bandera">
+				<div class="titulo">AO</div>
 			</div>
-			<div class="flag">
-				<img src="img/flags/arm.jpg" alt="bandera">
-				<div class="titulo">ARM</div>
+			<div class="flag-african">
+				<img src="img/flags/Africa/bf.png" alt="bandera">
+				<div class="titulo">BF</div>
 			</div>
-			<div class="flag">
-				<img src="img/flags/aus.jpg" alt="bandera">
-				<div class="titulo">AUS</div>
+			<div class="flag-african">
+				<img src="img/flags/Africa/bi.png" alt="bandera">
+				<div class="titulo">BI</div>
 			</div>
-			<div class="flag">
-				<img src="img/flags/aze.jpg" alt="bandera">
-				<div class="titulo">AZE</div>
+			<div class="flag-african">
+				<img src="img/flags/Africa/bj.png" alt="bandera">
+				<div class="titulo">BJ</div>
 			</div>
-			<div class="flag">
-				<img src="img/flags/bel.jpg" alt="bandera">
-				<div class="titulo">BEL</div>
+			<div class="flag-african">
+				<img src="img/flags/Africa/bw.png" alt="bandera">
+				<div class="titulo">BW</div>
 			</div>
-			<div class="flag">
-				<img src="img/flags/bie.jpg" alt="bandera">
-				<div class="titulo">BIE</div>
+			<div class="flag-african">
+				<img src="img/flags/Africa/cd.png" alt="bandera">
+				<div class="titulo">CD</div>
 			</div>
-			<div class="flag">
-				<img src="img/flags/bos.jpg" alt="bandera">
-				<div class="titulo">BOS</div>
+			<div class="flag-african">
+				<img src="img/flags/Africa/cf.png" alt="bandera">
+				<div class="titulo">CF</div>
 			</div>
-			<div class="flag">
-				<img src="img/flags/bul.jpg" alt="bandera">
-				<div class="titulo">BUL</div>
+			<div class="flag-african">
+				<img src="img/flags/Africa/cg.png" alt="bandera">
+				<div class="titulo">CG</div>
 			</div>
-			<div class="flag">
-				<img src="img/flags/cez.jpg" alt="bandera">
-				<div class="titulo">CEZ</div>
+			<div class="flag-african">
+				<img src="img/flags/Africa/ci.png" alt="bandera">
+				<div class="titulo">CI</div>
 			</div>
-			<div class="flag">
-				<img src="img/flags/chi.jpg" alt="bandera">
-				<div class="titulo">CYP</div>
+			<div class="flag-african">
+				<img src="img/flags/Africa/cm.png" alt="bandera">
+				<div class="titulo">CM</div>
 			</div>
-			<div class="flag">
-				<img src="img/flags/cro.jpg" alt="bandera">
-				<div class="titulo">CRO</div>
+			<div class="flag-african">
+				<img src="img/flags/Africa/cv.png" alt="bandera">
+				<div class="titulo">CV</div>
 			</div>
-			<div class="flag">
-				<img src="img/flags/din.jpg" alt="bandera">
-				<div class="titulo">DEN</div>
+			<div class="flag-african">
+				<img src="img/flags/Africa/dj.png" alt="bandera">
+				<div class="titulo">DJ</div>
 			</div>
-			<div class="flag">
-				<img src="img/flags/esln.jpg" alt="bandera">
-				<div class="titulo">SVN</div>
+			<div class="flag-african">
+				<img src="img/flags/Africa/dz.png" alt="bandera">
+				<div class="titulo">DZ</div>
 			</div>
-			<div class="flag">
-				<img src="img/flags/eslq.jpg" alt="bandera">
-				<div class="titulo">SVQ</div>></div>
-			<div class="flag">
-				<img src="img/flags/esp.jpg" alt="bandera">
-				<div class="titulo">ESP</div>
+			<div class="flag-african">
+				<img src="img/flags/Africa/eg.png" alt="bandera">
+				<div class="titulo">EG</div>
 			</div>
-			<div class="flag">
-				<img src="img/flags/est.jpg" alt="bandera">
-				<div class="titulo">EST</div>
+			<div class="flag-african">
+				<img src="img/flags/Africa/eh.png" alt="bandera">
+				<div class="titulo">EH</div>
 			</div>
-			<div class="flag">
-				<img src="img/flags/fin.jpg" alt="bandera">
-				<div class="titulo">FIN</div>
+			<div class="flag-african">
+				<img src="img/flags/Africa/er.png" alt="bandera">
+				<div class="titulo">ER</div>
 			</div>
-			<div class="flag">
-				<img src="img/flags/fra.jpg" alt="bandera">
-				<div class="titulo">FRA</div>
+			<div class="flag-african">
+				<img src="img/flags/Africa/et.png" alt="bandera">
+				<div class="titulo">ET</div>
 			</div>
-			<div class="flag">
-				<img src="img/flags/ger.jpg" alt="bandera">
-				<div class="titulo">GER</div>
+			<div class="flag-african">
+				<img src="img/flags/Africa/ga.png" alt="bandera">
+				<div class="titulo">GA</div>
 			</div>
-			<div class="flag">
-				<img src="img/flags/gre.jpg" alt="bandera">
-				<div class="titulo">GRE</div>
+			<div class="flag-african">
+				<img src="img/flags/Africa/gh.png" alt="bandera">
+				<div class="titulo">GH</div>
 			</div>
-			<div class="flag">
-				<img src="img/flags/hun.jpg" alt="bandera">
-				<div class="titulo">HUN</div>
+			<div class="flag-african">
+				<img src="img/flags/Africa/gm.png" alt="bandera">
+				<div class="titulo">GM</div>
 			</div>
-			<div class="flag">
-				<img src="img/flags/irl.jpg" alt="bandera">
-				<div class="titulo">IRL</div>
+			<div class="flag-african">
+				<img src="img/flags/Africa/gn.png" alt="bandera">
+				<div class="titulo">GN</div>
 			</div>
-			<div class="flag">
-				<img src="img/flags/isl.jpg" alt="bandera">
-				<div class="titulo">ICE</div>
+			<div class="flag-african">
+				<img src="img/flags/Africa/gq.png" alt="bandera">
+				<div class="titulo">GQ</div>
 			</div>
-			<div class="flag">
-				<img src="img/flags/ita.jpg" alt="bandera">
-				<div class="titulo">ITA</div>
+			<div class="flag-african">
+				<img src="img/flags/Africa/gw.png" alt="bandera">
+				<div class="titulo">GW</div>
 			</div>
-			<div class="flag">
-				<img src="img/flags/lux.jpg" alt="bandera">
-				<div class="titulo">LUX</div>
+			<div class="flag-african">
+				<img src="img/flags/Africa/ke.png" alt="bandera">
+				<div class="titulo">KE</div>
 			</div>
-			<div class="flag">
-				<img src="img/flags/mac.jpg" alt="bandera">
-				<div class="titulo">MAC</div>
+			<div class="flag-african">
+				<img src="img/flags/Africa/km.png" alt="bandera">
+				<div class="titulo">KM</div>
 			</div>
-			<div class="flag">
-				<img src="img/flags/mal.jpg" alt="bandera">
-				<div class="titulo">MAL</div>
+			<div class="flag-african">
+				<img src="img/flags/Africa/lr.png" alt="bandera">
+				<div class="titulo">LR</div>
 			</div>
-			<div class="flag">
-				<img src="img/flags/mol.png" alt="bandera">
-				<div class="titulo">MOL</div>
+			<div class="flag-african">
+				<img src="img/flags/Africa/ls.png" alt="bandera">
+				<div class="titulo">LS</div>
 			</div>
-			<div class="flag">
-				<img src="img/flags/mon.jpg" alt="bandera">
-				<div class="titulo">MON</div>
+			<div class="flag-african">
+				<img src="img/flags/Africa/ly.png" alt="bandera">
+				<div class="titulo">LY</div>
 			</div>
-			<div class="flag">
-				<img src="img/flags/nor.jpg" alt="bandera">
-				<div class="titulo">NOR</div>
+			<div class="flag-african">
+				<img src="img/flags/Africa/ma.png" alt="bandera">
+				<div class="titulo">MA</div>
 			</div>
-			<div class="flag">
-				<img src="img/flags/pab.jpg" alt="bandera">
-				<div class="titulo">NET</div>
+			<div class="flag-african">
+				<img src="img/flags/Africa/mg.png" alt="bandera">
+				<div class="titulo">MG</div>
 			</div>
-			<div class="flag">
-				<img src="img/flags/pol.jpg" alt="bandera">
-				<div class="titulo">POL</div>
+			<div class="flag-african">
+				<img src="img/flags/Africa/ml.png" alt="bandera">
+				<div class="titulo">ML</div>
 			</div>
-			<div class="flag">
-				<img src="img/flags/por.jpg" alt="bandera">
-				<div class="titulo">POR</div>
+			<div class="flag-african">
+				<img src="img/flags/Africa/mr.png" alt="bandera">
+				<div class="titulo">MR</div>
 			</div>
-			<div class="flag">
-				<img src="img/flags/rom.png" alt="bandera">
-				<div class="titulo">ROM</div>
+			<div class="flag-african">
+				<img src="img/flags/Africa/mu.png" alt="bandera">
+				<div class="titulo">MU</div>
 			</div>
-			<div class="flag">
-				<img src="img/flags/ser.jpg" alt="bandera">
-				<div class="titulo">SER</div>
+			<div class="flag-african">
+				<img src="img/flags/Africa/mw.png" alt="bandera">
+				<div class="titulo">MW</div>
 			</div>
-			<div class="flag">
-				<img src="img/flags/sue.jpg" alt="bandera">
-				<div class="titulo">SWE</div>
+			<div class="flag-african">
+				<img src="img/flags/Africa/mz.png" alt="bandera">
+				<div class="titulo">MZ</div>
 			</div>
-			<div class="flag">
-				<img src="img/flags/sui.jpg" alt="bandera">
-				<div class="titulo">SWI</div>
+			<div class="flag-african">
+				<img src="img/flags/Africa/na.png" alt="bandera">
+				<div class="titulo">NA</div>
 			</div>
-			<div class="flag">
-				<img src="img/flags/tur.jpg" alt="bandera">
-				<div class="titulo">TUR</div>
+			<div class="flag-african">
+				<img src="img/flags/Africa/ne.png" alt="bandera">
+				<div class="titulo">NE</div>
 			</div>
-			<div class="flag">
-				<img src="img/flags/ucr.jpg" alt="bandera">
-				<div class="titulo">UKR</div>
+			<div class="flag-african">
+				<img src="img/flags/Africa/ng.png" alt="bandera">
+				<div class="titulo">NG</div>
 			</div>
-			<div class="flag">
-				<img src="img/flags/uk.jpg" alt="bandera">
-				<div class="titulo">GRB</div>
+			<div class="flag-african">
+				<img src="img/flags/Africa/rw.png" alt="bandera">
+				<div class="titulo">RW</div>
 			</div>
+			<div class="flag-african">
+				<img src="img/flags/Africa/sc.png" alt="bandera">
+				<div class="titulo">SC</div>
+			</div>
+			<div class="flag-african">
+				<img src="img/flags/Africa/sd.png" alt="bandera">
+				<div class="titulo">SD</div>
+			</div>
+			<div class="flag-african">
+				<img src="img/flags/Africa/sl.png" alt="bandera">
+				<div class="titulo">SL</div>
+			</div>
+			<div class="flag-african">
+				<img src="img/flags/Africa/sn.png" alt="bandera">
+				<div class="titulo">SN</div>
+			</div>
+			<div class="flag-african">
+				<img src="img/flags/Africa/so.png" alt="bandera">
+				<div class="titulo">SO</div>
+			</div>
+			<div class="flag-african">
+				<img src="img/flags/Africa/st.png" alt="bandera">
+				<div class="titulo">ST</div>
+			</div>
+			<div class="flag-african">
+				<img src="img/flags/Africa/sz.png" alt="bandera">
+				<div class="titulo">SZ</div>
+			</div>
+			<div class="flag-african">
+				<img src="img/flags/Africa/td.png" alt="bandera">
+				<div class="titulo">TD</div>
+			</div>
+			<div class="flag-african">
+				<img src="img/flags/Africa/tg.png" alt="bandera">
+				<div class="titulo">TG</div>
+			</div>
+			<div class="flag-african">
+				<img src="img/flags/Africa/tn.png" alt="bandera">
+				<div class="titulo">TN</div>
+			</div>
+			<div class="flag-african">
+				<img src="img/flags/Africa/tz.png" alt="bandera">
+				<div class="titulo">TZ</div>
+			</div>
+			<div class="flag-african">
+				<img src="img/flags/Africa/ug.png" alt="bandera">
+				<div class="titulo">UG</div>
+			</div>
+			<div class="flag-african">
+				<img src="img/flags/Africa/za.png" alt="bandera">
+				<div class="titulo">ZA</div>
+			</div>
+			<div class="flag-african">
+				<img src="img/flags/Africa/zm.png" alt="bandera">
+				<div class="titulo">ZM</div>
+			</div>
+			<div class="flag-african">
+				<img src="img/flags/Africa/zw.png" alt="bandera">
+				<div class="titulo">ZW</div>
+			</div>
+
+			<div class="flag-asia">
+				<img src="img/flags/Asia/ae.png" alt="bandera">
+				<div class="titulo">AE</div>
+			</div>
+			<div class="flag-asia">
+				<img src="img/flags/Asia/af.png" alt="bandera">
+				<div class="titulo">AF</div>
+			</div>
+			<div class="flag-asia">
+				<img src="img/flags/Asia/am.png" alt="bandera">
+				<div class="titulo">AM</div>
+			</div>
+			<div class="flag-asia">
+				<img src="img/flags/Asia/az.png" alt="bandera">
+				<div class="titulo">AZ</div>
+			</div>
+			<div class="flag-asia">
+				<img src="img/flags/Asia/bd.png" alt="bandera">
+				<div class="titulo">BD</div>
+			</div>
+			<div class="flag-asia">
+				<img src="img/flags/Asia/bh.png" alt="bandera">
+				<div class="titulo">BH</div>
+			</div>
+			<div class="flag-asia">
+				<img src="img/flags/Asia/bn.png" alt="bandera">
+				<div class="titulo">BN</div>
+			</div>
+			<div class="flag-asia">
+				<img src="img/flags/Asia/bt.png" alt="bandera">
+				<div class="titulo">BT</div>
+			</div>
+			<div class="flag-asia">
+				<img src="img/flags/Asia/cn.png" alt="bandera">
+				<div class="titulo">CN</div>
+			</div>
+			<div class="flag-asia">
+				<img src="img/flags/Asia/cy.png" alt="bandera">
+				<div class="titulo">CY</div>
+			</div>
+			<div class="flag-asia">
+				<img src="img/flags/Asia/ge.png" alt="bandera">
+				<div class="titulo">GE</div>
+			</div>
+			<div class="flag-asia">
+				<img src="img/flags/Asia/id.png" alt="bandera">
+				<div class="titulo">ID</div>
+			</div>
+			<div class="flag-asia">
+				<img src="img/flags/Asia/il.png" alt="bandera">
+				<div class="titulo">IL</div>
+			</div>
+			<div class="flag-asia">
+				<img src="img/flags/Asia/in.png" alt="bandera">
+				<div class="titulo">IN</div>
+			</div>
+			<div class="flag-asia">
+				<img src="img/flags/Asia/iq.png" alt="bandera">
+				<div class="titulo">IQ</div>
+			</div>
+			<div class="flag-asia">
+				<img src="img/flags/Asia/ir.png" alt="bandera">
+				<div class="titulo">IR</div>
+			</div>
+			<div class="flag-asia">
+				<img src="img/flags/Asia/jo.png" alt="bandera">
+				<div class="titulo">JO</div>
+			</div>
+			<div class="flag-asia">
+				<img src="img/flags/Asia/jp.png" alt="bandera">
+				<div class="titulo">JP</div>
+			</div>
+			<div class="flag-asia">
+				<img src="img/flags/Asia/kg.png" alt="bandera">
+				<div class="titulo">KG</div>
+			</div>
+			<div class="flag-asia">
+				<img src="img/flags/Asia/kh.png" alt="bandera">
+				<div class="titulo">KH</div>
+			</div>
+			<div class="flag-asia">
+				<img src="img/flags/Asia/ki.png" alt="bandera">
+				<div class="titulo">KI</div>
+			</div>
+			<div class="flag-asia">
+				<img src="img/flags/Asia/kp.png" alt="bandera">
+				<div class="titulo">KP</div>
+			</div>
+			<div class="flag-asia">
+				<img src="img/flags/Asia/kr.png" alt="bandera">
+				<div class="titulo">KR</div>
+			</div>
+			<div class="flag-asia">
+				<img src="img/flags/Asia/kw.png" alt="bandera">
+				<div class="titulo">KW</div>
+			</div>
+			<div class="flag-asia">
+				<img src="img/flags/Asia/kz.png" alt="bandera">
+				<div class="titulo">KZ</div>
+			</div>
+			<div class="flag-asia">
+				<img src="img/flags/Asia/la.png" alt="bandera">
+				<div class="titulo">LA</div>
+			</div>
+			<div class="flag-asia">
+				<img src="img/flags/Asia/lb.png" alt="bandera">
+				<div class="titulo">LB</div>
+			</div>
+			<div class="flag-asia">
+				<img src="img/flags/Asia/lk.png" alt="bandera">
+				<div class="titulo">LK</div>
+			</div>
+			<div class="flag-asia">
+				<img src="img/flags/Asia/mm.png" alt="bandera">
+				<div class="titulo">MM</div>
+			</div>
+			<div class="flag-asia">
+				<img src="img/flags/Asia/mv.png" alt="bandera">
+				<div class="titulo">MV</div>
+			</div>
+			<div class="flag-asia">
+				<img src="img/flags/Asia/my.png" alt="bandera">
+				<div class="titulo">MY</div>
+			</div>
+			<div class="flag-asia">
+				<img src="img/flags/Asia/np.png" alt="bandera">
+				<div class="titulo">NP</div>
+			</div>
+			<div class="flag-asia">
+				<img src="img/flags/Asia/om.png" alt="bandera">
+				<div class="titulo">OM</div>
+			</div>
+			<div class="flag-asia">
+				<img src="img/flags/Asia/ph.png" alt="bandera">
+				<div class="titulo">PH</div>
+			</div>
+			<div class="flag-asia">
+				<img src="img/flags/Asia/pk.png" alt="bandera">
+				<div class="titulo">PK</div>
+			</div>
+			<div class="flag-asia">
+				<img src="img/flags/Asia/qa.png" alt="bandera">
+				<div class="titulo">QA</div>
+			</div>
+			<div class="flag-asia">
+				<img src="img/flags/Asia/ru.png" alt="bandera">
+				<div class="titulo">RU</div>
+			</div>
+			<div class="flag-asia">
+				<img src="img/flags/Asia/sa.png" alt="bandera">
+				<div class="titulo">SA</div>
+			</div>
+			<div class="flag-asia">
+				<img src="img/flags/Asia/sg.png" alt="bandera">
+				<div class="titulo">SG</div>
+			</div>
+			<div class="flag-asia">
+				<img src="img/flags/Asia/sy.png" alt="bandera">
+				<div class="titulo">SY</div>
+			</div>
+			<div class="flag-asia">
+				<img src="img/flags/Asia/th.png" alt="bandera">
+				<div class="titulo">TH</div>
+			</div>
+			<div class="flag-asia">
+				<img src="img/flags/Asia/tj.png" alt="bandera">
+				<div class="titulo">TJ</div>
+			</div>
+			<div class="flag-asia">
+				<img src="img/flags/Asia/tl.png" alt="bandera">
+				<div class="titulo">TL</div>
+			</div>
+			<div class="flag-asia">
+				<img src="img/flags/Asia/tm.png" alt="bandera">
+				<div class="titulo">TM</div>
+			</div>
+			<div class="flag-asia">
+				<img src="img/flags/Asia/tr.png" alt="bandera">
+				<div class="titulo">TR</div>
+			</div>
+			<div class="flag-asia">
+				<img src="img/flags/Asia/tw.png" alt="bandera">
+				<div class="titulo">TW</div>
+			</div>
+			<div class="flag-asia">
+				<img src="img/flags/Asia/uz.png" alt="bandera">
+				<div class="titulo">UZ</div>
+			</div>
+			<div class="flag-asia">
+				<img src="img/flags/Asia/vn.png" alt="bandera">
+				<div class="titulo">VN</div>
+			</div>
+			<div class="flag-asia">
+				<img src="img/flags/Asia/ye.png" alt="bandera">
+				<div class="titulo">YE</div>
+			</div>
+
+			<div class="flag-europe">
+				<img src="img/flags/Europe/ad.png" alt="bandera">
+				<div class="titulo">AD</div>
+			</div>
+			<div class="flag-europe">
+				<img src="img/flags/Europe/al.png" alt="bandera">
+				<div class="titulo">AL</div>
+			</div>
+			<div class="flag-europe">
+				<img src="img/flags/Europe/at.png" alt="bandera">
+				<div class="titulo">AT</div>
+			</div>
+			<div class="flag-europe">
+				<img src="img/flags/Europe/ba.png" alt="bandera">
+				<div class="titulo">BA</div>
+			</div>
+			<div class="flag-europe">
+				<img src="img/flags/Europe/be.png" alt="bandera">
+				<div class="titulo">BE</div>
+			</div>
+			<div class="flag-europe">
+				<img src="img/flags/Europe/bg.png" alt="bandera">
+				<div class="titulo">BG</div>
+			</div>
+			<div class="flag-europe">
+				<img src="img/flags/Europe/by.png" alt="bandera">
+				<div class="titulo">BY</div>
+			</div>
+			<div class="flag-europe">
+				<img src="img/flags/Europe/ch.png" alt="bandera">
+				<div class="titulo">CH</div>
+			</div>
+			<div class="flag-europe">
+				<img src="img/flags/Europe/cz.png" alt="bandera">
+				<div class="titulo">CZ</div>
+			</div>
+			<div class="flag-europe">
+				<img src="img/flags/Europe/de.png" alt="bandera">
+				<div class="titulo">DE</div>
+			</div>
+			<div class="flag-europe">
+				<img src="img/flags/Europe/dk.png" alt="bandera">
+				<div class="titulo">DK</div>
+			</div>
+			<div class="flag-europe">
+				<img src="img/flags/Europe/ee.png" alt="bandera">
+				<div class="titulo">EE</div>
+			</div>
+			<div class="flag-europe">
+				<img src="img/flags/Europe/es.png" alt="bandera">
+				<div class="titulo">ES</div>
+			</div>
+			<div class="flag-europe">
+				<img src="img/flags/Europe/fi.png" alt="bandera">
+				<div class="titulo">FI</div>
+			</div>
+			<div class="flag-europe">
+				<img src="img/flags/Europe/fr.png" alt="bandera">
+				<div class="titulo">FR</div>
+			</div>
+			<div class="flag-europe">
+				<img src="img/flags/Europe/gb.png" alt="bandera">
+				<div class="titulo">GB</div>
+			</div>
+			<div class="flag-europe">
+				<img src="img/flags/Europe/gr.png" alt="bandera">
+				<div class="titulo">GR</div>
+			</div>
+			<div class="flag-europe">
+				<img src="img/flags/Europe/hr.png" alt="bandera">
+				<div class="titulo">HR</div>
+			</div>
+			<div class="flag-europe">
+				<img src="img/flags/Europe/hu.png" alt="bandera">
+				<div class="titulo">HU</div>
+			</div>
+			<div class="flag-europe">
+				<img src="img/flags/Europe/ie.png" alt="bandera">
+				<div class="titulo">IE</div>
+			</div>
+			<div class="flag-europe">
+				<img src="img/flags/Europe/is.png" alt="bandera">
+				<div class="titulo">IS</div>
+			</div>
+			<div class="flag-europe">
+				<img src="img/flags/Europe/it.png" alt="bandera">
+				<div class="titulo">IT</div>
+			</div>
+			<div class="flag-europe">
+				<img src="img/flags/Europe/ks.png" alt="bandera">
+				<div class="titulo">KS</div>
+			</div>
+			<div class="flag-europe">
+				<img src="img/flags/Europe/li.png" alt="bandera">
+				<div class="titulo">LI</div>
+			</div>
+			<div class="flag-europe">
+				<img src="img/flags/Europe/lt.png" alt="bandera">
+				<div class="titulo">LT</div>
+			</div>
+			<div class="flag-europe">
+				<img src="img/flags/Europe/lu.png" alt="bandera">
+				<div class="titulo">LU</div>
+			</div>
+			<div class="flag-europe">
+				<img src="img/flags/Europe/lv.png" alt="bandera">
+				<div class="titulo">LV</div>
+			</div>
+			<div class="flag-europe">
+				<img src="img/flags/Europe/mc.png" alt="bandera">
+				<div class="titulo">MC</div>
+			</div>
+			<div class="flag-europe">
+				<img src="img/flags/Europe/md.png" alt="bandera">
+				<div class="titulo">MD</div>
+			</div>
+			<div class="flag-europe">
+				<img src="img/flags/Europe/me.png" alt="bandera">
+				<div class="titulo">ME</div>
+			</div>
+			<div class="flag-europe">
+				<img src="img/flags/Europe/mk.png" alt="bandera">
+				<div class="titulo">MK</div>
+			</div>
+			<div class="flag-europe">
+				<img src="img/flags/Europe/mt.png" alt="bandera">
+				<div class="titulo">MT</div>
+			</div>
+			<div class="flag-europe">
+				<img src="img/flags/Europe/nl.png" alt="bandera">
+				<div class="titulo">NL</div>
+			</div>
+			<div class="flag-europe">
+				<img src="img/flags/Europe/no.png" alt="bandera">
+				<div class="titulo">NO</div>
+			</div>
+			<div class="flag-europe">
+				<img src="img/flags/Europe/pl.png" alt="bandera">
+				<div class="titulo">PL</div>
+			</div>
+			<div class="flag-europe">
+				<img src="img/flags/Europe/pt.png" alt="bandera">
+				<div class="titulo">PT</div>
+			</div>
+			<div class="flag-europe">
+				<img src="img/flags/Europe/ro.png" alt="bandera">
+				<div class="titulo">RO</div>
+			</div>
+			<div class="flag-europe">
+				<img src="img/flags/Europe/rs.png" alt="bandera">
+				<div class="titulo">RS</div>
+			</div>
+			<div class="flag-europe">
+				<img src="img/flags/Europe/se.png" alt="bandera">
+				<div class="titulo">SE</div>
+			</div>
+			<div class="flag-europe">
+				<img src="img/flags/Europe/si.png" alt="bandera">
+				<div class="titulo">SI</div>
+			</div>
+			<div class="flag-europe">
+				<img src="img/flags/Europe/sk.png" alt="bandera">
+				<div class="titulo">SK</div>
+			</div>
+			<div class="flag-europe">
+				<img src="img/flags/Europe/sm.png" alt="bandera">
+				<div class="titulo">SM</div>
+			</div>
+			<div class="flag-europe">
+				<img src="img/flags/Europe/ua.png" alt="bandera">
+				<div class="titulo">UA</div>
+			</div>
+			<div class="flag-europe">
+				<img src="img/flags/Europe/va.png" alt="bandera">
+				<div class="titulo">VA</div>
+			</div>
+
+			<div class="flag-namerica">
+				<img src="img/flags/North-America/ag.png" alt="bandera">
+				<div class="titulo">AG</div>
+			</div>
+			<div class="flag-namerica">
+				<img src="img/flags/North-America/bb.png" alt="bandera">
+				<div class="titulo">BB</div>
+			</div>
+			<div class="flag-namerica">
+				<img src="img/flags/North-America/bs.png" alt="bandera">
+				<div class="titulo">BS</div>
+			</div>
+			<div class="flag-namerica">
+				<img src="img/flags/North-America/bz.png" alt="bandera">
+				<div class="titulo">BZ</div>
+			</div>
+			<div class="flag-namerica">
+				<img src="img/flags/North-America/ca.png" alt="bandera">
+				<div class="titulo">CA</div>
+			</div>
+			<div class="flag-namerica">
+				<img src="img/flags/North-America/cr.png" alt="bandera">
+				<div class="titulo">CR</div>
+			</div>
+			<div class="flag-namerica">
+				<img src="img/flags/North-America/cu.png" alt="bandera">
+				<div class="titulo">CU</div>
+			</div>
+			<div class="flag-namerica">
+				<img src="img/flags/North-America/dm.png" alt="bandera">
+				<div class="titulo">DM</div>
+			</div>
+			<div class="flag-namerica">
+				<img src="img/flags/North-America/do.png" alt="bandera">
+				<div class="titulo">DO</div>
+			</div>
+			<div class="flag-namerica">
+				<img src="img/flags/North-America/gd.png" alt="bandera">
+				<div class="titulo">GD</div>
+			</div>
+			<div class="flag-namerica">
+				<img src="img/flags/North-America/gt.png" alt="bandera">
+				<div class="titulo">GT</div>
+			</div>
+			<div class="flag-namerica">
+				<img src="img/flags/North-America/hn.png" alt="bandera">
+				<div class="titulo">HN</div>
+			</div>
+			<div class="flag-namerica">
+				<img src="img/flags/North-America/ht.png" alt="bandera">
+				<div class="titulo">HT</div>
+			</div>
+			<div class="flag-namerica">
+				<img src="img/flags/North-America/jm.png" alt="bandera">
+				<div class="titulo">JM</div>
+			</div>
+			<div class="flag-namerica">
+				<img src="img/flags/North-America/kn.png" alt="bandera">
+				<div class="titulo">KN</div>
+			</div>
+			<div class="flag-namerica">
+				<img src="img/flags/North-America/lc.png" alt="bandera">
+				<div class="titulo">LC</div>
+			</div>
+			<div class="flag-namerica">
+				<img src="img/flags/North-America/mx.png" alt="bandera">
+				<div class="titulo">MX</div>
+			</div>
+			<div class="flag-namerica">
+				<img src="img/flags/North-America/ni.png" alt="bandera">
+				<div class="titulo">NI</div>
+			</div>
+			<div class="flag-namerica">
+				<img src="img/flags/North-America/pa.png" alt="bandera">
+				<div class="titulo">PA</div>
+			</div>
+			<div class="flag-namerica">
+				<img src="img/flags/North-America/sv.png" alt="bandera">
+				<div class="titulo">SV</div>
+			</div>
+			<div class="flag-namerica">
+				<img src="img/flags/North-America/tt.png" alt="bandera">
+				<div class="titulo">TT</div>
+			</div>
+			<div class="flag-namerica">
+				<img src="img/flags/North-America/us.png" alt="bandera">
+				<div class="titulo">US</div>
+			</div>
+			<div class="flag-namerica">
+				<img src="img/flags/North-America/vc.png" alt="bandera">
+				<div class="titulo">VC</div>
+			</div>
+
+			<div class="flag-oceania">
+				<img src="img/flags/Oceania/au.png" alt="bandera">
+				<div class="titulo">AU</div>
+			</div>
+			<div class="flag-oceania">
+				<img src="img/flags/Oceania/fj.png" alt="bandera">
+				<div class="titulo">FJ</div>
+			</div>
+			<div class="flag-oceania">
+				<img src="img/flags/Oceania/fm.png" alt="bandera">
+				<div class="titulo">FM</div>
+			</div>
+			<div class="flag-oceania">
+				<img src="img/flags/Oceania/mh.png" alt="bandera">
+				<div class="titulo">MH</div>
+			</div>
+			<div class="flag-oceania">
+				<img src="img/flags/Oceania/nr.png" alt="bandera">
+				<div class="titulo">NR</div>
+			</div>
+			<div class="flag-oceania">
+				<img src="img/flags/Oceania/nz.png" alt="bandera">
+				<div class="titulo">NZ</div>
+			</div>
+			<div class="flag-oceania">
+				<img src="img/flags/Oceania/pg.png" alt="bandera">
+				<div class="titulo">PG</div>
+			</div>
+			<div class="flag-oceania">
+				<img src="img/flags/Oceania/pw.png" alt="bandera">
+				<div class="titulo">PW</div>
+			</div>
+			<div class="flag-oceania">
+				<img src="img/flags/Oceania/sb.png" alt="bandera">
+				<div class="titulo">SB</div>
+			</div>
+			<div class="flag-oceania">
+				<img src="img/flags/Oceania/to.png" alt="bandera">
+				<div class="titulo">TO</div>
+			</div>
+			<div class="flag-oceania">
+				<img src="img/flags/Oceania/tv.png" alt="bandera">
+				<div class="titulo">TV</div>
+			</div>
+			<div class="flag-oceania">
+				<img src="img/flags/Oceania/vu.png" alt="bandera">
+				<div class="titulo">VU</div>
+			</div>
+			<div class="flag-oceania">
+				<img src="img/flags/Oceania/ws.png" alt="bandera">
+				<div class="titulo">WS</div>
+			</div>
+
+			<div class="flag-samerica">
+				<img src="img/flags/South-America/ar.png" alt="bandera">
+				<div class="titulo">AR</div>
+			</div>
+			<div class="flag-samerica">
+				<img src="img/flags/South-America/bo.png" alt="bandera">
+				<div class="titulo">BO</div>
+			</div>
+			<div class="flag-samerica">
+				<img src="img/flags/South-America/br.png" alt="bandera">
+				<div class="titulo">BR</div>
+			</div>
+			<div class="flag-samerica">
+				<img src="img/flags/South-America/cl.png" alt="bandera">
+				<div class="titulo">CL</div>
+			</div>
+			<div class="flag-samerica">
+				<img src="img/flags/South-America/co.png" alt="bandera">
+				<div class="titulo">CO</div>
+			</div>
+			<div class="flag-samerica">
+				<img src="img/flags/South-America/ec.png" alt="bandera">
+				<div class="titulo">EC</div>
+			</div>
+			<div class="flag-samerica">
+				<img src="img/flags/South-America/gy.png" alt="bandera">
+				<div class="titulo">GY</div>
+			</div>
+			<div class="flag-samerica">
+				<img src="img/flags/South-America/pe.png" alt="bandera">
+				<div class="titulo">PE</div>
+			</div>
+			<div class="flag-samerica">
+				<img src="img/flags/South-America/py.png" alt="bandera">
+				<div class="titulo">PY</div>
+			</div>
+			<div class="flag-samerica">
+				<img src="img/flags/South-America/sr.png" alt="bandera">
+				<div class="titulo">SR</div>
+			</div>
+			<div class="flag-samerica">
+				<img src="img/flags/South-America/uy.png" alt="bandera">
+				<div class="titulo">UY</div>
+			</div>
+			<div class="flag-samerica">
+				<img src="img/flags/South-America/ve.png" alt="bandera">
+				<div class="titulo">VE</div>
+			</div>
+
 		</div>
 
 		<div class="horarios">

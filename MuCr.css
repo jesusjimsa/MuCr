@@ -1857,9 +1857,10 @@ img{
 	left:0%;
 	height:85%;
 	width: 15.5%;
+	overflow-y: scroll;
 }
 
-.listaciudades .countries .flag{
+.listaciudades .countries .flag-african{
 	position:relative;
 	height: 10%;
 	width:17%;
@@ -1870,9 +1871,10 @@ img{
 	border:0.1vmin solid #000000;
 	margin-left: 1%;
 	margin-bottom: 2%;
+	display: none;
 }
 
-.listaciudades .countries .flag img{
+.listaciudades .countries .flag-african img{
 	height: 100%;
 	width:100%;
 	position: relative;
@@ -1880,7 +1882,7 @@ img{
 	z-index: 0;
 }
 
-.listaciudades .countries .flag .titulo{
+.listaciudades .countries .flag-african .titulo{
 	position: relative;
 	background-color: #197fa3;
 	color:white;
@@ -1897,9 +1899,228 @@ img{
 	cursor: pointer;
 }
 
-.listaciudades .countries .flag .titulo:hover {
+.listaciudades .countries .flag-african .titulo:hover {
 	opacity: 1;
 }
+
+.listaciudades .countries .flag-asia{
+	position:relative;
+	height: 10%;
+	width:17%;
+	top:3%;
+	left:1%;
+	border-radius: 200px 200px 200px 200px;
+	float: left;
+	border:0.1vmin solid #000000;
+	margin-left: 1%;
+	margin-bottom: 2%;
+	display: none;
+}
+
+.listaciudades .countries .flag-asia img{
+	height: 100%;
+	width:100%;
+	position: relative;
+	border-radius: 200px 200px 200px 200px;
+	z-index: 0;
+}
+
+.listaciudades .countries .flag-asia .titulo{
+	position: relative;
+	background-color: #197fa3;
+	color:white;
+	height: 70%;
+	width:100%;
+	bottom: 116%;
+	z-index: 1;
+	border-radius: 200px 200px 200px 200px;
+	text-align: center;
+	padding-top: 30%;
+	font-size: 1.5vmin;
+	font-weight: bold;
+	opacity: 0;
+	cursor: pointer;
+}
+
+.listaciudades .countries .flag-asia .titulo:hover {
+	opacity: 1;
+}
+
+
+.listaciudades .countries .flag-europe{
+	position:relative;
+	height: 10%;
+	width:17%;
+	top:3%;
+	left:1%;
+	border-radius: 200px 200px 200px 200px;
+	float: left;
+	border:0.1vmin solid #000000;
+	margin-left: 1%;
+	margin-bottom: 2%;
+	display: none;
+}
+
+.listaciudades .countries .flag-europe img{
+	height: 100%;
+	width:100%;
+	position: relative;
+	border-radius: 200px 200px 200px 200px;
+	z-index: 0;
+}
+
+.listaciudades .countries .flag-europe .titulo{
+	position: relative;
+	background-color: #197fa3;
+	color:white;
+	height: 70%;
+	width:100%;
+	bottom: 116%;
+	z-index: 1;
+	border-radius: 200px 200px 200px 200px;
+	text-align: center;
+	padding-top: 30%;
+	font-size: 1.5vmin;
+	font-weight: bold;
+	opacity: 0;
+	cursor: pointer;
+}
+
+.listaciudades .countries .flag-europe .titulo:hover {
+	opacity: 1;
+}
+
+.listaciudades .countries .flag-namerica{
+	position:relative;
+	height: 10%;
+	width:17%;
+	top:3%;
+	left:1%;
+	border-radius: 200px 200px 200px 200px;
+	float: left;
+	border:0.1vmin solid #000000;
+	margin-left: 1%;
+	margin-bottom: 2%;
+	display: none;
+}
+
+.listaciudades .countries .flag-namerica img{
+	height: 100%;
+	width:100%;
+	position: relative;
+	border-radius: 200px 200px 200px 200px;
+	z-index: 0;
+}
+
+.listaciudades .countries .flag-namerica .titulo{
+	position: relative;
+	background-color: #197fa3;
+	color:white;
+	height: 70%;
+	width:100%;
+	bottom: 116%;
+	z-index: 1;
+	border-radius: 200px 200px 200px 200px;
+	text-align: center;
+	padding-top: 30%;
+	font-size: 1.5vmin;
+	font-weight: bold;
+	opacity: 0;
+	cursor: pointer;
+}
+
+.listaciudades .countries .flag-namerica .titulo:hover {
+	opacity: 1;
+}
+
+
+.listaciudades .countries .flag-oceania{
+	position:relative;
+	height: 10%;
+	width:17%;
+	top:3%;
+	left:1%;
+	border-radius: 200px 200px 200px 200px;
+	float: left;
+	border:0.1vmin solid #000000;
+	margin-left: 1%;
+	margin-bottom: 2%;
+	display: none;
+}
+
+.listaciudades .countries .flag-oceania img{
+	height: 100%;
+	width:100%;
+	position: relative;
+	border-radius: 200px 200px 200px 200px;
+	z-index: 0;
+}
+
+.listaciudades .countries .flag-oceania .titulo{
+	position: relative;
+	background-color: #197fa3;
+	color:white;
+	height: 70%;
+	width:100%;
+	bottom: 116%;
+	z-index: 1;
+	border-radius: 200px 200px 200px 200px;
+	text-align: center;
+	padding-top: 30%;
+	font-size: 1.5vmin;
+	font-weight: bold;
+	opacity: 0;
+	cursor: pointer;
+}
+
+.listaciudades .countries .flag-oceania .titulo:hover {
+	opacity: 1;
+}
+
+
+.listaciudades .countries .flag-samerica{
+	position:relative;
+	height: 10%;
+	width:17%;
+	top:3%;
+	left:1%;
+	border-radius: 200px 200px 200px 200px;
+	float: left;
+	border:0.1vmin solid #000000;
+	margin-left: 1%;
+	margin-bottom: 2%;
+	display: none;
+}
+
+.listaciudades .countries .flag-samerica img{
+	height: 100%;
+	width:100%;
+	position: relative;
+	border-radius: 200px 200px 200px 200px;
+	z-index: 0;
+}
+
+.listaciudades .countries .flag-samerica .titulo{
+	position: relative;
+	background-color: #197fa3;
+	color:white;
+	height: 70%;
+	width:100%;
+	bottom: 116%;
+	z-index: 1;
+	border-radius: 200px 200px 200px 200px;
+	text-align: center;
+	padding-top: 30%;
+	font-size: 1.5vmin;
+	font-weight: bold;
+	opacity: 0;
+	cursor: pointer;
+}
+
+.listaciudades .countries .flag-samerica .titulo:hover {
+	opacity: 1;
+}
+
 
 .listaciudades .horarios{
 	position:relative;
