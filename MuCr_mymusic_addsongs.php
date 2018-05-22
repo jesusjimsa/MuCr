@@ -35,33 +35,38 @@
 		</div>
 
 		<div class="orden">
-			<div class="especialized_back">New Seacrh</div>
-			<div class="especialized">Alternative</div>
-			<div class="especialized">Punk</div>
-			<a class="blanco" href="MuCr_collection.php">
-				<div class="especialized">Rock</div>
-			</a>
-			<div class="especialized"> Blues</div>
-			<div class="especialized"> Classical</div>
-			<div class="especialized"> Country</div>
-			<div class="especialized">Folk</div>
-			<div class="especialized">Dance</div>
-			<div class="especialized"> Electronic</div>
-			<div class="especialized"> Easy Listening</div>
-			<div class="especialized"> Gospel</div>
-			<div class="especialized"> Religious</div>
-			<div class="especialized"> Rap</div>
-			<div class="especialized"> Holiday</div>
-			<div class="especialized"> Instrumental</div>
-			<div class="especialized"> Jazz</div>
-			<div class="especialized"> Latin</div>
-			<div class="especialized"> Metal</div>
-			<div class="especialized"> Moods</div>
-			<div class="especialized"> Pop</div>
-			<div class="especialized"> Other</div>
-			<div class="especialized"> R'n'B</div>
-			<div class="especialized"> Soundtrack</div>
-			<div class="especialized"> World</div>
+			<button class="especialized_back" )>Sort by</button>
+			<button class="especialized" style="display:block;" onclick="writeClassification(1);">Music Style</button><!-- 0 -->
+			<button class="especialized" style="display:block;" onclick="writeClassification(2);">Rarity</button><!-- 1 -->
+			<button class="especialized_back" style="display:none;" onclick="writeClassification(0);">Back</button>
+			<button class="especialized" style="display:none;">All</button><!-- 2 -->
+			<button class="especialized" style="display:none;">Alternative</button><!-- 3 -->
+			<button class="especialized" style="display:none;">Punk</button><!-- 4 -->
+			<button class="especialized" style="display:none;">Rock</button><!-- 5 -->
+			<button class="especialized" style="display:none;">Blues</button><!-- 6 -->
+			<button class="especialized" style="display:none;">Classical</button><!-- 7 -->
+			<button class="especialized" style="display:none;">Country</button><!-- 8 -->
+			<button class="especialized" style="display:none;">Folk</button><!-- 9 -->
+			<button class="especialized" style="display:none;">Dance</button><!-- 10 -->
+			<button class="especialized" style="display:none;">Electronic</button><!-- 11 -->
+			<button class="especialized" style="display:none;">Easy Listening</button><!-- 12 -->
+			<button class="especialized" style="display:none;">Gospel</button><!-- 13 -->
+			<button class="especialized" style="display:none;">Religious</button><!-- 14 -->
+			<button class="especialized" style="display:none;">Rap</button><!-- 15 -->
+			<button class="especialized" style="display:none;">Holiday</button><!-- 16 -->
+			<button class="especialized" style="display:none;">Instrumental</button><!-- 17 -->
+			<button class="especialized" style="display:none;">Jazz</button><!-- 18 -->
+			<button class="especialized" style="display:none;">Latin</button><!-- 19 -->
+			<button class="especialized" style="display:none;">Metal</button><!-- 20 -->
+			<button class="especialized" style="display:none;">Moods</button><!-- 21 -->
+			<button class="especialized" style="display:none;">Pop</button><!-- 22 -->
+			<button class="especialized" style="display:none;">Other</button><!-- 23 -->
+			<button class="especialized" style="display:none;">R'n'B</button><!-- 24 -->
+			<button class="especialized" style="display:none;">Soundtrack</button><!-- 25 -->
+			<button class="especialized" style="display:none;">World</button><!-- 26 -->
+			<button class="especialized_back" style="display:none;" onclick="writeClassification(0);">Back</button>
+			<button class="especialized" style="display:none;">Deluxe</button><!-- 27 -->
+			<button class="especialized" style="display:none;">Not deluxe</button><!-- 28 -->
 		</div>
 		</nav>
 

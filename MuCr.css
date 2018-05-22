@@ -598,6 +598,9 @@ img{
 	padding-top: 3%;
 	font-size: 2.5vmin;
 	border-bottom:0.25vmin solid white;
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
 }
 .musica .collection .orden .especialized_back{
 	background-color:black;
@@ -611,6 +614,9 @@ img{
 	padding-top: 3%;
 	font-size: 2.5vmin;
 	border-bottom:0.25vmin solid white;
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
 }
 
 .genre{

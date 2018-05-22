@@ -1,6 +1,3 @@
-/* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
-
 var fondos = [
 	"img/backgrounds/welcome/fondo1.jpg",
 	"img/backgrounds/welcome/fondo2.jpg",
@@ -18,34 +15,6 @@ var informa = [
 	"Opera House in Sydney, Australia",
 	"Opera House in Vienna, Austria",
 	"Ultra miami, Florida"
-];
-
-var music_styles = [
-	"<div class=\"especialized_back\">Back</div>",
-	"<div class=\"especialized\">Alternative</div>",
-	"<div class=\"especialized\">Punk</div>",
-	"<div class=\"especialized\">Rock</div>",
-	"<div class=\"especialized\">Blues</div>",
-	"<div class=\"especialized\">Classical</div>",
-	"<div class=\"especialized\">Country</div>",
-	"<div class=\"especialized\">Folk</div>",
-	"<div class=\"especialized\">Dance</div>",
-	"<div class=\"especialized\">Electronic</div>",
-	"<div class=\"especialized\">Easy Listening</div>",
-	"<div class=\"especialized\">Gospel</div>",
-	"<div class=\"especialized\">Religious</div>",
-	"<div class=\"especialized\">Rap</div>",
-	"<div class=\"especialized\">Holiday</div>",
-	"<div class=\"especialized\">Instrumental</div>",
-	"<div class=\"especialized\">Jazz</div>",
-	"<div class=\"especialized\">Latin</div>",
-	"<div class=\"especialized\">Metal</div>",
-	"<div class=\"especialized\">Moods</div>",
-	"<div class=\"especialized\">Pop</div>",
-	"<div class=\"especialized\">Other</div>",
-	"<div class=\"especialized\">R'n'B</div>",
-	"<div class=\"especialized\">Soundtrack</div>",
-	"<div class=\"especialized\">World</div>"
 ];
 
 function cambiarnombre(numero) {
@@ -85,18 +54,6 @@ function getCookie(name) {
 	return decodeURI(dc.substring(begin + prefix.length, end));
 }
 
-function callPHPCookies() {
-	var email_cookie = getCookie("email");
-
-	if (email_cookie != null) {
-		window.location.href = "../php/auth_cookies.php";
-	}
-}
-
-function changeImage(archivo){
-
-}
-
 function open_images(number) {
 	if (number == 0) {
 		document.getElementsByClassName("modificar_imagen")[0].style.display = "inherit";
@@ -112,8 +69,46 @@ function close_images() {
 	document.getElementsByClassName("modificar_imagen")[0].style.display = "none";
 }
 
-function writeClassification() {
-	for (var i = 0; i < music_styles.length; i++) {
-		document.write(music_styles[i]);
+function writeClassification(option) {
+	if (option == 0){
+		document.getElementsByClassName("especialized_back")[0].style.display = "block";
+
+		for(var i = 1; i < 3; i++){
+			document.getElementsByClassName("especialized_back")[i].style.display = "none";
+		}
+
+		for(var i = 0; i < 2; i++){
+			document.getElementsByClassName("especialized")[i].style.display = "block";
+		}
+
+		for(var i = 2; i < 29; i++){
+			document.getElementsByClassName("especialized")[i].style.display = "none";
+		}
+	}
+	
+	if (option == 1){
+		document.getElementsByClassName("especialized_back")[1].style.display = "block";
+		document.getElementsByClassName("especialized_back")[0].style.display = "none";
+
+		for(var i = 0; i < 2; i++){
+			document.getElementsByClassName("especialized")[i].style.display = "none";
+		}
+
+		for(var i = 2; i < 27; i++){
+			document.getElementsByClassName("especialized")[i].style.display = "block";
+		}
+	}
+
+	if (option == 2){
+		document.getElementsByClassName("especialized_back")[2].style.display = "block";
+		document.getElementsByClassName("especialized_back")[0].style.display = "none";
+
+		for(var i = 0; i < 2; i++){
+			document.getElementsByClassName("especialized")[i].style.display = "none";
+		}
+
+		for(var i = 27; i < 29; i++){
+			document.getElementsByClassName("especialized")[i].style.display = "block";
+		}
 	}
 }
