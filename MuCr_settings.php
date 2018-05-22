@@ -118,8 +118,42 @@
 	</div>
 
 	<div class="ajustes_principal">
-		<img id="ajustesimagen" src="<php echo $userimage; >      img/amy.jpg" alt="Profile picture">
-		<div class="nombre">jesusjimsa</div>
+		<img id="ajustesimagen"
+			src=
+					<?php
+						include 'php/connect_db.php';
+
+						$email = $_COOKIE['email'];
+
+						$sql_query = "SELECT URLimage FROM user WHERE email = '$email'";
+
+						$result = mysqli_query($conn, $sql_query);
+						$row = mysqli_fetch_assoc($result);
+
+
+						echo $row['URLimage'];
+						ob_flush();
+						flush();
+					?>
+		 alt="Profile picture">
+		<div class="nombre">
+			<?php
+				include 'php/connect_db.php';
+
+				$email = $_COOKIE['email'];
+
+				$sql_query = "SELECT email FROM user WHERE email = '$email'";
+
+				$result = mysqli_query($conn, $sql_query);
+				$row = mysqli_fetch_assoc($result);
+
+				list($username, $else) = explode('@', $row['email']);
+
+				echo $username;
+				ob_flush();
+				flush();
+			?>
+		</div>
 		<input type="button" class="cambiarimagen" value="cambiar imagen" onclick="open_images(0)">
 		<div class="cambiarcontrasena">
 			<p>Change Password</p>
@@ -208,7 +242,7 @@
 				<button type="submit" name="profile_picture" value="img/user/22.png" class="image_user"><img src="img/user/22.png" alt="1"></button>
 				<button type="submit" name="profile_picture" value="img/user/23.png" class="image_user"><img src="img/user/23.png" alt="1"></button>
 				<button type="submit" name="profile_picture" value="img/user/24.png" class="image_user"><img src="img/user/24.png" alt="1"></button>
-				
+
 			</form>
 		</div>
 	</div>
