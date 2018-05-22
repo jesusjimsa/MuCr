@@ -235,7 +235,7 @@
 	</div>
 
 	<div class="reconocimiento">
-		<p>Creado por:
+		<p>Created by:
 			<br/>José Manuel Rodriguez Calvo
 			<br/>Jesús Jiménez Sánchez</p>
 	</div>
