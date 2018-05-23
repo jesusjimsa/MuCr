@@ -113,42 +113,66 @@ function writeClassification(option) {
 	}
 }
 
+function closeALL(){
+	var vnamerica=23;
+	var vsamerica=12;
+	var voceania=13;
+	var veurope=44;
+	var vasia=50;
+	var vafrica=54;
+	for(var i=0;i<vnamerica;i++){document.getElementsByClassName("flag-namerica")[i].style.display="none";}
+	for(var i=0;i<vsamerica;i++){document.getElementsByClassName("flag-samerica")[i].style.display="none";}
+	for(var i=0;i<voceania;i++){document.getElementsByClassName("flag-oceania")[i].style.display="none";}
+	for(var i=0;i<veurope;i++){document.getElementsByClassName("flag-europe")[i].style.display="none";}
+	for(var i=0;i<vasia;i++){document.getElementsByClassName("flag-asia")[i].style.display="none";}
+	for(var i=0;i<vafrica;i++){document.getElementsByClassName("flag-africa")[i].style.display="none";}
+}
+
+function openOne(continents){
+	var flag="flag-europe";
+	var maxflag=0;
+	if(continents=="europe"){flag="flag-europe";maxflag=44;}
+	if(continents=="namerica"){flag="flag-namerica";maxflag=23;}
+	if(continents=="samerica"){flag="flag-samerica";maxflag=12;}
+	if(continents=="oceania"){flag="flag-oceania";maxflag=13;}
+	if(continents=="asia"){flag="flag-asia";maxflag=50;}
+	if(continents=="africa"){flag="flag-africa";maxflag=54;}
+
+	for(var i=0;i<maxflag;i++){document.getElementsByClassName(flag)[i].style.display="block";}
+
+}
+
+
+
 function opencountries(continent){
 	if(continent==1){
-		// var max=document.getElementsByClassName("flag-europe");
-		for(var i=0;i<10;i++){
-			document.getElementsByClassName("flag-europe")[i].style.display="block";
-		}
+		closeALL();
+		openOne("europe");
 	}
-	
+
 	if(continent==2){
-		for(var i=0;i<10;i++){
-			document.getElementsByClassName("flag-african")[i].style.display="block";
-		}
+		closeALL();
+		openOne("africa");
 	}
 
 	if(continent==3){
-		for(var i=0;i<10;i++){
-			document.getElementsByClassName("flag-oceania")[i].style.display="block";
-		}
+		closeALL();
+		openOne("oceania");
 	}
 
 	if(continent==4){
-		for(var i=0;i<10;i++){
-			document.getElementsByClassName("flag-namerica")[i].style.display="block";
-		}
+		closeALL();
+		openOne("namerica");
 	}
 
 	if(continent==5){
-		for(var i=0;i<10;i++){
-			document.getElementsByClassName("flag-samerica")[i].style.display="block";
-		}
+		closeALL();
+		openOne("samerica");
 	}
 
 	if(continent==6){
-		for(var i=0;i<10;i++){
-			document.getElementsByClassName("flag-asia")[i].style.display="block";
-		}
+		closeALL();
+		openOne("asia");
 	}
 
 }
