@@ -53,38 +53,38 @@
 			</div>
 
 			<div class="orden">
-				<button class="especialized_back")>Sort by</button>
-				<button class="especialized" style="display:block;" onclick="writeClassification(1);">Music Style</button> <!-- 0 -->
-				<button class="especialized" style="display:block;" onclick="writeClassification(2);">Rarity</button> <!-- 1 -->
+				<button class="especialized_back" )>Sort by</button>
+				<button class="especialized" style="display:block;" onclick="writeClassification(1);">Music Style</button><!-- 0 -->
+				<button class="especialized" style="display:block;" onclick="writeClassification(2);">Rarity</button><!-- 1 -->
 				<button class="especialized_back" style="display:none;" onclick="writeClassification(0);">Back</button>
-				<button class="especialized" style="display:none;">All</button> <!-- 2 -->
-				<button class="especialized" style="display:none;">Alternative</button> <!-- 3 -->
-				<button class="especialized" style="display:none;">Punk</button> <!-- 4 -->
-				<button class="especialized" style="display:none;">Rock</button> <!-- 5 -->
-				<button class="especialized" style="display:none;">Blues</button> <!-- 6 -->
-				<button class="especialized" style="display:none;">Classical</button> <!-- 7 -->
-				<button class="especialized" style="display:none;">Country</button> <!-- 8 -->
-				<button class="especialized" style="display:none;">Folk</button> <!-- 9 -->
-				<button class="especialized" style="display:none;">Dance</button> <!-- 10 -->
-				<button class="especialized" style="display:none;">Electronic</button> <!-- 11 -->
-				<button class="especialized" style="display:none;">Easy Listening</button> <!-- 12 -->
-				<button class="especialized" style="display:none;">Gospel</button> <!-- 13 -->
-				<button class="especialized" style="display:none;">Religious</button> <!-- 14 -->
-				<button class="especialized" style="display:none;">Rap</button> <!-- 15 -->
-				<button class="especialized" style="display:none;">Holiday</button> <!-- 16 -->
-				<button class="especialized" style="display:none;">Instrumental</button> <!-- 17 -->
-				<button class="especialized" style="display:none;">Jazz</button> <!-- 18 -->
-				<button class="especialized" style="display:none;">Latin</button> <!-- 19 -->
-				<button class="especialized" style="display:none;">Metal</button> <!-- 20 -->
-				<button class="especialized" style="display:none;">Moods</button> <!-- 21 -->
-				<button class="especialized" style="display:none;">Pop</button> <!-- 22 -->
-				<button class="especialized" style="display:none;">Other</button> <!-- 23 -->
-				<button class="especialized" style="display:none;">R'n'B</button> <!-- 24 -->
-				<button class="especialized" style="display:none;">Soundtrack</button> <!-- 25 -->
-				<button class="especialized" style="display:none;">World</button> <!-- 26 -->
+				<button class="especialized" style="display:none;">All</button><!-- 2 -->
+				<button class="especialized" style="display:none;">Alternative</button><!-- 3 -->
+				<button class="especialized" style="display:none;">Punk</button><!-- 4 -->
+				<button class="especialized" style="display:none;">Rock</button><!-- 5 -->
+				<button class="especialized" style="display:none;">Blues</button><!-- 6 -->
+				<button class="especialized" style="display:none;">Classical</button><!-- 7 -->
+				<button class="especialized" style="display:none;">Country</button><!-- 8 -->
+				<button class="especialized" style="display:none;">Folk</button><!-- 9 -->
+				<button class="especialized" style="display:none;">Dance</button><!-- 10 -->
+				<button class="especialized" style="display:none;">Electronic</button><!-- 11 -->
+				<button class="especialized" style="display:none;">Easy Listening</button><!-- 12 -->
+				<button class="especialized" style="display:none;">Gospel</button><!-- 13 -->
+				<button class="especialized" style="display:none;">Religious</button><!-- 14 -->
+				<button class="especialized" style="display:none;">Rap</button><!-- 15 -->
+				<button class="especialized" style="display:none;">Holiday</button><!-- 16 -->
+				<button class="especialized" style="display:none;">Instrumental</button><!-- 17 -->
+				<button class="especialized" style="display:none;">Jazz</button><!-- 18 -->
+				<button class="especialized" style="display:none;">Latin</button><!-- 19 -->
+				<button class="especialized" style="display:none;">Metal</button><!-- 20 -->
+				<button class="especialized" style="display:none;">Moods</button><!-- 21 -->
+				<button class="especialized" style="display:none;">Pop</button><!-- 22 -->
+				<button class="especialized" style="display:none;">Other</button><!-- 23 -->
+				<button class="especialized" style="display:none;">R'n'B</button><!-- 24 -->
+				<button class="especialized" style="display:none;">Soundtrack</button><!-- 25 -->
+				<button class="especialized" style="display:none;">World</button><!-- 26 -->
 				<button class="especialized_back" style="display:none;" onclick="writeClassification(0);">Back</button>
-				<button class="especialized" style="display:none;">Deluxe</button> <!-- 27 -->
-				<button class="especialized" style="display:none;">Not deluxe</button> <!-- 28 -->
+				<button class="especialized" style="display:none;">Deluxe</button><!-- 27 -->
+				<button class="especialized" style="display:none;">Not deluxe</button><!-- 28 -->
 			</div>
 	</nav>
 
@@ -112,6 +112,7 @@
 		</div>
 
 		<div class="countries">
+			<!-- AFRICA -->
 			<div class="flag-african">
 				<img src="img/flags/Africa/ao.png" alt="bandera">
 				<div class="titulo">AO</div>
@@ -328,7 +329,7 @@
 				<img src="img/flags/Africa/zw.png" alt="bandera">
 				<div class="titulo">ZW</div>
 			</div>
-
+			<!-- ASIA -->
 			<div class="flag-asia">
 				<img src="img/flags/Asia/ae.png" alt="bandera">
 				<div class="titulo">AE</div>
@@ -525,7 +526,7 @@
 				<img src="img/flags/Asia/ye.png" alt="bandera">
 				<div class="titulo">YE</div>
 			</div>
-
+			<!-- EUROPE -->
 			<div class="flag-europe">
 				<img src="img/flags/Europe/ad.png" alt="bandera">
 				<div class="titulo">AD</div>
@@ -702,7 +703,7 @@
 				<img src="img/flags/Europe/va.png" alt="bandera">
 				<div class="titulo">VA</div>
 			</div>
-
+			<!-- NORTH AMERICA -->
 			<div class="flag-namerica">
 				<img src="img/flags/North-America/ag.png" alt="bandera">
 				<div class="titulo">AG</div>
@@ -795,7 +796,7 @@
 				<img src="img/flags/North-America/vc.png" alt="bandera">
 				<div class="titulo">VC</div>
 			</div>
-
+			<!-- OCEANIA -->
 			<div class="flag-oceania">
 				<img src="img/flags/Oceania/au.png" alt="bandera">
 				<div class="titulo">AU</div>
@@ -848,7 +849,7 @@
 				<img src="img/flags/Oceania/ws.png" alt="bandera">
 				<div class="titulo">WS</div>
 			</div>
-
+			<!-- SOUTH AMERICA -->
 			<div class="flag-samerica">
 				<img src="img/flags/South-America/ar.png" alt="bandera">
 				<div class="titulo">AR</div>

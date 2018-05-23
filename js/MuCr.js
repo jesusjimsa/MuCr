@@ -73,21 +73,26 @@ function close_images() {
 
 function writeClassification(option) {
 	if (option == 0) {
+		// Show "Sort by"
 		document.getElementsByClassName("especialized_back")[0].style.display = "block";
 
+		// Hide "Back" buttons
 		for (var i = 1; i < 3; i++) {
 			document.getElementsByClassName("especialized_back")[i].style.display = "none";
 		}
 
+		// Show options
 		for (var i = 0; i < 2; i++) {
 			document.getElementsByClassName("especialized")[i].style.display = "block";
 		}
-
+		
+		// Hide all classficiations
 		for (var i = 2; i < 29; i++) {
 			document.getElementsByClassName("especialized")[i].style.display = "none";
 		}
 	}
 
+	// Show music styles
 	if (option == 1) {
 		document.getElementsByClassName("especialized_back")[1].style.display = "block";
 		document.getElementsByClassName("especialized_back")[0].style.display = "none";
@@ -101,6 +106,7 @@ function writeClassification(option) {
 		}
 	}
 
+	// Show ratity classification
 	if (option == 2) {
 		document.getElementsByClassName("especialized_back")[2].style.display = "block";
 		document.getElementsByClassName("especialized_back")[0].style.display = "none";
@@ -123,28 +129,28 @@ function closeALL() {
 	var vasia = 50;
 	var vafrica = 54;
 
-	for (var i = 0; i < vnamerica; i++) {
+	for (var i = 0; i < vnamerica - 1; i++) {
 		document.getElementsByClassName("flag-namerica")[i].style.display = "none";
 	}
 	
-	for (var i = 0; i < vsamerica; i++) {
+	for (var i = 0; i < vsamerica - 1; i++) {
 		document.getElementsByClassName("flag-samerica")[i].style.display = "none";
 	}
 	
-	for (var i = 0; i < voceania; i++) {
+	for (var i = 0; i < voceania - 1; i++) {
 		document.getElementsByClassName("flag-oceania")[i].style.display = "none";
 	}
 	
-	for (var i = 0; i < veurope; i++) {
+	for (var i = 0; i < veurope - 1; i++) {
 		document.getElementsByClassName("flag-europe")[i].style.display = "none";
 	}
 	
-	for (var i = 0; i < vasia; i++) {
+	for (var i = 0; i < vasia - 1; i++) {
 		document.getElementsByClassName("flag-asia")[i].style.display = "none";
 	}
 	
-	for (var i = 0; i < vafrica; i++) {
-		document.getElementsByClassName("flag-africa")[i].style.display = "none";
+	for (var i = 0; i < vafrica - 1; i++) {
+		document.getElementsByClassName("flag-african")[i].style.display = "none";
 	}
 }
 
@@ -178,11 +184,11 @@ function openOne(continents) {
 	}
 	
 	if (continents == "africa") {
-		flag = "flag-africa";
+		flag = "flag-african";
 		maxflag = 54;
 	}
 
-	for (var i = 0; i < maxflag; i++) {
+	for (var i = 0; i < maxflag - 1; i++) {
 		document.getElementsByClassName(flag)[i].style.display = "block";
 	}
 }
@@ -219,5 +225,4 @@ function opencountries(continent) {
 		closeALL();
 		openOne("asia");
 	}
-
 }
