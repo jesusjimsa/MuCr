@@ -41,7 +41,9 @@ function getCookie(name) {
 
 	if (begin == -1) {
 		begin = dc.indexOf(prefix);
-		if (begin != 0) return null;
+		if (begin != 0){
+			return null;
+		}
 	}
 	else {
 		begin += 2;
@@ -70,109 +72,157 @@ function close_images() {
 }
 
 function writeClassification(option) {
-	if (option == 0){
+	if (option == 0) {
+		// Show "Sort by"
 		document.getElementsByClassName("especialized_back")[0].style.display = "block";
 
-		for(var i = 1; i < 3; i++){
+		// Hide "Back" buttons
+		for (var i = 1; i < 3; i++) {
 			document.getElementsByClassName("especialized_back")[i].style.display = "none";
 		}
 
-		for(var i = 0; i < 2; i++){
+		// Show options
+		for (var i = 0; i < 2; i++) {
 			document.getElementsByClassName("especialized")[i].style.display = "block";
 		}
-
-		for(var i = 2; i < 29; i++){
+		
+		// Hide all classficiations
+		for (var i = 2; i < 29; i++) {
 			document.getElementsByClassName("especialized")[i].style.display = "none";
 		}
 	}
 
-	if (option == 1){
+	// Show music styles
+	if (option == 1) {
 		document.getElementsByClassName("especialized_back")[1].style.display = "block";
 		document.getElementsByClassName("especialized_back")[0].style.display = "none";
 
-		for(var i = 0; i < 2; i++){
+		for (var i = 0; i < 2; i++) {
 			document.getElementsByClassName("especialized")[i].style.display = "none";
 		}
 
-		for(var i = 2; i < 27; i++){
+		for (var i = 2; i < 27; i++) {
 			document.getElementsByClassName("especialized")[i].style.display = "block";
 		}
 	}
 
-	if (option == 2){
+	// Show ratity classification
+	if (option == 2) {
 		document.getElementsByClassName("especialized_back")[2].style.display = "block";
 		document.getElementsByClassName("especialized_back")[0].style.display = "none";
 
-		for(var i = 0; i < 2; i++){
+		for (var i = 0; i < 2; i++) {
 			document.getElementsByClassName("especialized")[i].style.display = "none";
 		}
 
-		for(var i = 27; i < 29; i++){
+		for (var i = 27; i < 29; i++) {
 			document.getElementsByClassName("especialized")[i].style.display = "block";
 		}
 	}
 }
 
-function closeALL(){
-	var vnamerica=23;
-	var vsamerica=12;
-	var voceania=13;
-	var veurope=44;
-	var vasia=50;
-	var vafrica=54;
-	for(var i=0;i<vnamerica;i++){document.getElementsByClassName("flag-namerica")[i].style.display="none";}
-	for(var i=0;i<vsamerica;i++){document.getElementsByClassName("flag-samerica")[i].style.display="none";}
-	for(var i=0;i<voceania;i++){document.getElementsByClassName("flag-oceania")[i].style.display="none";}
-	for(var i=0;i<veurope;i++){document.getElementsByClassName("flag-europe")[i].style.display="none";}
-	for(var i=0;i<vasia;i++){document.getElementsByClassName("flag-asia")[i].style.display="none";}
-	for(var i=0;i<vafrica;i++){document.getElementsByClassName("flag-africa")[i].style.display="none";}
+function closeALL() {
+	var vnamerica = 23;
+	var vsamerica = 12;
+	var voceania = 13;
+	var veurope = 44;
+	var vasia = 50;
+	var vafrica = 54;
+
+	for (var i = 0; i < vnamerica - 1; i++) {
+		document.getElementsByClassName("flag-namerica")[i].style.display = "none";
+	}
+	
+	for (var i = 0; i < vsamerica - 1; i++) {
+		document.getElementsByClassName("flag-samerica")[i].style.display = "none";
+	}
+	
+	for (var i = 0; i < voceania - 1; i++) {
+		document.getElementsByClassName("flag-oceania")[i].style.display = "none";
+	}
+	
+	for (var i = 0; i < veurope - 1; i++) {
+		document.getElementsByClassName("flag-europe")[i].style.display = "none";
+	}
+	
+	for (var i = 0; i < vasia - 1; i++) {
+		document.getElementsByClassName("flag-asia")[i].style.display = "none";
+	}
+	
+	for (var i = 0; i < vafrica - 1; i++) {
+		document.getElementsByClassName("flag-african")[i].style.display = "none";
+	}
 }
 
-function openOne(continents){
-	var flag="flag-europe";
-	var maxflag=0;
-	if(continents=="europe"){flag="flag-europe";maxflag=44;}
-	if(continents=="namerica"){flag="flag-namerica";maxflag=23;}
-	if(continents=="samerica"){flag="flag-samerica";maxflag=12;}
-	if(continents=="oceania"){flag="flag-oceania";maxflag=13;}
-	if(continents=="asia"){flag="flag-asia";maxflag=50;}
-	if(continents=="africa"){flag="flag-africa";maxflag=54;}
+function openOne(continents) {
+	var flag = "flag-europe";
+	var maxflag = 0;
 
-	for(var i=0;i<maxflag;i++){document.getElementsByClassName(flag)[i].style.display="block";}
+	if (continents == "europe") {
+		flag = "flag-europe";
+		maxflag = 44;
+	}
+	
+	if (continents == "namerica") {
+		flag = "flag-namerica";
+		maxflag = 23;
+	}
+	
+	if (continents == "samerica") {
+		flag = "flag-samerica";
+		maxflag = 12;
+	}
+	
+	if (continents == "oceania") {
+		flag = "flag-oceania";
+		maxflag = 13;
+	}
+	
+	if (continents == "asia") {
+		flag = "flag-asia";
+		maxflag = 50;
+	}
+	
+	if (continents == "africa") {
+		flag = "flag-african";
+		maxflag = 54;
+	}
 
+	for (var i = 0; i < maxflag - 1; i++) {
+		document.getElementsByClassName(flag)[i].style.display = "block";
+	}
 }
 
 
 
-function opencountries(continent){
-	if(continent==1){
+function opencountries(continent) {
+	if (continent == 1) {
 		closeALL();
 		openOne("europe");
 	}
 
-	if(continent==2){
+	if (continent == 2) {
 		closeALL();
 		openOne("africa");
 	}
 
-	if(continent==3){
+	if (continent == 3) {
 		closeALL();
 		openOne("oceania");
 	}
 
-	if(continent==4){
+	if (continent == 4) {
 		closeALL();
 		openOne("namerica");
 	}
 
-	if(continent==5){
+	if (continent == 5) {
 		closeALL();
 		openOne("samerica");
 	}
 
-	if(continent==6){
+	if (continent == 6) {
 		closeALL();
 		openOne("asia");
 	}
-
 }
