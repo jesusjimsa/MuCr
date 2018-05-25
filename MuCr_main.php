@@ -30,7 +30,7 @@
 							echo $row['URLimage'];
 							ob_flush();
 							flush();
-						?> 
+						?>
 				alt="Profile picture">
 			</div>
 			<div class="titulo">
@@ -68,34 +68,34 @@
 				<button class="especialized" style="display:block;" onclick="writeClassification(1);">Music Style</button> <!-- 0 -->
 				<button class="especialized" style="display:block;" onclick="writeClassification(2);">Rarity</button> <!-- 1 -->
 				<button class="especialized_back" style="display:none;" onclick="writeClassification(0);">Back</button>
-				<button class="especialized" style="display:none;">All</button> <!-- 2 -->
-				<button class="especialized" style="display:none;">Alternative</button> <!-- 3 -->
-				<button class="especialized" style="display:none;">Punk</button> <!-- 4 -->
-				<button class="especialized" style="display:none;">Rock</button> <!-- 5 -->
-				<button class="especialized" style="display:none;">Blues</button> <!-- 6 -->
-				<button class="especialized" style="display:none;">Classical</button> <!-- 7 -->
-				<button class="especialized" style="display:none;">Country</button> <!-- 8 -->
-				<button class="especialized" style="display:none;">Folk</button> <!-- 9 -->
-				<button class="especialized" style="display:none;">Dance</button> <!-- 10 -->
-				<button class="especialized" style="display:none;">Electronic</button> <!-- 11 -->
-				<button class="especialized" style="display:none;">Easy Listening</button> <!-- 12 -->
-				<button class="especialized" style="display:none;">Gospel</button> <!-- 13 -->
-				<button class="especialized" style="display:none;">Religious</button> <!-- 14 -->
-				<button class="especialized" style="display:none;">Rap</button> <!-- 15 -->
-				<button class="especialized" style="display:none;">Holiday</button> <!-- 16 -->
-				<button class="especialized" style="display:none;">Instrumental</button> <!-- 17 -->
-				<button class="especialized" style="display:none;">Jazz</button> <!-- 18 -->
-				<button class="especialized" style="display:none;">Latin</button> <!-- 19 -->
-				<button class="especialized" style="display:none;">Metal</button> <!-- 20 -->
-				<button class="especialized" style="display:none;">Moods</button> <!-- 21 -->
-				<button class="especialized" style="display:none;">Pop</button> <!-- 22 -->
-				<button class="especialized" style="display:none;">Other</button> <!-- 23 -->
-				<button class="especialized" style="display:none;">R'n'B</button> <!-- 24 -->
-				<button class="especialized" style="display:none;">Soundtrack</button> <!-- 25 -->
-				<button class="especialized" style="display:none;">World</button> <!-- 26 -->
+				<a href="MuCr_collection.php?title=All"><button class="especialized" style="display:none;">All</button> <!-- 2 --></a>
+				<a href="MuCr_collection.php?title=Alternative"><button class="especialized" style="display:none;">Alternative</button> <!-- 3 --></a>
+				<a href="MuCr_collection.php?title=Punk"><button class="especialized" style="display:none;">Punk</button> <!-- 4 --></a>
+				<a href="MuCr_collection.php?title=Rock"><button class="especialized" style="display:none;">Rock</button> <!-- 5 --></a>
+				<a href="MuCr_collection.php?title=Blues"><button class="especialized" style="display:none;">Blues</button> <!-- 6 --></a>
+				<a href="MuCr_collection.php?title=Classical"><button class="especialized" style="display:none;">Classical</button> <!-- 7 --></a>
+				<a href="MuCr_collection.php?title=Country"><button class="especialized" style="display:none;">Country</button> <!-- 8 --></a>
+				<a href="MuCr_collection.php?title=Folk"><button class="especialized" style="display:none;">Folk</button> <!-- 9 --></a>
+				<a href="MuCr_collection.php?title=Dance"><button class="especialized" style="display:none;">Dance</button> <!-- 10 --></a>
+				<a href="MuCr_collection.php?title=Electronic"><button class="especialized" style="display:none;">Electronic</button> <!-- 11 --></a>
+				<a href="MuCr_collection.php?title=Easy_Listening"><button class="especialized" style="display:none;">Easy Listening</button> <!-- 12 --></a>
+				<a href="MuCr_collection.php?title=Gospel"><button class="especialized" style="display:none;">Gospel</button> <!-- 13 --></a>
+				<a href="MuCr_collection.php?title=Religious"><button class="especialized" style="display:none;">Religious</button> <!-- 14 --></a>
+				<a href="MuCr_collection.php?title=Rap"><button class="especialized" style="display:none;">Rap</button> <!-- 15 --></a>
+				<a href="MuCr_collection.php?title=Holiday"><button class="especialized" style="display:none;">Holiday</button> <!-- 16 --></a>
+				<a href="MuCr_collection.php?title=Instrumental"><button class="especialized" style="display:none;">Instrumental</button> <!-- 17 --></a>
+				<a href="MuCr_collection.php?title=Jazz"><button class="especialized" style="display:none;">Jazz</button> <!-- 18 --></a>
+				<a href="MuCr_collection.php?title=Latin"><button class="especialized" style="display:none;">Latin</button> <!-- 19 --></a>
+				<a href="MuCr_collection.php?title=Metal"><button class="especialized" style="display:none;">Metal</button> <!-- 20 --></a>
+				<a href="MuCr_collection.php?title=Moods"><button class="especialized" style="display:none;">Moods</button> <!-- 21 --></a>
+				<a href="MuCr_collection.php?title=Other"><button class="especialized" style="display:none;">Other</button> <!-- 23 --></a>
+					<a href="MuCr_collection.php?title=Pop"><button class="especialized" style="display:none;">Pop</button> <!-- 22 --></a>
+				<a href="MuCr_collection.php?title=Rcomencomeb"><button class="especialized" style="display:none;">R'n'B</button> <!-- 24 --></a>
+				<a href="MuCr_collection.php?title=Soundtrack"><button class="especialized" style="display:none;">Soundtrack</button> <!-- 25 --></a>
+				<a href="MuCr_collection.php?title=World"><button class="especialized" style="display:none;">World</button> <!-- 26 --></a>
 				<button class="especialized_back" style="display:none;" onclick="writeClassification(0);">Back</button>
-				<button class="especialized" style="display:none;">Deluxe</button> <!-- 27 -->
-				<button class="especialized" style="display:none;">Not deluxe</button> <!-- 28 -->
+				<a href="MuCr_collection.php?title=Deluxe"><button class="especialized" style="display:none;">Deluxe</button> <!-- 27 --></a>
+				<a href="MuCr_collection.php?title=Not_Deluxe"><button class="especialized" style="display:none;">Not deluxe</button> <!-- 28 --></a>
 			</div>
 		</div>
 	</nav>
@@ -110,6 +110,42 @@
 		<div class="fila">
 			<div class="title">TIRULO</div>
 			<div class="row_main">
+				<div class="recom1">
+					<img src="img/covers/Jazz/Best.jpg" alt="Album cover">
+					<div class="close">
+						<img src="img/icons/close.png" alt="close">
+					</div>
+					<div class="add">
+						<img src="img/icons/add.png" alt="add">
+					</div>
+					<div class="love">
+						<img src="img/icons/heart.png" alt="love">
+					</div>
+				</div>
+				<div class="recom1">
+					<img src="img/covers/Jazz/Best.jpg" alt="Album cover">
+					<div class="close">
+						<img src="img/icons/close.png" alt="close">
+					</div>
+					<div class="add">
+						<img src="img/icons/add.png" alt="add">
+					</div>
+					<div class="love">
+						<img src="img/icons/heart.png" alt="love">
+					</div>
+				</div>
+				<div class="recom1">
+					<img src="img/covers/Jazz/Best.jpg" alt="Album cover">
+					<div class="close">
+						<img src="img/icons/close.png" alt="close">
+					</div>
+					<div class="add">
+						<img src="img/icons/add.png" alt="add">
+					</div>
+					<div class="love">
+						<img src="img/icons/heart.png" alt="love">
+					</div>
+				</div>
 				<div class="recom1">
 					<img src="img/covers/Jazz/Best.jpg" alt="Album cover">
 					<div class="close">
@@ -188,6 +224,42 @@
 		<div class="fila">
 			<div class="title">TIRULO</div>
 			<div class="row_main">
+				<div class="recom1">
+					<img src="img/covers/Jazz/Best.jpg" alt="Album cover">
+					<div class="close">
+						<img src="img/icons/close.png" alt="close">
+					</div>
+					<div class="add">
+						<img src="img/icons/add.png" alt="add">
+					</div>
+					<div class="love">
+						<img src="img/icons/heart.png" alt="love">
+					</div>
+				</div>
+				<div class="recom1">
+					<img src="img/covers/Jazz/Best.jpg" alt="Album cover">
+					<div class="close">
+						<img src="img/icons/close.png" alt="close">
+					</div>
+					<div class="add">
+						<img src="img/icons/add.png" alt="add">
+					</div>
+					<div class="love">
+						<img src="img/icons/heart.png" alt="love">
+					</div>
+				</div>
+				<div class="recom1">
+					<img src="img/covers/Jazz/Best.jpg" alt="Album cover">
+					<div class="close">
+						<img src="img/icons/close.png" alt="close">
+					</div>
+					<div class="add">
+						<img src="img/icons/add.png" alt="add">
+					</div>
+					<div class="love">
+						<img src="img/icons/heart.png" alt="love">
+					</div>
+				</div>
 				<div class="recom1">
 					<img src="img/covers/Jazz/Best.jpg" alt="Album cover">
 					<div class="close">

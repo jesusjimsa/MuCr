@@ -93,7 +93,7 @@
 			<img src="img/icons/close.png" alt="close">
 		</nav>
 	</a>
-	
+
 	<div class="concert_title">
 		Concerts
 	</div>
@@ -111,80 +111,114 @@
 	</div>
 
 	<div class="grid-concert">
+		<a href="MuCr_Concerts.php?artist=Audioslave">
 		<div class="itemo">
 			<div class="artist_name">Audioslave</div>
 			<img src="img/concerts/recommendations/audioslave.jpg" alt="Audioslave">
 		</div>
+	</a>
+	<a href="MuCr_Concerts.php?artist=Blink-182">
 		<div class="itemo">
 			<div class="artist_name">Blink-182</div>
 			<img src="img/concerts/recommendations/blink.jpg" alt="Blink-182">
 		</div>
+	</a>
+	<a href="MuCr_Concerts.php?artist=My_Chemical_Romance">
 		<div class="itemo">
 			<div class="artist_name">My Chemical Romance</div>
 			<img src="img/concerts/recommendations/chemical.jpg" alt="My Chemical Romance">
 		</div>
-		<a href="MuCr_Concerts.php">
+	</a>
+	<a href="MuCr_Concerts.php?artist=Coldplay">
 			<div class="itemo">
 				<div class="artist_name">Coldplay</div>
 				<img src="img/concerts/recommendations/coldplay.jpg" alt="Coldplay">
 			</div>
 		</a>
+		<a href="MuCr_Concerts.php?artist=Imagine_Dragons">
 		<div class="itemo">
 			<div class="artist_name">Imagine Dragons</div>
 			<img src="img/concerts/recommendations/dragons.jpg" alt="Imagine Dragons">
 		</div>
+	</a>
+	<a href="MuCr_Concerts.php?artist=Evanescence">
 		<div class="itemo">
 			<div class="artist_name">Evanescence</div>
 			<img src="img/concerts/recommendations/evanescence.jpg" alt="Evanescence">
 		</div>
+	</a>
+	<a href="MuCr_Concerts.php?artist=Fall_Out_Boy">
 		<div class="itemo">
 			<div class="artist_name">Fall Out Boy</div>
 			<img src="img/concerts/recommendations/fall.jpg" alt="Fall Out Boy">
 		</div>
+	</a>
+	<a href="MuCr_Concerts.php?artist=OK_GO">
 		<div class="itemo">
 			<div class="artist_name">OK GO</div>
 			<img src="img/concerts/recommendations/go.jpg" alt="OK GO">
 		</div>
+	</a>
+	<a href="MuCr_Concerts.php?artist=Gorillaz">
 		<div class="itemo">
 			<div class="artist_name">Gorillaz</div>
 			<img src="img/concerts/recommendations/gorillaz.jpg" alt="Gorillaz">
 		</div>
+	</a>
+	<a href="MuCr_Concerts.php?artist=Hoobastank">
 		<div class="itemo">
 			<div class="artist_name">Hoobastank</div>
 			<img src="img/concerts/recommendations/hoobastank.jpg" alt="Hoobastank">
 		</div>
+	</a>
+	<a href="MuCr_Concerts.php?artist=The_Killers">
 		<div class="itemo">
 			<div class="artist_name">The Killers</div>
 			<img src="img/concerts/recommendations/killers.jpg" alt="The Killers">
 		</div>
+	</a>
+	<a href="MuCr_Concerts.php?artist=Linki_Park">
 		<div class="itemo">
 			<div class="artist_name">Linkin Park</div>
 			<img src="img/concerts/recommendations/linkin.jpg" alt="Linkin Park">
 		</div>
+	</a>
+	<a href="MuCr_Concerts.php?artist=Maroon_5">
 		<div class="itemo">
 			<div class="artist_name">Maroon 5</div>
 			<img src="img/concerts/recommendations/maroon.jpg" alt="Maroon 5">
 		</div>
+	</a>
+	<a href="MuCr_Concerts.php?artist=Paramore">
 		<div class="itemo">
 			<div class="artist_name">Paramore</div>
 			<img src="img/concerts/recommendations/paramore.png" alt="Paramore">
 		</div>
+	</a>
+	<a href="MuCr_Concerts.php?artist=Twente_One_Pilots">
 		<div class="itemo">
 			<div class="artist_name">Twenty One Pilots</div>
 			<img src="img/concerts/recommendations/pilots.png" alt="Twenty One Pilots">
 		</div>
+	</a>
+	<a href="MuCr_Concerts.php?artist=Slinpknot">
 		<div class="itemo">
 			<div class="artist_name">Slipknot</div>
 			<img src="img/concerts/recommendations/slipknot.jpg" alt="Slipknot">
 		</div>
+	</a>
+	<a href="MuCr_Concerts.php?artist=The_White_Stripes">
 		<div class="itemo">
 			<div class="artist_name">The White Stripes</div>
 			<img src="img/concerts/recommendations/stripes.jpg" alt="The White Stripes">
 		</div>
+	</a>
+	<a href="MuCr_Concerts.php?artist=ZZ_Top">
 		<div class="itemo">
 			<div class="artist_name">ZZ Top</div>
 			<img src="img/concerts/recommendations/top.jpg" alt="ZZ Top">
 		</div>
+	</a>
 	</div>
 
 </body>

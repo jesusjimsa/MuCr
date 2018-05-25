@@ -95,7 +95,12 @@
 	</a>
 
 	<div class="genre">
-		Rock
+		<?php
+		$url = $_GET['title'];
+ 		$url = str_replace("_"," ",$url);
+		$url = str_replace("come","'",$url);
+		echo $url;
+ 		?>
 	</div>
 
 	<div class="grid-container">
