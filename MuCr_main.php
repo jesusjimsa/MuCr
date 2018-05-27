@@ -108,7 +108,7 @@
 
 	<div class="contenedor">
 		<div class="fila">
-			<div class="title">TIRULO</div>
+			<div class="title">Recomendations</div>
 			<div class="row_main">
 				<div class="recom1">
 					<img src="img/covers/Jazz/Best.jpg" alt="Album cover">
@@ -222,7 +222,7 @@
 		</div>
 
 		<div class="fila">
-			<div class="title">TIRULO</div>
+			<div class="title">For You</div>
 			<div class="row_main">
 				<div class="recom1">
 					<img src="img/covers/Jazz/Best.jpg" alt="Album cover">
@@ -336,7 +336,7 @@
 		</div>
 
 		<div class="fila">
-			<div class="title">TIRULO</div>
+			<div class="title"></div>
 			<div class="row_main">
 				<div class="recom1">
 					<img src="img/covers/Jazz/Best.jpg" alt="Album cover">

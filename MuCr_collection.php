@@ -104,8 +104,8 @@
 	</div>
 
 	<div class="grid-container">
-		<a href="MuCr_detailed_album_abbey_road.php">
-			<div class="itemo">
+		<a href="MuCr_detailed_album.php?artist=The_Beatles&type=rock&deluxe=true">
+		<div class="itemo">
 				<img src="img/covers/Rock/Abbey.jpg" alt="artist">
 				<div class="type">Vinyl</div>
 				<div class="add">
@@ -343,6 +343,8 @@
 			</div>
 		</div>
 	</div>
+
+
 
 </body>
 

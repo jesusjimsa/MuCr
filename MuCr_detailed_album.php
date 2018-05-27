@@ -11,7 +11,7 @@
 	<script src="js/MuCr.js"></script>
 </head>
 
-<body class="stage2">
+<body class="stage7	">
 	<nav class="sidebar">
 		<div class="user">
 			<div class="imagen">
@@ -95,247 +95,44 @@
 	</a>
 
 	<div class="genre">
-		Rock
+		<?php
+		$url = $_GET['artist'];
+ 		$url = str_replace("_"," ",$url);
+		$url = str_replace("come","'",$url);
+		echo $url;
+		?>
 	</div>
 
-	<div class="grid-container">
-		<div class="itemo">
-			<div class="close_album">
-				<a href="MuCr_collection.php">
-					<img id="peque" src="img/icons/close.png" alt="close">
-				</a>
-			</div>
-		</div>
-		<div class="itemo">
-			<img src="img/covers/Rock/Berry.png" alt="cover">
-			<div class="type">MP3</div>
-			<div class="add">
-				<img src="img/icons/add.png" alt="add">
-			</div>
-			<div class="love">
-				<img src="img/icons/heart.png" alt="love">
-			</div>
-			<div class="close">
-				<img src="img/icons/close.png" alt="close">
-			</div>
-		</div>
-		<div class="itemo">
-			<img src="img/covers/Rock/Bleed.jpg" alt="cover">
-			<div class="type">CD</div>
-			<div class="add">
-				<img src="img/icons/add.png" alt="add">
-			</div>
-			<div class="love">
-				<img src="img/icons/heart.png" alt="love">
-			</div>
-			<div class="close">
-				<img src="img/icons/close.png" alt="close">
-			</div>
-		</div>
-		<div class="itemo">
-			<img src="img/covers/Rock/Blue.jpg" alt="cover">
-			<div class="type">Tape</div>
-			<div class="add">
-				<img src="img/icons/add.png" alt="add">
-			</div>
-			<div class="love">
-				<img src="img/icons/heart.png" alt="love">
-			</div>
-			<div class="close">
-				<img src="img/icons/close.png" alt="close">
-			</div>
-		</div>
-		<div class="itemo">
-			<img src="img/covers/Rock/Creole.jpg" alt="cover">
-			<div class="type">Vinyl</div>
-			<div class="add">
-				<img src="img/icons/add.png" alt="add">
-			</div>
-			<div class="love">
-				<img src="img/icons/heart.png" alt="love">
-			</div>
-			<div class="close">
-				<img src="img/icons/close.png" alt="close">
-			</div>
-		</div>
-		<a href="MuCr_detailed_album_diamonds.php">
-			<div class="itemo">
-				<img src="img/covers/Rock/Diamonds.jpg" alt="cover">
-				<div class="type">MP3</div>
-				<div class="add">
-					<img src="img/icons/add.png" alt="add">
-				</div>
-				<div class="love">
-					<img src="img/icons/heart.png" alt="love">
-				</div>
-				<div class="close">
-					<img src="img/icons/close.png" alt="close">
-				</div>
-			</div>
-		</a>
-		<div class="itemo">
-			<img src="img/covers/Rock/Games.jpg" alt="cover">
-			<div class="type">CD</div>
-			<div class="add">
-				<img src="img/icons/add.png" alt="add">
-			</div>
-			<div class="love">
-				<img src="img/icons/heart.png" alt="love">
-			</div>
-			<div class="close">
-				<img src="img/icons/close.png" alt="close">
-			</div>
-		</div>
-		<div class="itemo">
-			<img src="img/covers/Rock/Highway.jpg" alt="cover">
-			<div class="type">Tape</div>
-			<div class="add">
-				<img src="img/icons/add.png" alt="add">
-			</div>
-			<div class="love">
-				<img src="img/icons/heart.png" alt="love">
-			</div>
-			<div class="close">
-				<img src="img/icons/close.png" alt="close">
-			</div>
-		</div>
-		<div class="itemo">
-			<img src="img/covers/Rock/Idiot.jpg" alt="cover">
-			<div class="type">Vinyl</div>
-			<div class="add">
-				<img src="img/icons/add.png" alt="add">
-			</div>
-			<div class="love">
-				<img src="img/icons/heart.png" alt="love">
-			</div>
-			<div class="close">
-				<img src="img/icons/close.png" alt="close">
-			</div>
-		</div>
-		<div class="itemo">
-			<img src="img/covers/Rock/Nevermind.jpg" alt="cover">
-			<div class="type">MP3</div>
-			<div class="add">
-				<img src="img/icons/add.png" alt="add">
-			</div>
-			<div class="love">
-				<img src="img/icons/heart.png" alt="love">
-			</div>
-			<div class="close">
-				<img src="img/icons/close.png" alt="close">
-			</div>
-		</div>
-		<div class="itemo">
-			<img src="img/covers/Rock/Next.jpg" alt="cover">
-			<div class="type">CD</div>
-			<div class="add">
-				<img src="img/icons/add.png" alt="add">
-			</div>
-			<div class="love">
-				<img src="img/icons/heart.png" alt="love">
-			</div>
-			<div class="close">
-				<img src="img/icons/close.png" alt="close">
-			</div>
-		</div>
-		<div class="itemo">
-			<img src="img/covers/Rock/Opera.png" alt="cover">
-			<div class="type">Tape</div>
-			<div class="add">
-				<img src="img/icons/add.png" alt="add">
-			</div>
-			<div class="love">
-				<img src="img/icons/heart.png" alt="love">
-			</div>
-			<div class="close">
-				<img src="img/icons/close.png" alt="close">
-			</div>
-		</div>
-		<div class="itemo">
-			<img src="img/covers/Rock/Pass.jpg" alt="cover">
-			<div class="type">Vinyl</div>
-			<div class="add">
-				<img src="img/icons/add.png" alt="add">
-			</div>
-			<div class="love">
-				<img src="img/icons/heart.png" alt="love">
-			</div>
-			<div class="close">
-				<img src="img/icons/close.png" alt="close">
-			</div>
-		</div>
-		<div class="itemo">
-			<img src="img/covers/Rock/Ringo.jpg" alt="cover">
-			<div class="type">MP3</div>
-			<div class="add">
-				<img src="img/icons/add.png" alt="add">
-			</div>
-			<div class="love">
-				<img src="img/icons/heart.png" alt="love">
-			</div>
-			<div class="close">
-				<img src="img/icons/close.png" alt="close">
-			</div>
-		</div>
-		<div class="itemo">
-			<img src="img/covers/Rock/Shape.jpg" alt="cover">
-			<div class="type">CD</div>
-			<div class="add">
-				<img src="img/icons/add.png" alt="add">
-			</div>
-			<div class="love">
-				<img src="img/icons/heart.png" alt="love">
-			</div>
-			<div class="close">
-				<img src="img/icons/close.png" alt="close">
-			</div>
-		</div>
-		<div class="itemo">
-			<img src="img/covers/Rock/Stardust.jpg" alt="cover">
-			<div class="type">Tape</div>
-			<div class="add">
-				<img src="img/icons/add.png" alt="add">
-			</div>
-			<div class="love">
-				<img src="img/icons/heart.png" alt="love">
-			</div>
-			<div class="close">
-				<img src="img/icons/close.png" alt="close">
-			</div>
-		</div>
-		<div class="itemo">
-			<img src="img/covers/Rock/Straits.jpg" alt="cover">
-			<div class="type">CD</div>
-			<div class="add">
-				<img src="img/icons/add.png" alt="add">
-			</div>
-			<div class="love">
-				<img src="img/icons/heart.png" alt="love">
-			</div>
-			<div class="close">
-				<img src="img/icons/close.png" alt="close">
-			</div>
-		</div>
-		<div class="itemo">
-			<img src="img/covers/Rock/acdc.jpg" alt="cover">
-			<div class="type">CD</div>
-			<div class="add">
-				<img src="img/icons/add.png" alt="add">
-			</div>
-			<div class="love">
-				<img src="img/icons/heart.png" alt="love">
-			</div>
-			<div class="close">
-				<img src="img/icons/close.png" alt="close">
-			</div>
-		</div>
+<a href=
+<?php
+	$url = $_GET['type'];
+	if($url=='main')
+		echo "MuCr_main.php";
+	else
+		echo "MuCr_collection.php?title=$url";
 
+?>
+>
+	<button class="gotostyle">
+		<div class="simbolo">
+			<img src="img/icons/arrow.png">
+		</div>
+		<div class="tituloatras">go to
+			<?php
+				$url = $_GET['type'];
+				$url = str_replace("_"," ",$url);
+				$url = str_replace("come","'",$url);
+				echo $url;
+			?>
+		</div>
+	</button>
+</a>
 		<div class="seleccionado">
 			<div class="imagen">
 				<img src="img/covers/Rock/Abbey_Road_Big.jpg" alt="cover">
 			</div>
-			<div class="titulo_normal">ABBEY ROAD</div>
-			<div class="album_artist">The Beatles (1969) - 47:24</div>
+			<div class=<?php $url = $_GET['deluxe'];if($url==true){echo titulo_especial;}else{echo titulo_normal;}?>>ABBEY ROAD</div>
+			<div class="album_artist">(1969) - 47:24</div>
 			<div class="album_type">Vinyl 33⅓ 200g</div>
 			<div class="listofsongs">
 				<div class="songs">Come Together - 4:20
@@ -425,7 +222,16 @@
 				</div>
 			</div>
 		</div>
-	</div>
+
+		<div class="recocollect">
+			<div class="albumlist"><img src="img/covers/Rock/Abbey_Road_Big.jpg"></div>
+			<div class="albumlist"><img src="img/covers/Rock/Abbey_Road_Big.jpg"></div>
+			<div class="albumlist"><img src="img/covers/Rock/Abbey_Road_Big.jpg"></div>
+			<div class="albumlist"><img src="img/covers/Rock/Abbey_Road_Big.jpg"></div>
+			<div class="albumlist"><img src="img/covers/Rock/Abbey_Road_Big.jpg"></div>
+			<div class="albumlist"><img src="img/covers/Rock/Abbey_Road_Big.jpg"></div>
+			<div class="albumlist"><img src="img/covers/Rock/Abbey_Road_Big.jpg"></div>
+		</div>
 
 </body>
 
