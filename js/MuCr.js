@@ -85,7 +85,7 @@ function writeClassification(option) {
 		for (var i = 0; i < 2; i++) {
 			document.getElementsByClassName("especialized")[i].style.display = "block";
 		}
-		
+
 		// Hide all classficiations
 		for (var i = 2; i < 29; i++) {
 			document.getElementsByClassName("especialized")[i].style.display = "none";
@@ -121,7 +121,6 @@ function writeClassification(option) {
 	}
 }
 
-<<<<<<< Updated upstream
 function closeALL() {
 	var vnamerica = 23;
 	var vsamerica = 12;
@@ -133,23 +132,23 @@ function closeALL() {
 	for (var i = 0; i < vnamerica - 1; i++) {
 		document.getElementsByClassName("flag-namerica")[i].style.display = "none";
 	}
-	
+
 	for (var i = 0; i < vsamerica - 1; i++) {
 		document.getElementsByClassName("flag-samerica")[i].style.display = "none";
 	}
-	
+
 	for (var i = 0; i < voceania - 1; i++) {
 		document.getElementsByClassName("flag-oceania")[i].style.display = "none";
 	}
-	
+
 	for (var i = 0; i < veurope - 1; i++) {
 		document.getElementsByClassName("flag-europe")[i].style.display = "none";
 	}
-	
+
 	for (var i = 0; i < vasia - 1; i++) {
 		document.getElementsByClassName("flag-asia")[i].style.display = "none";
 	}
-	
+
 	for (var i = 0; i < vafrica - 1; i++) {
 		document.getElementsByClassName("flag-african")[i].style.display = "none";
 	}
@@ -158,58 +157,32 @@ function closeALL() {
 function openOne(continents) {
 	var flag = "flag-europe";
 	var maxflag = 0;
-=======
-function closeALL(){
-	var vnamerica=23;
-	var vsamerica=12;
-	var voceania=13;
-	var veurope=44;
-	var vasia=50;
-	var vafrica=54;
-	for(var i=0;i<vnamerica;i++){document.getElementsByClassName("flag-namerica")[i].style.display="none";}
-	for(var i=0;i<vsamerica;i++){document.getElementsByClassName("flag-samerica")[i].style.display="none";}
-	for(var i=0;i<voceania;i++){document.getElementsByClassName("flag-oceania")[i].style.display="none";}
-	for(var i=0;i<veurope;i++){document.getElementsByClassName("flag-europe")[i].style.display="none";}
-	for(var i=0;i<vafrica;i++){document.getElementsByClassName("flag-african")[i].style.display="none";}
-	for(var i=0;i<vasia;i++){document.getElementsByClassName("flag-asia")[i].style.display="none";}
-}
-
-function openOne(continents){
-	var flag="flag-europe";
-	var maxflag=0;
-	if(continents=="europe"){flag="flag-europe";maxflag=44;}
-	if(continents=="namerica"){flag="flag-namerica";maxflag=23;}
-	if(continents=="samerica"){flag="flag-samerica";maxflag=12;}
-	if(continents=="oceania"){flag="flag-oceania";maxflag=13;}
-	if(continents=="asia"){flag="flag-asia";maxflag=50;}
-	if(continents=="africa"){flag="flag-african";maxflag=54;}
->>>>>>> Stashed changes
 
 	if (continents == "europe") {
 		flag = "flag-europe";
 		maxflag = 44;
 	}
-	
+
 	if (continents == "namerica") {
 		flag = "flag-namerica";
 		maxflag = 23;
 	}
-	
+
 	if (continents == "samerica") {
 		flag = "flag-samerica";
 		maxflag = 12;
 	}
-	
+
 	if (continents == "oceania") {
 		flag = "flag-oceania";
 		maxflag = 13;
 	}
-	
+
 	if (continents == "asia") {
 		flag = "flag-asia";
 		maxflag = 50;
 	}
-	
+
 	if (continents == "africa") {
 		flag = "flag-african";
 		maxflag = 54;
@@ -253,3 +226,21 @@ function opencountries(continent) {
 		openOne("asia");
 	}
 }
+
+
+/*
+if (navigator.geolocation) {
+  var tiempo_de_espera = 3000;
+  navigator.geolocation.getCurrentPosition(mostrarCoordenadas, mostrarError, { enableHighAccuracy: true, timeout: tiempo_de_espera, maximumAge: 0 } );
+}
+else {
+  alert("La Geolocalización no es soportada por este navegador");
+}
+function mostrarCoordenadas(position) {
+  alert("Latitud: " + position.coords.latitude + ", Longitud: " + position.coords.longitude);
+}
+function mostrarError(error) {
+  var errores = {1: 'Permiso denegado', 2: 'Posición no disponible', 3: 'Expiró el tiempo de respuesta'};
+  alert("Error: " + errores[error.code]);
+}
+*/
