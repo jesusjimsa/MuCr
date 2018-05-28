@@ -104,7 +104,7 @@
 	</div>
 
 	<div class="grid-container">
-		<a href="MuCr_detailed_album.php?artist=The_Beatles&type=<?php $url = $_GET['title']; echo $url;?>&deluxe=true">
+		<a href="MuCr_detailed_album.php?artist=The_Beatles&type=<?php $url = $_GET['title']; echo $url;?>&deluxe=false">
 		<div class="itemo">
 				<img src="img/covers/Rock/Abbey.jpg" alt="artist">
 				<div class="type">Vinyl</div>
@@ -171,7 +171,7 @@
 				<img src="img/icons/close.png" alt="close">
 			</div>
 		</div>
-		<a href="MuCr_detailed_album_diamonds.php">
+		<a href="MuCr_detailed_album.php?artist=Elton_John&type=<?php $url = $_GET['title']; echo $url;?>&deluxe=true">
 			<div class="itemo">
 				<img src="img/covers/Rock/Diamonds.jpg" alt="artist">
 				<div class="type">MP3</div>

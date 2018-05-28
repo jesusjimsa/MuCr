@@ -96,10 +96,21 @@
 
 	<div class="genre">
 		<?php
+/*
 		$url = $_GET['artist'];
  		$url = str_replace("_"," ",$url);
 		$url = str_replace("come","'",$url);
 		echo $url;
+    */
+    $artist = "ZZ Top";
+    $song_title = "It's only Love";
+
+    $mb_query = 'http://www.musicbrainz.org/ws/2/recording?query="'.$song_title.'"'.' AND artist:"'.$artist.'"';
+    $xml = simplexml_load_file($mb_query);
+
+    $releasedate = $xml->{'recording-list'}->recording[0]->{'release-list'}->release[0]->date;
+    echo $releasedate;
+
 		?>
 	</div>
 
@@ -110,6 +121,7 @@
 		echo "MuCr_main.php";
 	else
 		echo "MuCr_collection.php?title=$url";
+
 
 ?>
 >
@@ -131,7 +143,7 @@
 			<div class="imagen">
 				<img src="img/covers/Rock/Abbey_Road_Big.jpg" alt="cover">
 			</div>
-			<div class=<?php $url = $_GET['deluxe'];if($url==true){echo titulo_especial;}else{echo titulo_normal;}?>>ABBEY ROAD</div>
+			<div class=<?php $url = $_GET['deluxe'];if($url=='true'){echo titulo_especial;}else{echo titulo_normal;}?>>ABBEY ROAD</div>
 			<div class="album_artist">(1969) - 47:24</div>
 			<div class="album_type">Vinyl 33⅓ 200g</div>
 			<div class="listofsongs">
