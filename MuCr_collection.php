@@ -95,12 +95,17 @@
 	</a>
 
 	<div class="genre">
-		Rock
+		<?php
+		$url = $_GET['title'];
+ 		$url = str_replace("_"," ",$url);
+		$url = str_replace("come","'",$url);
+		echo $url;
+ 		?>
 	</div>
 
 	<div class="grid-container">
-		<a href="MuCr_detailed_album_abbey_road.php">
-			<div class="itemo">
+		<a href="MuCr_detailed_album.php?artist=The_Beatles&type=<?php $url = $_GET['title']; echo $url;?>&deluxe=false">
+		<div class="itemo">
 				<img src="img/covers/Rock/Abbey.jpg" alt="artist">
 				<div class="type">Vinyl</div>
 				<div class="add">
@@ -166,7 +171,7 @@
 				<img src="img/icons/close.png" alt="close">
 			</div>
 		</div>
-		<a href="MuCr_detailed_album_diamonds.php">
+		<a href="MuCr_detailed_album.php?artist=Elton_John&type=<?php $url = $_GET['title']; echo $url;?>&deluxe=true">
 			<div class="itemo">
 				<img src="img/covers/Rock/Diamonds.jpg" alt="artist">
 				<div class="type">MP3</div>
@@ -338,6 +343,8 @@
 			</div>
 		</div>
 	</div>
+
+
 
 </body>
 

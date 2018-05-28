@@ -98,7 +98,11 @@
 		<img src="img/covers/pop/coldplay.jpg" alt="artist_principal">
 	</div>
 	<div class="name">
-		Coldplay
+		<?php
+		$url = $_GET['artist'];
+		$url = str_replace("_"," ",$url);
+		echo $url;
+		 ?>
 	</div>
 
 	<div class="listaciudades">
