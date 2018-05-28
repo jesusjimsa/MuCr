@@ -103,7 +103,7 @@
 		echo $url;
     */
     $artist = "ZZ Top";
-    $song_title = "It's only Love";
+    $song_title = "Tush";
 
     $mb_query = 'http://www.musicbrainz.org/ws/2/recording?query="'.$song_title.'"'.' AND artist:"'.$artist.'"';
     $xml = simplexml_load_file($mb_query);
@@ -113,6 +113,11 @@
 
 		?>
 	</div>
+
+
+	<!-- Warning: simplexml_load_file(http://www.musicbrainz.org/ws/2/recording?query=%22Tush%22%20AND%20artist:%22ZZ%20Top%22): failed to open stream: HTTP request failed! HTTP/1.1 403 Forbidden in /Users/jesusjimsa/Sites/MuCr_detailed_album.php on line 109
+
+	Warning: simplexml_load_file(): I/O warning : failed to load external entity "http://www.musicbr -->
 
 <a href=
 <?php
