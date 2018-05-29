@@ -119,9 +119,9 @@ if ($fmt == 'json') {
 	print_r(error_get_last());
 	//var_dump($response);
 	echo $response["releases"][0]["id"];
-*/
-}
 
+}
+*/
 
 		?>
 	</div>
