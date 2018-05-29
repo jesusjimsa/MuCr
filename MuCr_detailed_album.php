@@ -172,7 +172,8 @@ if ($fmt == 'json') {
 	curl_close($ch);
 	$response = json_decode($response, JSON_FORCE_OBJECT);
 	print_r(error_get_last());
-	echo $response;
+	// var_dump($response);
+	echo $response["releases"][0]["id"];
 }
 
 
