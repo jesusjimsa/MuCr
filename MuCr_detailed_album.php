@@ -101,15 +101,80 @@
  		$url = str_replace("_"," ",$url);
 		$url = str_replace("come","'",$url);
 		echo $url;
-    */
-    $artist = "ZZ Top";
-    $song_title = "Tush";
 
-    $mb_query = 'http://www.musicbrainz.org/ws/2/recording?query="'.$song_title.'"'.' AND artist:"'.$artist.'"';
-    $xml = simplexml_load_file($mb_query);
+  					$ch = curl_init();
 
-    $releasedate = $xml->{'recording-list'}->recording[0]->{'release-list'}->release[0]->date;
+		        curl_setopt($ch, CURLOPT_URL, "http://www.musicbrainz.org/ws/2/recording?query=Tush&artist=ZZ+Top");
+						curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+
+			 			// $output contains the output string
+			 			$output = curl_exec($ch);
+						//$arr = json_decode($output,true);
+  //  $mb_query = 'http://www.musicbrainz.org/ws/2/recording?query="'.$song_title.'"'.' AND artist:"'.$artist.'"';
+    //$xml = simplexml_load_file($mb_query);
+
+
+    $releasedate = $output->{'recording-list'}->recording[0]->{'release-list'}->release[0]->date;
     echo $releasedate;
+		        curl_close($ch);
+
+$curl = new curl();
+
+$data = array(
+	'title'		=> 'Showdown',
+	'artist'	=> 'Pendulum',
+	'release'	=> 'In Silico',
+	'duration'	=> 327784,
+//	'tracknumber'	=> 0,
+//	'count'		=> 10,
+//	'releasetype'	=> '',
+
+	'limit'		=> 25,
+	'limit'		=> 1,
+);
+$target = 'http://musicbrainz.org/ws/1/track/?type=xml';
+foreach ($data as $ref => $dat) {
+	$target .= '&' . $ref . '=' . urlencode($dat);
+}
+
+                                $curl->target($target);
+                                $curl->runit();
+                                $mb = $curl->bodyarray['metadata'];
+
+if (isset($mb['track-list'])) {
+	$mb = $mb['track-list'];
+
+	if (isset($mb['track']['0'])) {
+		$mb = $mb['track'];
+		$artist_id = $mb['0']['artist_attr']['id'];
+		$song_id = $mb['0_attr']['id'];
+	} else {
+		$artist_id = $mb['track']['artist_attr']['id'];
+		$song_id = $mb['track_attr']['id'];
+	}
+} else {
+	// no data
+}
+
+echo "\n" . $artist_id . ' ' . $song_id;
+*/
+$release='In Silico';
+$fmt='json';
+$url = "http://musicbrainz.org/ws/2/release/?query=release:".urlencode($release)."&fmt=".$fmt;
+//echo $url;
+
+if ($fmt == 'json') {
+	$ch = curl_init();
+	curl_setopt($ch, CURLOPT_URL, $url);
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+	curl_setopt($ch, CURLOPT_USERAGENT, 'CdBase');
+	$response = curl_exec ($ch);
+	curl_close($ch);
+	$response = json_decode($response, JSON_FORCE_OBJECT);
+	print_r(error_get_last());
+	echo $response;
+}
+
 
 		?>
 	</div>
