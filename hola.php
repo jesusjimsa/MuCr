@@ -13,7 +13,7 @@ if ($fmt == 'json') {
 	curl_close($ch);
 	$response = json_decode($response, JSON_FORCE_OBJECT);
 	print_r(error_get_last());
-	// var_dump($response);
-	echo $response["releases"][0]["id"];
+	 var_dump($response);
+	//echo $response["releases"][0]["id"];
 }
 ?>

@@ -222,28 +222,19 @@
 		</div>
 
 		<div class="fila">
+			<?php
+				include 'controladorlista2.php';
+				
+ 				  $albumes=new lista2("pop");
+			?>
 			<div class="title">For You</div>
 			<div class="row_main">
 				<div class="recom1">
 					<img src="<?php
-							$genre='pop';
-							$fmt='json';
-							$url = "http://musicbrainz.org/ws/2/release/?query=tag:".urlencode($genre)."&fmt=".$fmt;
 
-							if ($fmt == 'json') {
-								$ch = curl_init();
-								curl_setopt($ch, CURLOPT_URL, $url);
-								curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-								curl_setopt($ch, CURLOPT_USERAGENT, 'CdBase');
-								$response = curl_exec ($ch);
-								curl_close($ch);
-								$response = json_decode($response, JSON_FORCE_OBJECT);
-								$id1=$response["releases"][0]["id"];
-								$url1="http://coverartarchive.org/release/".$id1."/front";
-								echo $url1;
-							}
-					?>"
-					alt="Album cover">
+
+						echo albumes.getImageAlbum(0);
+					?>"	alt="Album cover">
 					<div class="close">
 						<img src="img/icons/close.png" alt="close">
 					</div>
@@ -255,7 +246,9 @@
 					</div>
 				</div>
 				<div class="recom1">
-					<img src="img/covers/Jazz/Best.jpg" alt="Album cover">
+					<img src="<?php
+						echo albumes.getImageAlbum(1);
+					?>" alt="Album cover">
 					<div class="close">
 						<img src="img/icons/close.png" alt="close">
 					</div>
@@ -267,7 +260,9 @@
 					</div>
 				</div>
 				<div class="recom1">
-					<img src="img/covers/Jazz/Best.jpg" alt="Album cover">
+					<img src="<?php
+						echo albumes.getImageAlbum(2);
+						?>" alt="Album cover">
 					<div class="close">
 						<img src="img/icons/close.png" alt="close">
 					</div>
@@ -279,7 +274,10 @@
 					</div>
 				</div>
 				<div class="recom1">
-					<img src="img/covers/Jazz/Best.jpg" alt="Album cover">
+					<img src="<?php
+						echo albumes.getImageAlbum(3);
+						?>
+					" alt="Album cover">
 					<div class="close">
 						<img src="img/icons/close.png" alt="close">
 					</div>
@@ -291,7 +289,9 @@
 					</div>
 				</div>
 				<div class="recom1">
-					<img src="img/covers/Jazz/Illusion.jpg" alt="Album cover">
+					<img src="<?php
+						echo albumes.getImageAlbum(4);
+					?>" alt="Album cover">
 					<div class="close">
 						<img src="img/icons/close.png" alt="close">
 					</div>
@@ -303,7 +303,9 @@
 					</div>
 				</div>
 				<div class="recom1">
-					<img src="img/covers/Jazz/Joy.jpg" alt="Album cover">
+					<img src="<?php
+						echo albumes.getImageAlbum(5);
+					?>" alt="Album cover">
 					<div class="close">
 						<img src="img/icons/close.png" alt="close">
 					</div>
@@ -315,7 +317,9 @@
 					</div>
 				</div>
 				<div class="recom1">
-					<img src="img/covers/Jazz/Krall.jpg" alt="Album cover">
+					<img src="<?php
+						echo albumes.getImageAlbum(6);
+					?>" alt="Album cover">
 					<div class="close">
 						<img src="img/icons/close.png" alt="close">
 					</div>
@@ -327,7 +331,9 @@
 					</div>
 				</div>
 				<div class="recom1">
-					<img src="img/covers/Jazz/Nagula.jpg" alt="Album cover">
+					<img src="<?php
+						echo albumes.getImageAlbum(7);
+					?>" alt="Album cover">
 					<div class="close">
 						<img src="img/icons/close.png" alt="close">
 					</div>
@@ -339,7 +345,9 @@
 					</div>
 				</div>
 				<div class="recom1">
-					<img src="img/covers/Jazz/Nothing.jpg" alt="Album cover">
+					<img src="<?php
+						echo albumes.getImageAlbum(8);
+					?>" alt="Album cover">
 					<div class="close">
 						<img src="img/icons/close.png" alt="close">
 					</div>
