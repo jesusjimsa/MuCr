@@ -99,8 +99,8 @@
 		<?php
 
 		$artist1 = $_GET['artist'];
- 		$artist1 = str_replace("_"," ",$url);
-		$artis1 = str_replace("come","'",$url);
+ 		$artist1 = str_replace("_"," ",$artist1);
+		$artist1 = str_replace("come","'",$artist1);
 		echo $artist1;
 
 /*
@@ -166,8 +166,9 @@ if ($fmt == 'json') {
 				$album = $_GET['album'];
 				$album = str_replace("_"," ",$album);
 				$album0 = new album;
-				$album0->createAlbumsearched($artis1,$album);
-				echo $album0->getTitulo();
+				$album0->createAlbumsearched($artist1,$album);
+				echo "tonto";
+				$album0->showTitulo();
 				?>
 
 			</div>
