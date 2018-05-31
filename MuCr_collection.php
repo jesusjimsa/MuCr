@@ -104,7 +104,7 @@
 	</div>
 
 	<div class="grid-container">
-		<a href="MuCr_detailed_album.php?artist=The_Beatles&type=<?php $url = $_GET['title']; echo $url;?>&deluxe=false">
+		<a href="MuCr_detailed_album.php?artist=The_Beatles&type=<?php $url = $_GET['title']; echo $url;?>&deluxe=false&album=Abbey+Road">
 		<div class="itemo">
 				<img src="img/covers/Rock/Abbey.jpg" alt="artist">
 				<div class="type">Vinyl</div>
