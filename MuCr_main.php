@@ -225,7 +225,7 @@
 			<?php
 				include 'controladorlista2.php';
 				
- 				  $albumes=new lista2("pop");
+ 				$albumes = new lista2("pop");
 			?>
 			<div class="title">For You</div>
 			<div class="row_main">
