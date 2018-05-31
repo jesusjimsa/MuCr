@@ -107,16 +107,17 @@ class lista2{
 	 }
 
 	public function crearalbum($numero, $genre){
-		$album=new album;
+		$album = new album;
+		echo "adios";
 		$album->set(
-			getAPI($numero, $genre, "id"),
-			getAPI($numero, $genre, "title"),
-			getAPI($numero, $genre, "artist"),
+			$this->getAPI($numero, $genre, "id"),
+			$this->getAPI($numero, $genre, "title"),
+			$this->getAPI($numero, $genre, "artist"),
 			$genre,
-			getAPI($numero, $genre, "status"),
+			$this->getAPI($numero, $genre, "status"),
 			false,
-			getAPI($numero, $genre, "date"),
-			"http://coverartarchive.org/release/" . getAPI($numero, $genre, "id") . "/front"
+			$this->getAPI($numero, $genre, "date"),
+			"http://coverartarchive.org/release/" . $this->getAPI($numero, $genre, "id") . "/front"
 		);
 
 		return $album;
@@ -124,16 +125,17 @@ class lista2{
 
 	public function lista2($genre){
 		$this->genre = $genre;
+		
 		$lista = array(
-						crearalbum(0, $genre),
-						crearalbum(1, $genre),
-						crearalbum(2, $genre),
-						crearalbum(3, $genre),
-						crearalbum(4, $genre),
-						crearalbum(5, $genre),
-						crearalbum(6, $genre),
-						crearalbum(7, $genre),
-						crearalbum(8, $genre)
+						$this->crearalbum(0, $genre),
+						$this->crearalbum(1, $genre),
+						$this->crearalbum(2, $genre),
+						$this->crearalbum(3, $genre),
+						$this->crearalbum(4, $genre),
+						$this->crearalbum(5, $genre),
+						$this->crearalbum(6, $genre),
+						$this->crearalbum(7, $genre),
+						$this->crearalbum(8, $genre)
 					);
 		return $this;
 	}
