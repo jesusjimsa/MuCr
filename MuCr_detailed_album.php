@@ -19,7 +19,8 @@
 			</div>
 			<div class="titulo">
 				<?php
-					include 'php/write_username.php'
+					include 'php/write_username.php';
+					include 'controladorAlbumRelacionado.php';
 				?>
 			</div>
 		</div>
@@ -97,10 +98,10 @@
 	<div class="genre">
 		<?php
 
-		$url = $_GET['artist'];
- 		$url = str_replace("_"," ",$url);
-		$url = str_replace("come","'",$url);
-		echo $url;
+		$artist1 = $_GET['artist'];
+ 		$artist1 = str_replace("_"," ",$url);
+		$artis1 = str_replace("come","'",$url);
+		echo $artist1;
 
 /*
 $release='In Silico';
@@ -160,7 +161,16 @@ if ($fmt == 'json') {
 			<div class="imagen">
 				<img src="img/covers/Rock/Abbey_Road_Big.jpg" alt="cover">
 			</div>
-			<div class=<?php $url = $_GET['deluxe'];if($url=='true'){echo titulo_especial;}else{echo titulo_normal;}?>>ABBEY ROAD</div>
+			<div class="<?php $url = $_GET['deluxe'];if($url=='true'){echo titulo_especial;}else{echo titulo_normal;}?>">
+				<?php
+				$album = $_GET['album'];
+				$album = str_replace("_"," ",$album);
+				$album0 = new album;
+				$album0->createAlbumsearched($artis1,$album);
+				echo $album0->getTitulo();
+				?>
+
+			</div>
 			<div class="album_artist">(1969) - 47:24</div>
 			<div class="album_type">Vinyl 33⅓ 200g</div>
 			<div class="listofsongs">
@@ -252,14 +262,45 @@ if ($fmt == 'json') {
 			</div>
 		</div>
 
+		<?php
+				$albumA1=new album;
+				$albumA1->createAlbumrand($artist1);
+				while($albumA1->IsEqual($albumA0)){$albumA1->createAlbumrand($artist1);}
+				//echo $albumA1.getImage();
+				$albumA2=new album;
+				$albumA2->createAlbumrand($artist1);
+				while($albumA2->IsEqual($albumA0) || $albumA2->IsEqual($albumA1)){$albumA2->createAlbumrand($artist1);}
+				//	echo $albumA2->getImage();
+				$albumA3=new album;
+				$albumA3->createAlbumrand($artist1);
+				while($albumA3->IsEqual($albumA0) || $albumA3->IsEqual($albumA1) || $albumA3->IsEqual($albumA2)){$albumA3->createAlbumrand($artist1);}
+				//echo $albumA3->getImage();
+				$albumA4=new album;
+				$albumA4->createAlbumrand($artist1);
+				while($albumA4->IsEqual($albumA0) || $albumA4->IsEqual($albumA1) || $albumA4->IsEqual($albumA2)|| $albumA4->IsEqual($albumA3)){$albumA4->createAlbumrand($artist1);}
+				//echo $albumA3->getImage();
+				$albumA5=new album;
+				$albumA5->createAlbumrand($artist1);
+				while($albumA5->IsEqual($albumA0) || $albumA5->IsEqual($albumA1) || $albumA5->IsEqual($albumA2)|| $albumA5->IsEqual($albumA3)|| $albumA5->IsEqual($albumA4)){$albumA5->createAlbumrand($artist1);}
+				//echo $albumA3->getImage();
+				$albumA6=new album;
+				$albumA6->createAlbumrand($artist1);
+				while($albumA6->IsEqual($albumA0) || $albumA6->IsEqual($albumA1) || $albumA6->IsEqual($albumA2)|| $albumA6->IsEqual($albumA3)|| $albumA6->IsEqual($albumA4)|| $albumA6->IsEqual($albumA5)){$albumA6->createAlbumrand($artist1);}
+				//echo $albumA3->getImage();
+				$albumA7=new album;
+				$albumA7->createAlbumrand($artist1);
+				while($albumA7->IsEqual($albumA0) || $albumA7->IsEqual($albumA1) || $albumA7->IsEqual($albumA2)|| $albumA7->IsEqual($albumA3)|| $albumA7->IsEqual($albumA4)|| $albumA7->IsEqual($albumA5)|| $albumA7->IsEqual($albumA6)){$albumA7->createAlbumrand($artist1);}
+				//echo $albumA3->getImage();
+		 ?>
+
 		<div class="recocollect">
-			<div class="albumlist"><img src="img/covers/Rock/Abbey_Road_Big.jpg"></div>
-			<div class="albumlist"><img src="img/covers/Rock/Abbey_Road_Big.jpg"></div>
-			<div class="albumlist"><img src="img/covers/Rock/Abbey_Road_Big.jpg"></div>
-			<div class="albumlist"><img src="img/covers/Rock/Abbey_Road_Big.jpg"></div>
-			<div class="albumlist"><img src="img/covers/Rock/Abbey_Road_Big.jpg"></div>
-			<div class="albumlist"><img src="img/covers/Rock/Abbey_Road_Big.jpg"></div>
-			<div class="albumlist"><img src="img/covers/Rock/Abbey_Road_Big.jpg"></div>
+			<div class="albumlist"><img src="<?php echo $albumA1->getImage();?>"></div>
+			<div class="albumlist"><img src="<?php echo $albumA2->getImage();?>"></div>
+			<div class="albumlist"><img src="<?php echo $albumA3->getImage();?>"></div>
+			<div class="albumlist"><img src="<?php echo $albumA4->getImage();?>"></div>
+			<div class="albumlist"><img src="<?php echo $albumA5->getImage();?>"></div>
+			<div class="albumlist"><img src="<?php echo $albumA6->getImage();?>"></div>
+			<div class="albumlist"><img src="<?php echo $albumA7->getImage();?>"></div>
 		</div>
 
 </body>
