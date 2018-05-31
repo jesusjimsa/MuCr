@@ -1,16 +1,20 @@
 <?php
 
 class album{
-  var $id;
-  var $titulo;
-  var $artista;
+  var $id="";
+  var $titulo="";
+  var $artista="";
 
   public function getID(){
       return $this->id;
     }
+  public function showTitulo(){
+    echo "tonto";
+  }
   public function getTitulo(){
     return $this->titulo;
   }
+
   public function getArtista(){
     return $this->Artista;
   }
