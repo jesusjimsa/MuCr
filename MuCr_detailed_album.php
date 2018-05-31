@@ -101,6 +101,7 @@
 		$artist1 = $_GET['artist'];
  		$artist1 = str_replace("_"," ",$url);
 		$artist1 = str_replace("come","'",$url);
+
 		echo $artist1;
 
 /*
