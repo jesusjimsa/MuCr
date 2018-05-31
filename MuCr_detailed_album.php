@@ -99,8 +99,9 @@
 		<?php
 
 		$artist1 = $_GET['artist'];
- 		$artist1 = str_replace("_"," ",$artist1);
-		$artist1 = str_replace("come","'",$artist1);
+ 		$artist1 = str_replace("_"," ",$url);
+		$artist1 = str_replace("come","'",$url);
+
 		echo $artist1;
 
 /*
@@ -126,11 +127,6 @@ if ($fmt == 'json') {
 
 		?>
 	</div>
-
-
-	<!-- Warning: simplexml_load_file(http://www.musicbrainz.org/ws/2/recording?query=%22Tush%22%20AND%20artist:%22ZZ%20Top%22): failed to open stream: HTTP request failed! HTTP/1.1 403 Forbidden in /Users/jesusjimsa/Sites/MuCr_detailed_album.php on line 109
-
-	Warning: simplexml_load_file(): I/O warning : failed to load external entity "http://www.musicbr -->
 
 <a href=
 <?php
@@ -161,16 +157,14 @@ if ($fmt == 'json') {
 			<div class="imagen">
 				<img src="img/covers/Rock/Abbey_Road_Big.jpg" alt="cover">
 			</div>
-			<div class="<?php $url = $_GET['deluxe'];if($url=='true'){echo titulo_especial;}else{echo titulo_normal;}?>">
+			<div class="<?php $url = $_GET['deluxe'];if($url=='true'){echo titulo_especial;}else{echo titulo_normal;} ?>">
 				<?php
-				$album = $_GET['album'];
-				$album = str_replace("_"," ",$album);
-				$album0 = new album;
-				$album0->createAlbumsearched($artist1,$album);
-				echo "tonto";
-				$album0->showTitulo();
+					$album = $_GET['album'];
+					$album = str_replace("_"," ",$album);
+					$album0 = new album;
+					$album0->createAlbumsearched($artis1,$album);
+					echo $album0->getTitulo();
 				?>
-
 			</div>
 			<div class="album_artist">(1969) - 47:24</div>
 			<div class="album_type">Vinyl 33⅓ 200g</div>
@@ -265,32 +259,32 @@ if ($fmt == 'json') {
 
 		<?php
 				$albumA1=new album;
-				$albumA1->createAlbumrand($artist1);
-				while($albumA1->IsEqual($albumA0)){$albumA1->createAlbumrand($artist1);}
+				$albumA1->createAlbumRand($artist1);
+				while($albumA1->IsEqual($albumA0)){$albumA1->createAlbumRand($artist1);}
 				//echo $albumA1.getImage();
 				$albumA2=new album;
-				$albumA2->createAlbumrand($artist1);
-				while($albumA2->IsEqual($albumA0) || $albumA2->IsEqual($albumA1)){$albumA2->createAlbumrand($artist1);}
+				$albumA2->createAlbumRand($artist1);
+				while($albumA2->IsEqual($albumA0) || $albumA2->IsEqual($albumA1)){$albumA2->createAlbumRand($artist1);}
 				//	echo $albumA2->getImage();
 				$albumA3=new album;
-				$albumA3->createAlbumrand($artist1);
-				while($albumA3->IsEqual($albumA0) || $albumA3->IsEqual($albumA1) || $albumA3->IsEqual($albumA2)){$albumA3->createAlbumrand($artist1);}
+				$albumA3->createAlbumRand($artist1);
+				while($albumA3->IsEqual($albumA0) || $albumA3->IsEqual($albumA1) || $albumA3->IsEqual($albumA2)){$albumA3->createAlbumRand($artist1);}
 				//echo $albumA3->getImage();
 				$albumA4=new album;
-				$albumA4->createAlbumrand($artist1);
-				while($albumA4->IsEqual($albumA0) || $albumA4->IsEqual($albumA1) || $albumA4->IsEqual($albumA2)|| $albumA4->IsEqual($albumA3)){$albumA4->createAlbumrand($artist1);}
+				$albumA4->createAlbumRand($artist1);
+				while($albumA4->IsEqual($albumA0) || $albumA4->IsEqual($albumA1) || $albumA4->IsEqual($albumA2)|| $albumA4->IsEqual($albumA3)){$albumA4->createAlbumRand($artist1);}
 				//echo $albumA3->getImage();
 				$albumA5=new album;
-				$albumA5->createAlbumrand($artist1);
-				while($albumA5->IsEqual($albumA0) || $albumA5->IsEqual($albumA1) || $albumA5->IsEqual($albumA2)|| $albumA5->IsEqual($albumA3)|| $albumA5->IsEqual($albumA4)){$albumA5->createAlbumrand($artist1);}
+				$albumA5->createAlbumRand($artist1);
+				while($albumA5->IsEqual($albumA0) || $albumA5->IsEqual($albumA1) || $albumA5->IsEqual($albumA2)|| $albumA5->IsEqual($albumA3)|| $albumA5->IsEqual($albumA4)){$albumA5->createAlbumRand($artist1);}
 				//echo $albumA3->getImage();
 				$albumA6=new album;
-				$albumA6->createAlbumrand($artist1);
-				while($albumA6->IsEqual($albumA0) || $albumA6->IsEqual($albumA1) || $albumA6->IsEqual($albumA2)|| $albumA6->IsEqual($albumA3)|| $albumA6->IsEqual($albumA4)|| $albumA6->IsEqual($albumA5)){$albumA6->createAlbumrand($artist1);}
+				$albumA6->createAlbumRand($artist1);
+				while($albumA6->IsEqual($albumA0) || $albumA6->IsEqual($albumA1) || $albumA6->IsEqual($albumA2)|| $albumA6->IsEqual($albumA3)|| $albumA6->IsEqual($albumA4)|| $albumA6->IsEqual($albumA5)){$albumA6->createAlbumRand($artist1);}
 				//echo $albumA3->getImage();
 				$albumA7=new album;
-				$albumA7->createAlbumrand($artist1);
-				while($albumA7->IsEqual($albumA0) || $albumA7->IsEqual($albumA1) || $albumA7->IsEqual($albumA2)|| $albumA7->IsEqual($albumA3)|| $albumA7->IsEqual($albumA4)|| $albumA7->IsEqual($albumA5)|| $albumA7->IsEqual($albumA6)){$albumA7->createAlbumrand($artist1);}
+				$albumA7->createAlbumRand($artist1);
+				while($albumA7->IsEqual($albumA0) || $albumA7->IsEqual($albumA1) || $albumA7->IsEqual($albumA2)|| $albumA7->IsEqual($albumA3)|| $albumA7->IsEqual($albumA4)|| $albumA7->IsEqual($albumA5)|| $albumA7->IsEqual($albumA6)){$albumA7->createAlbumRand($artist1);}
 				//echo $albumA3->getImage();
 		 ?>
 

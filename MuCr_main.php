@@ -223,17 +223,67 @@
 
 		<div class="fila">
 			<?php
-				include 'controladorlista2.php';
+				include 'controladorAlbumRelacionado.php';
+
+				$artist1 = "rihanna";
+				$albumA1 = new album;
+				$albumA1->createAlbumRand($artist1);
 				
- 				  $albumes=new lista2("pop");
+				echo $albumA1->getImage();
+				$albumA2 = new album;
+				$albumA2->createAlbumRand($artist1);
+				
+				while($albumA2->IsEqual($albumA1)){
+					$albumA2->createAlbumRand($artist1);
+				}
+				
+				//	echo $albumA2->getImage();
+				$albumA3 = new album;
+				$albumA3->createAlbumRand($artist1);
+				
+				while($albumA3->IsEqual($albumA1) || $albumA3->IsEqual($albumA2)){
+					$albumA3->createAlbumRand($artist1);
+				}
+				
+				//echo $albumA3->getImage();
+				$albumA4 = new album;
+				$albumA4->createAlbumRand($artist1);
+				
+				while($albumA4->IsEqual($albumA1) || $albumA4->IsEqual($albumA2)|| $albumA4->IsEqual($albumA3)){
+					$albumA4->createAlbumRand($artist1);
+				}
+				
+				//echo $albumA3->getImage();
+				$albumA5 = new album;
+				$albumA5->createAlbumRand($artist1);
+				
+				while($albumA5->IsEqual($albumA1) || $albumA5->IsEqual($albumA2)|| $albumA5->IsEqual($albumA3)|| $albumA5->IsEqual($albumA4)){
+					$albumA5->createAlbumRand($artist1);
+				}
+				
+				//echo $albumA3->getImage();
+				$albumA6 = new album;
+				$albumA6->createAlbumRand($artist1);
+				
+				while($albumA6->IsEqual($albumA1) || $albumA6->IsEqual($albumA2)|| $albumA6->IsEqual($albumA3)|| $albumA6->IsEqual($albumA4)|| $albumA6->IsEqual($albumA5)){
+					$albumA6->createAlbumRand($artist1);
+				}
+				
+				//echo $albumA3->getImage();
+				$albumA7 = new album;
+				$albumA7->createAlbumRand($artist1);
+				
+				while($albumA7->IsEqual($albumA1) || $albumA7->IsEqual($albumA2)|| $albumA7->IsEqual($albumA3)|| $albumA7->IsEqual($albumA4)|| $albumA7->IsEqual($albumA5)|| $albumA7->IsEqual($albumA6)){
+					$albumA7->createAlbumRand($artist1);
+				}
+				
+				//echo $albumA3->getImage();
 			?>
 			<div class="title">For You</div>
 			<div class="row_main">
 				<div class="recom1">
 					<img src="<?php
-
-
-						echo albumes.getImageAlbum(0);
+						echo $albumA1->getImage();
 					?>"	alt="Album cover">
 					<div class="close">
 						<img src="img/icons/close.png" alt="close">
@@ -247,7 +297,7 @@
 				</div>
 				<div class="recom1">
 					<img src="<?php
-						echo albumes.getImageAlbum(1);
+						echo $albumA2->getImage();
 					?>" alt="Album cover">
 					<div class="close">
 						<img src="img/icons/close.png" alt="close">
@@ -261,7 +311,7 @@
 				</div>
 				<div class="recom1">
 					<img src="<?php
-						echo albumes.getImageAlbum(2);
+						echo $albumA3->getImage();
 						?>" alt="Album cover">
 					<div class="close">
 						<img src="img/icons/close.png" alt="close">
@@ -275,7 +325,7 @@
 				</div>
 				<div class="recom1">
 					<img src="<?php
-						echo albumes.getImageAlbum(3);
+						echo $albumA4->getImage();
 						?>
 					" alt="Album cover">
 					<div class="close">
@@ -290,7 +340,7 @@
 				</div>
 				<div class="recom1">
 					<img src="<?php
-						echo albumes.getImageAlbum(4);
+						echo $albumA5->getImage();
 					?>" alt="Album cover">
 					<div class="close">
 						<img src="img/icons/close.png" alt="close">
@@ -304,7 +354,7 @@
 				</div>
 				<div class="recom1">
 					<img src="<?php
-						echo albumes.getImageAlbum(5);
+						echo $albumA6->getImage();
 					?>" alt="Album cover">
 					<div class="close">
 						<img src="img/icons/close.png" alt="close">
@@ -318,7 +368,7 @@
 				</div>
 				<div class="recom1">
 					<img src="<?php
-						echo albumes.getImageAlbum(6);
+						echo $albumA7->getImage();
 					?>" alt="Album cover">
 					<div class="close">
 						<img src="img/icons/close.png" alt="close">
