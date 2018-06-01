@@ -159,7 +159,12 @@
 				<img src="<?php
 								echo $albumA0->getImage();
 							?>" alt="cover">
+				
 			</div>
+			<div class="like_album" onclick="changeImageLike();">
+				<img src="img/icons/heart.png" alt="Like" id="likke">
+			</div>
+			
 			<div class="<?php $url = $_GET['deluxe'];if($url == 'true'){echo "titulo_especial";}else{echo "titulo_normal";} ?>">
 				<?php
 					echo $albumA0->showTitle();
