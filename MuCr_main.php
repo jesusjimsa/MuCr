@@ -194,30 +194,6 @@
 						<img src="img/icons/heart.png" alt="love">
 					</div>
 				</div>
-				<div class="recom1">
-					<img src="img/covers/Jazz/Nagula.jpg" alt="Album cover">
-					<div class="close">
-						<img src="img/icons/close.png" alt="close">
-					</div>
-					<div class="add">
-						<img src="img/icons/add.png" alt="add">
-					</div>
-					<div class="love">
-						<img src="img/icons/heart.png" alt="love">
-					</div>
-				</div>
-				<div class="recom1">
-					<img src="img/covers/Jazz/Nothing.jpg" alt="Album cover">
-					<div class="close">
-						<img src="img/icons/close.png" alt="close">
-					</div>
-					<div class="add">
-						<img src="img/icons/add.png" alt="add">
-					</div>
-					<div class="love">
-						<img src="img/icons/heart.png" alt="love">
-					</div>
-				</div>
 			</div>
 		</div>
 
@@ -229,7 +205,7 @@
 				$albumA1 = new album;
 				$albumA1->createAlbumRand($artist1);
 				
-				echo $albumA1->getImage();
+
 				$albumA2 = new album;
 				$albumA2->createAlbumRand($artist1);
 				
@@ -249,7 +225,7 @@
 				$albumA4 = new album;
 				$albumA4->createAlbumRand($artist1);
 				
-				while($albumA4->IsEqual($albumA1) || $albumA4->IsEqual($albumA2)|| $albumA4->IsEqual($albumA3)){
+				while($albumA4->IsEqual($albumA1) || $albumA4->IsEqual($albumA2) || $albumA4->IsEqual($albumA3)){
 					$albumA4->createAlbumRand($artist1);
 				}
 				
@@ -257,7 +233,7 @@
 				$albumA5 = new album;
 				$albumA5->createAlbumRand($artist1);
 				
-				while($albumA5->IsEqual($albumA1) || $albumA5->IsEqual($albumA2)|| $albumA5->IsEqual($albumA3)|| $albumA5->IsEqual($albumA4)){
+				while($albumA5->IsEqual($albumA1) || $albumA5->IsEqual($albumA2) || $albumA5->IsEqual($albumA3) || $albumA5->IsEqual($albumA4)){
 					$albumA5->createAlbumRand($artist1);
 				}
 				
@@ -265,19 +241,16 @@
 				$albumA6 = new album;
 				$albumA6->createAlbumRand($artist1);
 				
-				while($albumA6->IsEqual($albumA1) || $albumA6->IsEqual($albumA2)|| $albumA6->IsEqual($albumA3)|| $albumA6->IsEqual($albumA4)|| $albumA6->IsEqual($albumA5)){
+				while($albumA6->IsEqual($albumA1) || $albumA6->IsEqual($albumA2) || $albumA6->IsEqual($albumA3) || $albumA6->IsEqual($albumA4) || $albumA6->IsEqual($albumA5)){
 					$albumA6->createAlbumRand($artist1);
 				}
-				
-				//echo $albumA3->getImage();
+
 				$albumA7 = new album;
 				$albumA7->createAlbumRand($artist1);
 				
-				while($albumA7->IsEqual($albumA1) || $albumA7->IsEqual($albumA2)|| $albumA7->IsEqual($albumA3)|| $albumA7->IsEqual($albumA4)|| $albumA7->IsEqual($albumA5)|| $albumA7->IsEqual($albumA6)){
+				while($albumA7->IsEqual($albumA1) || $albumA7->IsEqual($albumA2) || $albumA7->IsEqual($albumA3) || $albumA7->IsEqual($albumA4) || $albumA7->IsEqual($albumA6)){
 					$albumA7->createAlbumRand($artist1);
 				}
-				
-				//echo $albumA3->getImage();
 			?>
 			<div class="title">For You</div>
 			<div class="row_main">
@@ -380,34 +353,6 @@
 						<img src="img/icons/heart.png" alt="love">
 					</div>
 				</div>
-				<div class="recom1">
-					<img src="<?php
-						echo albumes.getImageAlbum(7);
-					?>" alt="Album cover">
-					<div class="close">
-						<img src="img/icons/close.png" alt="close">
-					</div>
-					<div class="add">
-						<img src="img/icons/add.png" alt="add">
-					</div>
-					<div class="love">
-						<img src="img/icons/heart.png" alt="love">
-					</div>
-				</div>
-				<div class="recom1">
-					<img src="<?php
-						echo albumes.getImageAlbum(8);
-					?>" alt="Album cover">
-					<div class="close">
-						<img src="img/icons/close.png" alt="close">
-					</div>
-					<div class="add">
-						<img src="img/icons/add.png" alt="add">
-					</div>
-					<div class="love">
-						<img src="img/icons/heart.png" alt="love">
-					</div>
-				</div>
 			</div>
 		</div>
 
@@ -464,30 +409,6 @@
 				</div>
 				<div class="recom1">
 					<img src="img/covers/Jazz/Nagula.jpg" alt="Album cover">
-					<div class="close">
-						<img src="img/icons/close.png" alt="close">
-					</div>
-					<div class="add">
-						<img src="img/icons/add.png" alt="add">
-					</div>
-					<div class="love">
-						<img src="img/icons/heart.png" alt="love">
-					</div>
-				</div>
-				<div class="recom1">
-					<img src="img/covers/Jazz/Nothing.jpg" alt="Album cover">
-					<div class="close">
-						<img src="img/icons/close.png" alt="close">
-					</div>
-					<div class="add">
-						<img src="img/icons/add.png" alt="add">
-					</div>
-					<div class="love">
-						<img src="img/icons/heart.png" alt="love">
-					</div>
-				</div>
-				<div class="recom1">
-					<img src="img/covers/Jazz/Nothing.jpg" alt="Album cover">
 					<div class="close">
 						<img src="img/icons/close.png" alt="close">
 					</div>
