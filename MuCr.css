@@ -1558,12 +1558,6 @@ border-radius: 5vmin 0vmin 0px 0vmin;
 	background-color: rgba(77,77,77,0.9);
 }
 
-/* .grid-container .seleccionado .imagen{
-	position:fixed;
-	height:100%;
-	width:10%;
-} */
-
 .seleccionado .imagen img{
 	max-width: 31%;
 	max-height: 51%;
@@ -1573,6 +1567,14 @@ border-radius: 5vmin 0vmin 0px 0vmin;
 	background-repeat: no-repeat;
 	background-attachment: relative;
 	background-size: cover;
+}
+
+.seleccionado .like_album img{
+	max-width: 4%;
+	max-height: 4%;
+	background-color: rgba(77,77,77,0.9);
+	position: relative;
+	left: 36.3%;
 }
 
  .seleccionado .titulo_normal{

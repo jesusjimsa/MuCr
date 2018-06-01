@@ -41,7 +41,7 @@ function getCookie(name) {
 
 	if (begin == -1) {
 		begin = dc.indexOf(prefix);
-		if (begin != 0){
+		if (begin != 0) {
 			return null;
 		}
 	}
@@ -224,6 +224,17 @@ function opencountries(continent) {
 	if (continent == 6) {
 		closeALL();
 		openOne("asia");
+	}
+}
+
+function changeImageLike() {
+	if (document.getElementById("likke").src != "img/icons/red_heart.png") {
+		document.getElementById("likke").src = "img/icons/heart.png";
+		
+		
+	}
+	else {
+		document.getElementById("likke").src = "img/icons/red_heart.png";console.log("hola");
 	}
 }
 
