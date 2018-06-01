@@ -297,13 +297,13 @@
 		 ?>
 
 		<div class="recocollect">
-			<div class="albumlist"><img src="<?php echo $albumA1->getImage();?>"></div>
-			<div class="albumlist"><img src="<?php echo $albumA2->getImage();?>"></div>
-			<div class="albumlist"><img src="<?php echo $albumA3->getImage();?>"></div>
-			<div class="albumlist"><img src="<?php echo $albumA4->getImage();?>"></div>
-			<div class="albumlist"><img src="<?php echo $albumA5->getImage();?>"></div>
-			<div class="albumlist"><img src="<?php echo $albumA6->getImage();?>"></div>
-			<div class="albumlist"><img src="<?php echo $albumA7->getImage();?>"></div>
+			<div class="albumlist"><img src="<?php echo $albumA1->getImage();?>" alt=""></div>
+			<div class="albumlist"><img src="<?php echo $albumA2->getImage();?>" alt=""></div>
+			<div class="albumlist"><img src="<?php echo $albumA3->getImage();?>" alt=""></div>
+			<div class="albumlist"><img src="<?php echo $albumA4->getImage();?>" alt=""></div>
+			<div class="albumlist"><img src="<?php echo $albumA5->getImage();?>" alt=""></div>
+			<div class="albumlist"><img src="<?php echo $albumA6->getImage();?>" alt=""></div>
+			<div class="albumlist"><img src="<?php echo $albumA7->getImage();?>" alt=""></div>
 		</div>
 
 </body>

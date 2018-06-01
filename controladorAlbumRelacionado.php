@@ -4,6 +4,8 @@ class album{
 	public $id;
 	public $titulo;
 	public $artista;
+	public $type;
+	public $deluxe;
 
 	public function getID(){
 		return $this->id;
@@ -15,6 +17,14 @@ class album{
 
 	public function getArtista(){
 		return $this->artista;
+	}
+
+	public function getType(){
+		$this->type;
+	}
+
+	public function getDeluxe(){
+		$this->deluxe;
 	}
 
 	public function showTitle(){
@@ -39,6 +49,24 @@ class album{
 		else {
 			return false;
 		}
+	}
+
+	public function isDeluxe($album){
+		$result = false;
+
+		if(strpos($album, "Deluxe") != false){
+			$result = true;
+		}
+
+		if(strpos($album, "deluxe") != false){
+			$result = true;
+		}
+
+		if(strpos($album, "DELUXE") != false){
+			$result = true;
+		}
+
+		return $result;
 	}
 
 	public function createAlbumRand($artista1){
@@ -66,6 +94,9 @@ class album{
 
 		//get the artist
 		$this->artista = $artista1;
+
+		$this->type = $response["releases"][$numer]["media"][0]["format"];
+		$this->deluxe = $this->isDeluxe($response["releases"][$numer]["artist-credit"][0]["artist"]["disambiguation"]);
 
 		return $this;
 	}
@@ -95,6 +126,8 @@ class album{
 			$this->id = null;
 			$this->titulo = null;
 			$this->artista = null;
+			$this->type = null;
+			$this->deluxe = null;
 		}
 		else{
 			$this->id = $response["releases"][$i]["id"];
@@ -104,6 +137,9 @@ class album{
 
 			//get the artist
 			$this->artista = str_replace("_", " ", $artista1);
+
+			$this->type = $response["releases"][$i]["media"][0]["format"];
+			$this->deluxe = $this->isDeluxe($response["releases"][$i]["artist-credit"][0]["artist"]["disambiguation"]);
 		}
 		
 		return $this;
