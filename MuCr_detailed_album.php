@@ -129,28 +129,23 @@
 				echo $url;
 			?>
 		</div>
-		<?php
-
-		?>
 	</button>
 </a>
 		<div class="seleccionado">
 			<?php
-			$album_name = $_GET['album'];
-			$album_name = str_replace("_", " ", $album_name);
-			$albumA0 = new album;
-			// echo $_GET['artist'];
-			$albumA0->createAlbumsearched($artist1, $album_name);
+				$album_name = $_GET['album'];
+				$album_name = str_replace("_", " ", $album_name);
+				$albumA0 = new album;
+				// echo $_GET['artist'];
+				$albumA0->createAlbumsearched($artist1, $album_name);
 			 ?>
 			<div class="imagen">
 				<img src="<?php
-
-				 echo $albumA0->getImage(); ?>" alt="cover">
+								echo $albumA0->getImage();
+							?>" alt="cover">
 			</div>
 			<div class="<?php $url = $_GET['deluxe'];if($url == 'true'){echo "titulo_especial";}else{echo "titulo_normal";} ?>">
 				<?php
-
-
 					echo $albumA0->showTitle();
 				?>
 			</div>
@@ -313,7 +308,6 @@
 			<div class="albumlist"><img src="<?php echo $albumA6->getImage();?>" alt=""></div>
 			<div class="albumlist"><img src="<?php echo $albumA7->getImage();?>" alt=""></div>
 		</div>
-
 </body>
 
 </html>
