@@ -15,7 +15,7 @@
 	<nav class="sidebar">
 		<div class="user">
 			<div class="imagen">
-				<img src=
+				<img src="
 						<?php
 							include 'php/connect_db.php';
 
@@ -30,7 +30,7 @@
 							echo $row['URLimage'];
 							ob_flush();
 							flush();
-						?>
+						?>"
 				alt="Profile picture">
 			</div>
 			<div class="titulo">
