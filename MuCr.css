@@ -1670,6 +1670,11 @@ border-radius: 5vmin 0vmin 0px 0vmin;
 	width:13%;
 	background-color: white;
 	margin-right: 1%;
+	background-image: url("img/covers/generic_album.jpg");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: relative;
+	background-size: cover;
 }
 .recocollect .albumlist img{
 	width: 100%;
