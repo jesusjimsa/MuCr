@@ -72,19 +72,19 @@ class album{
 	public function createAlbumRand($artista1){
 		$fmt = 'json';
 		$url = "http://musicbrainz.org/ws/2/release/?query=artist:" . urlencode($artista1) . "&fmt=" . $fmt;
-		
+
 		//get the ID
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_URL, $url);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 		curl_setopt($ch, CURLOPT_USERAGENT, 'CdBase');
-	
+
 		$response = curl_exec($ch);
 		curl_close($ch);
 		$response = json_decode($response, JSON_FORCE_OBJECT);
 		$numer = rand() % count($response["releases"]);
 		$this->id = $response["releases"][$numer]["id"];
-	
+
 		//get the title
 		$fmt='json';
 		$url = "http://musicbrainz.org/ws/2/release/?query=tag:".urlencode($genre)."&fmt=".$fmt;
@@ -110,13 +110,13 @@ class album{
 		curl_setopt($ch, CURLOPT_URL, $url);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 		curl_setopt($ch, CURLOPT_USERAGENT, 'CdBase');
-	
+
 		$response = curl_exec($ch);
 		// var_dump($response);
 		curl_close($ch);
 		$response = json_decode($response, JSON_FORCE_OBJECT);
 
-		$i = 0;
+	 	$i = 0;
 		// echo $albumtitle;
 		while($response["releases"][$i]["title"] != $albumtitle && $i < count($response["releases"])){
 			$i++;
@@ -141,7 +141,7 @@ class album{
 			$this->type = $response["releases"][$i]["media"][0]["format"];
 			$this->deluxe = $this->isDeluxe($response["releases"][$i]["artist-credit"][0]["artist"]["disambiguation"]);
 		}
-		
+
 		return $this;
 	}
 }
