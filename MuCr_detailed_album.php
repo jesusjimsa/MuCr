@@ -97,48 +97,25 @@
 
 	<div class="genre">
 		<?php
+			$artist1 = $_GET['artist'];
+			$artist1 = str_replace("_"," ",$artist1);
+			$artist1 = str_replace("come","'",$artist1);
 
-		$artist1 = $_GET['artist'];
- 		$artist1 = str_replace("_"," ",$url);
-		$artist1 = str_replace("come","'",$url);
-
-		echo $artist1;
-
-/*
-$release='In Silico';
-$fmt='json';
-$url = "http://musicbrainz.org/ws/2/release/?query=release:".urlencode($release)."&fmt=".$fmt;
-//echo $url;
-
-if ($fmt == 'json') {
-	$ch = curl_init();
-	curl_setopt($ch, CURLOPT_URL, $url);
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-	curl_setopt($ch, CURLOPT_USERAGENT, 'CdBase');
-	$response = curl_exec ($ch);
-	curl_close($ch);
-	$response = json_decode($response, JSON_FORCE_OBJECT);
-	print_r(error_get_last());
-	//var_dump($response);
-	echo $response["releases"][0]["id"];
-
-}
-*/
-
+			echo $artist1;
 		?>
 	</div>
 
-<a href=
-<?php
-	$url = $_GET['type'];
-	if($url=='main')
-		echo "MuCr_main.php";
-	else
-		echo "MuCr_collection.php?title=$url";
-
-
-?>
->
+	<a href="
+		<?php
+			$url = $_GET['type'];
+			if($url == 'main'){
+				echo "MuCr_main.php";
+			}
+			else{
+				echo "MuCr_collection.php?title=$url";
+			}
+		?>">
+	>
 	<button class="gotostyle">
 		<div class="simbolo">
 			<img src="img/icons/arrow.png">
@@ -148,6 +125,7 @@ if ($fmt == 'json') {
 				$url = $_GET['type'];
 				$url = str_replace("_"," ",$url);
 				$url = str_replace("come","'",$url);
+
 				echo $url;
 			?>
 		</div>
@@ -157,13 +135,15 @@ if ($fmt == 'json') {
 			<div class="imagen">
 				<img src="img/covers/Rock/Abbey_Road_Big.jpg" alt="cover">
 			</div>
-			<div class="<?php $url = $_GET['deluxe'];if($url=='true'){echo titulo_especial;}else{echo titulo_normal;} ?>">
+			<div class="<?php $url = $_GET['deluxe'];if($url == 'true'){echo "titulo_especial";}else{echo "titulo_normal";} ?>">
 				<?php
-					$album = $_GET['album'];
-					$album = str_replace("_"," ",$album);
-					$album0 = new album;
-					$album0->createAlbumsearched($artis1,$album);
-					echo $album0->getTitulo();
+					$album_name = $_GET['album'];
+					$album_name = str_replace("_", " ", $album_name);
+					$albumA0 = new album;
+					// echo $_GET['artist'];
+					$albumA0->createAlbumsearched($artist1, $album_name);
+
+					echo $albumA0->showTitle();
 				?>
 			</div>
 			<div class="album_artist">(1969) - 47:24</div>
@@ -258,33 +238,61 @@ if ($fmt == 'json') {
 		</div>
 
 		<?php
-				$albumA1=new album;
+				$albumA1 = new album;
 				$albumA1->createAlbumRand($artist1);
-				while($albumA1->IsEqual($albumA0)){$albumA1->createAlbumRand($artist1);}
+
+				while($albumA1->IsEqual($albumA0)){
+					$albumA1->createAlbumRand($artist1);
+				}
+				
 				//echo $albumA1.getImage();
-				$albumA2=new album;
+				$albumA2 = new album;
 				$albumA2->createAlbumRand($artist1);
-				while($albumA2->IsEqual($albumA0) || $albumA2->IsEqual($albumA1)){$albumA2->createAlbumRand($artist1);}
+				
+				while($albumA2->IsEqual($albumA0) || $albumA2->IsEqual($albumA1)){
+					$albumA2->createAlbumRand($artist1);
+				}
+				
 				//	echo $albumA2->getImage();
-				$albumA3=new album;
+				$albumA3 = new album;
 				$albumA3->createAlbumRand($artist1);
-				while($albumA3->IsEqual($albumA0) || $albumA3->IsEqual($albumA1) || $albumA3->IsEqual($albumA2)){$albumA3->createAlbumRand($artist1);}
+				
+				while($albumA3->IsEqual($albumA0) || $albumA3->IsEqual($albumA1) || $albumA3->IsEqual($albumA2)){
+					$albumA3->createAlbumRand($artist1);
+				}
+				
 				//echo $albumA3->getImage();
-				$albumA4=new album;
+				$albumA4 = new album;
 				$albumA4->createAlbumRand($artist1);
-				while($albumA4->IsEqual($albumA0) || $albumA4->IsEqual($albumA1) || $albumA4->IsEqual($albumA2)|| $albumA4->IsEqual($albumA3)){$albumA4->createAlbumRand($artist1);}
+				
+				while($albumA4->IsEqual($albumA0) || $albumA4->IsEqual($albumA1) || $albumA4->IsEqual($albumA2)|| $albumA4->IsEqual($albumA3)){
+					$albumA4->createAlbumRand($artist1);
+				}
+				
 				//echo $albumA3->getImage();
-				$albumA5=new album;
+				$albumA5 = new album;
 				$albumA5->createAlbumRand($artist1);
-				while($albumA5->IsEqual($albumA0) || $albumA5->IsEqual($albumA1) || $albumA5->IsEqual($albumA2)|| $albumA5->IsEqual($albumA3)|| $albumA5->IsEqual($albumA4)){$albumA5->createAlbumRand($artist1);}
+				
+				while($albumA5->IsEqual($albumA0) || $albumA5->IsEqual($albumA1) || $albumA5->IsEqual($albumA2)|| $albumA5->IsEqual($albumA3)|| $albumA5->IsEqual($albumA4)){
+					$albumA5->createAlbumRand($artist1);
+				}
+				
 				//echo $albumA3->getImage();
-				$albumA6=new album;
+				$albumA6 = new album;
 				$albumA6->createAlbumRand($artist1);
-				while($albumA6->IsEqual($albumA0) || $albumA6->IsEqual($albumA1) || $albumA6->IsEqual($albumA2)|| $albumA6->IsEqual($albumA3)|| $albumA6->IsEqual($albumA4)|| $albumA6->IsEqual($albumA5)){$albumA6->createAlbumRand($artist1);}
+				
+				while($albumA6->IsEqual($albumA0) || $albumA6->IsEqual($albumA1) || $albumA6->IsEqual($albumA2)|| $albumA6->IsEqual($albumA3)|| $albumA6->IsEqual($albumA4)|| $albumA6->IsEqual($albumA5)){
+					$albumA6->createAlbumRand($artist1);
+				}
+				
 				//echo $albumA3->getImage();
-				$albumA7=new album;
+				$albumA7 = new album;
 				$albumA7->createAlbumRand($artist1);
-				while($albumA7->IsEqual($albumA0) || $albumA7->IsEqual($albumA1) || $albumA7->IsEqual($albumA2)|| $albumA7->IsEqual($albumA3)|| $albumA7->IsEqual($albumA4)|| $albumA7->IsEqual($albumA5)|| $albumA7->IsEqual($albumA6)){$albumA7->createAlbumRand($artist1);}
+				
+				while($albumA7->IsEqual($albumA0) || $albumA7->IsEqual($albumA1) || $albumA7->IsEqual($albumA2)|| $albumA7->IsEqual($albumA3)|| $albumA7->IsEqual($albumA4)|| $albumA7->IsEqual($albumA5)|| $albumA7->IsEqual($albumA6)){
+					$albumA7->createAlbumRand($artist1);
+				}
+				
 				//echo $albumA3->getImage();
 		 ?>
 
