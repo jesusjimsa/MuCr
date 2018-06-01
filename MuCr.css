@@ -483,13 +483,18 @@ img{
 @media all and (min-width:800px){
 	.contenedor .row_main .recom1{
 		height: 100%;
-		width: 10%;
+		width: 12%;
 		background-color: black;
 		position: relative;
 		top: 0%;
 		left: 0%;
 		float:left;
 		margin-right: 0.5%;
+		background-image: url("img/covers/generic_album.jpg");
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-attachment: relative;
+		background-size: cover;
 	}
 }
 
@@ -507,13 +512,18 @@ img{
 @media all and (max-width:800px){
 	.contenedor .row_main .recom1{
 		height: 100%;
-		width: 20%;
+		width: 25%;
 		background-color: black;
 		position: relative;
 		top: 0%;
 		left: 0%;
 		float:left;
 		margin-right: 1%;
+		background-image: url("img/covers/generic_album.jpg");
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-attachment: relative;
+		background-size: cover;
 	}
 }
 

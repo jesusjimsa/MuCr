@@ -73,28 +73,25 @@ class album{
 		$fmt = 'json';
 		$url = "http://musicbrainz.org/ws/2/release/?query=artist:" . urlencode($artista1) . "&fmt=" . $fmt;
 
-		//get the ID
-		$ch = curl_init();
-		curl_setopt($ch, CURLOPT_URL, $url);
-		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-		curl_setopt($ch, CURLOPT_USERAGENT, 'CdBase');
-
-		$response = curl_exec($ch);
-		curl_close($ch);
-		$response = json_decode($response, JSON_FORCE_OBJECT);
+		do{
+			//get the ID
+			$ch = curl_init();
+			curl_setopt($ch, CURLOPT_URL, $url);
+			curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+			curl_setopt($ch, CURLOPT_USERAGENT, 'CdBase');
 		
-		if(count($response["releases"]) > 0){
-			$numer = rand() % count($response["releases"]);
-		}
-		else{
-			$numer = 0;
-		}
+			$response = curl_exec($ch);
+			curl_close($ch);
+			$response = json_decode($response, JSON_FORCE_OBJECT);
+			
+			$numer = rand(0, count($response["releases"]));
+		}while(count($response["releases"]) == 0);
 		
 		$this->id = $response["releases"][$numer]["id"];
 
 		//get the title
 		$fmt='json';
-		$url = "http://musicbrainz.org/ws/2/release/?query=tag:".urlencode($genre)."&fmt=".$fmt;
+		$url = "http://musicbrainz.org/ws/2/release/?query=tag:" . urlencode($genre) . "&fmt=" . $fmt;
 
 		//get the title
 		$this->titulo = $response["releases"][$numer]["title"];

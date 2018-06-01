@@ -15,7 +15,23 @@
 	<nav class="sidebar">
 		<div class="user">
 			<div class="imagen">
-				<img src="img/amy.jpg" alt="Profile picture">
+				<img src="
+						<?php
+							include 'php/connect_db.php';
+
+							$email = $_COOKIE['email'];
+
+							$sql_query = "SELECT URLimage FROM user WHERE email = '$email'";
+
+							$result = mysqli_query($conn, $sql_query);
+							$row = mysqli_fetch_assoc($result);
+
+
+							echo $row['URLimage'];
+							ob_flush();
+							flush();
+						?>"
+				alt="Profile picture">
 			</div>
 			<div class="titulo">
 				<?php
