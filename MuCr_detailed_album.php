@@ -129,28 +129,23 @@
 				echo $url;
 			?>
 		</div>
-		<?php
-
-		?>
 	</button>
 </a>
 		<div class="seleccionado">
 			<?php
-			$album_name = $_GET['album'];
-			$album_name = str_replace("_", " ", $album_name);
-			$albumA0 = new album;
-			// echo $_GET['artist'];
-			$albumA0->createAlbumsearched($artist1, $album_name);
+				$album_name = $_GET['album'];
+				$album_name = str_replace("_", " ", $album_name);
+				$albumA0 = new album;
+				// echo $_GET['artist'];
+				$albumA0->createAlbumsearched($artist1, $album_name);
 			 ?>
 			<div class="imagen">
 				<img src="<?php
-
-				 echo $albumA0->getImage(); ?>" alt="cover">
+								echo $albumA0->getImage();
+							?>" alt="cover">
 			</div>
 			<div class="<?php $url = $_GET['deluxe'];if($url == 'true'){echo "titulo_especial";}else{echo "titulo_normal";} ?>">
 				<?php
-
-
 					echo $albumA0->showTitle();
 				?>
 			</div>
@@ -305,15 +300,94 @@
 		 ?>
 
 		<div class="recocollect">
-			<div class="albumlist"><img src="<?php echo $albumA1->getImage();?>" alt=""></div>
-			<div class="albumlist"><img src="<?php echo $albumA2->getImage();?>" alt=""></div>
-			<div class="albumlist"><img src="<?php echo $albumA3->getImage();?>" alt=""></div>
-			<div class="albumlist"><img src="<?php echo $albumA4->getImage();?>" alt=""></div>
-			<div class="albumlist"><img src="<?php echo $albumA5->getImage();?>" alt=""></div>
-			<div class="albumlist"><img src="<?php echo $albumA6->getImage();?>" alt=""></div>
-			<div class="albumlist"><img src="<?php echo $albumA7->getImage();?>" alt=""></div>
+			<a href="MuCr_detailed_album.php?artist=<?php echo $albumA1->getArtista(); ?>&type=<?php $url = $_GET['type']; echo $url;?>&deluxe=false&album=<?php echo $albumA1->getTitulo(); ?>">
+				<div class="albumlist">
+					<img src="<?php echo $albumA1->getImage();?>" alt="">
+				</div>
+			</a>
+			<a href="MuCr_detailed_album.php?artist=<?php echo $albumA2->getArtista(); ?>&type=<?php $url = $_GET['type']; echo $url;?>&deluxe=false&album=<?php echo $albumA2->getTitulo(); ?>">
+				<div class="albumlist">
+					<img src="<?php echo $albumA2->getImage();?>" alt="">
+				</div>
+			</a>
+			<a href="MuCr_detailed_album.php?artist=<?php echo $albumA3->getArtista(); ?>&type=<?php $url = $_GET['type']; echo $url;?>&deluxe=false&album=<?php echo $albumA3->getTitulo(); ?>">
+				<div class="albumlist">
+					<img src="<?php echo $albumA3->getImage();?>" alt="">
+				</div>
+			</a>
+			<a href="MuCr_detailed_album.php?artist=<?php echo $albumA4->getArtista(); ?>&type=<?php $url = $_GET['type']; echo $url;?>&deluxe=false&album=<?php echo $albumA4->getTitulo(); ?>">
+				<div class="albumlist">
+					<img src="<?php echo $albumA4->getImage();?>" alt="">
+				</div>
+			</a>
+			<a href="MuCr_detailed_album.php?artist=<?php echo $albumA5->getArtista(); ?>&type=<?php $url = $_GET['type']; echo $url;?>&deluxe=false&album=<?php echo $albumA5->getTitulo(); ?>">
+				<div class="albumlist">
+					<img src="<?php echo $albumA5->getImage();?>" alt="">
+				</div>
+			</a>
+			<a href="MuCr_detailed_album.php?artist=<?php echo $albumA6->getArtista(); ?>&type=<?php $url = $_GET['type']; echo $url;?>&deluxe=false&album=<?php echo $albumA6->getTitulo(); ?>">
+				<div class="albumlist">
+					<img src="<?php echo $albumA6->getImage();?>" alt="">
+				</div>
+			</a>
+			<a href="MuCr_detailed_album.php?artist=<?php echo $albumA7->getArtista(); ?>&type=<?php $url = $_GET['type']; echo $url;?>&deluxe=false&album=<?php echo $albumA7->getTitulo(); ?>">
+				<div class="albumlist">
+					<img src="<?php echo $albumA7->getImage();?>" alt="">
+				</div>
+			</a>
 		</div>
 
+		<div class="name_list">
+			<a href="MuCr_detailed_album.php?artist=<?php echo $albumA1->getArtista(); ?>&type=<?php $url = $_GET['type']; echo $url;?>&deluxe=false&album=<?php echo $albumA1->getTitulo(); ?>">
+				<div class="related_name">
+					<?php
+						$albumA1->showTitle();
+					?>
+				</div>
+			</a>
+			<a href="MuCr_detailed_album.php?artist=<?php echo $albumA2->getArtista(); ?>&type=<?php $url = $_GET['type']; echo $url;?>&deluxe=false&album=<?php echo $albumA2->getTitulo(); ?>">
+				<div class="related_name">
+					<?php
+						$albumA2->showTitle();
+					?>
+				</div>
+			</a>
+			<a href="MuCr_detailed_album.php?artist=<?php echo $albumA3->getArtista(); ?>&type=<?php $url = $_GET['type']; echo $url;?>&deluxe=false&album=<?php echo $albumA3->getTitulo(); ?>">
+				<div class="related_name">
+					<?php
+						$albumA3->showTitle();
+					?>
+				</div>
+			</a>
+			<a href="MuCr_detailed_album.php?artist=<?php echo $albumA4->getArtista(); ?>&type=<?php $url = $_GET['type']; echo $url;?>&deluxe=false&album=<?php echo $albumA4->getTitulo(); ?>">
+				<div class="related_name">
+					<?php
+						$albumA4->showTitle();
+					?>
+				</div>
+			</a>
+			<a href="MuCr_detailed_album.php?artist=<?php echo $albumA5->getArtista(); ?>&type=<?php $url = $_GET['type']; echo $url;?>&deluxe=false&album=<?php echo $albumA5->getTitulo(); ?>">
+				<div class="related_name">
+					<?php
+						$albumA5->showTitle();
+					?>
+				</div>
+			</a>
+			<a href="MuCr_detailed_album.php?artist=<?php echo $albumA6->getArtista(); ?>&type=<?php $url = $_GET['type']; echo $url;?>&deluxe=false&album=<?php echo $albumA6->getTitulo(); ?>">
+				<div class="related_name">
+					<?php
+						$albumA6->showTitle();
+					?>
+				</div>
+			</a>
+			<a href="MuCr_detailed_album.php?artist=<?php echo $albumA7->getArtista(); ?>&type=<?php $url = $_GET['type']; echo $url;?>&deluxe=false&album=<?php echo $albumA7->getTitulo(); ?>">
+				<div class="related_name">
+					<?php
+						$albumA7->showTitle();
+					?>
+				</div>
+			</a>
+		</div>
 </body>
 
 </html>

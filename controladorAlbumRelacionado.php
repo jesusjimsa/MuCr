@@ -82,7 +82,14 @@ class album{
 		$response = curl_exec($ch);
 		curl_close($ch);
 		$response = json_decode($response, JSON_FORCE_OBJECT);
-		$numer = rand() % count($response["releases"]);
+		
+		if(count($response["releases"]) > 0){
+			$numer = rand() % count($response["releases"]);
+		}
+		else{
+			$numer = 0;
+		}
+		
 		$this->id = $response["releases"][$numer]["id"];
 
 		//get the title
