@@ -1,13 +1,23 @@
 <?php
 
 class album{
-	public $id;
-	public $titulo;
-	public $artista;
-	public $type;
-	public $deluxe;
-	public $year;
+	private $API_KEY;
+	private $id;
+	private $titulo;
+	private $artista;
+	private $type;
+	private $deluxe;
+	private $year;
 
+	function __construct(){
+		$api_file = fopen("API_KEY.txt", "r");
+		$this->API_KEY = fread($api_file, filesize("API_KEY.txt"));
+		fclose($api_file);
+	}
+
+	function getApiKey(){
+		return $this->API_KEY;
+	}
 
 	public function getID(){
 		return $this->id;
@@ -45,8 +55,20 @@ class album{
 	}
 
 	public function getImage(){
-		$link = "http://coverartarchive.org/release/" . $this->getID() . "/front";
-		return $link;
+		$link = "http://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=" . $this->API_KEY . "&artist=" . $this->artista . "&album=" . $this->titulo . "&format=json";
+
+		$ch = curl_init();
+		curl_setopt($ch, CURLOPT_URL, $link);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+		curl_setopt($ch, CURLOPT_USERAGENT, 'CdBase');
+
+		$response = curl_exec($ch);
+		curl_close($ch);
+		$response = json_decode($response, JSON_FORCE_OBJECT);
+
+		$image_link = $response["album"]["image"][4]["#text"];
+
+		return $image_link;
 	}
 
 	public function IsEqual($album1){
@@ -58,22 +80,18 @@ class album{
 		}
 	}
 
-
 	public function addAlbumtoBd(){
-		//	echo "llega aqui0a00a0sd0as0da0sd0as0da";
 		include 'php/connect_db.php';
-		$year=$this->getYear();
+		$year = $this->getYear();
 
-		$deluxe=$this->getdeluxe();
-		$type=$this->getType();
-		$artist=$this->getArtista();
-		$titulo=$this->getTitulo();
+		$deluxe = $this->getdeluxe();
+		$type = $this->getType();
+		$artist = $this->getArtista();
+		$titulo = $this->getTitulo();
+
 		$sql_order = "INSERT INTO album(name,artist,type,deluxe,year) VALUES ('$titulo', '$artist','$type','$deluxe','$year')";
 		$conn->query($sql_order);
-		//echo "llega 2aqui0a00a0sd0as0da0sd0as0da";
-
 	}
-
 
 	public function isDeluxe($album){
 		$result = false;
@@ -94,46 +112,38 @@ class album{
 	}
 
 	public function createAlbumRand($artista1){
-		$fmt = 'json';
-		$url = "http://musicbrainz.org/ws/2/release/?query=artist:" . urlencode($artista1) . "&fmt=" . $fmt;
+		$url = "http://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=" . $artista1 . "&api_key=" . $this->API_KEY . "&format=json";
 
-		do{
-			//get the ID
-			$ch = curl_init();
-			curl_setopt($ch, CURLOPT_URL, $url);
-			curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-			curl_setopt($ch, CURLOPT_USERAGENT, 'CdBase');
+		//get the ID
+		$ch = curl_init();
+		curl_setopt($ch, CURLOPT_URL, $url);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+		curl_setopt($ch, CURLOPT_USERAGENT, 'CdBase');
 
-			$response = curl_exec($ch);
-			curl_close($ch);
-			$response = json_decode($response, JSON_FORCE_OBJECT);
+		$response = curl_exec($ch);
+		curl_close($ch);
+		$response = json_decode($response, JSON_FORCE_OBJECT);
 
-			$numer = rand(0, count($response["releases"]));
-		}while(count($response["releases"]) == 0);
+		$numer = rand(0, count($response["topalbums"]["album"]));
 
-		$this->id = $response["releases"][$numer]["id"];
+		$this->id = $response["topalbums"]["album"][$numer]["mbid"];
 
 		//get the title
-		$fmt='json';
-		$url="http://musicbrainz.org/ws/2/release/?query=tag:".urlencode($genre)."&fmt=".$fmt;
-
-		//get the title
-		$this->titulo = $response["releases"][$numer]["title"];
+		$this->titulo = $response["topalbums"]["album"][$numer]["name"];
 
 		//get the artist
-		$this->artista = $artista1;
+		$this->artista = $response["topalbums"]["album"][$numer]["artist"]["name"];
 
-		$this->type = $response["releases"][$numer]["media"][0]["format"];
-		$this->deluxe = 0;//$this->isDeluxe($response["releases"][$numer]["artist-credit"][0]["artist"]["disambiguation"]);
-		$this->year=substr($response["releases"][$numer]["release-events"][0]["date"],0,4);
+		//$this->type = $response["releases"][$numer]["media"][0]["format"];
+		//$this->deluxe = 0;//$this->isDeluxe($response["releases"][$numer]["artist-credit"][0]["artist"]["disambiguation"]);
+		//$this->year = substr($response["releases"][$numer]["release-events"][0]["date"],0,4);
 		$this->addAlbumtoBd();
 
 		return $this;
 	}
 
 	public function createAlbumsearched($artista1, $albumtitle){
-		$fmt = 'json';
-		$url = "http://musicbrainz.org/ws/2/release/?query=artist:" . urlencode($artista1) . "&fmt=".$fmt;
+		$url = "http://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=" . $this->API_KEY . "&artist=" . urlencode($artista1) . "&album=" . urlencode($albumtitle) . "&format=json";
 
 		//get the ID
 		$ch = curl_init();
@@ -146,33 +156,18 @@ class album{
 		curl_close($ch);
 		$response = json_decode($response, JSON_FORCE_OBJECT);
 
-	 	$i = 0;
-		// echo $albumtitle;
-		while($response["releases"][$i]["title"] != $albumtitle && $i < count($response["releases"])){
-			$i++;
-		}
+		$this->id = $response["album"]["mbid"];
 
-		if($response["releases"][$i]["title"] != $albumtitle){
-			$this->id = null;
-			$this->titulo = null;
-			$this->artista = null;
-			$this->type = null;
-			$this->deluxe = null;
-		}
-		else{
-			$this->id = $response["releases"][$i]["id"];
+		//get the title
+		$this->titulo = $response["album"]["name"];
 
-			//get the title
-			$this->titulo = $response["releases"][$i]["title"];
+		//get the artist
+		$this->artista = $response["album"]["artist"];
 
-			//get the artist
-			$this->artista = str_replace("_", " ", $artista1);
-
-			$this->type = $response["releases"][$i]["media"][0]["format"];
-			$this->deluxe =0; //$this->isDeluxe($response["releases"][$i]["artist-credit"][0]["artist"]["disambiguation"]);
-			$this->year=substr($response["releases"][$i]["release-events"][0]["date"],0,4);
-			$this->addAlbumtoBd();
-		}
+		// $this->type = $response["releases"][$i]["media"][0]["format"];
+		// $this->deluxe =0; //$this->isDeluxe($response["releases"][$i]["artist-credit"][0]["artist"]["disambiguation"]);
+		// $this->year=substr($response["releases"][$i]["release-events"][0]["date"],0,4);
+		$this->addAlbumtoBd();
 
 		return $this;
 	}
