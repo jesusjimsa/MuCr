@@ -159,19 +159,19 @@
 				<img src="<?php
 								echo $albumA0->getImage();
 							?>" alt="cover">
-				
+
 			</div>
 			<div class="like_album" onclick="changeImageLike();">
 				<img src="img/icons/heart.png" alt="Like" id="likke">
 			</div>
-			
+
 			<div class="<?php $url = $_GET['deluxe'];if($url == 'true'){echo "titulo_especial";}else{echo "titulo_normal";} ?>">
 				<?php
 					echo $albumA0->showTitle();
 				?>
 			</div>
-			<div class="album_artist">(1969) - 47:24</div>
-			<div class="album_type">Vinyl 33⅓ 200g</div>
+			<div class="album_artist"><?php echo $albumA0->getYear();?></div>
+			<div class="album_type"><?php echo $albumA0->getType();?></div>
 			<div class="listofsongs">
 				<div class="songs">Come Together - 4:20
 					<div class="love_song">
