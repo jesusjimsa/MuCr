@@ -158,7 +158,7 @@
 			<div class="imagen">
 				<img src="<?php
 								echo $albumA0->getImage();
-							?>" alt="cover">
+							?>" alt="">
 
 			</div>
 			<div class="like_album" onclick="changeImageLike();">

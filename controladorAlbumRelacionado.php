@@ -60,14 +60,17 @@ class album{
 
 
 	public function addAlbumtoBd(){
+		//	echo "llega aqui0a00a0sd0as0da0sd0as0da";
 		include 'php/connect_db.php';
 		$year=$this->getYear();
+
 		$deluxe=$this->getdeluxe();
 		$type=$this->getType();
 		$artist=$this->getArtista();
 		$titulo=$this->getTitulo();
-		$sql_order = "INSERT INTO album(name,artist,type,deluxe,year) VALUES ($titulo, $artist,$type,$deluxe,$year)";
+		$sql_order = "INSERT INTO album(name,artist,type,deluxe,year) VALUES ('$titulo', '$artist','$type','$deluxe','$year')";
 		$conn->query($sql_order);
+		//echo "llega 2aqui0a00a0sd0as0da0sd0as0da";
 
 	}
 
@@ -122,8 +125,8 @@ class album{
 
 		$this->type = $response["releases"][$numer]["media"][0]["format"];
 		$this->deluxe = 0;//$this->isDeluxe($response["releases"][$numer]["artist-credit"][0]["artist"]["disambiguation"]);
-		$this->year=$response["releases"][$numer]["release-events"][0]["date"];
-		$this->addAlbumtobd();
+		$this->year=substr($response["releases"][$numer]["release-events"][0]["date"],0,4);
+		$this->addAlbumtoBd();
 
 		return $this;
 	}
@@ -167,8 +170,8 @@ class album{
 
 			$this->type = $response["releases"][$i]["media"][0]["format"];
 			$this->deluxe =0; //$this->isDeluxe($response["releases"][$i]["artist-credit"][0]["artist"]["disambiguation"]);
-			$this->year=$response["releases"][$i]["release-events"][0]["date"];
-			$this->addAlbumtobd();
+			$this->year=substr($response["releases"][$i]["release-events"][0]["date"],0,4);
+			$this->addAlbumtoBd();
 		}
 
 		return $this;
