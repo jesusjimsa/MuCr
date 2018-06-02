@@ -1560,8 +1560,8 @@ border-radius: 5vmin 0vmin 0px 0vmin;
 
 
 .seleccionado .imagen img{
-	max-width: 31%;
-	max-height: 51%;
+	width: 29.2%;
+	height: 51%;
 	position: fixed;
 	background-image: url("img/covers/generic_album.jpg");
 	background-position: center center;
