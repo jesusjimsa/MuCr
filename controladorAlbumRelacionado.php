@@ -79,14 +79,14 @@ class album{
 			curl_setopt($ch, CURLOPT_URL, $url);
 			curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 			curl_setopt($ch, CURLOPT_USERAGENT, 'CdBase');
-		
+
 			$response = curl_exec($ch);
 			curl_close($ch);
 			$response = json_decode($response, JSON_FORCE_OBJECT);
-			
+
 			$numer = rand(0, count($response["releases"]));
 		}while(count($response["releases"]) == 0);
-		
+
 		$this->id = $response["releases"][$numer]["id"];
 
 		//get the title
@@ -148,6 +148,24 @@ class album{
 
 		return $this;
 	}
+
+
+
+
+
+
+public function addAlbumtoBd(){
+	include 'php/connect_db.php';
+	$year=$this->getYear();
+	$deluxe=$this->getdeluxe();
+	$type=$this->getType();
+	$artist=$this->getArtista();
+	$titulo=$this->getTitulo();
+	$sql_order = "INSERT INTO album(name,artist,type,deluxe,year) VALUES ('$titulo', '$artist','$type','$deluxe','$year')";
+	$conn->query($sql_order);
+
+}
+
 }
 
 ?>
