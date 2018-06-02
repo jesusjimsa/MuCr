@@ -52,5 +52,8 @@ Temporary Items
 .history
 .vscode/settings.json
 
+### Added by me ###
+API_KEY.txt
+
 
 # End of https://www.gitignore.io/api/linux,macos,visualstudiocode
