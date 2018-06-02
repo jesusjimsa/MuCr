@@ -6,6 +6,8 @@ class album{
 	public $artista;
 	public $type;
 	public $deluxe;
+	public $year;
+
 
 	public function getID(){
 		return $this->id;
@@ -20,11 +22,16 @@ class album{
 	}
 
 	public function getType(){
-		$this->type;
+			return $this->type;
+	}
+
+	public function getYear(){
+		return $this->year;
+
 	}
 
 	public function getDeluxe(){
-		$this->deluxe;
+		return $this->deluxe;
 	}
 
 	public function showTitle(){
@@ -50,6 +57,20 @@ class album{
 			return false;
 		}
 	}
+
+
+	public function addAlbumtoBd(){
+		include 'php/connect_db.php';
+		$year=$this->getYear();
+		$deluxe=$this->getdeluxe();
+		$type=$this->getType();
+		$artist=$this->getArtista();
+		$titulo=$this->getTitulo();
+		$sql_order = "INSERT INTO album(name,artist,type,deluxe,year) VALUES ($titulo, $artist,$type,$deluxe,$year)";
+		$conn->query($sql_order);
+
+	}
+
 
 	public function isDeluxe($album){
 		$result = false;
@@ -79,19 +100,19 @@ class album{
 			curl_setopt($ch, CURLOPT_URL, $url);
 			curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 			curl_setopt($ch, CURLOPT_USERAGENT, 'CdBase');
-		
+
 			$response = curl_exec($ch);
 			curl_close($ch);
 			$response = json_decode($response, JSON_FORCE_OBJECT);
-			
+
 			$numer = rand(0, count($response["releases"]));
 		}while(count($response["releases"]) == 0);
-		
+
 		$this->id = $response["releases"][$numer]["id"];
 
 		//get the title
 		$fmt='json';
-		$url = "http://musicbrainz.org/ws/2/release/?query=tag:" . urlencode($genre) . "&fmt=" . $fmt;
+		$url="http://musicbrainz.org/ws/2/release/?query=tag:".urlencode($genre)."&fmt=".$fmt;
 
 		//get the title
 		$this->titulo = $response["releases"][$numer]["title"];
@@ -100,7 +121,9 @@ class album{
 		$this->artista = $artista1;
 
 		$this->type = $response["releases"][$numer]["media"][0]["format"];
-		$this->deluxe = $this->isDeluxe($response["releases"][$numer]["artist-credit"][0]["artist"]["disambiguation"]);
+		$this->deluxe = 0;//$this->isDeluxe($response["releases"][$numer]["artist-credit"][0]["artist"]["disambiguation"]);
+		$this->year=$response["releases"][$numer]["release-events"][0]["date"];
+		$this->addAlbumtobd();
 
 		return $this;
 	}
@@ -143,11 +166,20 @@ class album{
 			$this->artista = str_replace("_", " ", $artista1);
 
 			$this->type = $response["releases"][$i]["media"][0]["format"];
-			$this->deluxe = $this->isDeluxe($response["releases"][$i]["artist-credit"][0]["artist"]["disambiguation"]);
+			$this->deluxe =0; //$this->isDeluxe($response["releases"][$i]["artist-credit"][0]["artist"]["disambiguation"]);
+			$this->year=$response["releases"][$i]["release-events"][0]["date"];
+			$this->addAlbumtobd();
 		}
 
 		return $this;
 	}
+
+
+
+
+
+
+
 }
 
 ?>
