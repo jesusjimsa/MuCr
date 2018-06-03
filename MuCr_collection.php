@@ -135,9 +135,6 @@
 			$conn->query($sql_add_album_user);
 		?>
 	</div>
-
-
-
 </body>
 
 </html>

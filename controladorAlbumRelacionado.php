@@ -307,7 +307,12 @@ class album{
 		$this->titulo = $top_albums_tag[$i]["name"];
 		$this->artista = $top_albums_tag[$i]["artist"]["name"];
 		$this->id = $top_albums_tag[$i]["mbid"];
+		$this->getTypeandYear($this->artista,$this->titulo);
+		$this->addAlbumtoBd();
+		
+		return $this;
 	}
+
 
 	public function createAlbumByTitle($title_search){
 		$url = "http://ws.audioscrobbler.com/2.0/?method=album.search&album=" . $title_search . "&api_key=" . $this->API_KEY . "&format=json";
@@ -324,6 +329,10 @@ class album{
 		$this->titulo = $response["results"]["albummatches"]["album"][1]["name"];
 		$this->artista = $response["results"]["albummatches"]["album"][1]["artist"];
 		$this->id = $response["results"]["albummatches"]["album"][1]["mbid"];
+		$this->getTypeandYear($this->artista,$this->titulo);
+		$this->addAlbumtoBd();
+
+		return $this;
 	}
 }
 
