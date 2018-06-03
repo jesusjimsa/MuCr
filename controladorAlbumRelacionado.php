@@ -84,13 +84,14 @@ class album{
 
 	public function addAlbumtoBd(){
 		include 'php/connect_db.php';
-		$year = $this->getYear();
 
+		$year = $this->getYear();
 		$deluxe = $this->getdeluxe();
 		$type = $this->getType();
 		$artist = $this->getArtista();
 		$titulo = $this->getTitulo();
 		$style=$this->getGenres();
+
 		$sql_order = "INSERT INTO album(name,artist,style,type,deluxe,year) VALUES ('$titulo', '$artist','$style','$type','$deluxe','$year')";
 		$conn->query($sql_order);
 	}
@@ -285,6 +286,27 @@ class album{
 
 			echo "<div class=\"songs\">" . $song_list[$i]["name"] . " - " . $time_min . ":" . $time_sec . "\n<div class=\"love_song\">\n<img src=\"img/icons/heart.png\" alt=\"love_song\">\n</div>\n</div>\n";
 		}
+	}
+
+	public function createAlbumRandByTag($tag){
+		$url = "http://ws.audioscrobbler.com/2.0/?method=tag.gettopalbums&tag=" . $tag . "&api_key=" . $API_KEY . "&format=json";
+
+		$ch = curl_init();
+		curl_setopt($ch, CURLOPT_URL, $url);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+		curl_setopt($ch, CURLOPT_USERAGENT, 'CdBase');
+
+		$response = curl_exec($ch);
+		curl_close($ch);
+		$response = json_decode($response, JSON_FORCE_OBJECT);
+
+		$top_albums_tag = $response["albums"]["album"];
+
+		$rand_num = rand(0, count($top_albums_tag));
+
+		$this->titulo = $top_albums_tag[$i]["name"];
+		$this->artista = $top_albums_tag[$i]["artist"]["name"];
+		$this->id = $top_albums_tag[$i]["mbid"];
 	}
 }
 
