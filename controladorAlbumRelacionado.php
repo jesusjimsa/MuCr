@@ -334,6 +334,22 @@ class album{
 	}
 
 
+	public function createAlbumByTitle($title_search){
+		$url = "http://ws.audioscrobbler.com/2.0/?method=album.search&album=" . $title_search . "&api_key=" . $this->API_KEY . "&format=json";
+
+		$ch = curl_init();
+		curl_setopt($ch, CURLOPT_URL, $url);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+		curl_setopt($ch, CURLOPT_USERAGENT, 'CdBase');
+
+		$response = curl_exec($ch);
+		curl_close($ch);
+		$response = json_decode($response, JSON_FORCE_OBJECT);
+
+		$this->titulo = $response["results"]["albummatches"]["album"][1]["name"];
+		$this->artista = $response["results"]["albummatches"]["album"][1]["artist"];
+		$this->id = $response["results"]["albummatches"]["album"][1]["mbid"];
+	}
 }
 
 ?>

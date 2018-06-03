@@ -115,6 +115,7 @@
 		$url = $_GET['title'];
  		$url = str_replace("_"," ",$url);
 		$url = str_replace("come","'",$url);
+
 		echo $url;
  		?>
 	</div>
@@ -122,8 +123,16 @@
 	<div class="grid-container">
 		<?php
 			include 'php/fill_collection.php';
+			include 'controladorAlbumRelacionado.php';
+			
+			$array_albums = fillCollection($_GET['title']);
 
-			fillCollection($_GET['title']);
+			$email = $_COOKIE['email'];
+			$album_name = $_POST['album_name'];
+			$album_artist = $_POST['album_artist'];
+
+			$sql_add_album_user = "INSERT INTO U_listen_A(user_email, album_name, album_artist) VALUES ('$email', '$album_name', '$album_artist')";
+			$conn->query($sql_add_album_user);
 		?>
 	</div>
 
@@ -132,3 +141,9 @@
 </body>
 
 </html>
+
+<?php
+	function addAlbumDB(){
+		
+	}
+?>
