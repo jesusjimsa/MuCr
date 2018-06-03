@@ -91,8 +91,8 @@ class album{
 		$type = $this->getType();
 		$artist = $this->getArtista();
 		$titulo = $this->getTitulo();
-
-		$sql_order = "INSERT INTO album(name,artist,type,deluxe,year) VALUES ('$titulo', '$artist','$type','$deluxe','$year')";
+		$style=$this->getGenres();
+		$sql_order = "INSERT INTO album(name,artist,style,type,deluxe,year) VALUES ('$titulo', '$artist','$style','$type','$deluxe','$year')";
 		$conn->query($sql_order);
 	}
 
@@ -123,7 +123,9 @@ class album{
 	public function setGenress($listas){
 			$tagss="";
 			$style=array("alternative","punk","rock","blues","classical","country","folk","dance","electronic","easy","gospel","religious","rap","holiday","instrumental","jazz","latin","metal","moods","pop","rnb","soundtrack","world");
-			for($i=0;$i<4;$i++){
+			$max=count($listas);
+
+			for($i=0;$i<$max;$i++){
 
 				//var_dump($selected);
 					//echo $listas[$i]["name"];
@@ -150,6 +152,46 @@ class album{
 			}
 			return $tagss;
 	}
+
+public function getTypeandYear($artista,$albumtitle){
+				$pos=strpos($albumtitle,"(");
+				//echo $pos;
+				$titulo="";
+				if($pos===false){$titulo=$albumtitle;}
+				else{$titulo=substr($albumtitle,0,$pos-1);}
+				//echo $titulo;
+
+				$fmt = 'json';
+				$url = "http://musicbrainz.org/ws/2/release/?query=artist:" . urlencode($artista) . "&fmt=".$fmt;
+				//get the ID
+				$ch = curl_init();
+				curl_setopt($ch, CURLOPT_URL, $url);
+				curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+				curl_setopt($ch, CURLOPT_USERAGENT, 'CdBase');
+				$response = curl_exec($ch);
+				// var_dump($response);
+				curl_close($ch);
+				$response = json_decode($response, JSON_FORCE_OBJECT);
+				$i = 0;
+				// echo $albumtitle;
+
+				while($response["releases"][$i]["title"] != $titulo && $i <(count($response["releases"])-1) ){
+					$i++;
+				}
+
+
+				if($response["releases"][$i]["title"] == $titulo){
+						$this->type = $response["releases"][$i]["media"][0]["format"];
+						$this->deluxe = $this->isDeluxe($albumtitle);
+						$this->year=substr($response["releases"][$i]["release-events"][0]["date"],0,4);
+				}
+				else{
+					$this->type = NULL;
+					$this->year=NULL;
+					$this->deluxe=NULL;
+				}
+			}
+
 
 
 
@@ -178,6 +220,7 @@ class album{
 		$this->artista = $response["topalbums"]["album"][$numer]["artist"]["name"];
 
 		$this->genres = $this->setGenress($response["album"]["tags"]["tag"]);
+		$this->getTypeandYear($this->artista,$this->titulo);
 		//$this->type = $response["releases"][$numer]["media"][0]["format"];
 		//$this->deluxe = 0;//$this->isDeluxe($response["releases"][$numer]["artist-credit"][0]["artist"]["disambiguation"]);
 		//$this->year = substr($response["releases"][$numer]["release-events"][0]["date"],0,4);
@@ -200,7 +243,8 @@ class album{
 		curl_close($ch);
 		$response = json_decode($response, JSON_FORCE_OBJECT);
 
-		$this->id = $response["album"]["mbid"];
+
+			$this->id = $response["album"]["mbid"];
 
 		//get the title
 		$this->titulo = $response["album"]["name"];
@@ -208,7 +252,7 @@ class album{
 		//get the artist
 		$this->artista = $response["album"]["artist"];
 		$this->genres=$this->setGenress($response["album"]["tags"]["tag"]);
-
+		$this->getTypeandYear($this->artista,$this->titulo);
 		// $this->type = $response["releases"][$i]["media"][0]["format"];
 		// $this->deluxe =0; //$this->isDeluxe($response["releases"][$i]["artist-credit"][0]["artist"]["disambiguation"]);
 		// $this->year=substr($response["releases"][$i]["release-events"][0]["date"],0,4);
