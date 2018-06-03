@@ -117,9 +117,10 @@ class lista{
 
 
     public function crearlstaB(&$albumseleccionado, &$added, $user){
-      if($this->topico1="recomendations"){$this->searchrecommendations($albumseleccionado,$added, $user);}
-        //primero vamos a guardar la lista de los albumes que ya ha escuchado y que le ha dado a me gusta
-        else{
+      if($this->topico1 =="recomendations"){
+          $this->searchrecommendations($albumseleccionado,$added, $user);
+        }
+        else{   //primero vamos a guardar la lista de los albumes que ya ha escuchado y que le ha dado a me gusta
             include 'php/connect_db.php';
 
             $sql_order = "SELECT album_name FROM U_like_A WHERE '$user' = user_email";
@@ -130,15 +131,18 @@ class lista{
             $albumlisten = mysqli_fetch_all($result);
 
     		// I have collect them
-            $i = 0;$titulo_seleccionado="";
+            $i = 0;
+            $titulo_seleccionado="";
+           
             do {
-                $i++;
+                $i++; 
                 if ($this->topico1=="foryou") {
-                    $titulo_seleccionado = ($albumseleccionado->createAlbumRand($topic2))->getTitulo();
+                    // $titulillo = $albumseleccionado->createAlbumRand($this->topico2);
+                    $titulo_seleccionado = ($albumseleccionado->createAlbumRand($this->topico2))->getTitulo();
 
-
-                } else {
-                    $titulo_seleccionado = ($albumseleccionado->createAlbumRandbytag($topic2))->getTitulo();
+                }
+                else {
+                    $titulo_seleccionado = ($albumseleccionado->createAlbumRandByTag($this->topico2))->getTitulo();
                 }
                 if ($i == 50) {
                     break;
@@ -167,7 +171,7 @@ class lista{
         $this->albumV7 = new album;
 
         if ($construction == "recommendations") {
-            $topico1 = $topico2 = "recomendations";
+            $this->topico1 = $this->topico2 = "recomendations";
             $this->searchrecommendations($this->albumV1,$added, $user);
             $this->searchrecommendations($this->albumV2,$added, $user);
             $this->searchrecommendations($this->albumV3,$added, $user);
@@ -179,8 +183,8 @@ class lista{
 		}
 		else {
             if ($construction == "foryou") {
-                $topico1 = "foryou";
-				$topico2 = $this->searchtopic2($user);
+                $this->topico1 = "foryou";
+                $this->topico2 = $this->searchtopic2($user);
 
                 $this->crearlstaB($this->albumV1, $added, $user);
                 $this->crearlstaB($this->albumV2, $added, $user);
@@ -191,8 +195,8 @@ class lista{
                 $this->crearlstaB($this->albumV7, $added, $user);
 			}
 			else {
-                $topico1 = "artistvalored";
-                $topico2 = $this->searchtopic3($user);
+                $this->topico1 = "artistvalored";
+                $this->topico2 = $this->searchtopic3($user);
 
                 $this->crearlstaB($this->albumV1, $added, $user);
                 $this->crearlstaB($this->albumV2, $added, $user);

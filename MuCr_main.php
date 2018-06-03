@@ -207,7 +207,7 @@
 			<?php
 
 
-			$lista2 = new lista("foryou",$added,$email);
+				$lista2 = new lista("foryou",$added,$email);
 
 			?>
 			<div class="title">For You</div>

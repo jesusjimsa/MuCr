@@ -310,7 +310,7 @@ class album{
 		$this->getTypeandYear($this->artista,$this->titulo);
 		$this->addAlbumtoBd();
     
-    return $this;
+    	return $this;
   }
   
 	public function createAlbumByTitle($title_search){
