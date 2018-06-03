@@ -2,7 +2,7 @@
 	include 'controladorAlbumRelacionado.php';
 
 	$lll = new album;
-	$lll->createAlbumsearched("madonna", "MDNA");
+	$lll->createAlbumsearched("Nirvana", "Nevermind (Super Deluxe Edition)");
 	echo "hola";
 	echo $lll->getGenres();
 	echo $lll->getYear();

@@ -123,7 +123,9 @@ class album{
 	public function setGenress($listas){
 			$tagss="";
 			$style=array("alternative","punk","rock","blues","classical","country","folk","dance","electronic","easy","gospel","religious","rap","holiday","instrumental","jazz","latin","metal","moods","pop","rnb","soundtrack","world");
-			for($i=0;$i<4;$i++){
+			$max=count($listas);
+
+			for($i=0;$i<$max;$i++){
 
 				//var_dump($selected);
 					//echo $listas[$i]["name"];
@@ -152,6 +154,13 @@ class album{
 	}
 
 public function getTypeandYear($artista,$albumtitle){
+				$pos=strpos($albumtitle,"(");
+				//echo $pos;
+				$titulo="";
+				if($pos===false){$titulo=$albumtitle;}
+				else{$titulo=substr($albumtitle,0,$pos-1);}
+				//echo $titulo;
+
 				$fmt = 'json';
 				$url = "http://musicbrainz.org/ws/2/release/?query=artist:" . urlencode($artista) . "&fmt=".$fmt;
 				//get the ID
@@ -166,12 +175,12 @@ public function getTypeandYear($artista,$albumtitle){
 				$i = 0;
 				// echo $albumtitle;
 
-				while($response["releases"][$i]["title"] != $albumtitle && $i <(count($response["releases"])-1) ){
+				while($response["releases"][$i]["title"] != $titulo && $i <(count($response["releases"])-1) ){
 					$i++;
 				}
 
 
-				if($response["releases"][$i]["title"] == $albumtitle){
+				if($response["releases"][$i]["title"] == $titulo){
 						$this->type = $response["releases"][$i]["media"][0]["format"];
 						$this->deluxe = $this->isDeluxe($albumtitle);
 						$this->year=substr($response["releases"][$i]["release-events"][0]["date"],0,4);
@@ -234,8 +243,9 @@ public function getTypeandYear($artista,$albumtitle){
 		curl_close($ch);
 		$response = json_decode($response, JSON_FORCE_OBJECT);
 
-		$this->id = $response["album"]["mbid"];
-
+		if(in_array("mbid",$response["album"])){
+			$this->id = $response["album"]["mbid"];
+		}
 		//get the title
 		$this->titulo = $response["album"]["name"];
 

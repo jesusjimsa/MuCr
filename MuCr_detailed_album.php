@@ -165,7 +165,7 @@
 				<img src="img/icons/heart.png" alt="Like" id="likke">
 			</div>
 
-			<div class="<?php $url = $_GET['deluxe'];if($url == 'true'){echo "titulo_especial";}else{echo "titulo_normal";} ?>">
+			<div class="<?php $url = $_GET['deluxe'];if($url == True){echo "titulo_especial";}else{echo "titulo_normal";} ?>">
 				<?php
 					echo $albumA0->showTitle();
 				?>
