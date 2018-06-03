@@ -91,8 +91,8 @@ class album{
 		$type = $this->getType();
 		$artist = $this->getArtista();
 		$titulo = $this->getTitulo();
-
-		$sql_order = "INSERT INTO album(name,artist,type,deluxe,year) VALUES ('$titulo', '$artist','$type','$deluxe','$year')";
+		$style=$this->getGenres();
+		$sql_order = "INSERT INTO album(name,artist,style,type,deluxe,year) VALUES ('$titulo', '$artist','$style','$type','$deluxe','$year')";
 		$conn->query($sql_order);
 	}
 
@@ -243,9 +243,9 @@ public function getTypeandYear($artista,$albumtitle){
 		curl_close($ch);
 		$response = json_decode($response, JSON_FORCE_OBJECT);
 
-		if(in_array("mbid",$response["album"])){
+
 			$this->id = $response["album"]["mbid"];
-		}
+
 		//get the title
 		$this->titulo = $response["album"]["name"];
 

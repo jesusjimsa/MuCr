@@ -1,15 +1,17 @@
 <?php
 	include 'controladorAlbumRelacionado.php';
+	include 'php/connect_db.php';
 
 	$lll = new album;
-	$lll->createAlbumsearched("Nirvana", "Nevermind (Super Deluxe Edition)");
-	echo "hola";
+	$lll->createAlbumsearched("Michael Jackson", "Thriller 25 ");
+	//echo "hola";
+	$titulo=$lll->getTitulo();
+	$artista=$lll->getArtista();
 	echo $lll->getGenres();
-	echo $lll->getYear();
-	echo $lll->getType();
-	echo $lll->getDeluxe();
-
-	// $url = "http://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=" . "7469e83d1fc6415f3a1cf8790bdebacd". "&artist=" . urlencode("mecano") . "&album=" . urlencode("aidalai") . "&format=json";
+	$year=$lll->getYear();
+	$type=$lll->getType();
+	$deluxe=$lll->getDeluxe();
+	$sql_order = "INSERT INTO album(name,artist) VALUES ('$titulo', '$artista')";	// $url = "http://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=" . "7469e83d1fc6415f3a1cf8790bdebacd". "&artist=" . urlencode("mecano") . "&album=" . urlencode("aidalai") . "&format=json";
 	//
 	// //get the ID
 	// $ch = curl_init();
