@@ -173,91 +173,9 @@
 			<div class="album_artist"><?php echo $albumA0->getYear();?></div>
 			<div class="album_type"><?php echo $albumA0->getType();?></div>
 			<div class="listofsongs">
-				<div class="songs">Come Together - 4:20
-					<div class="love_song">
-						<img src="img/icons/heart.png" alt="love_song">
-					</div>
-				</div>
-				<div class="songs">Something - 3:03
-					<div class="love_song">
-						<img src="img/icons/heart.png" alt="love_song">
-					</div>
-				</div>
-				<div class="songs">Maxwell's Silver Hammer - 3:27
-					<div class="love_song">
-						<img src="img/icons/heart.png" alt="love_song">
-					</div>
-				</div>
-				<div class="songs">Oh! Darling - 3:26
-					<div class="love_song">
-						<img src="img/icons/heart.png" alt="love_song">
-					</div>
-				</div>
-				<div class="songs">Octopus's Garden - 2:51
-					<div class="love_song">
-						<img src="img/icons/heart.png" alt="love_song">
-					</div>
-				</div>
-				<div class="songs">I Want You (She's So Heavy) - 7:47
-					<div class="love_song">
-						<img src="img/icons/heart.png" alt="love_song">
-					</div>
-				</div>
-				<div class="songs">Here Comes The Sun - 3:05
-					<div class="love_song">
-						<img src="img/icons/heart.png" alt="love_song">
-					</div>
-				</div>
-				<div class="songs">Because - 2:45
-					<div class="love_song">
-						<img src="img/icons/heart.png" alt="love_song">
-					</div>
-				</div>
-				<div class="songs">You Never Give Me Your Money - 4:02
-					<div class="love_song">
-						<img src="img/icons/heart.png" alt="love_song">
-					</div>
-				</div>
-				<div class="songs">Sun King - 2:26
-					<div class="love_song">
-						<img src="img/icons/heart.png" alt="love_song">
-					</div>
-				</div>
-				<div class="songs">Mean Mr. Mustard - 1:06
-					<div class="love_song">
-						<img src="img/icons/heart.png" alt="love_song">
-					</div>
-				</div>
-				<div class="songs">Polythene Pam - 1:12
-					<div class="love_song">
-						<img src="img/icons/heart.png" alt="love_song">
-					</div>
-				</div>
-				<div class="songs">She Came In Through the Bathroom Window - 1:57
-					<div class="love_song">
-						<img src="img/icons/heart.png" alt="love_song">
-					</div>
-				</div>
-				<div class="songs">Golden Slumbers - 1:31
-					<div class="love_song">
-						<img src="img/icons/heart.png" alt="love_song">
-					</div>
-				</div>
-				<div class="songs">Carry That Weight - 1:36
-					<div class="love_song">
-						<img src="img/icons/heart.png" alt="love_song">
-					</div>
-				</div>
-				<div class="songs">The End - 2:19
-					<div class="love_song">
-						<img src="img/icons/heart.png" alt="love_song">
-					</div>
-				</div>
-				<div class="songs">Her Majesty - 0:23
-					<div class="love_song">
-						<img src="img/icons/heart.png" alt="love_song">
-					</div>
-				</div>
+				<?php
+					$albumA0->printSongs();
+				?>
 			</div>
 		</div>
 
