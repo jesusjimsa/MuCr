@@ -74,34 +74,34 @@
 				<button class="especialized" style="display:block;" onclick="writeClassification(1);">Music Style</button> <!-- 0 -->
 				<button class="especialized" style="display:block;" onclick="writeClassification(2);">Rarity</button> <!-- 1 -->
 				<button class="especialized_back" style="display:none;" onclick="writeClassification(0);">Back</button>
-				<a href="MuCr_collection.php?title=All"><button class="especialized" style="display:none;">All</button> <!-- 2 --></a>
-				<a href="MuCr_collection.php?title=Alternative"><button class="especialized" style="display:none;">Alternative</button> <!-- 3 --></a>
-				<a href="MuCr_collection.php?title=Punk"><button class="especialized" style="display:none;">Punk</button> <!-- 4 --></a>
-				<a href="MuCr_collection.php?title=Rock"><button class="especialized" style="display:none;">Rock</button> <!-- 5 --></a>
-				<a href="MuCr_collection.php?title=Blues"><button class="especialized" style="display:none;">Blues</button> <!-- 6 --></a>
-				<a href="MuCr_collection.php?title=Classical"><button class="especialized" style="display:none;">Classical</button> <!-- 7 --></a>
-				<a href="MuCr_collection.php?title=Country"><button class="especialized" style="display:none;">Country</button> <!-- 8 --></a>
-				<a href="MuCr_collection.php?title=Folk"><button class="especialized" style="display:none;">Folk</button> <!-- 9 --></a>
-				<a href="MuCr_collection.php?title=Dance"><button class="especialized" style="display:none;">Dance</button> <!-- 10 --></a>
-				<a href="MuCr_collection.php?title=Electronic"><button class="especialized" style="display:none;">Electronic</button> <!-- 11 --></a>
-				<a href="MuCr_collection.php?title=Easy_Listening"><button class="especialized" style="display:none;">Easy Listening</button> <!-- 12 --></a>
-				<a href="MuCr_collection.php?title=Gospel"><button class="especialized" style="display:none;">Gospel</button> <!-- 13 --></a>
-				<a href="MuCr_collection.php?title=Religious"><button class="especialized" style="display:none;">Religious</button> <!-- 14 --></a>
-				<a href="MuCr_collection.php?title=Rap"><button class="especialized" style="display:none;">Rap</button> <!-- 15 --></a>
-				<a href="MuCr_collection.php?title=Holiday"><button class="especialized" style="display:none;">Holiday</button> <!-- 16 --></a>
-				<a href="MuCr_collection.php?title=Instrumental"><button class="especialized" style="display:none;">Instrumental</button> <!-- 17 --></a>
-				<a href="MuCr_collection.php?title=Jazz"><button class="especialized" style="display:none;">Jazz</button> <!-- 18 --></a>
-				<a href="MuCr_collection.php?title=Latin"><button class="especialized" style="display:none;">Latin</button> <!-- 19 --></a>
-				<a href="MuCr_collection.php?title=Metal"><button class="especialized" style="display:none;">Metal</button> <!-- 20 --></a>
-				<a href="MuCr_collection.php?title=Moods"><button class="especialized" style="display:none;">Moods</button> <!-- 21 --></a>
-				<a href="MuCr_collection.php?title=Other"><button class="especialized" style="display:none;">Other</button> <!-- 23 --></a>
-				<a href="MuCr_collection.php?title=Pop"><button class="especialized" style="display:none;">Pop</button> <!-- 22 --></a>
-				<a href="MuCr_collection.php?title=Rcomencomeb"><button class="especialized" style="display:none;">R'n'B</button> <!-- 24 --></a>
-				<a href="MuCr_collection.php?title=Soundtrack"><button class="especialized" style="display:none;">Soundtrack</button> <!-- 25 --></a>
-				<a href="MuCr_collection.php?title=World"><button class="especialized" style="display:none;">World</button> <!-- 26 --></a>
+				<button class="especialized" style="display:none;">All</button> <!-- 2 -->
+				<button class="especialized" style="display:none;">Alternative</button> <!-- 3 -->
+				<button class="especialized" style="display:none;">Punk</button> <!-- 4 -->
+				<button class="especialized" style="display:none;">Rock</button> <!-- 5 -->
+				<button class="especialized" style="display:none;">Blues</button> <!-- 6 -->
+				<button class="especialized" style="display:none;">Classical</button> <!-- 7 -->
+				<button class="especialized" style="display:none;">Country</button> <!-- 8 -->
+				<button class="especialized" style="display:none;">Folk</button> <!-- 9 -->
+				<button class="especialized" style="display:none;">Dance</button> <!-- 10 -->
+				<button class="especialized" style="display:none;">Electronic</button> <!-- 11 -->
+				<button class="especialized" style="display:none;">Easy Listening</button> <!-- 12 -->
+				<button class="especialized" style="display:none;">Gospel</button> <!-- 13 -->
+				<button class="especialized" style="display:none;">Religious</button> <!-- 14 -->
+				<button class="especialized" style="display:none;">Rap</button> <!-- 15 -->
+				<button class="especialized" style="display:none;">Holiday</button> <!-- 16 -->
+				<button class="especialized" style="display:none;">Instrumental</button> <!-- 17 -->
+				<button class="especialized" style="display:none;">Jazz</button> <!-- 18 -->
+				<button class="especialized" style="display:none;">Latin</button> <!-- 19 -->
+				<button class="especialized" style="display:none;">Metal</button> <!-- 20 -->
+				<button class="especialized" style="display:none;">Moods</button> <!-- 21 -->
+				<button class="especialized" style="display:none;">Pop</button> <!-- 22 -->
+				<button class="especialized" style="display:none;">Other</button> <!-- 23 -->
+				<button class="especialized" style="display:none;">R'n'B</button> <!-- 24 -->
+				<button class="especialized" style="display:none;">Soundtrack</button> <!-- 25 -->
+				<button class="especialized" style="display:none;">World</button> <!-- 26 -->
 				<button class="especialized_back" style="display:none;" onclick="writeClassification(0);">Back</button>
-				<a href="MuCr_collection.php?title=Deluxe"><button class="especialized" style="display:none;">Deluxe</button> <!-- 27 --></a>
-				<a href="MuCr_collection.php?title=Not_Deluxe"><button class="especialized" style="display:none;">Not deluxe</button> <!-- 28 --></a>
+				<button class="especialized" style="display:none;">Deluxe</button> <!-- 27 -->
+				<button class="especialized" style="display:none;">Not deluxe</button> <!-- 28 -->
 			</div>
 	</nav>
 
@@ -173,9 +173,91 @@
 			<div class="album_artist"><?php echo $albumA0->getYear();?></div>
 			<div class="album_type"><?php echo $albumA0->getType();?></div>
 			<div class="listofsongs">
-				<?php
-					$albumA0->printSongs();
-				?>
+				<div class="songs">Come Together - 4:20
+					<div class="love_song">
+						<img src="img/icons/heart.png" alt="love_song">
+					</div>
+				</div>
+				<div class="songs">Something - 3:03
+					<div class="love_song">
+						<img src="img/icons/heart.png" alt="love_song">
+					</div>
+				</div>
+				<div class="songs">Maxwell's Silver Hammer - 3:27
+					<div class="love_song">
+						<img src="img/icons/heart.png" alt="love_song">
+					</div>
+				</div>
+				<div class="songs">Oh! Darling - 3:26
+					<div class="love_song">
+						<img src="img/icons/heart.png" alt="love_song">
+					</div>
+				</div>
+				<div class="songs">Octopus's Garden - 2:51
+					<div class="love_song">
+						<img src="img/icons/heart.png" alt="love_song">
+					</div>
+				</div>
+				<div class="songs">I Want You (She's So Heavy) - 7:47
+					<div class="love_song">
+						<img src="img/icons/heart.png" alt="love_song">
+					</div>
+				</div>
+				<div class="songs">Here Comes The Sun - 3:05
+					<div class="love_song">
+						<img src="img/icons/heart.png" alt="love_song">
+					</div>
+				</div>
+				<div class="songs">Because - 2:45
+					<div class="love_song">
+						<img src="img/icons/heart.png" alt="love_song">
+					</div>
+				</div>
+				<div class="songs">You Never Give Me Your Money - 4:02
+					<div class="love_song">
+						<img src="img/icons/heart.png" alt="love_song">
+					</div>
+				</div>
+				<div class="songs">Sun King - 2:26
+					<div class="love_song">
+						<img src="img/icons/heart.png" alt="love_song">
+					</div>
+				</div>
+				<div class="songs">Mean Mr. Mustard - 1:06
+					<div class="love_song">
+						<img src="img/icons/heart.png" alt="love_song">
+					</div>
+				</div>
+				<div class="songs">Polythene Pam - 1:12
+					<div class="love_song">
+						<img src="img/icons/heart.png" alt="love_song">
+					</div>
+				</div>
+				<div class="songs">She Came In Through the Bathroom Window - 1:57
+					<div class="love_song">
+						<img src="img/icons/heart.png" alt="love_song">
+					</div>
+				</div>
+				<div class="songs">Golden Slumbers - 1:31
+					<div class="love_song">
+						<img src="img/icons/heart.png" alt="love_song">
+					</div>
+				</div>
+				<div class="songs">Carry That Weight - 1:36
+					<div class="love_song">
+						<img src="img/icons/heart.png" alt="love_song">
+					</div>
+				</div>
+				<div class="songs">The End - 2:19
+					<div class="love_song">
+						<img src="img/icons/heart.png" alt="love_song">
+					</div>
+				</div>
+				<div class="songs">Her Majesty - 0:23
+					<div class="love_song">
+						<img src="img/icons/heart.png" alt="love_song">
+					</div>
+				</div>
 			</div>
 		</div>
 

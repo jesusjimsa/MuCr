@@ -4,6 +4,7 @@ include 'controladorAlbumRelacionado.php';
 
 class lista{
   public  $topico1="";
+  public  $topico2="";
   private $albumV1;
   private $albumV2;
   private $albumV3;
@@ -11,6 +12,14 @@ class lista{
   private $albumV5;
   private $albumV6;
   private $albumV7;
+
+public function searchrecommendations(){
+  include 'php/connect_db.php';
+  $sql_order = "SELECT album_name,count(album_name) FROM U_like_A";
+
+
+}
+
 
 
 public function searchtopic2($user){
@@ -56,7 +65,7 @@ public function searchtopic3($user){
 }
 
 public function isInsidesql($titulo,$row){
-  var $max=count($row);
+ $max=count($row);
   for($i=0;$i<$max;$i++){
     if($row[$i][0]==$titulo){return true;}
   }
@@ -64,7 +73,7 @@ public function isInsidesql($titulo,$row){
 }
 
 public function isInside($titulo,$row){
-  var $max=count($row);
+   $max=count($row);
   for($i=0;$i<$max;$i++){
     if($row[$i]==$titulo){return true;}
   }
@@ -85,16 +94,16 @@ $albumlisten = mysqli_fetch_all($result);
 $i=0;
 do{
   $i++;
-  if($topico1=="foryou"){$titulo_seleccionado=$albumseleccionado->createAlbumRand($topic2);}
+  if($this->topico1=="foryou"){$titulo_seleccionado=$albumseleccionado->createAlbumRand($topic2);}
   else{$titulo_seleccionado=$albumseleccionado->createAlbumRandbytag($topic2);}
   if($i==50){break;}
-}while(isInsidesql($titulo_seleccionado,$albumlikes) || isInsidesql($titulo_seleccionado,$albumlisten) || isInsidesql($titulo_seleccionado,$added)
+}while($this->isInsidesql($titulo_seleccionado,$albumlikes) || $this->isInsidesql($titulo_seleccionado,$albumlisten) || $this->isInsidesql($titulo_seleccionado,$added));
 
 if($i==50){
-      if($topico1=="foryou"){
-      $topico2=$this->searchtopic2($user);}
-      else{  $topico2=$this->searchtopic3($user);
-      this->crearlstaB(&$albumseleccionado,$added,$user)
+      if($this->topico1=="foryou"){
+      $this->topico2=$this->searchtopic2($user);}
+      else{  $this->topico2=$this->searchtopic3($user);
+      $this->crearlstaB($albumseleccionado,$added,$user);
       }
 }
 }
@@ -113,6 +122,7 @@ if($i==50){
      $this->albumV7 = new album;
      if($construction == "recommendations"){
         $topico1 = $topico2 = "recomendations";
+        $this->searchrecommendations();
      }
      else{
        if($construction=="foryou"){

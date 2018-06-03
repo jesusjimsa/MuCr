@@ -27,6 +27,6 @@
 	//  var_dump($response["album"]);
 	include 'listController.php';
 
-	$lista1 = new lista("noasda","nada","rodrigranada97@gmail.com");
+	$lista1 = new lista("recomendations","nada","rodrigranada97@gmail.com");
 //	echo $lista1->searchtopic2("rodrigranada97@gmail.com");
 ?>
