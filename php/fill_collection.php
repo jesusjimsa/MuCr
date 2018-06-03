@@ -27,11 +27,13 @@
 
 			$all_rand_nums[$i] = $rand_num;
 			
-			$rand_album_name = $top_albums_tag[$i]["name"];
-			$rand_album_artist = $top_albums_tag[$i]["artist"]["name"];
-			$rand_album_image = $top_albums_tag[$i]["image"][3]["#text"];
+			$rand_album_name = $top_albums_tag[$rand_num]["name"];
+			$rand_album_artist = $top_albums_tag[$rand_num]["artist"]["name"];
+			$rand_album_image = $top_albums_tag[$rand_num]["image"][3]["#text"];
 
 			echo "<a href=\"MuCr_detailed_album.php?artist=" . urlencode($rand_album_artist) . "&type=" . urlencode($tag) . "&deluxe=false&album=" . urlencode($rand_album_name) . "\">\n<div class=\"itemo\">\n<img src=\"" . $rand_album_image . "\" alt=\"artist\">\n<div class=\"type\">Vinyl</div>\n<div class=\"add\">\n<img src=\"img/icons/add.png\" alt=\"add\">\n</div>\n<div class=\"love\">\n<img src=\"img/icons/heart.png\" alt=\"love\">\n</div>\n<div class=\"close\">\n<img src=\"img/icons/close.png\" alt=\"close\">\n</div>\n</div>\n</a>";
 		}
 	}
 ?>
+
+<!-- <div class=\"add\"><form action=\"../add_album_db.php\">\n<input type=\"hidden\" value=" . $rand_album_name . ">\n<input type=\"hidden\" value=" . $rand_album_artist . ">\n<input class=\"img\" type=\"image\" src=\"images/login.jpg\" alt=\"add\"/>\n</form></div> -->
