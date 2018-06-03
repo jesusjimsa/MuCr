@@ -158,11 +158,11 @@ class album{
 					}
 				}
 			}
-			
+
 			if($tagss === ""){
 				$tagss = "Other";
 			}
-			
+
 			return $tagss;
 	}
 
@@ -179,7 +179,7 @@ class album{
 
 		$fmt = 'json';
 		$url = "http://musicbrainz.org/ws/2/release/?query=artist:" . urlencode($artista) . "&fmt=".$fmt;
-		
+
 		//get the ID
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_URL, $url);
@@ -309,11 +309,10 @@ class album{
 		$this->id = $top_albums_tag[$i]["mbid"];
 		$this->getTypeandYear($this->artista,$this->titulo);
 		$this->addAlbumtoBd();
-		
-		return $this;
-	}
-
-
+    
+    return $this;
+  }
+  
 	public function createAlbumByTitle($title_search){
 		$url = "http://ws.audioscrobbler.com/2.0/?method=album.search&album=" . $title_search . "&api_key=" . $this->API_KEY . "&format=json";
 

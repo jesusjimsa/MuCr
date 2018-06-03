@@ -1,6 +1,10 @@
 <?php
   	include 'listController.php';
-  
- 	$lista1 = new lista("recommendations","nada","rodrigranada97@gmail.com");
+
+
+  $added=array();
+ 	$lista1 = new lista("recommendations",$added,"rodrigranada97@gmail.com");
   	// echo $lista1->searchtopic2("rodrigranada97@gmail.com");
+  var_dump($lista1->getAlbumV1());
+
   ?>
