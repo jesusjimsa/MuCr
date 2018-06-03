@@ -40,11 +40,12 @@
 			
 			$all_rand_albums[$i]->set($rand_album_id, $rand_album_name, $rand_album_artist);
 
-			echo "<a href=\"MuCr_detailed_album.php?artist=" . urlencode($rand_album_artist) . "&type=" . urlencode($tag) . "&deluxe=false&album=" . urlencode($rand_album_name) . "\">\n<div class=\"itemo\">\n<img src=\"" . $rand_album_image . "\" alt=\"artist\">\n<div class=\"type\">Vinyl</div>\n<div class=\"add\">\n<img src=\"img/icons/add.png\" alt=\"add\">\n</div>\n<div class=\"love\">\n<img src=\"img/icons/heart.png\" alt=\"love\">\n</div>\n<div class=\"close\">\n<img src=\"img/icons/close.png\" alt=\"close\">\n</div>\n</div>\n</a>";
+			echo "<a href=\"MuCr_detailed_album.php?artist=" . urlencode($rand_album_artist) . "&type=" . urlencode($tag) . "&deluxe=false&album=" . urlencode($rand_album_name) . "\">\n<div class=\"itemo\">\n<img src=\"" . $rand_album_image . "\" alt=\"artist\">\n<div class=\"add\">\n<img src=\"img/icons/add.png\" alt=\"add\">\n</div>\n<div class=\"love\">\n<img src=\"img/icons/heart.png\" alt=\"love\">\n</div>\n<div class=\"close\">\n<img src=\"img/icons/close.png\" alt=\"close\">\n</div>\n</div>\n</a>";
 		}
 
 		return $all_rand_albums;
 	}
 ?>
 
-<!-- <div class=\"add\"><form action=\"../add_album_db.php\">\n<input type=\"hidden\" value=" . $rand_album_name . ">\n<input type=\"hidden\" value=" . $rand_album_artist . ">\n<input class=\"img\" type=\"image\" src=\"images/login.jpg\" alt=\"add\"/>\n</form></div> -->
+<!-- <div class=\"type\">Vinyl</div>\n -->
+<!-- <div class=\"add\"><form action=\"<?php addAlbumDB();?>\">\n<input type=\"hidden\" value=" . $rand_album_name . ">\n<input type=\"hidden\" value=" . $rand_album_artist . ">\n<input class=\"img\" type=\"image\" src=\"images/login.jpg\" alt=\"add\"/>\n</form></div> -->
