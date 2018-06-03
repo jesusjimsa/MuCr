@@ -151,6 +151,39 @@ class album{
 			return $tagss;
 	}
 
+public function getTypeandYear($artista,$albumtitle){
+				$fmt = 'json';
+				$url = "http://musicbrainz.org/ws/2/release/?query=artist:" . urlencode($artista) . "&fmt=".$fmt;
+				//get the ID
+				$ch = curl_init();
+				curl_setopt($ch, CURLOPT_URL, $url);
+				curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+				curl_setopt($ch, CURLOPT_USERAGENT, 'CdBase');
+				$response = curl_exec($ch);
+				// var_dump($response);
+				curl_close($ch);
+				$response = json_decode($response, JSON_FORCE_OBJECT);
+				$i = 0;
+				// echo $albumtitle;
+
+				while($response["releases"][$i]["title"] != $albumtitle && $i <(count($response["releases"])-1) ){
+					$i++;
+				}
+
+
+				if($response["releases"][$i]["title"] == $albumtitle){
+						$this->type = $response["releases"][$i]["media"][0]["format"];
+						$this->deluxe = $this->isDeluxe($albumtitle);
+						$this->year=substr($response["releases"][$i]["release-events"][0]["date"],0,4);
+				}
+				else{
+					$this->type = NULL;
+					$this->year=NULL;
+					$this->deluxe=NULL;
+				}
+			}
+
+
 
 
 
@@ -178,6 +211,7 @@ class album{
 		$this->artista = $response["topalbums"]["album"][$numer]["artist"]["name"];
 
 		$this->genres = $this->setGenress($response["album"]["tags"]["tag"]);
+		$this->getTypeandYear($this->artista,$this->titulo);
 		//$this->type = $response["releases"][$numer]["media"][0]["format"];
 		//$this->deluxe = 0;//$this->isDeluxe($response["releases"][$numer]["artist-credit"][0]["artist"]["disambiguation"]);
 		//$this->year = substr($response["releases"][$numer]["release-events"][0]["date"],0,4);
@@ -208,7 +242,7 @@ class album{
 		//get the artist
 		$this->artista = $response["album"]["artist"];
 		$this->genres=$this->setGenress($response["album"]["tags"]["tag"]);
-
+		$this->getTypeandYear($this->artista,$this->titulo);
 		// $this->type = $response["releases"][$i]["media"][0]["format"];
 		// $this->deluxe =0; //$this->isDeluxe($response["releases"][$i]["artist-credit"][0]["artist"]["disambiguation"]);
 		// $this->year=substr($response["releases"][$i]["release-events"][0]["date"],0,4);
