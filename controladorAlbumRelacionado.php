@@ -92,7 +92,7 @@ class album{
 		$titulo = $this->getTitulo();
 		$style=$this->getGenres();
 
-		$sql_order = "INSERT INTO album(name,artist,style,type,deluxe,year) VALUES ('$titulo', '$artist','$style','$type','$deluxe','$year')";
+		$sql_order = "INSERT INTO album(name, artist, style, type, deluxe, year) VALUES ('$titulo', '$artist', '$style', '$type', '$deluxe', '$year')";
 		$conn->query($sql_order);
 	}
 
