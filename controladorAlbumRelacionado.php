@@ -92,7 +92,7 @@ class album{
 		$titulo = $this->getTitulo();
 		$style=$this->getGenres();
 
-		$sql_order = "INSERT INTO album(name,artist,style,type,deluxe,year) VALUES ('$titulo', '$artist','$style','$type','$deluxe','$year')";
+		$sql_order = "INSERT INTO album(name, artist, style, type, deluxe, year) VALUES ('$titulo', '$artist', '$style', '$type', '$deluxe', '$year')";
 		$conn->query($sql_order);
 	}
 
@@ -158,11 +158,11 @@ class album{
 					}
 				}
 			}
-			
+
 			if($tagss === ""){
 				$tagss = "Other";
 			}
-			
+
 			return $tagss;
 	}
 
@@ -179,7 +179,7 @@ class album{
 
 		$fmt = 'json';
 		$url = "http://musicbrainz.org/ws/2/release/?query=artist:" . urlencode($artista) . "&fmt=".$fmt;
-		
+
 		//get the ID
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_URL, $url);
@@ -307,7 +307,33 @@ class album{
 		$this->titulo = $top_albums_tag[$i]["name"];
 		$this->artista = $top_albums_tag[$i]["artist"]["name"];
 		$this->id = $top_albums_tag[$i]["mbid"];
+		$this->getTypeandYear($this->artista,$this->titulo);
+		$this->addAlbumtoBd();
+			return $this;
 	}
+
+
+	public function createAlbumByTitle($title_search){
+	$url = "http://ws.audioscrobbler.com/2.0/?method=album.search&album=" . $title_search . "&api_key=" . $this->API_KEY . "&format=json";
+
+	$ch = curl_init();
+	curl_setopt($ch, CURLOPT_URL, $url);
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+	curl_setopt($ch, CURLOPT_USERAGENT, 'CdBase');
+
+	$response = curl_exec($ch);
+	curl_close($ch);
+	$response = json_decode($response, JSON_FORCE_OBJECT);
+
+	$this->titulo = $response["results"]["albummatches"]["album"][1]["name"];
+	$this->artista = $response["results"]["albummatches"]["album"][1]["artist"];
+	$this->id = $response["results"]["albummatches"]["album"][1]["mbid"];
+	$this->getTypeandYear($this->artista,$this->titulo);
+	$this->addAlbumtoBd();
+		return $this;
+	}
+
+
 }
 
 ?>
