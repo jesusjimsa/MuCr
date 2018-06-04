@@ -1,5 +1,5 @@
 <?php
-
+ini_set('max_execution_time', 300);
 class album{
 	private $API_KEY;
 	private $id;
@@ -231,9 +231,9 @@ class album{
 		$this->artista = $response["topalbums"]["album"][$numer]["artist"]["name"];
 
 		$this->genres = $this->setGenress($response["album"]["tags"]["tag"]);
-		$this->getTypeandYear($this->artista,$this->titulo);
-		$this->addAlbumtoBd();
-
+		//$this->getTypeandYear($this->artista,$this->titulo);
+	//	$this->addAlbumtoBd();
+	if($this->getTitulo()==NULL){return $this->createAlbumRand($artista1);}
 		return $this;
 	}
 
@@ -307,12 +307,13 @@ class album{
 		$this->titulo = $top_albums_tag[$rand_num]["name"];
 		$this->artista = $top_albums_tag[$rand_num]["artist"]["name"];
 		$this->id = $top_albums_tag[$rand_num]["mbid"];
-		$this->getTypeandYear($this->artista,$this->titulo);
-		$this->addAlbumtoBd();
-    
-    	return $this;
+	//	$this->getTypeandYear($this->artista,$this->titulo);
+	//	$this->addAlbumtoBd();
+
+		if($this==NULL){return createAlbumByTitle($title_search);}
+		else{return $this;}
   }
-  
+
 	public function createAlbumByTitle($title_search){
 		$url = "http://ws.audioscrobbler.com/2.0/?method=album.search&album=" . $title_search . "&api_key=" . $this->API_KEY . "&format=json";
 
@@ -328,10 +329,11 @@ class album{
 		$this->titulo = $response["results"]["albummatches"]["album"][1]["name"];
 		$this->artista = $response["results"]["albummatches"]["album"][1]["artist"];
 		$this->id = $response["results"]["albummatches"]["album"][1]["mbid"];
-		$this->getTypeandYear($this->artista,$this->titulo);
-		$this->addAlbumtoBd();
+		//$this->getTypeandYear($this->artista,$this->titulo);
+		//$this->addAlbumtoBd();
 
-		return $this;
+		if($this==NULL){return createAlbumByTitle($title_search);}
+		else{return $this;}
 	}
 }
 
