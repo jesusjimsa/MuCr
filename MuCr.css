@@ -262,8 +262,8 @@ img{
 	border-radius: 0px 0px 3vmin 3vmin;
 	background-color:rgba(77, 77, 77, 0.97);
 	position:fixed;
-	top:0%;
-	right:6%;
+	top:50%;
+	left:0%;
 	height:4.5%;
 	padding:1%;
 	width: 15%;
@@ -272,7 +272,7 @@ img{
 
 .dora .dorado{
 	border-radius: 3vmin 3vmin 3vmin 3vmin;
-	position: fixed;
+	position: relative;
 	right:7%;
 	top:2%;
 	height:5%;
@@ -597,7 +597,7 @@ img{
 
 .musica .collection .orden{
 	position:fixed;
-	height:55%;
+	height:45%;
 	width:16%;
 	top:36%;
 	left:0.5%;
