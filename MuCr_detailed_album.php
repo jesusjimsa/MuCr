@@ -177,7 +177,7 @@
 						$titulo=$albumA0->getTitulo();
 						$artista=$albumA0->getArtista();
 						include 'php/connect_db.php';
-						$sql_query = "SELECT album_name FROM U_like_A WHERE '$email'=email and '$titulo'=album_name";
+						$sql_query = "SELECT album_name,user_email FROM U_like_A WHERE '$email'=user_email and album_name='$titulo'";
 						$result = $conn->query($sql_query);
 						 if($result->num_rows==0){echo "img/icons/heart.png";}
 						 else{echo "img/icons/red_heart.png";}
