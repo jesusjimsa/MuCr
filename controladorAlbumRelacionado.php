@@ -96,20 +96,46 @@ class album{
 		$conn->query($sql_order);
 	}
 
-	public function isDeluxe($album){
-		$result = 0;
+	public function isDeluxe($album_name){
+		$result = false;
 
-		if(strpos($album, "Deluxe") != false){
-			$result = 1;
+		if(strpos($album_name, "Deluxe") != false){
+			$result = true;
 		}
 
-		if(strpos($album, "deluxe") != false){
-			$result = 1;
+		if(strpos($album_name, "deluxe") != false){
+			$result = true;
 		}
 
-		if(strpos($album, "DELUXE") != false){
-			$result = 1;
+		if(strpos($album_name, "DELUXE") != false){
+			$result = true;
 		}
+
+		if(strpos($album_name, "Limited") != false){
+			$result = true;
+		}
+
+		if(strpos($album_name, "limited") != false){
+			$result = true;
+		}
+
+		if(strpos($album_name, "LIMITED") != false){
+			$result = true;
+		}
+
+		if(strpos($album_name, "Special") != false){
+			$result = true;
+		}
+
+		if(strpos($album_name, "special") != false){
+			$result = true;
+		}
+
+		if(strpos($album_name, "SPECIAL") != false){
+			$result = true;
+		}
+
+		$this->deluxe = $result;
 
 		return $result;
 	}
