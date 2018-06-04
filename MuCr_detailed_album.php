@@ -194,8 +194,19 @@
 			<input type="hidden" name="album_name" value="<?php echo $albumA0->getTitulo();?>">
 			<input type="hidden" name="album_artist" value="<?php echo $albumA0->getArtista();?>">
 			<button type="image" name="add_button" value="add" class="add">
-				<img src="img/icons/add.png" alt="add">
-				Add album
+				<img src="	<?php
+							$titulo=$albumA0->getTitulo();
+							$artista=$albumA0->getArtista();
+							include 'php/connect_db.php';
+							$sql_query = "SELECT album_name, user_email FROM U_listen_A WHERE '$email'=user_email and album_name='$titulo'";
+							$result = $conn->query($sql_query);
+							  if($result->num_rows==0){echo "img/icons/add.png"; $valor=true;}
+							  else{echo "img/icons/visto.png"; $valor=false;}
+					?>" alt="add">
+					<?php if($valor==true){
+										echo "Add album";;
+								}else{echo "added";}
+						 ?>
 			</button>
 		</form>
 
@@ -367,7 +378,7 @@
 		$email = $_COOKIE['email'];
 		$album_name = $_POST['album_name'];
 		$album_artist = $_POST['album_artist'];
-	
+
 		$sql_delete_album_user = "DELETE FROM U_listen_A WHERE '$email' = email, '$album_name' = album_name, '$album_artist' = album_artist";
 		$conn->query($sql_delete_album_user);
 	}
