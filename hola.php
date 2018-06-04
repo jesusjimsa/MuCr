@@ -1,44 +1,19 @@
 <?php
-if (isset($_POST['add_button'])){
-	include 'php/connect_db.php';
-	$email = $_COOKIE['email'];
-	$album_name = $_POST['album_name'];
-	$album_artist = $_POST['album_artist'];
+include 'controladorAlbumRelacionado.php';
 
-	$sql_add_album_user = "INSERT INTO U_listen_A(user_email, album_name, album_artist) VALUES ('$email', '$album_name', '$album_artist')";
-	$conn->query($sql_add_album_user);
-}
+$albumA0=new Album;
+$albumA0->createAlbumsearched("Rihanna", "Umbrella");
+
+$titulo=$albumA0->getTitulo();
+$artista=$albumA0->getArtista();
+$titulo=$albumA0->getTitulo();
+$artista=$albumA0->getArtista();
+include 'php/connect_db.php';
+$sql_query = "SELECT album_name,user_email FROM U_like_A WHERE '$email'=user_email";
+$result = $conn->query($sql_query);
+ if($result->num_rows==0){echo "img/icons/heart.png";}
+ else{echo "img/icons/red_heart.png";}
+
+ // if($albumlikes->num_rows==0){echo "img/icons/heart.png";}
+ // else{echo "img/icons/red_heart.png";}
 ?>
-
-
-
-
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>MuCr - Collection</title>
-	<link rel="stylesheet" href="MuCr.css">
-	<link rel="shortcut icon" href="img/MuCr.png">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="js/MuCr.js"></script>
-</head>
-<body>
-	<div class="siko">
-		hhhhh
-	</div>
-	<div class="grid-container">
-	<div class="itemo">
-		<form action="" method="POST">
-			<input type="hidden" name="title" value="Rock">
-			<input type="hidden" name="album_name" value="The Beatles">
-			<input type="hidden" name="album_artist" value="The Beatles">
-			<button type="image" name="add_button" value="add" class="add">
-				<img src="img/icons/add.png" alt="add">
-			</button>
-		</form>
-	</div>
-</div>
-</body>
-</html>

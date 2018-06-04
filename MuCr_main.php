@@ -198,7 +198,7 @@
 			</div>
 			</a>
 		</div>
-
+	</div>
 		<div class="fila">
 			<?php
 				$lista3 = new lista("artistvalored", $added, $email);
