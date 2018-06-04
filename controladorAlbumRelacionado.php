@@ -208,8 +208,7 @@ class album{
 	}
 
 	public function createAlbumRand($artista1){
-		$url = "http://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=" . $artista1 . "&api_key=" . $this->API_KEY . "&format=json";
-
+		$url = "http://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=".$artista1."&api_key=".$this->API_KEY."&format=json";
 		//get the ID
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_URL, $url);
@@ -226,13 +225,12 @@ class album{
 
 		//get the title
 		$this->titulo = $response["topalbums"]["album"][$numer]["name"];
-
 		//get the artist
 		$this->artista = $response["topalbums"]["album"][$numer]["artist"]["name"];
 
 		$this->genres = $this->setGenress($response["album"]["tags"]["tag"]);
-		$this->getTypeandYear($this->artista,$this->titulo);
-		$this->addAlbumtoBd();
+		//$this->getTypeandYear($this->artista,$this->titulo);
+		//$this->addAlbumtoBd();
 
 		return $this;
 	}
@@ -289,7 +287,7 @@ class album{
 	}
 
 	public function createAlbumRandByTag($tag){
-		$url = "http://ws.audioscrobbler.com/2.0/?method=tag.gettopalbums&tag=" . $tag . "&api_key=" . $API_KEY . "&format=json";
+		$url = "http://ws.audioscrobbler.com/2.0/?method=tag.gettopalbums&tag=".$tag."&api_key=".$API_KEY."&format=json";
 
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_URL, $url);
@@ -307,42 +305,12 @@ class album{
 		$this->titulo = $top_albums_tag[$i]["name"];
 		$this->artista = $top_albums_tag[$i]["artist"]["name"];
 		$this->id = $top_albums_tag[$i]["mbid"];
-		$this->getTypeandYear($this->artista,$this->titulo);
-		$this->addAlbumtoBd();
-<<<<<<< HEAD
-			return $this;
-	}
+		//$this->getTypeandYear($this->artista,$this->titulo);
+		//$this->addAlbumtoBd();
 
-
-	public function createAlbumByTitle($title_search){
-	$url = "http://ws.audioscrobbler.com/2.0/?method=album.search&album=" . $title_search . "&api_key=" . $this->API_KEY . "&format=json";
-
-	$ch = curl_init();
-	curl_setopt($ch, CURLOPT_URL, $url);
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-	curl_setopt($ch, CURLOPT_USERAGENT, 'CdBase');
-
-	$response = curl_exec($ch);
-	curl_close($ch);
-	$response = json_decode($response, JSON_FORCE_OBJECT);
-
-	$this->titulo = $response["results"]["albummatches"]["album"][1]["name"];
-	$this->artista = $response["results"]["albummatches"]["album"][1]["artist"];
-	$this->id = $response["results"]["albummatches"]["album"][1]["mbid"];
-	$this->getTypeandYear($this->artista,$this->titulo);
-	$this->addAlbumtoBd();
-		return $this;
-	}
-
-<<<<<<< HEAD
-
-=======
-=======
-    
     	return $this;
   }
-  
->>>>>>> 594d66cdaf52ad8fccc8076b8d6e4fac275d2f18
+
 	public function createAlbumByTitle($title_search){
 		$url = "http://ws.audioscrobbler.com/2.0/?method=album.search&album=" . $title_search . "&api_key=" . $this->API_KEY . "&format=json";
 
@@ -363,7 +331,6 @@ class album{
 
 		return $this;
 	}
->>>>>>> 939ef4a01718936842f3bd3e088d62e6d291f49a
 }
 
 ?>
