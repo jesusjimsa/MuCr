@@ -333,7 +333,9 @@ class album{
 		return $this;
 	}
 
+<<<<<<< HEAD
 
+=======
 	public function createAlbumByTitle($title_search){
 		$url = "http://ws.audioscrobbler.com/2.0/?method=album.search&album=" . $title_search . "&api_key=" . $this->API_KEY . "&format=json";
 
@@ -350,6 +352,7 @@ class album{
 		$this->artista = $response["results"]["albummatches"]["album"][1]["artist"];
 		$this->id = $response["results"]["albummatches"]["album"][1]["mbid"];
 	}
+>>>>>>> 939ef4a01718936842f3bd3e088d62e6d291f49a
 }
 
 ?>
