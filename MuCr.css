@@ -1589,12 +1589,23 @@ img{
 	background-size: cover;
 }
 
+.seleccionado .like_album{
+	height: 35px;
+	width: auto;
+	cursor: pointer;
+	position: fixed;
+	left: 46%;
+	top: 20%;
+	border: 0px;
+	background-color: rgba(0, 0, 0, 0);
+}
+
 .seleccionado .like_album img{
-	max-width: 4%;
-	max-height: 4%;
+	/* max-width: 4%;
+	max-height: 4%; */
 	background-color: rgba(77,77,77,0.9);
-	position: relative;
-	left: 36.3%;
+	/* position: relative; */
+	/* left: 36.3%; */
 }
 
  .seleccionado .titulo_normal{
