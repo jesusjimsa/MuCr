@@ -170,8 +170,19 @@
 							?>" alt="">
 
 			</div>
-			<div class="like_album" onclick="changeImageLike();">
-				<img src="img/icons/heart.png" alt="Like" id="likke">
+			<div class="like_album">
+				<img src="
+				<?php
+
+						$titulo=$albumA0->getTitulo();
+						$artista=$albumA0->getArtista();
+						include 'php/connect_db.php';
+						$sql_query = "SELECT album_name FROM U_like_A WHERE '$email'=email and '$titulo'=album_name";
+						$result = $conn->query($sql_query);
+						 if($result->num_rows==0){echo "img/icons/heart.png";}
+						 else{echo "img/icons/red_heart.png";}
+
+				?>" alt="Like">
 			</div>
 
 			<div class="<?php $url = $_GET['deluxe'];if($url == 1){echo "titulo_especial";}else{echo "titulo_normal";} ?>">
@@ -346,7 +357,7 @@
 		$email = $_COOKIE['email'];
 		$album_name = $_POST['album_name'];
 		$album_artist = $_POST['album_artist'];
-	
+
 		$sql_add_album_user = "INSERT INTO U_listen_A(user_email, album_name, album_artist) VALUES ('$email', '$album_name', '$album_artist')";
 		$conn->query($sql_add_album_user);
 	}
