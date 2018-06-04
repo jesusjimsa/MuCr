@@ -180,7 +180,7 @@
 					echo $albumA0->showTitle();
 				?>
 			</div>
-			<div class="album_artist"><?php echo $albumA0->getYear();?></div>
+			<div class="album_artist"><?php echo $albumA0->getYear();?>{<?php echo $albumA0->getminutes();?>:<?php echo $albumA0->getseconds();?>}</div>
 			<div class="album_type"><?php echo $albumA0->getType();?></div>
 			<div class="listofsongs">
 				<?php

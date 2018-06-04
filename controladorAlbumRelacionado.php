@@ -9,6 +9,7 @@ class album{
 	private $deluxe;
 	private $year;
 	private $genres;
+	private $time;
 
 	function __construct(){
 		$api_file = fopen("API_KEY.txt", "r");
@@ -91,8 +92,9 @@ class album{
 		$artist = $this->getArtista();
 		$titulo = $this->getTitulo();
 		$style=$this->getGenres();
+		$time=$this->time;
 
-		$sql_order = "INSERT INTO album(name, artist, style, type, deluxe, year) VALUES ('$titulo', '$artist', '$style', '$type', '$deluxe', '$year')";
+		$sql_order = "INSERT INTO album(name, artist, style,length, type, deluxe, year) VALUES ('$titulo', '$artist', '$style','$time', '$type', '$deluxe', '$year')";
 		$conn->query($sql_order);
 	}
 
@@ -207,6 +209,43 @@ class album{
 		}
 	}
 
+public function getminutes(){
+		return  (int)((int)$this->time/ 60);
+}
+public function getseconds(){
+		return   (int)$this->time - ($this->getminutes() * 60);
+}
+
+		public function getTimeAlbum(){
+			$url = "http://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=" . $this->API_KEY . "&artist=" . $this->artista . "&album=" . $this->titulo . "&format=json";
+
+
+			$ch = curl_init();
+			curl_setopt($ch, CURLOPT_URL, $url);
+			curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+			curl_setopt($ch, CURLOPT_USERAGENT, 'CdBase');
+
+			$response = curl_exec($ch);
+
+			curl_close($ch);
+			$response = json_decode($response, JSON_FORCE_OBJECT);
+
+			$song_list = $response["album"]["tracks"]["track"];
+			$time_total=0;
+
+			for($i = 0; $i < count($song_list); $i++){
+				$time_total =$time_total+(int)((int)$song_list[$i]["duration"]);
+			}
+			//echo $time_total;
+			// $time_min = (int)((int)$time_total/ 60);
+			// $time_sec = (int)$time_total - ($time_min * 60);
+
+
+			$this->time=$time_total;
+		}
+
+
+
 	public function createAlbumRand($artista1){
 		$url = "http://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=" . $artista1 . "&api_key=" . $this->API_KEY . "&format=json";
 
@@ -232,12 +271,13 @@ class album{
 
 		$this->genres = $this->setGenress($response["album"]["tags"]["tag"]);
 		$this->getTypeandYear($this->artista,$this->titulo);
+		$this->getTimeAlbum();
 		$this->addAlbumtoBd();
 
 		if($this->getTitulo() == NULL){
 			return $this->createAlbumRand($artista1);
 		}
-		
+
 		return $this;
 	}
 
@@ -264,13 +304,18 @@ class album{
 		$this->artista = $response["album"]["artist"];
 		$this->genres=$this->setGenress($response["album"]["tags"]["tag"]);
 		$this->getTypeandYear($this->artista,$this->titulo);
+		$this->getTimeAlbum();
 		$this->addAlbumtoBd();
 
 		return $this;
 	}
 
+
+
+
 	public function printSongs(){
 		$url = "http://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=" . $this->API_KEY . "&artist=" . $this->artista . "&album=" . $this->titulo . "&format=json";
+
 
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_URL, $url);
@@ -288,7 +333,7 @@ class album{
 			$time_min = (int)((int)$song_list[$i]["duration"] / 60);
 			$time_sec = (int)$song_list[$i]["duration"] - ($time_min * 60);
 
-			echo "<div class=\"songs\">" . $song_list[$i]["name"] . " - " . $time_min . ":" . $time_sec . "\n<div class=\"love_song\">\n<img src=\"img/icons/heart.png\" alt=\"love_song\">\n</div>\n</div>\n";
+			echo "<div class=\"songs\">" . $song_list[$i]["name"] . " - " . $time_min . ":" . $time_sec . "\n</div>\n";
 		}
 	}
 
@@ -312,6 +357,7 @@ class album{
 		$this->artista = $top_albums_tag[$rand_num]["artist"]["name"];
 		$this->id = $top_albums_tag[$rand_num]["mbid"];
 		$this->getTypeandYear($this->artista,$this->titulo);
+		$this->getTimeAlbum();
 		$this->addAlbumtoBd();
 
 		if($this==NULL){return createAlbumByTitle($title_search);}
@@ -334,6 +380,7 @@ class album{
 		$this->artista = $response["results"]["albummatches"]["album"][1]["artist"];
 		$this->id = $response["results"]["albummatches"]["album"][1]["mbid"];
 		$this->getTypeandYear($this->artista,$this->titulo);
+		$this->getTimeAlbum();
 		$this->addAlbumtoBd();
 
 		if($this == NULL){
