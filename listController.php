@@ -12,28 +12,28 @@ class lista{
     private $albumV6;
 	private $albumV7;
 
-  public function isInsidesql($titulo, $row){
-      $max = count($row);
-      for ($i = 0; $i < $max; $i++) {
-          if ($row[$i][0] == $titulo) {
-              return true;
-          }
-  }
+    public function isInsidesql($titulo, $row){
+        $max = count($row);
+        for ($i = 0; $i < $max; $i++) {
+            if ($row[$i][0] == $titulo) {
+                return true;
+            }
+        }
 
-      return false;
-}
+        return false;
+    }
 
-  public function isInside($titulo, $row){
-  $max = count($row);
+    public function isInside($titulo, $row){
+        $max = count($row);
 
-      for ($i = 0; $i < $max; $i++){
-          if ($row[$i] == $titulo){
-              return true;
-          }
-  }
+        for ($i = 0; $i < $max; $i++){
+            if ($row[$i] == $titulo){
+                    return true;
+                }
+        }
 
-      return false;
-}
+        return false;
+    }
 
 
     public function searchrecommendations(&$albumvn,$added, $user){
@@ -43,12 +43,9 @@ class lista{
         $result = $conn->query($sql_order);
         $albumlikes = mysqli_fetch_all($result);
 
-
-
         $sql_order = "SELECT album_name FROM U_listen_A WHERE '$user' = user_email";
         $result = $conn->query($sql_order);
         $albumlisten = mysqli_fetch_all($result);
-
 
         //  get the albumlistened and liked
     		$sql_order = "SELECT album_name, COUNT(*) FROM U_like_A GROUP BY(album_name) ";
@@ -140,6 +137,7 @@ class lista{
 
             do {
                 $i++;
+
                 if ($this->topico1=="foryou") {
                      $albumseleccionado->createAlbumRand($this->topico2);
                      $titulo_seleccionado = ($albumseleccionado)->getTitulo();
@@ -147,9 +145,11 @@ class lista{
 
                 }
                 else {
-                  $mytag=substr($this->topico2,0,strpos($this->topico2,"-"));
-                  $albumseleccionado->createAlbumRandByTag($mytag);
-                  $titulo_seleccionado = ($albumseleccionado)->getTitulo();
+                    $mytag = substr($this->topico2, 0, strpos($this->topico2, "-"));
+                    $i = 50;
+                    
+                    $albumseleccionado = $albumseleccionado->createAlbumRandByTag($mytag);
+                    $titulo_seleccionado = ($albumseleccionado)->getTitulo();
                 }
                 if ($i == 50) {
                     break;
@@ -160,12 +160,13 @@ class lista{
                 $i=0;
                 if ($this->topico1 == "foryou") {
                     $this->topico2 = $this->searchtopic2($user);
-                } else {
+                }
+                else {
                     $this->topico2 = $this->searchtopic3($user);
-                    $this->crearlstaB($albumseleccionado, $added, $user);
+                    //$this->crearlstaB($albumseleccionado, $added, $user);
                 }
             }
-            array_push($added,$titulo_seleccionado);//it is added to not repeat
+            array_push($added,$titulo_seleccionado);    //it is added to not repeat
       }
 	}
 

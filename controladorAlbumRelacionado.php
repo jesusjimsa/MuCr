@@ -289,7 +289,7 @@ class album{
 	}
 
 	public function createAlbumRandByTag($tag){
-		$url = "http://ws.audioscrobbler.com/2.0/?method=tag.gettopalbums&tag=" . $tag . "&api_key=" . $API_KEY . "&format=json";
+		$url = "http://ws.audioscrobbler.com/2.0/?method=tag.gettopalbums&tag=" . $tag . "&api_key=" . $this->API_KEY . "&format=json";
 
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_URL, $url);
@@ -304,9 +304,9 @@ class album{
 
 		$rand_num = rand(0, count($top_albums_tag));
 
-		$this->titulo = $top_albums_tag[$i]["name"];
-		$this->artista = $top_albums_tag[$i]["artist"]["name"];
-		$this->id = $top_albums_tag[$i]["mbid"];
+		$this->titulo = $top_albums_tag[$rand_num]["name"];
+		$this->artista = $top_albums_tag[$rand_num]["artist"]["name"];
+		$this->id = $top_albums_tag[$rand_num]["mbid"];
 		$this->getTypeandYear($this->artista,$this->titulo);
 		$this->addAlbumtoBd();
     
