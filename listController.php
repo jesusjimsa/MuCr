@@ -42,6 +42,9 @@ class lista{
         $sql_order = "SELECT album_name FROM U_like_A WHERE '$user' = user_email";
         $result = $conn->query($sql_order);
         $albumlikes = mysqli_fetch_all($result);
+
+
+
         $sql_order = "SELECT album_name FROM U_listen_A WHERE '$user' = user_email";
         $result = $conn->query($sql_order);
         $albumlisten = mysqli_fetch_all($result);
@@ -117,6 +120,8 @@ class lista{
 
 
     public function crearlstaB(&$albumseleccionado, &$added, $user){
+      $alb=new album;
+
       if($this->topico1 =="recomendations"){
           $this->searchrecommendations($albumseleccionado,$added, $user);
         }
@@ -129,20 +134,22 @@ class lista{
             $sql_order = "SELECT album_name FROM U_listen_A WHERE '$user' = user_email";
             $result = $conn->query($sql_order);
             $albumlisten = mysqli_fetch_all($result);
-
     		// I have collect them
             $i = 0;
             $titulo_seleccionado="";
-           
+
             do {
-                $i++; 
+                $i++;
                 if ($this->topico1=="foryou") {
-                    // $titulillo = $albumseleccionado->createAlbumRand($this->topico2);
-                    $titulo_seleccionado = ($albumseleccionado->createAlbumRand($this->topico2))->getTitulo();
+                     $albumseleccionado->createAlbumRand($this->topico2);
+                     $titulo_seleccionado = ($albumseleccionado)->getTitulo();
+
 
                 }
                 else {
-                    $titulo_seleccionado = ($albumseleccionado->createAlbumRandByTag($this->topico2))->getTitulo();
+                  $mytag=substr($this->topico2,0,strpos($this->topico2,"-"));
+                  $albumseleccionado->createAlbumRandByTag($mytag);
+                  $titulo_seleccionado = ($albumseleccionado)->getTitulo();
                 }
                 if ($i == 50) {
                     break;
@@ -150,6 +157,7 @@ class lista{
             }while ($this->isInsidesql($titulo_seleccionado, $albumlikes) || $this->isInsidesql($titulo_seleccionado, $albumlisten) || $this->isInsidesql($titulo_seleccionado, $added));
 
             if ($i == 50) {
+                $i=0;
                 if ($this->topico1 == "foryou") {
                     $this->topico2 = $this->searchtopic2($user);
                 } else {
