@@ -36,9 +36,11 @@ class album{
 	public function getType(){
 			return $this->type;
 	}
+	
 	public function getGenres(){
 			return $this->genres;
 	}
+
 	public function getYear(){
 		return $this->year;
 	}
@@ -98,20 +100,46 @@ class album{
 		$conn->query($sql_order);
 	}
 
-	public function isDeluxe($album){
-		$result = 0;
+	public function isDeluxe($album_name){
+		$result = false;
 
-		if(strpos($album, "Deluxe") != false){
-			$result = 1;
+		if(strpos($album_name, "Deluxe") != false){
+			$result = true;
 		}
 
-		if(strpos($album, "deluxe") != false){
-			$result = 1;
+		if(strpos($album_name, "deluxe") != false){
+			$result = true;
 		}
 
-		if(strpos($album, "DELUXE") != false){
-			$result = 1;
+		if(strpos($album_name, "DELUXE") != false){
+			$result = true;
 		}
+
+		if(strpos($album_name, "Limited") != false){
+			$result = true;
+		}
+
+		if(strpos($album_name, "limited") != false){
+			$result = true;
+		}
+
+		if(strpos($album_name, "LIMITED") != false){
+			$result = true;
+		}
+
+		if(strpos($album_name, "Special") != false){
+			$result = true;
+		}
+
+		if(strpos($album_name, "special") != false){
+			$result = true;
+		}
+
+		if(strpos($album_name, "SPECIAL") != false){
+			$result = true;
+		}
+
+		$this->deluxe = $result;
 
 		return $result;
 	}
@@ -388,22 +416,6 @@ public function getseconds(){
 		}
 		else{
 			return $this;
-		}
-	}
-
-	public function isAdded(){
-		include 'php/connect_db.php';
-		$email = $_COOKIE['email'];
-		$album_name = $this->getTitulo();
-		$album_artist = $this->getArtista();
-
-		$sql_is_added = "SELECT album_name FROM U_listen_A WHERE email = '$email' AND album_name = '$album_name' AND album_artist = '$album_artist'";
-
-		if($conn->query($sql_is_added) == TRUE){
-			echo "<button type=\"image\" name=\"delete_button\" value=\"delete\" class=\"add\">\n<img src=\"img/icons/close.png\" alt=\"delete\">\nDelete album\n</button>";
-		}
-		else{
-			echo "<button type=\"image\" name=\"add_button\" value=\"add\" class=\"add\">\n<img src=\"img/icons/add.png\" alt=\"add\">\nAdd album\n</button>";
 		}
 	}
 }

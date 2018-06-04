@@ -37,10 +37,17 @@
 			$rand_album_artist = $top_albums_tag[$rand_num]["artist"]["name"];
 			$rand_album_image = $top_albums_tag[$rand_num]["image"][3]["#text"];
 			$rand_album_id = $top_albums_tag[$rand_num]["mbid"];
-			
+
 			$all_rand_albums[$i]->set($rand_album_id, $rand_album_name, $rand_album_artist);
 
-			echo "<a href=\"MuCr_detailed_album.php?artist=" . urlencode($rand_album_artist) . "&type=" . urlencode($tag) . "&deluxe=false&album=" . urlencode($rand_album_name) . "\">\n<div class=\"itemo\">\n<img src=\"" . $rand_album_image . "\" alt=\"artist\">\n</div>\n</a>";
+            if ($all_rand_albums[$i]->isDeluxe($rand_album_name)) {
+                $rand_album_deluxe = "1";	// 1 = true
+			}
+			else{
+				$rand_album_deluxe = "0";	// 0 = false
+			}
+
+			echo "<a href=\"MuCr_detailed_album.php?artist=" . urlencode($rand_album_artist) . "&type=" . urlencode($tag) . "&deluxe=" . $rand_album_deluxe . "&album=" . urlencode($rand_album_name) . "\">\n<div class=\"itemo\">\n<img src=\"" . $rand_album_image . "\" alt=\"artist\">\n</div>\n</a>";
 		}
 
 		return $all_rand_albums;

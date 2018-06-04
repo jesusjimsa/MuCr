@@ -72,7 +72,7 @@
 			<div class="orden">
 				<button class="especialized_back")>Sort by</button>
 				<button class="especialized" style="display:block;" onclick="writeClassification(1);">Music Style</button> <!-- 0 -->
-				<button class="especialized" style="display:block;" onclick="writeClassification(2);">Rarity</button> <!-- 1 -->
+				<a href="MuCr_collection.php?title=Deluxe"><button class="especialized" style="display:block;">Deluxe</button> <!-- 27 --></a>
 				<button class="especialized_back" style="display:none;" onclick="writeClassification(0);">Back</button>
 				<a href="MuCr_collection.php?title=All"><button class="especialized" style="display:none;">All</button> <!-- 2 --></a>
 				<a href="MuCr_collection.php?title=Alternative"><button class="especialized" style="display:none;">Alternative</button> <!-- 3 --></a>
@@ -99,9 +99,6 @@
 				<a href="MuCr_collection.php?title=Rcomencomeb"><button class="especialized" style="display:none;">R'n'B</button> <!-- 24 --></a>
 				<a href="MuCr_collection.php?title=Soundtrack"><button class="especialized" style="display:none;">Soundtrack</button> <!-- 25 --></a>
 				<a href="MuCr_collection.php?title=World"><button class="especialized" style="display:none;">World</button> <!-- 26 --></a>
-				<button class="especialized_back" style="display:none;" onclick="writeClassification(0);">Back</button>
-				<a href="MuCr_collection.php?title=Deluxe"><button class="especialized" style="display:none;">Deluxe</button> <!-- 27 --></a>
-				<a href="MuCr_collection.php?title=Not_Deluxe"><button class="especialized" style="display:none;">Not deluxe</button> <!-- 28 --></a>
 			</div>
 	</nav>
 
@@ -160,20 +157,28 @@
 							?>" alt="">
 
 			</div>
-			<div class="like_album">
-				<img src="
-				<?php
+			<form action="" method="POST">
+				<input type="hidden" name="album_name" value="<?php echo $albumA0->getTitulo();?>">
+				<input type="hidden" name="album_artist" value="<?php echo $albumA0->getArtista();?>">
+				<button type="image" name="like_button" value="like" class="like_album">
+					<img src="<?php
+								$titulo = $albumA0->getTitulo();
+								$artista = $albumA0->getArtista();
 
-						$titulo=$albumA0->getTitulo();
-						$artista=$albumA0->getArtista();
-						include 'php/connect_db.php';
-						$sql_query = "SELECT album_name,user_email FROM U_like_A WHERE '$email'=user_email and album_name='$titulo'";
-						$result = $conn->query($sql_query);
-						 if($result->num_rows==0){echo "img/icons/heart.png";}
-						 else{echo "img/icons/red_heart.png";}
+								include 'php/connect_db.php';
 
-				?>" alt="Like">
-			</div>
+								$sql_query = "SELECT album_name,user_email FROM U_like_A WHERE '$email' = user_email and album_name = '$titulo'";
+								$result = $conn->query($sql_query);
+
+								if($result->num_rows == 0){
+									echo "img/icons/heart.png";
+								}
+								else{
+									echo "img/icons/red_heart.png";
+								}
+							?>" alt="">
+				</button>
+			</form>
 
 			<div class="<?php $url = $_GET['deluxe'];if($url == 1){echo "titulo_especial";}else{echo "titulo_normal";} ?>">
 				<?php
@@ -190,117 +195,130 @@
 		</div>
 
 		<form action="" method="POST">
-			<input type="hidden" name="title" value="Rock">
 			<input type="hidden" name="album_name" value="<?php echo $albumA0->getTitulo();?>">
 			<input type="hidden" name="album_artist" value="<?php echo $albumA0->getArtista();?>">
 			<button type="image" name="add_button" value="add" class="add">
 				<img src="	<?php
-							$titulo=$albumA0->getTitulo();
-							$artista=$albumA0->getArtista();
-							include 'php/connect_db.php';
-							$sql_query = "SELECT album_name, user_email FROM U_listen_A WHERE '$email'=user_email and album_name='$titulo'";
-							$result = $conn->query($sql_query);
-							  if($result->num_rows==0){echo "img/icons/add.png"; $valor=true;}
-							  else{echo "img/icons/visto.png"; $valor=false;}
-					?>" alt="add">
-					<?php if($valor==true){
-										echo "Add album";;
-								}else{echo "added";}
-						 ?>
+								$titulo = $albumA0->getTitulo();
+								$artista = $albumA0->getArtista();
+
+								include 'php/connect_db.php';
+
+								$sql_query = "SELECT album_name, user_email FROM U_listen_A WHERE '$email' = user_email and album_name = '$titulo'";
+								$result = $conn->query($sql_query);
+
+								if($result->num_rows == 0){
+									echo "img/icons/add.png";
+									$valor = true;
+								}
+								else{
+									echo "img/icons/visto.png";
+									$valor = false;
+								}
+							?>"
+							alt="add">
+							<?php
+								if($valor == true){
+									echo "Add album";;
+								}
+								else{
+									echo "Added";
+								}
+						 	?>
 			</button>
 		</form>
 
 		<?php
-				$albumA1 = new album;
+			$albumA1 = new album;
+			$albumA1->createAlbumRand($artist1);
+
+			while($albumA1->IsEqual($albumA0)){
 				$albumA1->createAlbumRand($artist1);
+			}
 
-				while($albumA1->IsEqual($albumA0)){
-					$albumA1->createAlbumRand($artist1);
-				}
+			//echo $albumA1.getImage();
+			$albumA2 = new album;
+			$albumA2->createAlbumRand($artist1);
 
-				//echo $albumA1.getImage();
-				$albumA2 = new album;
+			while($albumA2->IsEqual($albumA0) || $albumA2->IsEqual($albumA1)){
 				$albumA2->createAlbumRand($artist1);
+			}
 
-				while($albumA2->IsEqual($albumA0) || $albumA2->IsEqual($albumA1)){
-					$albumA2->createAlbumRand($artist1);
-				}
+			//	echo $albumA2->getImage();
+			$albumA3 = new album;
+			$albumA3->createAlbumRand($artist1);
 
-				//	echo $albumA2->getImage();
-				$albumA3 = new album;
+			while($albumA3->IsEqual($albumA0) || $albumA3->IsEqual($albumA1) || $albumA3->IsEqual($albumA2)){
 				$albumA3->createAlbumRand($artist1);
+			}
 
-				while($albumA3->IsEqual($albumA0) || $albumA3->IsEqual($albumA1) || $albumA3->IsEqual($albumA2)){
-					$albumA3->createAlbumRand($artist1);
-				}
+			//echo $albumA3->getImage();
+			$albumA4 = new album;
+			$albumA4->createAlbumRand($artist1);
 
-				//echo $albumA3->getImage();
-				$albumA4 = new album;
+			while($albumA4->IsEqual($albumA0) || $albumA4->IsEqual($albumA1) || $albumA4->IsEqual($albumA2)|| $albumA4->IsEqual($albumA3)){
 				$albumA4->createAlbumRand($artist1);
+			}
 
-				while($albumA4->IsEqual($albumA0) || $albumA4->IsEqual($albumA1) || $albumA4->IsEqual($albumA2)|| $albumA4->IsEqual($albumA3)){
-					$albumA4->createAlbumRand($artist1);
-				}
+			//echo $albumA3->getImage();
+			$albumA5 = new album;
+			$albumA5->createAlbumRand($artist1);
 
-				//echo $albumA3->getImage();
-				$albumA5 = new album;
+			while($albumA5->IsEqual($albumA0) || $albumA5->IsEqual($albumA1) || $albumA5->IsEqual($albumA2)|| $albumA5->IsEqual($albumA3)|| $albumA5->IsEqual($albumA4)){
 				$albumA5->createAlbumRand($artist1);
+			}
 
-				while($albumA5->IsEqual($albumA0) || $albumA5->IsEqual($albumA1) || $albumA5->IsEqual($albumA2)|| $albumA5->IsEqual($albumA3)|| $albumA5->IsEqual($albumA4)){
-					$albumA5->createAlbumRand($artist1);
-				}
+			//echo $albumA3->getImage();
+			$albumA6 = new album;
+			$albumA6->createAlbumRand($artist1);
 
-				//echo $albumA3->getImage();
-				$albumA6 = new album;
+			while($albumA6->IsEqual($albumA0) || $albumA6->IsEqual($albumA1) || $albumA6->IsEqual($albumA2)|| $albumA6->IsEqual($albumA3)|| $albumA6->IsEqual($albumA4)|| $albumA6->IsEqual($albumA5)){
 				$albumA6->createAlbumRand($artist1);
+			}
 
-				while($albumA6->IsEqual($albumA0) || $albumA6->IsEqual($albumA1) || $albumA6->IsEqual($albumA2)|| $albumA6->IsEqual($albumA3)|| $albumA6->IsEqual($albumA4)|| $albumA6->IsEqual($albumA5)){
-					$albumA6->createAlbumRand($artist1);
-				}
+			//echo $albumA3->getImage();
+			$albumA7 = new album;
+			$albumA7->createAlbumRand($artist1);
 
-				//echo $albumA3->getImage();
-				$albumA7 = new album;
+			while($albumA7->IsEqual($albumA0) || $albumA7->IsEqual($albumA1) || $albumA7->IsEqual($albumA2)|| $albumA7->IsEqual($albumA3)|| $albumA7->IsEqual($albumA4)|| $albumA7->IsEqual($albumA5)|| $albumA7->IsEqual($albumA6)){
 				$albumA7->createAlbumRand($artist1);
+			}
 
-				while($albumA7->IsEqual($albumA0) || $albumA7->IsEqual($albumA1) || $albumA7->IsEqual($albumA2)|| $albumA7->IsEqual($albumA3)|| $albumA7->IsEqual($albumA4)|| $albumA7->IsEqual($albumA5)|| $albumA7->IsEqual($albumA6)){
-					$albumA7->createAlbumRand($artist1);
-				}
-
-				//echo $albumA3->getImage();
+			//echo $albumA3->getImage();
 		 ?>
 
 		<div class="recocollect">
-			<a href="MuCr_detailed_album.php?artist=<?php echo $albumA1->getArtista(); ?>&type=<?php $url = $_GET['type']; echo $url;?>&deluxe=<?php echo $albumA1->getdeluxe(); ?>&album=<?php echo $albumA1->getTitulo(); ?>">
+			<a href="MuCr_detailed_album.php?artist=<?php echo $albumA1->getArtista(); ?>&type=<?php $url = $_GET['type']; echo $url;?>&deluxe=<?php echo $albumA1->getDeluxe(); ?>&album=<?php echo $albumA1->getTitulo(); ?>">
 				<div class="albumlist">
 					<img src="<?php echo $albumA1->getImage();?>" alt="">
 				</div>
 			</a>
-			<a href="MuCr_detailed_album.php?artist=<?php echo $albumA2->getArtista(); ?>&type=<?php $url = $_GET['type']; echo $url;?>&deluxe=<?php echo $albumA2->getdeluxe(); ?>&album=<?php echo $albumA2->getTitulo(); ?>">
+			<a href="MuCr_detailed_album.php?artist=<?php echo $albumA2->getArtista(); ?>&type=<?php $url = $_GET['type']; echo $url;?>&deluxe=<?php echo $albumA2->getDeluxe(); ?>&album=<?php echo $albumA2->getTitulo(); ?>">
 				<div class="albumlist">
 					<img src="<?php echo $albumA2->getImage();?>" alt="">
 				</div>
 			</a>
-			<a href="MuCr_detailed_album.php?artist=<?php echo $albumA3->getArtista(); ?>&type=<?php $url = $_GET['type']; echo $url;?>&deluxe=<?php echo $albumA3->getdeluxe(); ?>&album=<?php echo $albumA3->getTitulo(); ?>">
+			<a href="MuCr_detailed_album.php?artist=<?php echo $albumA3->getArtista(); ?>&type=<?php $url = $_GET['type']; echo $url;?>&deluxe=<?php echo $albumA3->getDeluxe(); ?>&album=<?php echo $albumA3->getTitulo(); ?>">
 				<div class="albumlist">
 					<img src="<?php echo $albumA3->getImage();?>" alt="">
 				</div>
 			</a>
-			<a href="MuCr_detailed_album.php?artist=<?php echo $albumA4->getArtista(); ?>&type=<?php $url = $_GET['type']; echo $url;?>&deluxe=<?php echo $albumA4->getdeluxe(); ?>&album=<?php echo $albumA4->getTitulo(); ?>">
+			<a href="MuCr_detailed_album.php?artist=<?php echo $albumA4->getArtista(); ?>&type=<?php $url = $_GET['type']; echo $url;?>&deluxe=<?php echo $albumA4->getDeluxe(); ?>&album=<?php echo $albumA4->getTitulo(); ?>">
 				<div class="albumlist">
 					<img src="<?php echo $albumA4->getImage();?>" alt="">
 				</div>
 			</a>
-			<a href="MuCr_detailed_album.php?artist=<?php echo $albumA5->getArtista(); ?>&type=<?php $url = $_GET['type']; echo $url;?>&deluxe=<?php echo $albumA5->getdeluxe(); ?>&album=<?php echo $albumA5->getTitulo(); ?>">
+			<a href="MuCr_detailed_album.php?artist=<?php echo $albumA5->getArtista(); ?>&type=<?php $url = $_GET['type']; echo $url;?>&deluxe=<?php echo $albumA5->getDeluxe(); ?>&album=<?php echo $albumA5->getTitulo(); ?>">
 				<div class="albumlist">
 					<img src="<?php echo $albumA5->getImage();?>" alt="">
 				</div>
 			</a>
-			<a href="MuCr_detailed_album.php?artist=<?php echo $albumA6->getArtista(); ?>&type=<?php $url = $_GET['type']; echo $url;?>&deluxe=<?php echo $albumA6->getdeluxe(); ?>&album=<?php echo $albumA6->getTitulo(); ?>">
+			<a href="MuCr_detailed_album.php?artist=<?php echo $albumA6->getArtista(); ?>&type=<?php $url = $_GET['type']; echo $url;?>&deluxe=<?php echo $albumA6->getDeluxe(); ?>&album=<?php echo $albumA6->getTitulo(); ?>">
 				<div class="albumlist">
 					<img src="<?php echo $albumA6->getImage();?>" alt="">
 				</div>
 			</a>
-			<a href="MuCr_detailed_album.php?artist=<?php echo $albumA7->getArtista(); ?>&type=<?php $url = $_GET['type']; echo $url;?>&deluxe=<?php echo $albumA7->getdeluxe(); ?>&album=<?php echo $albumA7->getTitulo(); ?>">
+			<a href="MuCr_detailed_album.php?artist=<?php echo $albumA7->getArtista(); ?>&type=<?php $url = $_GET['type']; echo $url;?>&deluxe=<?php echo $albumA7->getDeluxe(); ?>&album=<?php echo $albumA7->getTitulo(); ?>">
 				<div class="albumlist">
 					<img src="<?php echo $albumA7->getImage();?>" alt="">
 				</div>
@@ -308,49 +326,49 @@
 		</div>
 
 		<div class="name_list">
-			<a href="MuCr_detailed_album.php?artist=<?php echo $albumA1->getArtista(); ?>&type=<?php $url = $_GET['type']; echo $url;?>&deluxe=<?php echo $albumA1->getdeluxe(); ?>&album=<?php echo $albumA1->getTitulo(); ?>">
+			<a href="MuCr_detailed_album.php?artist=<?php echo $albumA1->getArtista(); ?>&type=<?php $url = $_GET['type']; echo $url;?>&deluxe=<?php echo $albumA1->getDeluxe(); ?>&album=<?php echo $albumA1->getTitulo(); ?>">
 				<div class="related_name">
 					<?php
 						$albumA1->showTitle();
 					?>
 				</div>
 			</a>
-			<a href="MuCr_detailed_album.php?artist=<?php echo $albumA2->getArtista(); ?>&type=<?php $url = $_GET['type']; echo $url;?>&deluxe=<?php echo $albumA2->getdeluxe(); ?>&album=<?php echo $albumA2->getTitulo(); ?>">
+			<a href="MuCr_detailed_album.php?artist=<?php echo $albumA2->getArtista(); ?>&type=<?php $url = $_GET['type']; echo $url;?>&deluxe=<?php echo $albumA2->getDeluxe(); ?>&album=<?php echo $albumA2->getTitulo(); ?>">
 				<div class="related_name">
 					<?php
 						$albumA2->showTitle();
 					?>
 				</div>
 			</a>
-			<a href="MuCr_detailed_album.php?artist=<?php echo $albumA3->getArtista(); ?>&type=<?php $url = $_GET['type']; echo $url;?>&deluxe=<?php echo $albumA3->getdeluxe(); ?>&album=<?php echo $albumA3->getTitulo(); ?>">
+			<a href="MuCr_detailed_album.php?artist=<?php echo $albumA3->getArtista(); ?>&type=<?php $url = $_GET['type']; echo $url;?>&deluxe=<?php echo $albumA3->getDeluxe(); ?>&album=<?php echo $albumA3->getTitulo(); ?>">
 				<div class="related_name">
 					<?php
 						$albumA3->showTitle();
 					?>
 				</div>
 			</a>
-			<a href="MuCr_detailed_album.php?artist=<?php echo $albumA4->getArtista(); ?>&type=<?php $url = $_GET['type']; echo $url;?>&deluxe=<?php echo $albumA4->getdeluxe(); ?>&album=<?php echo $albumA4->getTitulo(); ?>">
+			<a href="MuCr_detailed_album.php?artist=<?php echo $albumA4->getArtista(); ?>&type=<?php $url = $_GET['type']; echo $url;?>&deluxe=<?php echo $albumA4->getDeluxe(); ?>&album=<?php echo $albumA4->getTitulo(); ?>">
 				<div class="related_name">
 					<?php
 						$albumA4->showTitle();
 					?>
 				</div>
 			</a>
-			<a href="MuCr_detailed_album.php?artist=<?php echo $albumA5->getArtista(); ?>&type=<?php $url = $_GET['type']; echo $url;?>&deluxe=<?php echo $albumA5->getdeluxe(); ?>&album=<?php echo $albumA5->getTitulo(); ?>">
+			<a href="MuCr_detailed_album.php?artist=<?php echo $albumA5->getArtista(); ?>&type=<?php $url = $_GET['type']; echo $url;?>&deluxe=<?php echo $albumA5->getDeluxe(); ?>&album=<?php echo $albumA5->getTitulo(); ?>">
 				<div class="related_name">
 					<?php
 						$albumA5->showTitle();
 					?>
 				</div>
 			</a>
-			<a href="MuCr_detailed_album.php?artist=<?php echo $albumA6->getArtista(); ?>&type=<?php $url = $_GET['type']; echo $url;?>&deluxe=<?php echo $albumA6->getdeluxe(); ?>&album=<?php echo urlencode($albumA6->getTitulo()); ?>">
+			<a href="MuCr_detailed_album.php?artist=<?php echo $albumA6->getArtista(); ?>&type=<?php $url = $_GET['type']; echo $url;?>&deluxe=<?php echo $albumA6->getDeluxe(); ?>&album=<?php echo urlencode($albumA6->getTitulo()); ?>">
 				<div class="related_name">
 					<?php
 						$albumA6->showTitle();
 					?>
 				</div>
 			</a>
-			<a href="MuCr_detailed_album.php?artist=<?php echo $albumA7->getArtista(); ?>&type=<?php $url = $_GET['type']; echo $url;?>&deluxe=<?php echo $albumA7->getdeluxe(); ?>&album=<?php echo urlencode($albumA7->getTitulo()); ?>">
+			<a href="MuCr_detailed_album.php?artist=<?php echo $albumA7->getArtista(); ?>&type=<?php $url = $_GET['type']; echo $url;?>&deluxe=<?php echo $albumA7->getDeluxe(); ?>&album=<?php echo urlencode($albumA7->getTitulo()); ?>">
 				<div class="related_name">
 					<?php
 						$albumA7->showTitle();
@@ -373,13 +391,13 @@
 		$conn->query($sql_add_album_user);
 	}
 
-	if(isset($_POST['delete_button'])){
+	if (isset($_POST['like_button'])){
 		include 'php/connect_db.php';
 		$email = $_COOKIE['email'];
 		$album_name = $_POST['album_name'];
 		$album_artist = $_POST['album_artist'];
 
-		$sql_delete_album_user = "DELETE FROM U_listen_A WHERE '$email' = email, '$album_name' = album_name, '$album_artist' = album_artist";
-		$conn->query($sql_delete_album_user);
+		$sql_like_album_user = "INSERT INTO U_like_A(user_email, album_name, album_artist) VALUES ('$email', '$album_name', '$album_artist')";
+		$conn->query($sql_like_album_user);
 	}
 ?>
