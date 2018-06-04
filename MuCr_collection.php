@@ -138,9 +138,3 @@
 </body>
 
 </html>
-
-<?php
-	function addAlbumDB(){
-		
-	}
-?>

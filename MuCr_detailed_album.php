@@ -111,6 +111,16 @@
 		</nav>
 	</a>
 
+	<form action="" method="POST">
+		<input type="hidden" name="title" value="Rock">
+		<input type="hidden" name="album_name" value="The Beatles">
+		<input type="hidden" name="album_artist" value="The Beatles">
+		<button type="image" name="add_button" value="add" class="add">
+			<img src="img/icons/add.png" alt="add">
+			Add album
+		</button>
+	</form>
+
 	<div class="genre">
 		<?php
 			$artist1 = $_GET['artist'];
@@ -122,31 +132,30 @@
 	</div>
 
 	<a href="
-		<?php
-			$url = $_GET['type'];
-			if($url == 'main'){
-				echo "MuCr_main.php";
-			}
-			else{
-				echo "MuCr_collection.php?title=$url";
-			}
-		?>">
-	>
-	<button class="gotostyle">
-		<div class="simbolo">
-			<img src="img/icons/arrow.png">
-		</div>
-		<div class="tituloatras">go to
-			<?php
-				$url = $_GET['type'];
-				$url = str_replace("_"," ",$url);
-				$url = str_replace("come","'",$url);
+				<?php
+					$url = $_GET['type'];
+					if($url == 'main'){
+						echo "MuCr_main.php";
+					}
+					else{
+						echo "MuCr_collection.php?title=$url";
+					}
+				?>">
+			<button class="gotostyle">
+				<div class="simbolo">
+					<img src="img/icons/arrow.png">
+				</div>
+				<div class="tituloatras">go to
+					<?php
+						$url = $_GET['type'];
+						$url = str_replace("_"," ",$url);
+						$url = str_replace("come","'",$url);
 
-				echo $url;
-			?>
-		</div>
-	</button>
-</a>
+						echo $url;
+					?>
+				</div>
+			</button>
+		</a>
 		<div class="seleccionado">
 			<?php
 				$album_name = $_GET['album'];
@@ -330,3 +339,15 @@
 </body>
 
 </html>
+
+<?php
+	if (isset($_POST['add_button'])){
+		include 'php/connect_db.php';
+		$email = $_COOKIE['email'];
+		$album_name = $_POST['album_name'];
+		$album_artist = $_POST['album_artist'];
+	
+		$sql_add_album_user = "INSERT INTO U_listen_A(user_email, album_name, album_artist) VALUES ('$email', '$album_name', '$album_artist')";
+		$conn->query($sql_add_album_user);
+	}
+?>
