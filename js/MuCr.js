@@ -230,10 +230,15 @@ function opencountries(continent) {
 function changeImageLike() {
 	if (document.getElementById("likke").src != "img/icons/red_heart.png") {
 		document.getElementById("likke").src = "img/icons/heart.png";
-		
-		
+
+
 	}
 	else {
 		document.getElementById("likke").src = "img/icons/red_heart.png";console.log("hola");
 	}
+}
+
+
+function refreshdiv() {
+	$("#mimagen1").load("index.html")
 }
