@@ -1425,6 +1425,18 @@ border-radius: 5vmin 0vmin 0px 0vmin;
 	background-color: rgba(77, 77, 77, 0.50);
 }
 
+.grid-container .itemo .add{
+	height: 15%;
+	width:15%;
+	/* position: absolute;
+	right: 82%;
+	bottom: 83%; */
+	/* cursor: pointer;
+	opacity: 0;
+	background-color: rgba(77, 77, 77, 0.50);
+	z-index: 1; */
+}
+
 .grid-container .itemo .add img{
 	height: 15%;
 	width:15%;
