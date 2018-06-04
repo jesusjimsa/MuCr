@@ -108,7 +108,27 @@
 	</a>
 
 	<div class="autor">
-		<img src="img/covers/pop/coldplay.jpg" alt="artist_principal">
+		<img src="
+			<?php
+			$api_file = fopen("API_KEY.txt", "r");
+				$API_KEY = fread($api_file, filesize("API_KEY.txt"));
+			fclose($api_file);
+			$artista=$_GET['artist'];
+
+			$imagenes="http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=".$artista."&api_key=".$API_KEY."&format=json";
+
+			$ch = curl_init();
+			curl_setopt($ch, CURLOPT_URL, $imagenes);
+			curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+			curl_setopt($ch, CURLOPT_USERAGENT, 'CdBase');
+
+			$response = curl_exec($ch);
+			curl_close($ch);
+			$response = json_decode($response, JSON_FORCE_OBJECT);
+
+			echo $response['artist']['image'][3]['#text'];
+
+			?>" alt="artist_principal">
 	</div>
 	<div class="name">
 		<?php
@@ -922,7 +942,30 @@
 			<div class="hora">
 				<div class="nombre">MADRID</div>
 				<div class="imagen">
-					<img src="img/ciudades/madrid.jpg" alt="ciudades">
+					<img src="
+					<?php
+					$api_file2 = fopen("API_KEY_Imagenes.txt", "r");
+						$API_KEY2 = fread($api_file2, filesize("API_KEY_Imagenes.txt"));
+					fclose($api_file2);
+					$ciudad="Madrid";
+					$pais="Spain";
+
+
+					$imagenes="https://pixabay.com/api/?key=".$API_KEY2."&q=".$ciudad."+".$pais."&image_type=photo&pretty=true&format=json";
+
+					$ch = curl_init();
+					curl_setopt($ch, CURLOPT_URL, $imagenes);
+					curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+					curl_setopt($ch, CURLOPT_USERAGENT, 'CdBase');
+
+					$response = curl_exec($ch);
+					curl_close($ch);
+					$response = json_decode($response, JSON_FORCE_OBJECT);
+
+					echo $response['hits'][0]['largeImageURL'];
+
+					?>
+					" alt="ciudades">
 				</div>
 				<div class="time">11-1-2001</div>
 				<div class="price">80$</div>
