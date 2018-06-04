@@ -111,16 +111,6 @@
 		</nav>
 	</a>
 
-	<form action="" method="POST">
-		<input type="hidden" name="title" value="Rock">
-		<input type="hidden" name="album_name" value="The Beatles">
-		<input type="hidden" name="album_artist" value="The Beatles">
-		<button type="image" name="add_button" value="add" class="add">
-			<img src="img/icons/add.png" alt="add">
-			Add album
-		</button>
-	</form>
-
 	<div class="genre">
 		<?php
 			$artist1 = $_GET['artist'];
@@ -187,6 +177,15 @@
 				?>
 			</div>
 		</div>
+
+		<form action="" method="POST">
+			<input type="hidden" name="title" value="Rock">
+			<input type="hidden" name="album_name" value="<?php echo $albumA0->getTitulo();?>">
+			<input type="hidden" name="album_artist" value="<?php echo $albumA0->getArtista();?>">
+			<?php
+				$albumA0->isAdded();
+			?>
+		</form>
 
 		<?php
 				$albumA1 = new album;
@@ -349,5 +348,15 @@
 	
 		$sql_add_album_user = "INSERT INTO U_listen_A(user_email, album_name, album_artist) VALUES ('$email', '$album_name', '$album_artist')";
 		$conn->query($sql_add_album_user);
+	}
+
+	if(isset($_POST['delete_button'])){
+		include 'php/connect_db.php';
+		$email = $_COOKIE['email'];
+		$album_name = $_POST['album_name'];
+		$album_artist = $_POST['album_artist'];
+	
+		$sql_delete_album_user = "DELETE FROM U_listen_A WHERE '$email' = email, '$album_name' = album_name, '$album_artist' = album_artist";
+		$conn->query($sql_delete_album_user);
 	}
 ?>
