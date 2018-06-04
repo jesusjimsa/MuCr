@@ -49,3 +49,5 @@
 
 <!-- <div class=\"type\">Vinyl</div>\n -->
 <!-- <div class=\"add\"><form action=\"<?php addAlbumDB();?>\">\n<input type=\"hidden\" value=" . $rand_album_name . ">\n<input type=\"hidden\" value=" . $rand_album_artist . ">\n<input class=\"img\" type=\"image\" src=\"images/login.jpg\" alt=\"add\"/>\n</form></div> -->
+
+<button type="submit" name="profile_picture" value="img/user/1.png" class="image_user"><img src="img/user/1.png" alt="1"></button>
