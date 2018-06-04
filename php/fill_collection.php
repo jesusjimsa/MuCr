@@ -44,7 +44,7 @@
                 $rand_album_deluxe = "1";	// 1 = true
 			}
 			else{
-				$rand_album_deluxe = "false";
+				$rand_album_deluxe = "0";	// 0 = false
 			}
 
 			echo "<a href=\"MuCr_detailed_album.php?artist=" . urlencode($rand_album_artist) . "&type=" . urlencode($tag) . "&deluxe=" . $rand_album_deluxe . "&album=" . urlencode($rand_album_name) . "\">\n<div class=\"itemo\">\n<img src=\"" . $rand_album_image . "\" alt=\"artist\">\n</div>\n</a>";

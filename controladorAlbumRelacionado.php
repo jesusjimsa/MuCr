@@ -35,9 +35,11 @@ class album{
 	public function getType(){
 			return $this->type;
 	}
+	
 	public function getGenres(){
 			return $this->genres;
 	}
+
 	public function getYear(){
 		return $this->year;
 	}
