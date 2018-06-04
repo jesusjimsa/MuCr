@@ -193,9 +193,10 @@
 			<input type="hidden" name="title" value="Rock">
 			<input type="hidden" name="album_name" value="<?php echo $albumA0->getTitulo();?>">
 			<input type="hidden" name="album_artist" value="<?php echo $albumA0->getArtista();?>">
-			<?php
-				$albumA0->isAdded();
-			?>
+			<button type="image" name="add_button" value="add" class="add">
+				<img src="img/icons/add.png" alt="add">
+				Add album
+			</button>
 		</form>
 
 		<?php
