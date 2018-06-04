@@ -109,15 +109,18 @@
 	<div class="contenedor">
 		<?php
 			include 'listController.php';
-			
+
 			$added = array();
 		?>
 
 		<div class="fila">
+			<?php
+				$lista1 = new lista("recomendations", $added, $email);
+			?>
 			<div class="title">Recomendations</div>
 			<div class="row_main">
 				<div class="recom1">
-					<img src="img/covers/Jazz/Best.jpg" alt="Album cover">
+					<img src="<?php echo ($lista1->getAlbumV1())->getImage();?>" alt="Album cover">
 					<div class="close">
 						<img src="img/icons/close.png" alt="close">
 					</div>
@@ -129,7 +132,7 @@
 					</div>
 				</div>
 				<div class="recom1">
-					<img src="img/covers/Jazz/Best.jpg" alt="Album cover">
+					<img src="<?php echo ($lista1->getAlbumV2())->getImage();?>" alt="Album cover">
 					<div class="close">
 						<img src="img/icons/close.png" alt="close">
 					</div>
@@ -141,7 +144,7 @@
 					</div>
 				</div>
 				<div class="recom1">
-					<img src="img/covers/Jazz/Best.jpg" alt="Album cover">
+					<img src="<?php echo ($lista1->getAlbumV3())->getImage();?>" alt="Album cover">
 					<div class="close">
 						<img src="img/icons/close.png" alt="close">
 					</div>
@@ -153,7 +156,7 @@
 					</div>
 				</div>
 				<div class="recom1">
-					<img src="img/covers/Jazz/Best.jpg" alt="Album cover">
+					<img src="<?php echo ($lista1->getAlbumV4())->getImage();?>" alt="Album cover">
 					<div class="close">
 						<img src="img/icons/close.png" alt="close">
 					</div>
@@ -165,7 +168,7 @@
 					</div>
 				</div>
 				<div class="recom1">
-					<img src="img/covers/Jazz/Illusion.jpg" alt="Album cover">
+					<img src="<?php echo ($lista1->getAlbumV5())->getImage();?>" alt="Album cover">
 					<div class="close">
 						<img src="img/icons/close.png" alt="close">
 					</div>
@@ -177,7 +180,7 @@
 					</div>
 				</div>
 				<div class="recom1">
-					<img src="img/covers/Jazz/Joy.jpg" alt="Album cover">
+					<img src="<?php echo ($lista1->getAlbumV6())->getImage();?>" alt="Album cover">
 					<div class="close">
 						<img src="img/icons/close.png" alt="close">
 					</div>
@@ -189,7 +192,7 @@
 					</div>
 				</div>
 				<div class="recom1">
-					<img src="img/covers/Jazz/Krall.jpg" alt="Album cover">
+					<img src="<?php echo ($lista1->getAlbumV7())->getImage();?>" alt="Album cover">
 					<div class="close">
 						<img src="img/icons/close.png" alt="close">
 					</div>

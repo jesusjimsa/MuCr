@@ -1,6 +1,7 @@
 <?php
 include 'controladorAlbumRelacionado.php';
 error_reporting(E_ERROR);
+ini_set('max_execution_time', 300);
 class lista{
     public $topico1 = "";
     public $topico2 = "";
@@ -147,7 +148,7 @@ class lista{
                 else {
                     $mytag = substr($this->topico2, 0, strpos($this->topico2, "-"));
                     $i = 50;
-                    
+
                     $albumseleccionado = $albumseleccionado->createAlbumRandByTag($mytag);
                     $titulo_seleccionado = ($albumseleccionado)->getTitulo();
                 }
@@ -181,13 +182,13 @@ class lista{
 
         if ($construction == "recommendations") {
             $this->topico1 = $this->topico2 = "recomendations";
-            $this->searchrecommendations($this->albumV1,$added, $user);
-            $this->searchrecommendations($this->albumV2,$added, $user);
-            $this->searchrecommendations($this->albumV3,$added, $user);
-            $this->searchrecommendations($this->albumV4,$added, $user);
-            $this->searchrecommendations($this->albumV5,$added, $user);
-            $this->searchrecommendations($this->albumV6,$added, $user);
-            $this->searchrecommendations($this->albumV7,$added, $user);
+            while($this->albumV1->getImage()==NULL)$this->searchrecommendations($this->albumV1,$added, $user);
+            while($this->albumV2->getImage()==NULL)$this->searchrecommendations($this->albumV2,$added, $user);
+            while($this->albumV3->getImage()==NULL)$this->searchrecommendations($this->albumV3,$added, $user);
+            while($this->albumV4->getImage()==NULL)$this->searchrecommendations($this->albumV4,$added, $user);
+            while($this->albumV5->getImage()==NULL)$this->searchrecommendations($this->albumV5,$added, $user);
+            while($this->albumV6->getImage()==NULL)$this->searchrecommendations($this->albumV6,$added, $user);
+            while($this->albumV7->getImage()==NULL)$this->searchrecommendations($this->albumV7,$added, $user);
 
 		}
 		else {
@@ -195,25 +196,25 @@ class lista{
                 $this->topico1 = "foryou";
                 $this->topico2 = $this->searchtopic2($user);
 
-                $this->crearlstaB($this->albumV1, $added, $user);
-                $this->crearlstaB($this->albumV2, $added, $user);
-                $this->crearlstaB($this->albumV3, $added, $user);
-                $this->crearlstaB($this->albumV4, $added, $user);
-                $this->crearlstaB($this->albumV5, $added, $user);
-                $this->crearlstaB($this->albumV6, $added, $user);
-                $this->crearlstaB($this->albumV7, $added, $user);
+                while($this->albumV1->getImage()==NULL)$this->crearlstaB($this->albumV1, $added, $user);
+                while($this->albumV2->getImage()==NULL)$this->crearlstaB($this->albumV2, $added, $user);
+                while($this->albumV3->getImage()==NULL)$this->crearlstaB($this->albumV3, $added, $user);
+                while($this->albumV4->getImage()==NULL)$this->crearlstaB($this->albumV4, $added, $user);
+                while($this->albumV5->getImage()==NULL)$this->crearlstaB($this->albumV5, $added, $user);
+                while($this->albumV6->getImage()==NULL)$this->crearlstaB($this->albumV6, $added, $user);
+                while($this->albumV7->getImage()==NULL)$this->crearlstaB($this->albumV7, $added, $user);
 			}
 			else {
                 $this->topico1 = "artistvalored";
                 $this->topico2 = $this->searchtopic3($user);
 
-                $this->crearlstaB($this->albumV1, $added, $user);
-                $this->crearlstaB($this->albumV2, $added, $user);
-                $this->crearlstaB($this->albumV3, $added, $user);
-                $this->crearlstaB($this->albumV4, $added, $user);
-                $this->crearlstaB($this->albumV5, $added, $user);
-                $this->crearlstaB($this->albumV6, $added, $user);
-                $this->crearlstaB($this->albumV7, $added, $user);
+                while($this->albumV1->getImage()==NULL)$this->crearlstaB($this->albumV1, $added, $user);
+                while($this->albumV2->getImage()==NULL)$this->crearlstaB($this->albumV2, $added, $user);
+                while($this->albumV3->getImage()==NULL)$this->crearlstaB($this->albumV3, $added, $user);
+                while($this->albumV4->getImage()==NULL)$this->crearlstaB($this->albumV4, $added, $user);
+                while($this->albumV5->getImage()==NULL)$this->crearlstaB($this->albumV5, $added, $user);
+                while($this->albumV6->getImage()==NULL)$this->crearlstaB($this->albumV6, $added, $user);
+                while($this->albumV7->getImage()==NULL)$this->crearlstaB($this->albumV7, $added, $user);
             }
         }
     }
