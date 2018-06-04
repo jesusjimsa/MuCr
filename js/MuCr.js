@@ -234,11 +234,6 @@ function changeImageLike() {
 
 	}
 	else {
-		document.getElementById("likke").src = "img/icons/red_heart.png";console.log("hola");
+		document.getElementById("likke").src = "img/icons/red_heart.png"; console.log("hola");
 	}
-}
-
-
-function refreshdiv() {
-	$("#mimagen1").load("index.html")
 }
