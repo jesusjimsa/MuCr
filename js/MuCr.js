@@ -105,20 +105,6 @@ function writeClassification(option) {
 			document.getElementsByClassName("especialized")[i].style.display = "block";
 		}
 	}
-
-	// Show ratity classification
-	if (option == 2) {
-		document.getElementsByClassName("especialized_back")[2].style.display = "block";
-		document.getElementsByClassName("especialized_back")[0].style.display = "none";
-
-		for (var i = 0; i < 2; i++) {
-			document.getElementsByClassName("especialized")[i].style.display = "none";
-		}
-
-		for (var i = 27; i < 29; i++) {
-			document.getElementsByClassName("especialized")[i].style.display = "block";
-		}
-	}
 }
 
 function closeALL() {

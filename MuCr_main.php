@@ -66,7 +66,7 @@
 			<div class="orden">
 				<button class="especialized_back")>Sort by</button>
 				<button class="especialized" style="display:block;" onclick="writeClassification(1);">Music Style</button> <!-- 0 -->
-				<button class="especialized" style="display:block;" onclick="writeClassification(2);">Rarity</button> <!-- 1 -->
+				<a href="MuCr_collection.php?title=Deluxe"><button class="especialized" style="display:block;">Deluxe</button> <!-- 27 --></a>
 				<button class="especialized_back" style="display:none;" onclick="writeClassification(0);">Back</button>
 				<a href="MuCr_collection.php?title=All"><button class="especialized" style="display:none;">All</button> <!-- 2 --></a>
 				<a href="MuCr_collection.php?title=Alternative"><button class="especialized" style="display:none;">Alternative</button> <!-- 3 --></a>
@@ -93,9 +93,6 @@
 				<a href="MuCr_collection.php?title=Rcomencomeb"><button class="especialized" style="display:none;">R'n'B</button> <!-- 24 --></a>
 				<a href="MuCr_collection.php?title=Soundtrack"><button class="especialized" style="display:none;">Soundtrack</button> <!-- 25 --></a>
 				<a href="MuCr_collection.php?title=World"><button class="especialized" style="display:none;">World</button> <!-- 26 --></a>
-				<button class="especialized_back" style="display:none;" onclick="writeClassification(0);">Back</button>
-				<a href="MuCr_collection.php?title=Deluxe"><button class="especialized" style="display:none;">Deluxe</button> <!-- 27 --></a>
-				<a href="MuCr_collection.php?title=Not_Deluxe"><button class="especialized" style="display:none;">Not deluxe</button> <!-- 28 --></a>
 			</div>
 		</div>
 	</nav>
