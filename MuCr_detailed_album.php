@@ -99,6 +99,12 @@
 				<a href="MuCr_collection.php?title=Rcomencomeb"><button class="especialized" style="display:none;">R'n'B</button> <!-- 24 --></a>
 				<a href="MuCr_collection.php?title=Soundtrack"><button class="especialized" style="display:none;">Soundtrack</button> <!-- 25 --></a>
 				<a href="MuCr_collection.php?title=World"><button class="especialized" style="display:none;">World</button> <!-- 26 --></a>
+				
+				<form action="php/search_by_artist.php" class="search_artist" method="POST">
+					<input type="text" value="Search by artist" name="artist_search" onfocus="if (this.value=='Search by artist') this.value='';"
+					onblur="if (this.value == '') this.value = 'Search by artist';" class="search_artist_box">
+					<input type="submit" name="search_artist" value="Go" class="search_artist_button">
+				</form>
 			</div>
 	</nav>
 

@@ -100,12 +100,10 @@
 				<a href="MuCr_collection.php?title=World"><button class="especialized" style="display:none;">World</button> <!-- 26 --></a>
 			</div>
 
-			<form action="" class="search_artist">
+			<form action="php/search_by_artist.php" class="search_artist" method="POST">
 				<input type="text" value="Search by artist" name="artist_search" onfocus="if (this.value=='Search by artist') this.value='';"
 				 onblur="if (this.value == '') this.value = 'Search by artist';" class="search_artist_box">
-				<button type="image" name="search_artist" class="search_artist_button">
-					Go
-				</button>
+				<input type="submit" name="search_artist" value="Go" class="search_artist_button">
 			</form>
 	</nav>
 
