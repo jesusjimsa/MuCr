@@ -132,32 +132,31 @@
 			?>
 		</div>
 		<div class="container">
-		<?php
-			include 'php/fill_albums.php';
+			<?php
+				include 'php/fill_albums.php';
 
-			fillMyAlbumsAndLikes();
-		?>
+				fillMyAlbumsAndLikes($_GET["mylist"]);
+			?>
 		</div>
 
 	</div>
-  <div class="grid-container_album_artista">
-	<div class="especific">
-		<?php
-			if($_GET["mylist"] == "seen"){
-				echo "My artists";
-			}
-			else{
-				echo "Liked artists";
-			}
-		?>
+	<div class="grid-container_album_artista">
+		<div class="especific">
+			<?php
+				if($_GET["mylist"] == "seen"){
+					echo "My artists";
+				}
+				else{
+					echo "Liked artists";
+				}
+			?>
+		</div>
+		<div class="container">
+			<?php
+				fillMyArtists($_GET["mylist"]);
+			?>
+		</div>
 	</div>
-	<div class="container">
-	  <div class="elem"></div>
-	  <div class="elem"></div>
-	  <div class="elem"></div>
-	  <div class="elem"></div>
-	</div>
-  </div>
 </body>
 
 </html>

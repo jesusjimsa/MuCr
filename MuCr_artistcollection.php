@@ -168,11 +168,11 @@
 			$response = json_decode($response, JSON_FORCE_OBJECT);
 
 			$respuesta = $response['artist']['bio']['summary'];
-			if(strpos($respuesta,"incorrect tag") == False){
+			if(strpos($respuesta, "incorrect tag") == False){
 				echo $respuesta;
 			}
 			else{
-				echo "There is not Bio yet, it is implementing ";
+				echo "There is not Bio yet, it is implementing";
 			}
 		?>
 	</div>
