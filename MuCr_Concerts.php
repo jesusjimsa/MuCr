@@ -114,6 +114,8 @@
 				$API_KEY = fread($api_file, filesize("API_KEY.txt"));
 			fclose($api_file);
 			$artista=$_GET['artist'];
+			$artista=str_replace(" ","+",$artista);
+			$artista=str_replace("_","+",$artista);
 
 			$imagenes="http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=".$artista."&api_key=".$API_KEY."&format=json";
 
