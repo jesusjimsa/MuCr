@@ -21,8 +21,8 @@
 
 		$num_albums = count($top_albums_artist);
 
-		if($num_albums > 50){
-			$num_albums = 50;	// If there are more than 50 albums, we'll show just the first 50
+		if($num_albums > 42){
+			$num_albums = 42;	// If there are more than 42 albums, we'll show just the first 42
 		}
 
 		for($i = 0; $i < $num_albums; $i++){
@@ -36,7 +36,7 @@
 
 			$album_deluxe = $album->isDeluxe($album_name);
 
-			echo "<a href=\"MuCr_detailed_album.php?artist=" . urlencode($artist_name) . "&type=All&deluxe=" . $album_deluxe . "&album=" . urlencode($album_name) . "\">\n<div class=\"itemo\">\n<img src=\"" . $album_image . "\" alt=\"artist\">\n</div>\n</a>";
+			echo "<a href=\"MuCr_detailed_album.php?artist=" . urlencode($artist_name) . "&type=All&deluxe=" . $album_deluxe . "&album=" . urlencode($album_name) . "\">\n<div class=\"itemo\">\n<img src=\"" . $album_image . "\" alt=\"album cover\">\n</div>\n</a>";
 		}
 	}
 ?>
