@@ -92,13 +92,19 @@
 		return $all_rand_albums;
 	}
 
-	function fillMyAlbumsAndLikes(){
+	function fillMyAlbumsAndLikes($option){
 		include 'php/connect_db.php';
 		include 'controladorAlbumRelacionado.php';
 
 		$user_email = $_COOKIE["email"];
 
-		$sql_myalbums = "SELECT * FROM U_listen_A WHERE user_email = '$user_email'";
+		if($option == "seen"){
+			$sql_myalbums = "SELECT * FROM U_listen_A WHERE user_email = '$user_email'";
+		}
+		else{
+			$sql_myalbums = "SELECT * FROM U_like_A WHERE user_email = '$user_email'";
+		}
+		
 		$result = $conn->query($sql_myalbums);
 		$rows = mysqli_fetch_all($result);
 
@@ -117,28 +123,42 @@
 		}
 	}
 
-	function fillMyArtists(){
+	function fillMyArtists($option){
 		include 'php/connect_db.php';
-		include 'controladorAlbumRelacionado.php';
 
 		$user_email = $_COOKIE["email"];
 
-		$sql_myalbums = "SELECT * FROM U_listen_A WHERE user_email = '$user_email'";
+		$api_file = fopen("API_KEY.txt", "r");
+		$API_KEY = fread($api_file, filesize("API_KEY.txt"));
+		fclose($api_file);
+
+		if($option == "seen"){
+			$sql_myalbums = "SELECT  DISTINCT album_artist FROM U_listen_A WHERE user_email = '$user_email'";
+		}
+		else{
+			$sql_myalbums = "SELECT DISTINCT album_artist FROM U_like_A WHERE user_email = '$user_email'";
+		}
+
 		$result = $conn->query($sql_myalbums);
 		$rows = mysqli_fetch_all($result);
 
 		$num_rows = count($rows);
 
 		for($i = 0; $i < $num_rows; $i++){
-			$album_name = $rows[$i][1];
-			$album_artist = $rows[$i][2];
+			$album_artist = $rows[$i][0];
 
-			$album = new album;
-			$album = $album->createAlbumSearched($album_artist, $album_name);
+			$url = "http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=" . urlencode($album_artist) . "&api_key=" . $API_KEY . "&format=json";
 
-			$album_deluxe = $album->isDeluxe($album_name);
+			$ch = curl_init();
+			curl_setopt($ch, CURLOPT_URL, $url);
+			curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+			curl_setopt($ch, CURLOPT_USERAGENT, 'CdBase');
 
-			echo "<a href=\"MuCr_detailed_album.php?artist=" . urlencode($album_artist) . "&type=All&deluxe=" . $album_deluxe . "&album=" . urlencode($album_name) . "\">\n<div class=\"elem\">\n<img src=\"" . $album->getImage() . "\">\n</div>\n</a>";
+			$response = curl_exec($ch);
+			curl_close($ch);
+			$response = json_decode($response, JSON_FORCE_OBJECT);
+
+			echo "<a href=\"MuCr_artistcollection.php?artist=" . urlencode($album_artist) . "\">\n<div class=\"elem\">\n<img src=\"" . $response["artist"]["image"][4]["#text"] . "\">\n</div>\n</a>";
 		}
 	}
 ?>

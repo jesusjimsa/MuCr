@@ -51,32 +51,32 @@ class concerRec{
        $this->miconcert1=$c1->createrecomendations($email);
 
        $this->miconcert2=$c1->createrecomendations($email);
-       while($this->miconcert2==$this->miconcert1 || $i<50){$this->miconcert2=$c1->createrecomendations($email);}
+       while($this->miconcert2==$this->miconcert1 || $i<50){$i++;$this->miconcert2=$c1->createrecomendations($email);}
        if($i==50){$this->miconcert2=$c1->createrecomendations2();$i=0;}
 
        $this->miconcert2=$c1->createrecomendations($email);
-       while($this->miconcert3==$this->miconcert1|| $this->miconcert3==$this->miconcert2 || $i<50){$this->miconcert3=$c1->createrecomendations($email);}
+       while($this->miconcert3==$this->miconcert1|| $this->miconcert3==$this->miconcert2 || $i<50){$i++;$this->miconcert3=$c1->createrecomendations($email);}
        if($i==50){$this->miconcert3=$c1->createrecomendations2();$i=0;}
 
        $this->miconcert4=$c1->createrecomendations($email);
-       while($this->miconcert4==$this->miconcert1|| $this->miconcert4==$this->miconcert2||$this->miconcert4==$this->miconcert3 || $i<50){$this->miconcert4=$c1->createrecomendations($email);}
+       while($this->miconcert4==$this->miconcert1|| $this->miconcert4==$this->miconcert2||$this->miconcert4==$this->miconcert3 || $i<50){$i++;$this->miconcert4=$c1->createrecomendations($email);}
        if($i==50){$this->miconcert4=$c1->createrecomendations2();$i=0;}
 
        $this->miconcert5=$c1->createrecomendations($email);
-       while($this->miconcert5==$this->miconcert1|| $this->miconcert5==$this->miconcert2||$this->miconcert5==$this->miconcert3|| $this->miconcert5==$this->miconcert4 || $i<50){$this->miconcert5=$c1->createrecomendations($email);}
+       while($this->miconcert5==$this->miconcert1|| $this->miconcert5==$this->miconcert2||$this->miconcert5==$this->miconcert3|| $this->miconcert5==$this->miconcert4 || $i<50){$i++;$this->miconcert5=$c1->createrecomendations($email);}
        if($i==50){$this->miconcert5=$c1->createrecomendations2();$i=0;}
 
        $this->miconcert6=$c1->createrecomendations($email);
-       while($this->miconcert6==$this->miconcert1|| $this->miconcert6==$this->miconcert2||$this->miconcert6==$this->miconcert3|| $this->miconcert6==$this->miconcert4 || $this->miconcert6==$this->miconcert5 || $i<50){$this->miconcert6=$c1->createrecomendations($email);}
+       while($this->miconcert6==$this->miconcert1|| $this->miconcert6==$this->miconcert2||$this->miconcert6==$this->miconcert3|| $this->miconcert6==$this->miconcert4 || $this->miconcert6==$this->miconcert5 || $i<50){$i++;$this->miconcert6=$c1->createrecomendations($email);}
        if($i==50){$this->miconcert6=$c1->createrecomendations2();$i=0;}
 
        $this->miconcert7=$c1->createrecomendations($email);
-       while($this->miconcert7==$this->miconcert1|| $this->miconcert7==$this->miconcert2||$this->miconcert7==$this->miconcert3|| $this->miconcert7==$this->miconcert4 || $this->miconcert7==$this->miconcert5|| $this->miconcert7==$this->miconcert6 || $i<50){$this->miconcert7=$c1->createrecomendations($email);}
+       while($this->miconcert7==$this->miconcert1|| $this->miconcert7==$this->miconcert2||$this->miconcert7==$this->miconcert3|| $this->miconcert7==$this->miconcert4 || $this->miconcert7==$this->miconcert5|| $this->miconcert7==$this->miconcert6 || $i<50){$i++;$this->miconcert7=$c1->createrecomendations($email);}
        if($i==50){$this->miconcert7=$c1->createrecomendations2();$i=0;}
 
 
        $this->miconcert13=$c1->createrecomendations($email);
-       while($this->miconcert13==$this->miconcert1|| $this->miconcert13==$this->miconcert2||$this->miconcert13==$this->miconcert3|| $this->miconcert13==$this->miconcert4 || $this->miconcert13==$this->miconcert5|| $this->miconcert13==$this->miconcert6 || $this->miconcert13==$this->miconcert7 || $i<50){$this->miconcert13=$c1->createrecomendations($email);}
+       while($this->miconcert13==$this->miconcert1|| $this->miconcert13==$this->miconcert2||$this->miconcert13==$this->miconcert3|| $this->miconcert13==$this->miconcert4 || $this->miconcert13==$this->miconcert5|| $this->miconcert13==$this->miconcert6 || $this->miconcert13==$this->miconcert7 || $i<50){$i++;$this->miconcert13=$c1->createrecomendations($email);}
        if($i==50){$this->miconcert13=$c1->createrecomendations2();$i=0;}
 
 
