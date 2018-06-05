@@ -99,6 +99,14 @@
 				<a href="MuCr_collection.php?title=Soundtrack"><button class="especialized" style="display:none;">Soundtrack</button> <!-- 25 --></a>
 				<a href="MuCr_collection.php?title=World"><button class="especialized" style="display:none;">World</button> <!-- 26 --></a>
 			</div>
+
+			<form action="" class="search_artist">
+				<input type="text" value="Search by artist" name="artist_search" onfocus="if (this.value=='Search by artist') this.value='';"
+				 onblur="if (this.value == '') this.value = 'Search by artist';">
+				<button type="image" name="search_artist" value="go" class="search_artist_button">
+					Go
+				</button>
+			</form>
 	</nav>
 
 	<a href="../php/delete_cookies.php">
