@@ -101,7 +101,7 @@
 				<a href="MuCr_Milist.php?mylist=seen"><button class="especialized" style="display:block;">My albums</button> <!-- 27 --></a>
 				<a href="MuCr_Milist.php?mylist=like"><button class="especialized" style="display:block;">My likes</button> <!-- 28 --></a>
 			</div>
-	
+
 			<form action="php/search_by_artist.php" class="search_artist" method="POST">
 				<input type="text" value="Search by artist" name="artist_search" onfocus="if (this.value=='Search by artist') this.value='';"
 				onblur="if (this.value == '') this.value = 'Search by artist';" class="search_artist_box">
@@ -115,6 +115,15 @@
 			<img src="img/icons/close.png" alt="close">
 		</nav>
 	</a>
+
+	<form action="php/search_by_location.php" class="search_location" method="POST">
+		<input type="text" value="City" name="city" onfocus="if (this.value=='City') this.value='';"
+		onblur="if (this.value == '') this.value = 'City,Country,...';" class="search_location_box_city">
+		
+		<input type="text" value="radius" name="radius" onfocus="if (this.value=='radius') this.value='';"
+		onblur="if (this.value == '') this.value = 'radius';" class="search_location_box_radius">
+		<input type="submit" name="search_location" value="Go" class="search_location_button">
+	</form>
 
 	<div class="concert_title">
 		Concerts
