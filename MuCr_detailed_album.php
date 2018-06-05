@@ -158,7 +158,7 @@
 				$album_name = str_replace("_", " ", $album_name);
 				$albumA0 = new album;
 				// echo $_GET['artist'];
-				$albumA0->createAlbumsearched($artist1, $album_name);
+				$albumA0->createAlbumSearched($artist1, $album_name);
 			 ?>
 			<div class="imagen">
 				<img src="<?php

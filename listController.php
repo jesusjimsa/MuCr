@@ -49,7 +49,7 @@ class lista{
         $albumlisten = mysqli_fetch_all($result);
 
         //  get the albumlistened and liked
-    		$sql_order = "SELECT album_name, COUNT(*) FROM U_like_A GROUP BY(album_name) ";
+    	$sql_order = "SELECT album_name, COUNT(*) FROM U_like_A GROUP BY(album_name) ";
         $result = $conn->query($sql_order);
 
         $row = mysqli_fetch_all($result);

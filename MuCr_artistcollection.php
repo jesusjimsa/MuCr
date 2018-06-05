@@ -189,7 +189,7 @@
 			include 'controladorAlbumRelacionado.php';
 			include 'php/fill_albums.php';
 
-			fillArtist($_GET['artist']);
+			fillArtistAlbums($_GET['artist']);
 		?>
 	</div>
 </body>
