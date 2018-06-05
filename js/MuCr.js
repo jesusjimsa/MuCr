@@ -104,6 +104,9 @@ function writeClassification(option) {
 		for (var i = 2; i < 27; i++) {
 			document.getElementsByClassName("especialized")[i].style.display = "block";
 		}
+
+		document.getElementsByClassName("especialized")[27].style.display = "none";
+		document.getElementsByClassName("especialized")[28].style.display = "none";
 	}
 }
 
