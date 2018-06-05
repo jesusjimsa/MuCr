@@ -11,13 +11,13 @@ class album{
 	private $genres;
 	private $time;
 
-	function __construct(){
+	public function __construct(){
 		$api_file = fopen("API_KEY.txt", "r");
 		$this->API_KEY = fread($api_file, filesize("API_KEY.txt"));
 		fclose($api_file);
 	}
 
-	function getApiKey(){
+	public function getApiKey(){
 		return $this->API_KEY;
 	}
 
@@ -34,11 +34,11 @@ class album{
 	}
 
 	public function getType(){
-			return $this->type;
+		return $this->type;
 	}
 
 	public function getGenres(){
-			return $this->genres;
+		return $this->genres;
 	}
 
 	public function getYear(){
@@ -103,39 +103,39 @@ class album{
 	public function isDeluxe($album_name){
 		$result = false;
 
-		if(strpos($album_name, "Deluxe") != false){
+		if (strpos($album_name, "Deluxe") != false) {
 			$result = true;
 		}
 
-		if(strpos($album_name, "deluxe") != false){
+		if (strpos($album_name, "deluxe") != false) {
 			$result = true;
 		}
 
-		if(strpos($album_name, "DELUXE") != false){
+		if (strpos($album_name, "DELUXE") != false) {
 			$result = true;
 		}
 
-		if(strpos($album_name, "Limited") != false){
+		if (strpos($album_name, "Limited") != false) {
 			$result = true;
 		}
 
-		if(strpos($album_name, "limited") != false){
+		if (strpos($album_name, "limited") != false) {
 			$result = true;
 		}
 
-		if(strpos($album_name, "LIMITED") != false){
+		if (strpos($album_name, "LIMITED") != false) {
 			$result = true;
 		}
 
-		if(strpos($album_name, "Special") != false){
+		if (strpos($album_name, "Special") != false) {
 			$result = true;
 		}
 
-		if(strpos($album_name, "special") != false){
+		if (strpos($album_name, "special") != false) {
 			$result = true;
 		}
 
-		if(strpos($album_name, "SPECIAL") != false){
+		if (strpos($album_name, "SPECIAL") != false) {
 			$result = true;
 		}
 
@@ -144,15 +144,19 @@ class album{
 		return $result;
 	}
 
-	public function isContained($var1,$var2){
-		if(strpos($var1, $var2) !== false){return true;}
-		else{return false;}
+	public function isContained($var1, $var2){
+		if (strpos($var1, $var2) !== false) {
+			return true;
+		}
+		else {
+			return false;
+		}
 	}
 
 	public function setGenress($listas){
-			$tagss = "";
-			$max = count($listas);
-			$style = array(
+		$tagss = "";
+		$max = count($listas);
+		$style = array(
 				"alternative","punk","rock","blues",
 				"classical","country","folk","dance",
 				"electronic","easy","gospel","religious",
@@ -161,49 +165,49 @@ class album{
 				"soundtrack","world"
 			);
 
-			for($i=0;$i<$max;$i++){
-				if($listas[$i]["name"] === "60s"){
-					$tagss.="60s"."-";
+		for ($i=0;$i<$max;$i++) {
+			if ($listas[$i]["name"] === "60s") {
+				$tagss.="60s"."-";
+			}
+			else {
+				if ($listas[$i]["name"] === "70s") {
+					$tagss.="70s"."-";
 				}
-				else{
-					if($listas[$i]["name"] === "70s"){
-						$tagss.="70s"."-";
+				else {
+					if ($listas[$i]["name"] === "80s") {
+						$tagss.="80s"."-";
 					}
-					else{
-						if($listas[$i]["name"] === "80s"){
-							$tagss.="80s"."-";
+					else {
+						if ($listas[$i]["name"] === "90s") {
+							$tagss.="90s"."-";
 						}
-						else{
-							if($listas[$i]["name"] === "90s"){
-								$tagss.="90s"."-";
-							}
-							else{
-								foreach($style as $styleSelected){
-									if($this->isContained($listas[$i]["name"], $styleSelected)){
-										$tagss.=$styleSelected."-";
-									}
+						else {
+							foreach ($style as $styleSelected) {
+								if ($this->isContained($listas[$i]["name"], $styleSelected)) {
+									$tagss.=$styleSelected."-";
 								}
 							}
 						}
 					}
 				}
 			}
+		}
 
-			if($tagss === ""){
-				$tagss = "Other";
-			}
+		if ($tagss === "") {
+			$tagss = "Other";
+		}
 
-			return $tagss;
+		return $tagss;
 	}
 
-	public function getTypeandYear($artista,$albumtitle){
-		$pos = strpos($albumtitle,"(");
+	public function getTypeandYear($artista, $albumtitle){
+		$pos = strpos($albumtitle, "(");
 		$titulo = "";
 
-		if($pos === false){
+		if ($pos === false) {
 			$titulo = $albumtitle;
 		}
-		else{
+		else {
 			$titulo = substr($albumtitle, 0, $pos - 1);
 		}
 
@@ -221,58 +225,53 @@ class album{
 		$response = json_decode($response, JSON_FORCE_OBJECT);
 		$i = 0;
 
-		while($response["releases"][$i]["title"] != $titulo && $i <(count($response["releases"])-1) ){
+		while ($response["releases"][$i]["title"] != $titulo && $i <(count($response["releases"])-1)) {
 			$i++;
 		}
 
-		if($response["releases"][$i]["title"] == $titulo){
+		if ($response["releases"][$i]["title"] == $titulo) {
 			$this->type = $response["releases"][$i]["media"][0]["format"];
 			$this->deluxe = $this->isDeluxe($albumtitle);
-			$this->year=substr($response["releases"][$i]["release-events"][0]["date"],0,4);
+			$this->year=substr($response["releases"][$i]["release-events"][0]["date"], 0, 4);
 		}
-		else{
-			$this->type = NULL;
-			$this->year=NULL;
-			$this->deluxe=NULL;
+		else {
+			$this->type = null;
+			$this->year=null;
+			$this->deluxe=null;
 		}
 	}
 
-public function getminutes(){
+	public function getminutes(){
 		return  (int)((int)$this->time/ 60);
-}
-public function getseconds(){
+	}
+
+	public function getseconds(){
 		return   (int)$this->time - ($this->getminutes() * 60);
-}
+	}
 
-		public function getTimeAlbum(){
-			$url = "http://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=" . $this->API_KEY . "&artist=" . $this->artista . "&album=" . $this->titulo . "&format=json";
-
-
-			$ch = curl_init();
-			curl_setopt($ch, CURLOPT_URL, $url);
-			curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-			curl_setopt($ch, CURLOPT_USERAGENT, 'CdBase');
-
-			$response = curl_exec($ch);
-
-			curl_close($ch);
-			$response = json_decode($response, JSON_FORCE_OBJECT);
-
-			$song_list = $response["album"]["tracks"]["track"];
-			$time_total=0;
-
-			for($i = 0; $i < count($song_list); $i++){
-				$time_total =$time_total+(int)((int)$song_list[$i]["duration"]);
-			}
-			//echo $time_total;
-			// $time_min = (int)((int)$time_total/ 60);
-			// $time_sec = (int)$time_total - ($time_min * 60);
+	public function getTimeAlbum(){
+		$url = "http://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=" . $this->API_KEY . "&artist=" . $this->artista . "&album=" . $this->titulo . "&format=json";
 
 
-			$this->time=$time_total;
+		$ch = curl_init();
+		curl_setopt($ch, CURLOPT_URL, $url);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+		curl_setopt($ch, CURLOPT_USERAGENT, 'CdBase');
+
+		$response = curl_exec($ch);
+
+		curl_close($ch);
+		$response = json_decode($response, JSON_FORCE_OBJECT);
+
+		$song_list = $response["album"]["tracks"]["track"];
+		$time_total=0;
+
+		for ($i = 0; $i < count($song_list); $i++) {
+			$time_total =$time_total+(int)((int)$song_list[$i]["duration"]);
 		}
 
-
+		$this->time = $time_total;
+	}
 
 	public function createAlbumRand($artista1){
 		$url = "http://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=" . $artista1 . "&api_key=" . $this->API_KEY . "&format=json";
@@ -298,18 +297,18 @@ public function getseconds(){
 		$this->artista = $response["topalbums"]["album"][$numer]["artist"]["name"];
 
 		$this->genres = $this->setGenress($response["album"]["tags"]["tag"]);
-		$this->getTypeandYear($this->artista,$this->titulo);
+		$this->getTypeandYear($this->artista, $this->titulo);
 		$this->getTimeAlbum();
 		$this->addAlbumtoBd();
 
-		if($this->getTitulo() == NULL){
+		if ($this->getTitulo() == null) {
 			return $this->createAlbumRand($artista1);
 		}
 
 		return $this;
 	}
 
-	public function createAlbumsearched($artista1, $albumtitle){
+	public function createAlbumSearched($artista1, $albumtitle){
 		$url = "http://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=" . $this->API_KEY . "&artist=" . urlencode($artista1) . "&album=" . urlencode($albumtitle) . "&format=json";
 
 		//get the ID
@@ -332,19 +331,15 @@ public function getseconds(){
 		//get the artist
 		$this->artista = $response["album"]["artist"];
 		$this->genres=$this->setGenress($response["album"]["tags"]["tag"]);
-		$this->getTypeandYear($this->artista,$this->titulo);
+		$this->getTypeandYear($this->artista, $this->titulo);
 		$this->getTimeAlbum();
 		$this->addAlbumtoBd();
 
 		return $this;
 	}
 
-
-
-
 	public function printSongs(){
 		$url = "http://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=" . $this->API_KEY . "&artist=" . $this->artista . "&album=" . $this->titulo . "&format=json";
-
 
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_URL, $url);
@@ -358,7 +353,7 @@ public function getseconds(){
 
 		$song_list = $response["album"]["tracks"]["track"];
 
-		for($i = 0; $i < count($song_list); $i++){
+		for ($i = 0; $i < count($song_list); $i++) {
 			$time_min = (int)((int)$song_list[$i]["duration"] / 60);
 			$time_sec = (int)$song_list[$i]["duration"] - ($time_min * 60);
 
@@ -385,13 +380,17 @@ public function getseconds(){
 		$this->titulo = $top_albums_tag[$rand_num]["name"];
 		$this->artista = $top_albums_tag[$rand_num]["artist"]["name"];
 		$this->id = $top_albums_tag[$rand_num]["mbid"];
-		$this->getTypeandYear($this->artista,$this->titulo);
+		$this->getTypeandYear($this->artista, $this->titulo);
 		$this->getTimeAlbum();
 		$this->addAlbumtoBd();
 
-		if($this==NULL){return createAlbumByTitle($title_search);}
-		else{return $this;}
-  }
+		if ($this==null) {
+			return createAlbumByTitle($title_search);
+		}
+		else {
+			return $this;
+		}
+	}
 
 	public function createAlbumByTitle($title_search){
 		$url = "http://ws.audioscrobbler.com/2.0/?method=album.search&album=" . $title_search . "&api_key=" . $this->API_KEY . "&format=json";
@@ -408,14 +407,14 @@ public function getseconds(){
 		$this->titulo = $response["results"]["albummatches"]["album"][1]["name"];
 		$this->artista = $response["results"]["albummatches"]["album"][1]["artist"];
 		$this->id = $response["results"]["albummatches"]["album"][1]["mbid"];
-		$this->getTypeandYear($this->artista,$this->titulo);
+		$this->getTypeandYear($this->artista, $this->titulo);
 		$this->getTimeAlbum();
 		$this->addAlbumtoBd();
 
-		if($this == NULL){
+		if ($this == null) {
 			return createAlbumByTitle($title_search);
 		}
-		else{
+		else {
 			return $this;
 		}
 	}

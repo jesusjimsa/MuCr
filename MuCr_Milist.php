@@ -41,7 +41,7 @@
 		</div>
 		<a class="blanco" href="MuCr_settings.php">
 			<div class="options">
-				<img src="img/icons/settings.png" alt="Settings">Ajustes
+				<img src="img/icons/settings.png" alt="Settings">Settings
 			</div>
 		</a>
 	</nav>
@@ -117,64 +117,46 @@
 	</a>
 
 	<div class="genre">
-      My List
+	  My List
 	</div>
 
 	<div class="grid-container_album">
-        <div class="especific">My Albums</div>
-        <div class="container">
-          <?php
-          ini_set('max_execution_time', 300);
-          include 'php/connect_db.php';
-          $email = $_COOKIE['email'];
-          include 'controladorAlbumRelacionado.php';
+		<div class="especific">
+			<?php
+				if($_GET["mylist"] == "seen"){
+					echo "My albums";
+				}
+				else{
+					echo "My Likes";
+				}
+			?>
+		</div>
+		<div class="container">
+		<?php
+			include 'php/fill_albums.php';
 
-          $api_file = fopen("API_KEY.txt", "r");
-      		$API_KEY = fread($api_file, filesize("API_KEY.txt"));
-      		fclose($api_file);
-
-          $opcion=$_GET["mylist"];
-          $sql_order="";
-          if($opcion=="like"){
-            $sql_order="SELECT * from U_like_A WHERE user_email='$email'";
-          }else{
-            $sql_order="SELECT * from U_listen_A WHERE user_email='$email'";
-          }
-          $result = $conn->query($sql_order);
-          $albums = mysqli_fetch_all($result);
-          $code="";
-          for($i=0;$i<count($albums);$i++){
-            $titulo=$albums[$i][2];
-            $artista=$albums[$i][1];
-            $link = "http://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=" . $API_KEY . "&artist=" . urlencode($artista) . "&album=" . urlencode($titulo) . "&format=json";
-
-        		$ch = curl_init();
-        		curl_setopt($ch, CURLOPT_URL, $link);
-        		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        		curl_setopt($ch, CURLOPT_USERAGENT, 'CdBase');
-
-        		$response = curl_exec($ch);
-        		curl_close($ch);
-        		$response = json_decode($response, JSON_FORCE_OBJECT);
-
-        		$image_link = $response["album"]["image"][4]["#text"];
-
-          $code.= "<div class=\"elem\"> <img src=\"$image_link\"> </div>";
-          }
-          echo $code;
-
-          ?>
-        </div>
+			fillMyAlbumsAndLikes();
+		?>
+		</div>
 
 	</div>
   <div class="grid-container_album_artista">
-    <div class="especific">My Artists</div>
-    <div class="container">
-      <div class="elem"></div>
-      <div class="elem"></div>
-      <div class="elem"></div>
-      <div class="elem"></div>
-    </div>
+	<div class="especific">
+		<?php
+			if($_GET["mylist"] == "seen"){
+				echo "My artists";
+			}
+			else{
+				echo "Liked artists";
+			}
+		?>
+	</div>
+	<div class="container">
+	  <div class="elem"></div>
+	  <div class="elem"></div>
+	  <div class="elem"></div>
+	  <div class="elem"></div>
+	</div>
   </div>
 </body>
 

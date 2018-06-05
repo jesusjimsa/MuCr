@@ -42,7 +42,7 @@
 		</div>
 		<a class="blanco" href="MuCr_settings.php">
 			<div class="options">
-				<img src="img/icons/settings.png" alt="Settings">Ajustes
+				<img src="img/icons/settings.png" alt="Settings">Settings
 			</div>
 		</a>
 	</nav>
@@ -158,7 +158,7 @@
 				$album_name = str_replace("_", " ", $album_name);
 				$albumA0 = new album;
 				// echo $_GET['artist'];
-				$albumA0->createAlbumsearched($artist1, $album_name);
+				$albumA0->createAlbumSearched($artist1, $album_name);
 			 ?>
 			<div class="imagen">
 				<img src="<?php

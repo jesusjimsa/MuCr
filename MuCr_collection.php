@@ -41,7 +41,7 @@
 		</div>
 		<a class="blanco" href="MuCr_settings.php">
 			<div class="options">
-				<img src="img/icons/settings.png" alt="Settings">Ajustes
+				<img src="img/icons/settings.png" alt="Settings">Settings
 			</div>
 		</a>
 	</nav>
@@ -128,7 +128,7 @@
 
 	<div class="grid-container">
 		<?php
-			include 'php/fill_collection.php';
+			include 'php/fill_albums.php';
 			include 'controladorAlbumRelacionado.php';
 			
 			$array_albums = fillCollection($_GET['title']);
