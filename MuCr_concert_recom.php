@@ -134,116 +134,116 @@
 
 	<div class="grid-concert">
 		<?php include 'concertrecomendations.php';
-		$prueba=new concerRec($_COOKIE['email']);
-		 ?>
+			$prueba = new concerRec($_COOKIE['email']);
+		?>
 		<a href="MuCr_Concerts.php?artist=Audioslave">
-		<div class="itemo">
-			<div class="artist_name"><?php $prueba->getM1() ?></div>
-			<img src="img/concerts/recommendations/audioslave.jpg" alt="Audioslave">
-		</div>
-	</a>
-	<a href="MuCr_Concerts.php?artist=Blink-182">
-		<div class="itemo">
-			<div class="artist_name"><?php $prueba->getM1() ?></div>
-			<img src="img/concerts/recommendations/blink.jpg" alt="Blink-182">
-		</div>
-	</a>
-	<a href="MuCr_Concerts.php?artist=My_Chemical_Romance">
-		<div class="itemo">
-			<div class="artist_name"><?php $prueba->getM1() ?></div>
-			<img src="img/concerts/recommendations/chemical.jpg" alt="My Chemical Romance">
-		</div>
-	</a>
-	<a href="MuCr_Concerts.php?artist=Coldplay">
 			<div class="itemo">
 				<div class="artist_name"><?php $prueba->getM1() ?></div>
-				<img src="img/concerts/recommendations/coldplay.jpg" alt="Coldplay">
+				<img src="img/concerts/recommendations/audioslave.jpg" alt="Audioslave">
 			</div>
 		</a>
-		<a href="MuCr_Concerts.php?artist=Imagine_Dragons">
-		<div class="itemo">
-			<div class="artist_name"><?php $prueba->getM1() ?></div>
-			<img src="img/concerts/recommendations/dragons.jpg" alt="Imagine Dragons">
-		</div>
-	</a>
-	<a href="MuCr_Concerts.php?artist=Evanescence">
-		<div class="itemo">
-			<div class="artist_name"><?php $prueba->getM1() ?></div>
-			<img src="img/concerts/recommendations/evanescence.jpg" alt="Evanescence">
-		</div>
-	</a>
-	<a href="MuCr_Concerts.php?artist=Fall_Out_Boy">
-		<div class="itemo">
-			<div class="artist_name"><?php $prueba->getM1() ?></div>
-			<img src="img/concerts/recommendations/fall.jpg" alt="Fall Out Boy">
-		</div>
-	</a>
-	<a href="MuCr_Concerts.php?artist=OK_GO">
-		<div class="itemo">
-			<div class="artist_name"><?php $prueba->getM1() ?></div>
-			<img src="img/concerts/recommendations/go.jpg" alt="OK GO">
-		</div>
-	</a>
-	<a href="MuCr_Concerts.php?artist=Gorillaz">
-		<div class="itemo">
-			<div class="artist_name"><?php $prueba->getM1() ?></div>
-			<img src="img/concerts/recommendations/gorillaz.jpg" alt="Gorillaz">
-		</div>
-	</a>
-	<a href="MuCr_Concerts.php?artist=Hoobastank">
-		<div class="itemo">
-			<div class="artist_name"><?php $prueba->getM1() ?></div>
-			<img src="img/concerts/recommendations/hoobastank.jpg" alt="Hoobastank">
-		</div>
-	</a>
-	<a href="MuCr_Concerts.php?artist=The_Killers">
-		<div class="itemo">
-			<div class="artist_name"><?php $prueba->getM1() ?></div>
-			<img src="img/concerts/recommendations/killers.jpg" alt="The Killers">
-		</div>
-	</a>
-	<a href="MuCr_Concerts.php?artist=Linki_Park">
-		<div class="itemo">
-			<div class="artist_name"><?php $prueba->getM1() ?></div>
-			<img src="img/concerts/recommendations/linkin.jpg" alt="Linkin Park">
-		</div>
-	</a>
-	<a href="MuCr_Concerts.php?artist=Maroon_5">
-		<div class="itemo">
-			<div class="artist_name"><?php $prueba->getM1() ?></div>
-			<img src="img/concerts/recommendations/maroon.jpg" alt="Maroon 5">
-		</div>
-	</a>
-	<a href="MuCr_Concerts.php?artist=Paramore">
-		<div class="itemo">
-			<div class="artist_name"><?php $prueba->getM1() ?></div>
-			<img src="img/concerts/recommendations/paramore.png" alt="Paramore">
-		</div>
-	</a>
-	<a href="MuCr_Concerts.php?artist=Twente_One_Pilots">
-		<div class="itemo">
-			<div class="artist_name"><?php $prueba->getM1() ?></div>
-			<img src="img/concerts/recommendations/pilots.png" alt="Twenty One Pilots">
-		</div>
-	</a>
-	<a href="MuCr_Concerts.php?artist=Slinpknot">
-		<div class="itemo">
-			<div class="artist_name"><?php $prueba->getM1() ?></div>
-			<img src="img/concerts/recommendations/slipknot.jpg" alt="Slipknot">
-		</div>
-	</a>
-	<a href="MuCr_Concerts.php?artist=The_White_Stripes">
-		<div class="itemo">
-			<div class="artist_name"><?php $prueba->getM1() ?></div>
-			<img src="img/concerts/recommendations/stripes.jpg" alt="The White Stripes">
-		</div>
-	</a>
-	<a href="MuCr_Concerts.php?artist=ZZ_Top">
-		<div class="itemo">
-			<div class="artist_name"><?php $prueba->getM18() ?></div>
-			<img src="img/concerts/recommendations/top.jpg" alt="ZZ Top">
-		</div>
-	</a>
+		<a href="MuCr_Concerts.php?artist=Blink-182">
+			<div class="itemo">
+				<div class="artist_name"><?php $prueba->getM1() ?></div>
+				<img src="img/concerts/recommendations/blink.jpg" alt="Blink-182">
+			</div>
+		</a>
+		<a href="MuCr_Concerts.php?artist=My_Chemical_Romance">
+			<div class="itemo">
+				<div class="artist_name"><?php $prueba->getM1() ?></div>
+				<img src="img/concerts/recommendations/chemical.jpg" alt="My Chemical Romance">
+			</div>
+		</a>
+		<a href="MuCr_Concerts.php?artist=Coldplay">
+				<div class="itemo">
+					<div class="artist_name"><?php $prueba->getM1() ?></div>
+					<img src="img/concerts/recommendations/coldplay.jpg" alt="Coldplay">
+				</div>
+			</a>
+			<a href="MuCr_Concerts.php?artist=Imagine_Dragons">
+			<div class="itemo">
+				<div class="artist_name"><?php $prueba->getM1() ?></div>
+				<img src="img/concerts/recommendations/dragons.jpg" alt="Imagine Dragons">
+			</div>
+		</a>
+		<a href="MuCr_Concerts.php?artist=Evanescence">
+			<div class="itemo">
+				<div class="artist_name"><?php $prueba->getM1() ?></div>
+				<img src="img/concerts/recommendations/evanescence.jpg" alt="Evanescence">
+			</div>
+		</a>
+		<a href="MuCr_Concerts.php?artist=Fall_Out_Boy">
+			<div class="itemo">
+				<div class="artist_name"><?php $prueba->getM1() ?></div>
+				<img src="img/concerts/recommendations/fall.jpg" alt="Fall Out Boy">
+			</div>
+		</a>
+		<a href="MuCr_Concerts.php?artist=OK_GO">
+			<div class="itemo">
+				<div class="artist_name"><?php $prueba->getM1() ?></div>
+				<img src="img/concerts/recommendations/go.jpg" alt="OK GO">
+			</div>
+		</a>
+		<a href="MuCr_Concerts.php?artist=Gorillaz">
+			<div class="itemo">
+				<div class="artist_name"><?php $prueba->getM1() ?></div>
+				<img src="img/concerts/recommendations/gorillaz.jpg" alt="Gorillaz">
+			</div>
+		</a>
+		<a href="MuCr_Concerts.php?artist=Hoobastank">
+			<div class="itemo">
+				<div class="artist_name"><?php $prueba->getM1() ?></div>
+				<img src="img/concerts/recommendations/hoobastank.jpg" alt="Hoobastank">
+			</div>
+		</a>
+		<a href="MuCr_Concerts.php?artist=The_Killers">
+			<div class="itemo">
+				<div class="artist_name"><?php $prueba->getM1() ?></div>
+				<img src="img/concerts/recommendations/killers.jpg" alt="The Killers">
+			</div>
+		</a>
+		<a href="MuCr_Concerts.php?artist=Linki_Park">
+			<div class="itemo">
+				<div class="artist_name"><?php $prueba->getM1() ?></div>
+				<img src="img/concerts/recommendations/linkin.jpg" alt="Linkin Park">
+			</div>
+		</a>
+		<a href="MuCr_Concerts.php?artist=Maroon_5">
+			<div class="itemo">
+				<div class="artist_name"><?php $prueba->getM1() ?></div>
+				<img src="img/concerts/recommendations/maroon.jpg" alt="Maroon 5">
+			</div>
+		</a>
+		<a href="MuCr_Concerts.php?artist=Paramore">
+			<div class="itemo">
+				<div class="artist_name"><?php $prueba->getM1() ?></div>
+				<img src="img/concerts/recommendations/paramore.png" alt="Paramore">
+			</div>
+		</a>
+		<a href="MuCr_Concerts.php?artist=Twente_One_Pilots">
+			<div class="itemo">
+				<div class="artist_name"><?php $prueba->getM1() ?></div>
+				<img src="img/concerts/recommendations/pilots.png" alt="Twenty One Pilots">
+			</div>
+		</a>
+		<a href="MuCr_Concerts.php?artist=Slinpknot">
+			<div class="itemo">
+				<div class="artist_name"><?php $prueba->getM1() ?></div>
+				<img src="img/concerts/recommendations/slipknot.jpg" alt="Slipknot">
+			</div>
+		</a>
+		<a href="MuCr_Concerts.php?artist=The_White_Stripes">
+			<div class="itemo">
+				<div class="artist_name"><?php $prueba->getM1() ?></div>
+				<img src="img/concerts/recommendations/stripes.jpg" alt="The White Stripes">
+			</div>
+		</a>
+		<a href="MuCr_Concerts.php?artist=ZZ_Top">
+			<div class="itemo">
+				<div class="artist_name"><?php $prueba->getM18() ?></div>
+				<img src="img/concerts/recommendations/top.jpg" alt="ZZ Top">
+			</div>
+		</a>
 	</div>
 
 </body>
