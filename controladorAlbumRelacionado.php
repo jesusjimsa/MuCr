@@ -36,7 +36,7 @@ class album{
 	public function getType(){
 			return $this->type;
 	}
-	
+
 	public function getGenres(){
 			return $this->genres;
 	}
@@ -322,6 +322,7 @@ public function getseconds(){
 
 		curl_close($ch);
 		$response = json_decode($response, JSON_FORCE_OBJECT);
+
 
 		$this->id = $response["album"]["mbid"];
 
