@@ -12,8 +12,8 @@ class album{
 	private $time;
 
 	public function __construct(){
-		$api_file = fopen("API_KEY.txt", "r");
-		$this->API_KEY = fread($api_file, filesize("API_KEY.txt"));
+		$api_file = fopen("API_KEY_Lastfm.txt", "r");
+		$this->API_KEY = fread($api_file, filesize("API_KEY_Lastfm.txt"));
 		fclose($api_file);
 	}
 
