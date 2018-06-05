@@ -157,6 +157,7 @@ class lista{
                     $albumseleccionado = $albumseleccionado->createAlbumRandByTag($mytag);
                     $titulo_seleccionado = ($albumseleccionado)->getTitulo();
                 }
+                
                 if ($i == 30) {
                     break;
                 }
@@ -224,27 +225,27 @@ class lista{
                 while ($this->albumV1->getImage() == null) {
                     $this->crearlstaB($this->albumV1, $added, $user);
                 }
-                
+
                 while ($this->albumV2->getImage() == null) {
                     $this->crearlstaB($this->albumV2, $added, $user);
                 }
-                
+
                 while ($this->albumV3->getImage() == null) {
                     $this->crearlstaB($this->albumV3, $added, $user);
                 }
-                
+
                 while ($this->albumV4->getImage() == null) {
                     $this->crearlstaB($this->albumV4, $added, $user);
                 }
-                
+
                 while ($this->albumV5->getImage() == null) {
                     $this->crearlstaB($this->albumV5, $added, $user);
                 }
-                
+
                 while ($this->albumV6->getImage() == null) {
                     $this->crearlstaB($this->albumV6, $added, $user);
                 }
-                
+
                 while ($this->albumV7->getImage() == null) {
                     $this->crearlstaB($this->albumV7, $added, $user);
                 }
@@ -256,27 +257,27 @@ class lista{
                 while ($this->albumV1->getImage() == null) {
                     $this->crearlstaB($this->albumV1, $added, $user);
                 }
-                
+
                 while ($this->albumV2->getImage() == null) {
                     $this->crearlstaB($this->albumV2, $added, $user);
                 }
-                
+
                 while ($this->albumV3->getImage() == null) {
                     $this->crearlstaB($this->albumV3, $added, $user);
                 }
-                
+
                 while ($this->albumV4->getImage() == null) {
                     $this->crearlstaB($this->albumV4, $added, $user);
                 }
-                
+
                 while ($this->albumV5->getImage() == null) {
                     $this->crearlstaB($this->albumV5, $added, $user);
                 }
-                
+
                 while ($this->albumV6->getImage() == null) {
                     $this->crearlstaB($this->albumV6, $added, $user);
                 }
-                
+
                 while ($this->albumV7->getImage() == null) {
                     $this->crearlstaB($this->albumV7, $added, $user);
                 }
