@@ -107,19 +107,84 @@
 		</nav>
 	</a>
 
-	<div class="genre">
-		<?php
-		$url = $_GET['title'];
- 		$url = str_replace("_"," ",$url);
-		$url = str_replace("come","'",$url);
+	<div class="imagenArtista">
+			<img src="
+			<?php
+			$api_file = fopen("API_KEY.txt", "r");
+				$API_KEY = fread($api_file, filesize("API_KEY.txt"));
+			fclose($api_file);
+			$artista=$_GET['artist'];
+			$artista=str_replace(" ","+",$artista);
+			$artista=str_replace("_","+",$artista);
 
-		echo $url;
+			$imagenes="http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=".$artista."&api_key=".$API_KEY."&format=json";
+
+			$ch = curl_init();
+			curl_setopt($ch, CURLOPT_URL, $imagenes);
+			curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+			curl_setopt($ch, CURLOPT_USERAGENT, 'CdBase');
+
+			$response = curl_exec($ch);
+			curl_close($ch);
+			$response = json_decode($response, JSON_FORCE_OBJECT);
+
+			echo $response['artist']['image'][3]['#text'];
+
+			 ?>
+		" alt="artist_picture">
+
+	</div>
+
+	<div class="genreArtista">
+		<?php
+		$url1 = $_GET['artist'];
+ 		$url1 = str_replace("_"," ",$url1);
+		$url1 = str_replace("+"," ",$url1);
+
+		echo $url1;
  		?>
 	</div>
 
-	<div class="grid-container">
-		
+	<div class="comentarios">
+		<?php
+		$url="http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=".$artista."&api_key=".$API_KEY."&format=json";
+
+		$ch = curl_init();
+		curl_setopt($ch, CURLOPT_URL, $url);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+		curl_setopt($ch, CURLOPT_USERAGENT, 'CdBase');
+
+		$response = curl_exec($ch);
+		curl_close($ch);
+		$response = json_decode($response, JSON_FORCE_OBJECT);
+
+		$respuesta=$response['artist']['bio']['summary'];
+		if(strpos($respuesta,"incorrect tag")==False){echo $respuesta;}
+		else{echo "There is not Bio yet, it is implementing ";}
+		?>
 	</div>
+
+	<a href="MuCr_Concerts.php?artist=<?php echo $artista;?>">
+		<button class="aconcierto">
+				<img src="img/icons/concierto.png">
+				<?php echo $url1;?>
+		</button>
+	</a>
+
+	<div class="grid-container_artista">
+		<div class="itemo"></div>
+			<div class="itemo"></div>
+				<div class="itemo"></div>
+				<div class="itemo"></div>
+					<div class="itemo"></div>
+						<div class="itemo"></div>
+						<div class="itemo"></div>
+							<div class="itemo"></div>
+								<div class="itemo"></div>
+								<div class="itemo"></div>
+									<div class="itemo"></div>
+										<div class="itemo"></div>
+		</div>
 </body>
 
 </html>
