@@ -119,8 +119,8 @@
 	<div class="imagenArtista">
 			<img src="
 			<?php
-			$api_file = fopen("API_KEY.txt", "r");
-				$API_KEY = fread($api_file, filesize("API_KEY.txt"));
+			$api_file = fopen("API_KEY_Lastfm.txt", "r");
+				$API_KEY = fread($api_file, filesize("API_KEY_Lastfm.txt"));
 			fclose($api_file);
 			$artista=$_GET['artist'];
 			$artista=str_replace(" ","+",$artista);

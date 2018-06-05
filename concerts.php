@@ -9,12 +9,12 @@ class concert{
   private $API_KEY2;
 
   function __construct(){
-		$api_file = fopen("API_KEY.txt", "r");
-		$this->API_KEY = fread($api_file, filesize("API_KEY.txt"));
+		$api_file = fopen("API_KEY_Lastfm.txt", "r");
+		$this->API_KEY = fread($api_file, filesize("API_KEY_Lastfm.txt"));
 		fclose($api_file);
 
-    $api_file2 = fopen("API_KEY_2.txt", "r");
-		$this->API_KEY2 = fread($api_file2, filesize("API_KEY_2.txt"));
+    $api_file2 = fopen("API_KEY_Ticketmaster.txt", "r");
+		$this->API_KEY2 = fread($api_file2, filesize("API_KEY_Ticketmaster.txt"));
 		fclose($api_file2);
 
 	}
