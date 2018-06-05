@@ -53,8 +53,9 @@ Temporary Items
 .vscode/settings.json
 
 ### Added by me ###
-API_KEY.txt
+API_KEY_Lastfm.txt
 API_KEY_Imagenes.txt
+API_KEY_Ticketmaster.txt
 python/*
 .htaccess
 

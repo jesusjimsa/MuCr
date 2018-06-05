@@ -1,7 +1,7 @@
 <?php
 	function fillArtistAlbums($artist_name){
-		$api_file = fopen("API_KEY.txt", "r");
-		$API_KEY = fread($api_file, filesize("API_KEY.txt"));
+		$api_file = fopen("API_KEY_Lastfm.txt", "r");
+		$API_KEY = fread($api_file, filesize("API_KEY_Lastfm.txt"));
 		fclose($api_file);
 
 		$url = "http://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=" . $artist_name . "&api_key=" . $API_KEY . "&format=json";
@@ -39,8 +39,8 @@
 	}
 
 	function fillCollection($tag){
-		$api_file = fopen("API_KEY.txt", "r");
-		$API_KEY = fread($api_file, filesize("API_KEY.txt"));
+		$api_file = fopen("API_KEY_Lastfm.txt", "r");
+		$API_KEY = fread($api_file, filesize("API_KEY_Lastfm.txt"));
 		fclose($api_file);
 
 		$url = "http://ws.audioscrobbler.com/2.0/?method=tag.gettopalbums&tag=" . $tag . "&api_key=" . $API_KEY . "&format=json";
@@ -128,8 +128,8 @@
 
 		$user_email = $_COOKIE["email"];
 
-		$api_file = fopen("API_KEY.txt", "r");
-		$API_KEY = fread($api_file, filesize("API_KEY.txt"));
+		$api_file = fopen("API_KEY_Lastfm.txt", "r");
+		$API_KEY = fread($api_file, filesize("API_KEY_Lastfm.txt"));
 		fclose($api_file);
 
 		if($option == "seen"){
