@@ -1977,18 +1977,21 @@ img{
 	position: fixed;
 	top: 19%;
 	left: 22%;
-	width: 73.35%;
+	width: 70%;
+	height:70%;
+	background-color: rgba(77,77,77,0.97);
+	overflow-y:scroll;
 }
 
 .grid-concert .itemo{
 	position: relative;
 	height: 34.2%;
-	width: 15.1%;
+	width: 16.5%;
 	left: 0%;
 	top: 0%;
 	float:left;
 	z-index: 0;
-	margin-bottom: -5px;
+	margin-bottom: -2%;
 }
 
 .grid-concert .itemo img{

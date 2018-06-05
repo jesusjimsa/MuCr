@@ -101,7 +101,7 @@
 				<a href="MuCr_Milist.php?mylist=seen"><button class="especialized" style="display:block;">My albums</button> <!-- 27 --></a>
 				<a href="MuCr_Milist.php?mylist=like"><button class="especialized" style="display:block;">My likes</button> <!-- 28 --></a>
 			</div>
-	
+
 			<form action="php/search_by_artist.php" class="search_artist" method="POST">
 				<input type="text" value="Search by artist" name="artist_search" onfocus="if (this.value=='Search by artist') this.value='';"
 				onblur="if (this.value == '') this.value = 'Search by artist';" class="search_artist_box">
@@ -133,7 +133,42 @@
 	</div>
 
 	<div class="grid-concert">
+		<?php
 
+			include 'php/connect_db.php';
+
+			$user_email = $_COOKIE["email"];
+
+			$api_file = fopen("API_KEY.txt", "r");
+			$API_KEY = fread($api_file, filesize("API_KEY.txt"));
+			fclose($api_file);
+
+
+			$sql_myalbums = "SELECT  DISTINCT concert_artist FROM U_attended_C WHERE user_email = '$user_email'";
+
+			$result = $conn->query($sql_myalbums);
+			$rows = mysqli_fetch_all($result);
+
+			$num_rows = count($rows);
+
+			for($i = 0; $i < $num_rows; $i++){
+				$album_artist = $rows[$i][0];
+
+				$url = "http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=" . urlencode($album_artist) . "&api_key=" . $API_KEY . "&format=json";
+
+				$ch = curl_init();
+				curl_setopt($ch, CURLOPT_URL, $url);
+				curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+				curl_setopt($ch, CURLOPT_USERAGENT, 'CdBase');
+
+				$response = curl_exec($ch);
+				curl_close($ch);
+				$response = json_decode($response, JSON_FORCE_OBJECT);
+
+				echo "<a href=\"MuCr_Concerts.php?artist=" . urlencode($album_artist) . "\">\n<div class=\"itemo\">\n<div class=\"artist_name\">".$album_artist."</div>\n<img src=\"" . $response["artist"]["image"][4]["#text"] . "\">\n</div>\n</a>";
+			}
+		?>
+<!--
 		<a href="MuCr_Concerts.php?artist=The_beatles"><div class="itemo">
 			<div class="artist_name">The Beatles</div>
 			<img src="img/concerts/artists/beatles.jpg" alt="The Beatles">
@@ -237,7 +272,7 @@
 			<div class="artist_name">The Who</div>
 			<img src="img/concerts/artists/who.jpg" alt="The Who">
 		</div>
-		</a>
+		</a> -->
 	</div>
 
 
