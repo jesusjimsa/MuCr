@@ -597,7 +597,7 @@ img{
 
 .musica .collection .orden{
 	position:fixed;
-	height:45%;
+	height:50%;
 	width:16%;
 	top:36%;
 	left:0.5%;
@@ -1409,6 +1409,11 @@ img{
 	float:left;
 	z-index: 0;
 	margin-right: -2px;
+	background-image: url("img/covers/generic_album.jpg");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: relative;
+	background-size: cover;
 }
 
 .grid-container .itemo img{

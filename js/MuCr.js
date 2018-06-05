@@ -87,7 +87,7 @@ function writeClassification(option) {
 		}
 
 		// Hide all classficiations
-		for (var i = 2; i < 29; i++) {
+		for (var i = 2; i < 26; i++) {
 			document.getElementsByClassName("especialized")[i].style.display = "none";
 		}
 	}
