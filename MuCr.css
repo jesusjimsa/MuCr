@@ -637,6 +637,11 @@ img{
 	border-right: 0;
 }
 
+.collection .search_artist{
+	position: relative;
+	top: 550px;
+}
+
 .genre{
 	color:rgba(25,127,163,1);
 	border-radius: 5vmin 5vmin 5vmin 5vmin;
