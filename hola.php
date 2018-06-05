@@ -1,6 +1,3 @@
-
-
-
 <?php
 // $url="http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=Cher&api_key=7469e83d1fc6415f3a1cf8790bdebacd&format=json";
 //
@@ -56,5 +53,4 @@ echo $code;
 // $response = json_decode($response, JSON_FORCE_OBJECT);
 //
 // echo $response['hits'][0]['largeImageURL'];
-
 ?>

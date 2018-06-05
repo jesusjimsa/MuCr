@@ -99,6 +99,13 @@
 				<a href="MuCr_collection.php?title=Soundtrack"><button class="especialized" style="display:none;">Soundtrack</button> <!-- 25 --></a>
 				<a href="MuCr_collection.php?title=World"><button class="especialized" style="display:none;">World</button> <!-- 26 --></a>
 			</div>
+
+			<form action="php/search_by_artist.php" class="search_artist" method="POST">
+				<input type="text" value="Search by artist" name="artist_search" onfocus="if (this.value=='Search by artist') this.value='';"
+				onblur="if (this.value == '') this.value = 'Search by artist';" class="search_artist_box">
+				<input type="submit" name="search_artist" value="Go" class="search_artist_button">
+			</form>
+		</div>
 	</nav>
 
 	<a href="../php/delete_cookies.php">
@@ -147,20 +154,24 @@
 
 	<div class="comentarios">
 		<?php
-		$url="http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=".$artista."&api_key=".$API_KEY."&format=json";
+			$url="http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=".$artista."&api_key=".$API_KEY."&format=json";
 
-		$ch = curl_init();
-		curl_setopt($ch, CURLOPT_URL, $url);
-		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-		curl_setopt($ch, CURLOPT_USERAGENT, 'CdBase');
+			$ch = curl_init();
+			curl_setopt($ch, CURLOPT_URL, $url);
+			curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+			curl_setopt($ch, CURLOPT_USERAGENT, 'CdBase');
 
-		$response = curl_exec($ch);
-		curl_close($ch);
-		$response = json_decode($response, JSON_FORCE_OBJECT);
+			$response = curl_exec($ch);
+			curl_close($ch);
+			$response = json_decode($response, JSON_FORCE_OBJECT);
 
-		$respuesta=$response['artist']['bio']['summary'];
-		if(strpos($respuesta,"incorrect tag")==False){echo $respuesta;}
-		else{echo "There is not Bio yet, it is implementing ";}
+			$respuesta = $response['artist']['bio']['summary'];
+			if(strpos($respuesta,"incorrect tag") == False){
+				echo $respuesta;
+			}
+			else{
+				echo "There is not Bio yet, it is implementing ";
+			}
 		?>
 	</div>
 
@@ -172,19 +183,12 @@
 	</a>
 
 	<div class="grid-container_artista">
-		<div class="itemo"></div>
-			<div class="itemo"></div>
-				<div class="itemo"></div>
-				<div class="itemo"></div>
-					<div class="itemo"></div>
-						<div class="itemo"></div>
-						<div class="itemo"></div>
-							<div class="itemo"></div>
-								<div class="itemo"></div>
-								<div class="itemo"></div>
-									<div class="itemo"></div>
-										<div class="itemo"></div>
-		</div>
+		<?php
+			include 'php/fill_artist.php';
+
+			fillArtist($_GET['artist']);
+		?>
+	</div>
 </body>
 
 </html>
