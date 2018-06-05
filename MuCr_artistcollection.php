@@ -11,7 +11,7 @@
 	<script src="js/MuCr.js"></script>
 </head>
 
-<body class="stage2">
+<body class="stage8">
 	<nav class="sidebar">
 		<div class="user">
 			<div class="imagen">
