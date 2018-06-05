@@ -639,7 +639,26 @@ img{
 
 .collection .search_artist{
 	position: relative;
-	top: 550px;
+	top: 540px;
+}
+
+.collection .search_artist .search_artist_box{
+	height: 38px;
+	width: 75%;
+	border: 0px;
+	border-radius: 4px 4px 4px 4px;
+	/* text-align: center; */
+	font-size: 1.8vmin;
+}
+
+.collection .search_artist .search_artist_button{
+	height: 40px;
+	width: 45px;
+	background-color: #197fa3;
+	border: 0px;
+	border-radius: 4px 4px 4px 4px;
+	color: white;
+	font-size: 1.8vmin;
 }
 
 .genre{

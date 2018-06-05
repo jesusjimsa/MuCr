@@ -102,8 +102,8 @@
 
 			<form action="" class="search_artist">
 				<input type="text" value="Search by artist" name="artist_search" onfocus="if (this.value=='Search by artist') this.value='';"
-				 onblur="if (this.value == '') this.value = 'Search by artist';">
-				<button type="image" name="search_artist" value="go" class="search_artist_button">
+				 onblur="if (this.value == '') this.value = 'Search by artist';" class="search_artist_box">
+				<button type="image" name="search_artist" class="search_artist_button">
 					Go
 				</button>
 			</form>
@@ -952,25 +952,24 @@
 				<div class="imagen">
 					<img src="
 					<?php
-					$api_file2 = fopen("API_KEY_Imagenes.txt", "r");
+						$api_file2 = fopen("API_KEY_Imagenes.txt", "r");
 						$API_KEY2 = fread($api_file2, filesize("API_KEY_Imagenes.txt"));
-					fclose($api_file2);
-					$ciudad="Madrid";
-					$pais="Spain";
+						fclose($api_file2);
+						$ciudad = "Madrid";
+						$pais = "Spain";
 
+						$imagenes = "https://pixabay.com/api/?key=".$API_KEY2."&q=".$ciudad."+".$pais."&image_type=photo&pretty=true&format=json";
 
-					$imagenes="https://pixabay.com/api/?key=".$API_KEY2."&q=".$ciudad."+".$pais."&image_type=photo&pretty=true&format=json";
+						$ch = curl_init();
+						curl_setopt($ch, CURLOPT_URL, $imagenes);
+						curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+						curl_setopt($ch, CURLOPT_USERAGENT, 'CdBase');
 
-					$ch = curl_init();
-					curl_setopt($ch, CURLOPT_URL, $imagenes);
-					curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-					curl_setopt($ch, CURLOPT_USERAGENT, 'CdBase');
+						$response = curl_exec($ch);
+						curl_close($ch);
+						$response = json_decode($response, JSON_FORCE_OBJECT);
 
-					$response = curl_exec($ch);
-					curl_close($ch);
-					$response = json_decode($response, JSON_FORCE_OBJECT);
-
-					echo $response['hits'][0]['largeImageURL'];
+						echo $response['hits'][0]['largeImageURL'];
 
 					?>
 					" alt="ciudades">
