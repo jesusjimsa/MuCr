@@ -183,19 +183,12 @@
 	</a>
 
 	<div class="grid-container_artista">
-		<div class="itemo"></div>
-			<div class="itemo"></div>
-				<div class="itemo"></div>
-				<div class="itemo"></div>
-					<div class="itemo"></div>
-						<div class="itemo"></div>
-						<div class="itemo"></div>
-							<div class="itemo"></div>
-								<div class="itemo"></div>
-								<div class="itemo"></div>
-									<div class="itemo"></div>
-										<div class="itemo"></div>
-		</div>
+		<?php
+			include 'php/fill_artist.php';
+
+			fillArtist($_GET['artist']);
+		?>
+	</div>
 </body>
 
 </html>
