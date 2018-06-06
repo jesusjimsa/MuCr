@@ -2514,6 +2514,18 @@ img{
 	font-size: 5vmin;
 }
 
+.listaciudades .current_country img{
+	position: fixed;
+	height: 5%;
+	width: 5%;
+	bottom: 53%;
+	left: 37%;
+	border-radius: 200px 200px 200px 200px;
+	border: 0.1vmin solid #000000;
+	margin-left: 1%;
+	margin-bottom: 2%;
+}
+
 .listaciudades .horarios{
 	position:relative;
 	border-radius:0px 0px 28px 0px;
