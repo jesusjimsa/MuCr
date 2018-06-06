@@ -134,6 +134,7 @@
 
 	<div class="grid-concert">
 		<?php
+
 			include 'php/connect_db.php';
 
 			$user_email = $_COOKIE["email"];
