@@ -27,18 +27,29 @@ if($response['results'][0]['address_components'][0]['types'][0]=="country"){
       $latitud=$response['results'][0]['geometry']['location']['lat'];
       $longitud=$response['results'][0]['geometry']['location']['lng'];
       $radius=$radius+400;
-      $city=$response['results'][0]['address_components'][0]['short_name']
+      $city=$response['results'][0]['address_components'][0]['short_name'];
       $location = "Location: " . "../MuCr_concert_near.php?type=country&lat=".$latitud."&lng=".$longitud."&country=".$city."&radius=".$radius;
 }//muetsra country si es un pais y locality si es una ciudad
 else{
   if($response['results'][0]['address_components'][0]['types'][0]=="locality"){
        $country=$response['results'][0]['address_components'][3]['long_name'];
+               $url = "https://maps.googleapis.com/maps/api/geocode/json?address=".$country."&key=".$API_KEY;
+
+               $ch = curl_init();
+               curl_setopt($ch, CURLOPT_URL, $url);
+               curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+               curl_setopt($ch, CURLOPT_USERAGENT, 'CdBase');
+
+               $response = curl_exec($ch);
+               curl_close($ch);
+               $response = json_decode($response, JSON_FORCE_OBJECT);
+       $country=$response['results'][0]['address_components'][0]['short_name'];
        $latitud=$response['results'][0]['geometry']['location']['lat'];
        $longitud=$response['results'][0]['geometry']['location']['lng'];
-      $location = "Location: " . "../MuCr_concert_near.php?type=country&lat=".$latitud."&lng=".$longitud."&country=".$country."&city=".$city."&radius=".$radius;
+      $location = "Location: " . "../MuCr_concert_near.php?type=locality&lat=".$latitud."&lng=".$longitud."&country=".$country."&city=".$city."&radius=".$radius;
 }
 
 }
 
-//header($location);
+header($location);
 ?>
