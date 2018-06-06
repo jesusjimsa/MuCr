@@ -1,3 +1,6 @@
+<?php
+require_once 'php/exit_unauthenticated.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -210,8 +213,8 @@
 
 
 				$api_file = fopen("API_KEY_Lastfm.txt", "r");
-        $API_KEY = fread($api_file, filesize("API_KEY_Lastfm.txt"));
-        fclose($api_file);
+				$API_KEY = fread($api_file, filesize("API_KEY_Lastfm.txt"));
+				fclose($api_file);
 
 				$email = $_COOKIE['email'];
 				include 'php/connect_db.php';
