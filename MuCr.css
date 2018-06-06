@@ -686,6 +686,7 @@ img{
  height:5%;
  width:30%;
 }
+
 .search_location .search_location_box_city{
 	position:relative;
 	left:2%;
@@ -696,6 +697,7 @@ img{
 	/* text-align: center; */
 	font-size: 1.8vmin;
 }
+
 .search_location .search_location_box_radius{
 	position:relative;
 	height: 90%;
@@ -706,6 +708,7 @@ img{
 	font-size: 1.8vmin;
 	margin-left:2%;
 }
+
 .search_location .search_location_button{
 	position:relative;
 	height: 90%;
@@ -716,6 +719,7 @@ img{
 	color: white;
 	font-size: 1.8vmin;
 }
+
 .genre{
 	color:rgba(25,127,163,1);
 	border-radius: 5vmin 5vmin 5vmin 5vmin;
@@ -2502,11 +2506,18 @@ img{
 	opacity: 1;
 }
 
+.listaciudades .current_country{
+	position:fixed;
+	bottom: 56%;
+	left: 33%;
+	color: white;
+	font-size: 5vmin;
+}
 
 .listaciudades .horarios{
 	position:relative;
 	border-radius:0px 0px 28px 0px;
-	bottom: 85%;
+	bottom: 70%;
 	left: 16%;
 	height: 85%;
 	width: 84%;
