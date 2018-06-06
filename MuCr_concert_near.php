@@ -174,7 +174,7 @@
 
 							for($i=0;$i<$max;$i++){
 								$title=$response['_embedded']['events'][$i]['name'];//titulo del evento
-								$imge=['_embedded']['events'][$i]["images"][0]['url'];//la imagen
+								$imge=$response['_embedded']['events'][$i]["images"][0]['url'];//la imagen
 								$date=$response['_embedded']['events'][$i]['dates']['start']['localDate'];//la fecha
 								$hour=$response['_embedded']['events'][$i]['dates']['start']['localTime'];//la hora
 								$city=$response['_embedded']['events'][$i] ['_embedded']['venues'][0]['city']['name'];//la ciudad
