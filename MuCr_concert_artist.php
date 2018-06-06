@@ -134,12 +134,13 @@
 
 	<div class="grid-concert">
 		<?php
+
 			include 'php/connect_db.php';
 
 			$user_email = $_COOKIE["email"];
 
-			$api_file = fopen("API_KEY_Lastfm.txt", "r");
-			$API_KEY = fread($api_file, filesize("API_KEY_Lastfm.txt"));
+			$api_file = fopen("API_KEY.txt", "r");
+			$API_KEY = fread($api_file, filesize("API_KEY.txt"));
 			fclose($api_file);
 
 

@@ -1,6 +1,7 @@
 <?php
 
-class concert{
+class concert
+{
     private $artista;
     private $fecha;
     private $city;
@@ -38,7 +39,7 @@ class concert{
             array_push($artistas, $row[$i][0]);
         }
 
-        $sql="SELECT concert_artist,user_email from U_attended_C WHERE '$email' = user_email";
+        $sql="SELECT concert_artist,user_email from U_attended_C WHERE '$email'=user_email";
         $result2 = mysqli_query($conn, $sql);
         $row2 = mysqli_fetch_all($result2);
 		
@@ -47,26 +48,21 @@ class concert{
         }
 
 		$numer = rand(0, count($artistas) - 1);
-
-		$this->artista = $artistas[$numer];
 		
         return $artistas[$numer];
     }
 	
 	public function createrecomendations2(){
-		$artistas = array();
-		
-		include 'php/connect_db.php';
-		
-		$sql = "SELECT album_artist FROM U_like_A";
+        $artistas=array();
+        include 'php/connect_db.php';
+        $sql="SELECT album_artist from U_like_A";
         $result = mysqli_query($conn, $sql);
         $row = mysqli_fetch_all($result);
-
+        //var_dump($row);
         for ($i=0;$i<count($row);$i++) {
             array_push($artistas, $row[$i][0]);
-		}
-		
-        $sql = "SELECT concert_artist FROM U_attended_C";
+        }
+        $sql="SELECT concert_artist from U_attended_C";
         $result2 = mysqli_query($conn, $sql);
         $row2 = mysqli_fetch_all($result2);
 
@@ -75,10 +71,7 @@ class concert{
         }
 
 		$numer = rand(0, count($artistas));
-
-		$this->artista = $artistas[$numer];
 		
         return $artistas[$numer];
     }
 }
-?>

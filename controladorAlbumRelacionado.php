@@ -318,12 +318,17 @@ class album{
 		curl_setopt($ch, CURLOPT_USERAGENT, 'CdBase');
 
 		$response = curl_exec($ch);
+
 		curl_close($ch);
 		$response = json_decode($response, JSON_FORCE_OBJECT);
 
 
 		$this->id = $response["album"]["mbid"];
+
+		//get the title
 		$this->titulo = $response["album"]["name"];
+
+		//get the artist
 		$this->artista = $response["album"]["artist"];
 		$this->genres=$this->setGenress($response["album"]["tags"]["tag"]);
 		$this->getTypeandYear($this->artista, $this->titulo);
@@ -379,7 +384,7 @@ class album{
 		$this->getTimeAlbum();
 		$this->addAlbumtoBd();
 
-		if ($this == null) {
+		if ($this==null) {
 			return createAlbumRandByTag($tag);
 		}
 		else {

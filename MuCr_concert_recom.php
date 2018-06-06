@@ -133,117 +133,115 @@
 	</div>
 
 	<div class="grid-concert">
-		<?php
-			include 'concertrecomendations.php';
-
-			$recommendation = new concerRec($_COOKIE['email']);
+		<?php include 'concertrecomendations.php';
+			$prueba = new concerRec($_COOKIE['email']);
 		?>
-		<a href="MuCr_Concerts.php?artist=<?php echo $recommendation->getM1(); ?>">
+		<a href="MuCr_Concerts.php?artist=Audioslave">
 			<div class="itemo">
-				<div class="artist_name"><?php echo $recommendation->getM1(); ?></div>
-				<img src="<?php $recommendation->getImage(1); ?>" alt="Artist image">
+				<div class="artist_name"><?php $prueba->getM1() ?></div>
+				<img src="img/concerts/recommendations/audioslave.jpg" alt="Audioslave">
 			</div>
 		</a>
-		<a href="MuCr_Concerts.php?artist=<?php echo $recommendation->getM2(); ?>">
+		<a href="MuCr_Concerts.php?artist=Blink-182">
 			<div class="itemo">
-				<div class="artist_name"><?php echo $recommendation->getM2(); ?></div>
-				<img src="<?php $recommendation->getImage(2); ?>" alt="Artist image">
+				<div class="artist_name"><?php $prueba->getM1() ?></div>
+				<img src="img/concerts/recommendations/blink.jpg" alt="Blink-182">
 			</div>
 		</a>
-		<a href="MuCr_Concerts.php?artist=<?php echo $recommendation->getM3(); ?>">
+		<a href="MuCr_Concerts.php?artist=My_Chemical_Romance">
 			<div class="itemo">
-				<div class="artist_name"><?php echo $recommendation->getM3(); ?></div>
-				<img src="<?php $recommendation->getImage(3); ?>" alt="Artist image">
+				<div class="artist_name"><?php $prueba->getM1() ?></div>
+				<img src="img/concerts/recommendations/chemical.jpg" alt="My Chemical Romance">
 			</div>
 		</a>
-		<a href="MuCr_Concerts.php?artist=<?php echo $recommendation->getM4(); ?>">
+		<a href="MuCr_Concerts.php?artist=Coldplay">
+				<div class="itemo">
+					<div class="artist_name"><?php $prueba->getM1() ?></div>
+					<img src="img/concerts/recommendations/coldplay.jpg" alt="Coldplay">
+				</div>
+			</a>
+			<a href="MuCr_Concerts.php?artist=Imagine_Dragons">
 			<div class="itemo">
-				<div class="artist_name"><?php echo $recommendation->getM4(); ?></div>
-				<img src="<?php $recommendation->getImage(4); ?>" alt="Artist image">
+				<div class="artist_name"><?php $prueba->getM1() ?></div>
+				<img src="img/concerts/recommendations/dragons.jpg" alt="Imagine Dragons">
 			</div>
 		</a>
-		<a href="MuCr_Concerts.php?artist=<?php echo $recommendation->getM5(); ?>">
+		<a href="MuCr_Concerts.php?artist=Evanescence">
 			<div class="itemo">
-				<div class="artist_name"><?php echo $recommendation->getM5(); ?></div>
-				<img src="<?php $recommendation->getImage(5); ?>" alt="Artist image">
+				<div class="artist_name"><?php $prueba->getM1() ?></div>
+				<img src="img/concerts/recommendations/evanescence.jpg" alt="Evanescence">
 			</div>
 		</a>
-		<a href="MuCr_Concerts.php?artist=<?php echo $recommendation->getM6(); ?>">
+		<a href="MuCr_Concerts.php?artist=Fall_Out_Boy">
 			<div class="itemo">
-				<div class="artist_name"><?php echo $recommendation->getM6(); ?></div>
-				<img src="<?php $recommendation->getImage(6); ?>" alt="Artist image">
+				<div class="artist_name"><?php $prueba->getM1() ?></div>
+				<img src="img/concerts/recommendations/fall.jpg" alt="Fall Out Boy">
 			</div>
 		</a>
-		<a href="MuCr_Concerts.php?artist=<?php echo $recommendation->getM7(); ?>">
+		<a href="MuCr_Concerts.php?artist=OK_GO">
 			<div class="itemo">
-				<div class="artist_name"><?php echo $recommendation->getM7(); ?></div>
-				<img src="<?php $recommendation->getImage(7); ?>" alt="Artist image">
+				<div class="artist_name"><?php $prueba->getM1() ?></div>
+				<img src="img/concerts/recommendations/go.jpg" alt="OK GO">
 			</div>
 		</a>
-		<a href="MuCr_Concerts.php?artist=<?php echo $recommendation->getM8(); ?>">
+		<a href="MuCr_Concerts.php?artist=Gorillaz">
 			<div class="itemo">
-				<div class="artist_name"><?php echo $recommendation->getM8(); ?></div>
-				<img src="<?php $recommendation->getImage(8); ?>" alt="Artist image">
+				<div class="artist_name"><?php $prueba->getM1() ?></div>
+				<img src="img/concerts/recommendations/gorillaz.jpg" alt="Gorillaz">
 			</div>
 		</a>
-		<a href="MuCr_Concerts.php?artist=<?php echo $recommendation->getM9(); ?>">
+		<a href="MuCr_Concerts.php?artist=Hoobastank">
 			<div class="itemo">
-				<div class="artist_name"><?php echo $recommendation->getM9(); ?></div>
-				<img src="<?php $recommendation->getImage(9); ?>" alt="Artist image">
+				<div class="artist_name"><?php $prueba->getM1() ?></div>
+				<img src="img/concerts/recommendations/hoobastank.jpg" alt="Hoobastank">
 			</div>
 		</a>
-		<a href="MuCr_Concerts.php?artist=<?php echo $recommendation->getM10(); ?>">
+		<a href="MuCr_Concerts.php?artist=The_Killers">
 			<div class="itemo">
-				<div class="artist_name"><?php echo $recommendation->getM10(); ?></div>
-				<img src="<?php $recommendation->getImage(10); ?>" alt="Artist image">
+				<div class="artist_name"><?php $prueba->getM1() ?></div>
+				<img src="img/concerts/recommendations/killers.jpg" alt="The Killers">
 			</div>
 		</a>
-		<a href="MuCr_Concerts.php?artist=<?php echo $recommendation->getM11(); ?>">
+		<a href="MuCr_Concerts.php?artist=Linki_Park">
 			<div class="itemo">
-				<div class="artist_name"><?php echo $recommendation->getM11(); ?></div>
-				<img src="<?php $recommendation->getImage(11); ?>" alt="Artist image">
+				<div class="artist_name"><?php $prueba->getM1() ?></div>
+				<img src="img/concerts/recommendations/linkin.jpg" alt="Linkin Park">
 			</div>
 		</a>
-		<a href="MuCr_Concerts.php?artist=<?php echo $recommendation->getM12(); ?>">
+		<a href="MuCr_Concerts.php?artist=Maroon_5">
 			<div class="itemo">
-				<div class="artist_name"><?php echo $recommendation->getM12(); ?></div>
-				<img src="<?php $recommendation->getImage(12); ?>" alt="Artist image">
+				<div class="artist_name"><?php $prueba->getM1() ?></div>
+				<img src="img/concerts/recommendations/maroon.jpg" alt="Maroon 5">
 			</div>
 		</a>
-		<a href="MuCr_Concerts.php?artist=<?php echo $recommendation->getM13(); ?>">
+		<a href="MuCr_Concerts.php?artist=Paramore">
 			<div class="itemo">
-				<div class="artist_name"><?php echo $recommendation->getM13(); ?></div>
-				<img src="<?php $recommendation->getImage(13); ?>" alt="Artist image">
+				<div class="artist_name"><?php $prueba->getM1() ?></div>
+				<img src="img/concerts/recommendations/paramore.png" alt="Paramore">
 			</div>
 		</a>
-		<a href="MuCr_Concerts.php?artist=<?php echo $recommendation->getM14(); ?>">
+		<a href="MuCr_Concerts.php?artist=Twente_One_Pilots">
 			<div class="itemo">
-				<div class="artist_name"><?php echo $recommendation->getM14(); ?></div>
-				<img src="<?php $recommendation->getImage(14); ?>" alt="Artist image">
+				<div class="artist_name"><?php $prueba->getM1() ?></div>
+				<img src="img/concerts/recommendations/pilots.png" alt="Twenty One Pilots">
 			</div>
 		</a>
-		<a href="MuCr_Concerts.php?artist=<?php echo $recommendation->getM15(); ?>">
+		<a href="MuCr_Concerts.php?artist=Slinpknot">
 			<div class="itemo">
-				<div class="artist_name"><?php echo $recommendation->getM15(); ?></div>
-				<img src="<?php $recommendation->getImage(15); ?>" alt="Artist image">
+				<div class="artist_name"><?php $prueba->getM1() ?></div>
+				<img src="img/concerts/recommendations/slipknot.jpg" alt="Slipknot">
 			</div>
 		</a>
-		<a href="MuCr_Concerts.php?artist=<?php echo $recommendation->getM16(); ?>">
+		<a href="MuCr_Concerts.php?artist=The_White_Stripes">
 			<div class="itemo">
-				<div class="artist_name"><?php echo $recommendation->getM16(); ?></div>
-				<img src="<?php $recommendation->getImage(16); ?>" alt="Artist image">
+				<div class="artist_name"><?php $prueba->getM1() ?></div>
+				<img src="img/concerts/recommendations/stripes.jpg" alt="The White Stripes">
 			</div>
 		</a>
-		<a href="MuCr_Concerts.php?artist=<?php echo $recommendation->getM17(); ?>">
+		<a href="MuCr_Concerts.php?artist=ZZ_Top">
 			<div class="itemo">
-				<div class="artist_name"><?php echo $recommendation->getM17(); ?></div>
-				<img src="<?php $recommendation->getImage(17); ?>" alt="Artist image">
-			</div>
-		</a>
-		<a href="MuCr_Concerts.php?artist=<?php echo $recommendation->getM18(); ?>">
-			<div class="itemo">
-				<div class="artist_name"><?php echo $recommendation->getM18(); ?></div>
-				<img src="<?php $recommendation->getImage(18); ?>" alt="Artist image">
+				<div class="artist_name"><?php $prueba->getM18() ?></div>
+				<img src="img/concerts/recommendations/top.jpg" alt="ZZ Top">
 			</div>
 		</a>
 	</div>

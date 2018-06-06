@@ -10,7 +10,6 @@
 // $response['_embedded']['events'][1]['url'];//la url para comprar el ticket
  //var_dump($response);
 
-<<<<<<< HEAD
 //header($location);
 
 
@@ -29,8 +28,5 @@ $response = json_decode($response, JSON_FORCE_OBJECT);
 //$response['similarartists']['artist'][0]['name'];elnombre
 //$response['similarartists']['artist'][0]['image'][2]['#text'];la imagen del susodicho
 //var_dump($response['similarartists']['artist'][0]['image'][2]['#text']);
-=======
-//header($location); -->
->>>>>>> c20c730384816b99a24b77450733da493681a91e
 
 ?>
