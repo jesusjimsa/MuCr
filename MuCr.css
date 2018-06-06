@@ -677,6 +677,45 @@ img{
 	font-size: 1.8vmin;
 }
 
+.search_location{
+ position: fixed;
+ padding-top: 0.25%;
+ top: 13%;
+ background-color: rgba(77,77,77,0.97);
+ left:75%;
+ height:5%;
+ width:30%;
+}
+.search_location .search_location_box_city{
+	position:relative;
+	left:2%;
+	height: 90%;
+	width: 50%;
+	border: 0px;
+	border-radius: 4px 4px 4px 4px;
+	/* text-align: center; */
+	font-size: 1.8vmin;
+}
+.search_location .search_location_box_radius{
+	position:relative;
+	height: 90%;
+	width: 15%;
+	border: 0px;
+	border-radius: 4px 4px 4px 4px;
+	/* text-align: center; */
+	font-size: 1.8vmin;
+	margin-left:2%;
+}
+.search_location .search_location_button{
+	position:relative;
+	height: 90%;
+	width: 45px;
+	background-color: #197fa3;
+	border: 0px;
+	border-radius: 4px 4px 4px 4px;
+	color: white;
+	font-size: 1.8vmin;
+}
 .genre{
 	color:rgba(25,127,163,1);
 	border-radius: 5vmin 5vmin 5vmin 5vmin;

@@ -101,7 +101,7 @@
 				<a href="MuCr_Milist.php?mylist=seen"><button class="especialized" style="display:block;">My albums</button> <!-- 27 --></a>
 				<a href="MuCr_Milist.php?mylist=like"><button class="especialized" style="display:block;">My likes</button> <!-- 28 --></a>
 			</div>
-	
+
 			<form action="php/search_by_artist.php" class="search_artist" method="POST">
 				<input type="text" value="Search by artist" name="artist_search" onfocus="if (this.value=='Search by artist') this.value='';"
 				onblur="if (this.value == '') this.value = 'Search by artist';" class="search_artist_box">
@@ -115,6 +115,15 @@
 			<img src="img/icons/close.png" alt="close">
 		</nav>
 	</a>
+
+	<form action="php/search_by_location.php" class="search_location" method="POST">
+		<input type="text" value="City" name="city" onfocus="if (this.value=='City') this.value='';"
+		onblur="if (this.value == '') this.value = 'City,Country,...';" class="search_location_box_city">
+
+		<input type="text" value="radius" name="radius" onfocus="if (this.value=='radius') this.value='';"
+		onblur="if (this.value == '') this.value = 'radius';" class="search_location_box_radius">
+		<input type="submit" name="search_location" value="Go" class="search_location_button">
+	</form>
 
 	<div class="concert_title">
 		Concerts
@@ -133,6 +142,91 @@
 	</div>
 
 	<div class="near_scroll">
+		<?php
+				if($_GET['type']=="country"){
+					$api_file = fopen("API_KEY_Ticketmaster.txt", "r");
+					$API_KEY = fread($api_file, filesize("API_KEY_Ticketmaster.txt"));
+					fclose($api_file);
+
+
+				}
+				else{
+						if($_GET['type']=="locality"){
+							$api_file = fopen("API_KEY_Ticketmaster.txt", "r");
+							$API_KEY = fread($api_file, filesize("API_KEY_Ticketmaster.txt"));
+							fclose($api_file);
+
+							$api_file2 = fopen("API_KEY_Imagenes.txt", "r");
+							$API_KEY2 = fread($api_file2, filesize("API_KEY_Imagenes.txt"));
+							fclose($api_file2);
+
+
+							$url = "https://app.ticketmaster.com/discovery/v2/events.json?latlong=".$_GET['lat'].",".$_GET['lng']."&radius=".$_GET['radius']."&apikey=".$API_KEY;
+							$ch = curl_init();
+							curl_setopt($ch, CURLOPT_URL, $url);
+							curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+							curl_setopt($ch, CURLOPT_USERAGENT, 'CdBase');
+							$response = curl_exec($ch);
+							curl_close($ch);
+							$response = json_decode($response, JSON_FORCE_OBJECT);
+
+							$max=count($response['_embedded']['events']);
+
+							for($i=0;$i<$max;$i++){
+								$title=$response['_embedded']['events'][$i]['name'];//titulo del evento
+								$imge=$response['_embedded']['events'][$i]["images"][0]['url'];//la imagen
+								$date=$response['_embedded']['events'][$i]['dates']['start']['localDate'];//la fecha
+								$hour=$response['_embedded']['events'][$i]['dates']['start']['localTime'];//la hora
+								$city=$response['_embedded']['events'][$i] ['_embedded']['venues'][0]['city']['name'];//la ciudad
+								$coin=$response['_embedded']['events'][$i] ['priceRanges'][0]['currency'];//la moneda
+								$min_prec=$response['_embedded']['events'][$i] ['priceRanges'][0]['min'];//minimo precio
+								$max_prec=$response['_embedded']['events'][$i] ['priceRanges'][0]['min'];//maximo precio
+								$link=$response['_embedded']['events'][$i]['url'];//la url para comprar el ticket
+
+								$uriFlag="img/flags/".strtolower($_GET['country']).".png";//la bandera del pais
+								////////////////////////////////////////////////////////////////////////////////////////////
+								$imagenes = "https://pixabay.com/api/?key=".$API_KEY2."&q=".$city."&image_type=photo&pretty=true&format=json";
+								$ch = curl_init();
+								curl_setopt($ch, CURLOPT_URL, $imagenes);
+								curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+								curl_setopt($ch, CURLOPT_USERAGENT, 'CdBase');
+								$response = curl_exec($ch);
+								curl_close($ch);
+								$response = json_decode($response, JSON_FORCE_OBJECT);
+
+								$urlcity=$response['hits'][5]['largeImageURL'];
+								////////////////////////////////////////////////////////////////////////////////////////////////
+								echo "<div class=\"concert\">";
+									echo "<img src=\"".$imge."\" alt=\"".$title."\">";
+									echo	"<div class=\"name_artist\">";
+										echo $title;
+									echo "</div>";
+									echo "<div class=\"location_date\">";
+										echo $date." at ".$hour;
+									echo "<br/> Minimum:".$min_prec." ".$coin." Maximum: ".$max_prec." ".$coin;
+									echo "</div>";
+									echo "<div class=\"city_near\">";
+										echo "	<img src=\"".$urlcity."\" alt=\"ciudad\">";
+										echo "<div class=\"flag\">";
+											echo "<img src=\"".$uriFlag."\" alt=\"bandera\">";
+										echo "</div>";
+										echo "<div class=\"titulo\">".$city."</div>";
+								echo"</div></div>";
+
+
+								$title=$imge=$date=$hour=$city=$coin=$min_prec=$max_prec=$link=$uriFlag=$imagenes=NULL;
+							}
+
+						}
+						else{
+
+								echo "Busca en el buscador";
+						}
+				}
+
+			?>
+
+
 		<div class="concert">
 			<img src="img/concerts/posters/bowie.jpg" alt="David Bowie">
 			<div class="name_artist">
@@ -150,74 +244,7 @@
 				<div class="titulo">IASI</div>
 			</div>
 		</div>
-		<div class="concert">
-			<img src="img/concerts/posters/McCartney.jpg" alt="Paul McCartney">
-			<div class="name_artist">
-				Paul McCartney
-			</div>
-			<div class="location_date">
-				29 May 2018
-				<br/> Cheapest: 80€
-			</div>
-			<div class="city_near">
-				<img src="img/ciudades/budapest.jpg" alt="ciudad">
-				<div class="flag">
-					<img src="img/flags/hun.jpg" alt="bandera">
-				</div>
-				<div class="titulo">BUDAPEST</div>
-			</div>
-		</div>
-		<div class="concert">
-			<img src="img/concerts/posters/foo_fighters.jpg" alt="Foo Fighters">
-			<div class="name_artist">
-				Foo Fighters
-			</div>
-			<div class="location_date">
-				16 June 2018
-				<br/> Cheapest: 80€
-			</div>
-			<div class="city_near">
-				<img src="img/ciudades/Bucuresti.jpg" alt="ciudad">
-				<div class="flag">
-					<img src="img/flags/rom.png" alt="bandera">
-				</div>
-				<div class="titulo">BUCHAREST</div>
-			</div>
-		</div>
-		<div class="concert">
-			<img src="img/concerts/posters/rolling_stones.jpg" alt="The Rolling Stones">
-			<div class="name_artist">
-				The Rolling Stones
-			</div>
-			<div class="location_date">
-				18 June 2018
-				<br/> Cheapest: 80€
-			</div>
-			<div class="city_near">
-				<img src="img/ciudades/cluj.jpg" alt="ciudad">
-				<div class="flag">
-					<img src="img/flags/rom.png" alt="bandera">
-				</div>
-				<div class="titulo">CLUJ</div>
-			</div>
-		</div>
-		<div class="concert">
-			<img src="img/concerts/posters/general.jpg" alt="Basic">
-			<div class="name_artist">
-				Paco paquez
-			</div>
-			<div class="location_date">
-				5 August 2018
-				<br/> Cheapest: 2€
-			</div>
-			<div class="city_near">
-				<img src="img/ciudades/chisinau.jpg" alt="ciudad">
-				<div class="flag">
-					<img src="img/flags/mol.png" alt="bandera">
-				</div>
-				<div class="titulo">CHISINAU</div>
-			</div>
-		</div>
+
 	</div>
 
 </body>
