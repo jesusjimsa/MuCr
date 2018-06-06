@@ -1345,7 +1345,7 @@ require_once 'php/exit_unauthenticated.php';
 		
 		<div class="current_country">
 			<?php
-				if($_GET['country'] != ""){
+				if(isset($_GET['country']) && $_GET['country'] != ""){
 					if($_GET['country'] == "Not yet"){
 						echo "Country not supported yet";
 					}
@@ -1363,7 +1363,7 @@ require_once 'php/exit_unauthenticated.php';
 			<?php
 				include 'php/fill_concert.php';
 
-				if($_GET['country'] != ""){
+				if(isset($_GET['country']) && $_GET['country'] != ""){
 					printConcerts($_GET['artist'], $_GET['country']);
 				}
 			?>
