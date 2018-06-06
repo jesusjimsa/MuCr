@@ -40,7 +40,46 @@
 		</a>
 		<div class="titulo_grupos">Log in as:</div>
 		<div class="grupos">
+			<a href="php/change_user_to_group.php?user=<?php echo $_COOKIE['grupo'];?>" >
 			<div class="grupis">
+				<div class="imagenes">
+					<img src="<?php
+					 	$email=$_COOKIE['grupo'];
+						$sql_imagen="SELECT * FROM user WHERE email='$email'";
+						include 'php/connect_db.php';
+						$result = mysqli_query($conn, $sql_imagen);
+						$row = mysqli_fetch_assoc($result);
+							echo $row['URLimage'];
+					?>" alt="you">
+				</div>
+				<div class="nome">MYSELF</div>
+			</a>
+			</div>
+			<?php
+				include 'php/connect_db.php';
+				$email=$_COOKIE['grupo'];
+				$sql_show="SELECT * FROM U_group WHERE user_email='$email'";
+
+				$result = mysqli_query($conn, $sql_show);
+				$row = mysqli_fetch_all($result);
+				for($i=0;$i<count($row)-1;$i++){
+						$name=$row[$i][1];
+						$sql_image="SELECT * FROM grupo WHERE name='$name'";
+						$result = mysqli_query($conn, $sql_image);
+						$row2 = mysqli_fetch_assoc($result);
+						$image=$row2['URLimage'];
+
+
+						echo "<a href=\"php/change_user_to_group.php?user=".$name."\" >";
+						echo "<div class=\"grupis\">";
+						echo "<div class=\"imagenes\">";
+						echo "<img src=\"".$image."\" alt=\"group\">";
+						echo "</div>";
+						echo "<div class=\"nome\">".$name."</div></div></a>";
+				}
+			?>
+
+			<!-- <div class="grupis">
 				<div class="imagenes">
 					<img src="img/amy.jpg" alt="you">
 				</div>
@@ -100,7 +139,7 @@
 					<img src="img/group.jpg" alt="group">
 				</div>
 				<div class="nome">#GROUP10</div>
-			</div>
+			</div> -->
 		</div>
 		</div>
 
@@ -112,10 +151,6 @@
 		</nav>
 	</a>
 
-	<div class="dora">
-		<input type="text" class="dorado" value="search" onfocus="if (this.value=='search') this.value='';" onblur="if (this.value=='') this.value='search';"
-		/>
-	</div>
 
 	<div class="ajustes_principal">
 		<img id="ajustesimagen"
@@ -178,9 +213,6 @@
 					<div class="textillo">Create new group
 						<br>choose a name:</div>
 					<input class="cajetilla" type="text" name="group_name">
-				</div>
-				<div class="especifico">
-					<input class="cajetilla3" type="button" name="group_image" value="choose a image for the group" onclick="open_images(1)">
 				</div>
 				<div class="especifico">
 					<div class="textillo">Select User for the group:</div>
