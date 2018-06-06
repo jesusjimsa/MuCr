@@ -1,3 +1,6 @@
+<?php
+require_once 'php/exit_unauthenticated.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 

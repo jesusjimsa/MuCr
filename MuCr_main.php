@@ -1,3 +1,6 @@
+<?php
+require_once 'php/exit_unauthenticated.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -120,7 +123,7 @@
 
 		<div class="fila">
 			<?php
-				$lista1 = new lista("recomendations", $added, $email);
+				$lista1 = new lista("recommendations", $added, $email);
 			?>
 			<div class="title">Recomendations</div>
 			<div class="row_main">
@@ -210,8 +213,8 @@
 
 
 				$api_file = fopen("API_KEY_Lastfm.txt", "r");
-        $API_KEY = fread($api_file, filesize("API_KEY_Lastfm.txt"));
-        fclose($api_file);
+				$API_KEY = fread($api_file, filesize("API_KEY_Lastfm.txt"));
+				fclose($api_file);
 
 				$email = $_COOKIE['email'];
 				include 'php/connect_db.php';
