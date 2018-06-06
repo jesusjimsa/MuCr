@@ -1368,7 +1368,6 @@ require_once 'php/exit_unauthenticated.php';
 				}
 			?>
 		</div>
-
 	</div>
 
 	<div class="artistarel">

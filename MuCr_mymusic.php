@@ -165,18 +165,20 @@ require_once 'php/exit_unauthenticated.php';
 		<div class="escenario">
 			<?php
 				include 'php/connect_db.php';
-				$email=$_COOKIE['email'];
-				$sql_order="SELECT * from albums_NV WHERE user='$email'";
+
+				$email = $_COOKIE['email'];
+
+				$sql_order = "SELECT * from albums_NV WHERE user='$email'";
 				$result = mysqli_query($conn, $sql_order);
 				$row = mysqli_fetch_all($result);
 
-				$max=count($row)-1;
-				for($i=0;$i<$max;$i++){
+				$max = count($row);
+				for($i = 0; $i < $max; $i++){
 					echo "<div class=\"muestra\">";
-					echo "<div class=\"casillaM1\">".$row[$i][0]."</div>
-					<div class=\"casillaM1\">".$row[$i][1]."</div>
-					<div class=\"casillaM1\">".$row[$i][2]."</div>
-					<div class=\"casillaM1\">".$row[$i][3]."</div>";
+					echo "<div class=\"casillaM1\">" . $row[$i][0] . "</div>
+					<div class=\"casillaM1\">" . $row[$i][1] . "</div>
+					<div class=\"casillaM1\">" . $row[$i][2] . "</div>
+					<div class=\"casillaM1\">" . $row[$i][3] . "</div>";
 					echo "</div>";
 				}
 
@@ -189,18 +191,21 @@ require_once 'php/exit_unauthenticated.php';
 		<div class="escenario">
 			<?php
 				include 'php/connect_db.php';
-				$email=$_COOKIE['email'];
-				$sql_order="SELECT * from concerts_NV WHERE user='$email'";
+
+				$email = $_COOKIE['email'];
+
+				$sql_order = "SELECT * from concerts_NV WHERE user = '$email'";
 				$result = mysqli_query($conn, $sql_order);
 				$row = mysqli_fetch_all($result);
 
-				$max=count($row)-1;
-				for($i=0;$i<$max;$i++){
+				$max = count($row);
+
+				for($i = 0; $i < $max; $i++){
 					echo "<div class=\"muestra\">";
-					echo "<div class=\"casillaM1\">".$row[$i][0]."</div>
-					<div class=\"casillaM1\">".$row[$i][1]."</div>
-					<div class=\"casillaM1\">".$row[$i][2]."</div>
-					<div class=\"casillaM1\">".$row[$i][3]."</div>";
+					echo "<div class=\"casillaM1\">" . $row[$i][0] . "</div>
+					<div class=\"casillaM1\">" . $row[$i][1] . "</div>
+					<div class=\"casillaM1\">" . $row[$i][2] . "</div>
+					<div class=\"casillaM1\">" . $row[$i][3] . "</div>";
 					echo "</div>";
 				}
 

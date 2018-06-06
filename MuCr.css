@@ -2536,6 +2536,19 @@ img{
 	overflow-y: scroll;
 }
 
+.listaciudades .horarios .nothing_found{
+	top:20%;
+	position: relative;
+	left:0.5%;
+	height: 10%;
+	width:99.5%;
+	margin-bottom: 1%;
+	color:white;
+	text-align: center;
+	padding-top: 0.4%;
+	font-size: 5vmin;
+}
+
 .listaciudades .horarios .hora{
 	background-color: rgba(77,77,77,1);
 	top:1%;
@@ -2592,14 +2605,16 @@ img{
 	position: relative;
 	left:61%;
 	height: 91%;
-	width:10%;
+	width:20%;
 	bottom:300%;
 	color:white;
 	text-align:center;
 	/* padding-top:0.5%; */
 	font-weight: bold;
-	font-size: 3.6vmin;
+	font-size: 3vmin;
 }
+
+
 
 .listaciudades .horarios .asistir{
 	position:relative;
@@ -2722,6 +2737,7 @@ img{
 	height:15%;
 	width:78%;
 }
+
 .upload_concert{
 	position: fixed;
 	background-color:rgba(77,77,77,0.90);
@@ -2745,6 +2761,7 @@ img{
 	padding-top:2%;
 	color:white;
 }
+
 .cuestionario{
 	position:relative;
 	left:22%;
@@ -2763,6 +2780,7 @@ img{
 	/* text-align: center; */
 	font-size: 1.8vmin;
 }
+
 .cuestionario .submit_datos{
 	position: relative;
 	height: 100%;
@@ -2804,6 +2822,7 @@ img{
 	color: white;
 	padding-top:1%;
 }
+
 .escenario{
 	position: relative;
 	top:5%;
@@ -2813,14 +2832,16 @@ img{
 	z-index: 1;
 	overflow-y: scroll;
 }
+
 .escenario .muestra{
-position:relative;
-background-color: rgba(77,77,77,0.90);
-top:1%;
-width:99%;
-height:15%;
-margin-bottom: 1%;
+	position:relative;
+	background-color: rgba(77,77,77,0.90);
+	top:1%;
+	width:99%;
+	height:15%;
+	margin-bottom: 1%;
 }
+
 .escenario .muestra .casillaM1{
 	position:relative;
 	background-color: rgba(77,77,77,0.97);
