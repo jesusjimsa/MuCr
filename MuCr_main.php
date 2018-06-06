@@ -120,7 +120,7 @@
 
 		<div class="fila">
 			<?php
-				$lista1 = new lista("recomendations", $added, $email);
+				$lista1 = new lista("recommendations", $added, $email);
 			?>
 			<div class="title">Recomendations</div>
 			<div class="row_main">

@@ -14,15 +14,10 @@ function checkUser($email, $password1){
 			// Set cookies
 			setcookie("email", $email, time() + (86400 * 30), "/");	// 86400 = 1 day
 			setcookie("password", $password1, time() + (86400 * 30), "/");	// 86400 = 1 day
-			
+			setcookie("grupo", $email, time() + (86400 * 30), "/");	// 86400 = 1 day
+
 			header('Location: ../MuCr_main.php');
 		}
-		else{
-			echo "Hello darkness my old friend";
-		}
-	}
-	else{
-		echo "I don't work " . $result->num_rows;
 	}
 
 	$conn->close();

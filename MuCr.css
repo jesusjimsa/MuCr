@@ -2690,3 +2690,124 @@ img{
 	top: 7.5px;
 	right: 61px;
 }
+
+.upload_album{
+	position: fixed;
+	background-color: rgba(77,77,77,0.90);
+	top:20%;
+	left:20%;
+	height:15%;
+	width:78%;
+}
+.upload_concert{
+	position: fixed;
+	background-color:rgba(77,77,77,0.90);
+	top:37%;
+	left:20%;
+	height:15%;
+	width:78%;
+}
+
+.presentacion{
+	position: relative;
+	top:2%;
+	background-color: rgba(77,77,77,1);
+	left:1%;
+	height: 69%;
+	width:20%;
+	font-size: 5vmin;
+	border:0.5vmin solid white;
+	border-radius: 2.5vmin 2.5vmin 2.5vmin 2.5vmin;
+	text-align: center;
+	padding-top:2%;
+	color:white;
+}
+.cuestionario{
+	position:relative;
+	left:22%;
+	width:77%;
+	height: 30%;
+	bottom:60%;
+	z-index: 1;
+}
+
+
+.cuestionario .set_album{
+	height: 100%;
+	width: 20%;
+	border: 0px;
+	border-radius: 4px 4px 4px 4px;
+	/* text-align: center; */
+	font-size: 1.8vmin;
+}
+.cuestionario .submit_datos{
+	position: relative;
+	height: 100%;
+	width: 5%;
+	background-color: #197fa3;
+	border: 0px;
+	border-radius: 4px 4px 4px 4px;
+	color: white;
+	font-size: 1.8vmin;
+	left:12%;
+}
+
+.uploaded_albums{
+	position: fixed;
+	background-color: rgba(77,77,77,0.80);
+	top:55%;
+	left:20%;
+	height:43%;
+	width:35%;
+}
+
+.uploaded_concerts{
+	position: fixed;
+	background-color: rgba(77,77,77,0.80);
+	top:55%;
+	left:60%;
+	height:43%;
+	width:35%;
+}
+
+.uploaded_ti{
+	position:relative;
+	background-color: #197fa3;
+	top:2%;
+	left:2%;
+	height:6%;
+	width:50%;
+	text-align: center;
+	color: white;
+	padding-top:1%;
+}
+.escenario{
+	position: relative;
+	top:5%;
+	left:0%;
+	height:88%;
+	width:100%;
+	z-index: 1;
+	overflow-y: scroll;
+}
+.escenario .muestra{
+position:relative;
+background-color: rgba(77,77,77,0.90);
+top:1%;
+width:99%;
+height:15%;
+margin-bottom: 1%;
+}
+.escenario .muestra .casillaM1{
+	position:relative;
+	background-color: rgba(77,77,77,0.97);
+	height:60%;
+	width:24%;
+	margin-right: 1%;
+	text-align: center;
+	font-size: 2vmin;
+	padding-top:3%;
+	float: left;
+	color:white;
+
+}

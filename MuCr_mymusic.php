@@ -101,7 +101,7 @@
 				<a href="MuCr_Milist.php?mylist=seen"><button class="especialized" style="display:block;">My albums</button> <!-- 27 --></a>
 				<a href="MuCr_Milist.php?mylist=like"><button class="especialized" style="display:block;">My likes</button> <!-- 28 --></a>
 			</div>
-	
+
 			<form action="php/search_by_artist.php" class="search_artist" method="POST">
 				<input type="text" value="Search by artist" name="artist_search" onfocus="if (this.value=='Search by artist') this.value='';"
 				onblur="if (this.value == '') this.value = 'Search by artist';" class="search_artist_box">
@@ -119,401 +119,92 @@
 	<div class="genre">
 		Your Studio
 	</div>
-	<div class="mitad_izq">
-		<div class="centrado">Your Contributions</div>
-		<div class="newstudio">
-			<img src="img/amaral/amaral.jpg" alt="grupo">
-			<div class="listado">
-				<ul>
-					<li>
-						<h1>Estrellas en el mar1</h1>
-					</li>
-					<li>Sin ti no soy nada
-						<span class="tiempo">3:45</span>
-						<button class="deletesong">delete song</button>
-					</li>
-					<li>Te necesito
-						<span class="tiempo">3:45</span>
-						<button class="deletesong">delete song</button>
-					</li>
-					<li>Toda la noche en la calle
-						<span class="tiempo">3:45</span>
-						<button class="deletesong">delete song</button>
-					</li>
-					<li>Moriría por vos
-						<span class="tiempo">3:45</span>
-						<button class="deletesong">delete song</button>
-					</li>
-					<li>Estrella de mar
-						<span class="tiempo">3:45</span>
-						<button class="deletesong">delete song</button>
-					</li>
-					<li>Salir corriendo
-						<span class="tiempo">3:45</span>
-						<button class="deletesong">delete song</button>
-					</li>
-					<li>Sin ti no soy nada
-						<span class="tiempo">3:45</span>
-						<button class="deletesong">delete song</button>
-					</li>
-					<li>Te necesito
-						<span class="tiempo">3:45</span>
-						<button class="deletesong">delete song</button>
-					</li>
-					<li>Toda la noche en la calle
-						<span class="tiempo">3:45</span>
-						<button class="deletesong">delete song</button>
-					</li>
-					<li>Moriría por vos
-						<span class="tiempo">3:45</span>
-						<button class="deletesong">delete song</button>
-					</li>
-					<li>Estrella de mar
-						<span class="tiempo">3:45</span>
-						<button class="deletesong">delete song</button>
-					</li>
-					<li>Salir corriendo
-						<span class="tiempo">3:45</span>
-						<button class="deletesong">delete song</button>
-					</li>
-					<li>
-						<button class="addsong" onclick="window.location.href='MuCr_mymusic_addsongs.php'">add a song</button>
+	<div class="upload_album">
+			<div class="presentacion">Add Album</div>
 
-					</li>
-				</ul>
+				<form action="php/insert_album.php" class="cuestionario" method="POST">
+				<input type="text" value="insert the artist" name="artist" onfocus="if (this.value=='insert the artist') this.value='';"
+				onblur="if (this.value == '') this.value = 'insert the artist';" class="set_album">
 
-			</div>
-			<button class="deletealbum">Delete album</button>
-		</div>
+				<input type="text" value="insert the title" name="title" onfocus="if (this.value=='insert the title') this.value='';"
+				onblur="if (this.value == '') this.value = 'insert the title';" class="set_album">
 
-		<div class="newstudio">
-			<img src="img/amaral/amaral2.jpg" alt="album">
-			<div class="listado">
-				<ul>
-					<li>
-						<h1>Estrellas en el mar2</h1>
-					</li>
-					<li>Sin ti no soy nada
-						<span class="tiempo">3:45</span>
-						<button class="deletesong">delete song</button>
-					</li>
-					<li>Te necesito
-						<span class="tiempo">3:45</span>
-						<button class="deletesong">delete song</button>
-					</li>
-					<li>Toda la noche en la calle
-						<span class="tiempo">3:45</span>
-						<button class="deletesong">delete song</button>
-					</li>
-					<li>Moriría por vos
-						<span class="tiempo">3:45</span>
-						<button class="deletesong">delete song</button>
-					</li>
-					<li>Estrella de mar
-						<span class="tiempo">3:45</span>
-						<button class="deletesong">delete song</button>
-					</li>
-					<li>Salir corriendo
-						<span class="tiempo">3:45</span>
-						<button class="deletesong">delete song</button>
-					</li>
-					<li>Sin ti no soy nada
-						<span class="tiempo">3:45</span>
-						<button class="deletesong">delete song</button>
-					</li>
-					<li>Te necesito
-						<span class="tiempo">3:45</span>
-						<button class="deletesong">delete song</button>
-					</li>
-					<li>Toda la noche en la calle
-						<span class="tiempo">3:45</span>
-						<button class="deletesong">delete song</button>
-					</li>
-					<li>Moriría por vos
-						<span class="tiempo">3:45</span>
-						<button class="deletesong">delete song</button>
-					</li>
-					<li>Estrella de mar
-						<span class="tiempo">3:45</span>
-						<button class="deletesong">delete song</button>
-					</li>
-					<li>Salir corriendo
-						<span class="tiempo">3:45</span>
-						<button class="deletesong">delete song</button>
-					</li>
-					<li>
+				<input type="text" value="insert the style" name="style" onfocus="if (this.value=='insert the style') this.value='';"
+				onblur="if (this.value == '') this.value = 'insert the style';" class="set_album">
 
-						<button class="addsong" onclick="window.location.href='MuCr_mymusic_addsongs.php'">add a song</button>
+				<input type="text" value="insert the type" name="type" onfocus="if (this.value=='insert the type') this.value='';"
+				onblur="if (this.value == '') this.value = 'insert the type';" class="set_album">
 
-					</li>
-				</ul>
+				<input type="submit" name="add_album" value="Go" class="submit_datos">
+				</form>
+	</div>
+	<div class="upload_concert">
+		<div class="presentacion">Add Concert</div>
+			<form action="php/insert_concerts.php" class="cuestionario" method="POST">
+				<input type="text" value="insert the artist" name="artist" onfocus="if (this.value=='insert the artist') this.value='';"
+				onblur="if (this.value == '') this.value = 'insert the artist';" class="set_album">
 
-			</div>
-			<button class="deletealbum">Delete album</button>
-		</div>
-		<div class="newstudio">
-			<img src="img/amaral/amaral3.jpg" alt="album">
-			<div class="listado">
-				<ul>
-					<li>
-						<h1>Estrellas en el mar3</h1>
-					</li>
-					<li>Sin ti no soy nada
-						<span class="tiempo">3:45</span>
-						<button class="deletesong">delete song</button>
-					</li>
-					<li>Te necesito
-						<span class="tiempo">3:45</span>
-						<button class="deletesong">delete song</button>
-					</li>
-					<li>Toda la noche en la calle
-						<span class="tiempo">3:45</span>
-						<button class="deletesong">delete song</button>
-					</li>
-					<li>Moriría por vos
-						<span class="tiempo">3:45</span>
-						<button class="deletesong">delete song</button>
-					</li>
-					<li>Estrella de mar
-						<span class="tiempo">3:45</span>
-						<button class="deletesong">delete song</button>
-					</li>
-					<li>Salir corriendo
-						<span class="tiempo">3:45</span>
-						<button class="deletesong">delete song</button>
-					</li>
-					<li>Sin ti no soy nada
-						<span class="tiempo">3:45</span>
-						<button class="deletesong">delete song</button>
-					</li>
-					<li>Te necesito
-						<span class="tiempo">3:45</span>
-						<button class="deletesong">delete song</button>
-					</li>
-					<li>Toda la noche en la calle
-						<span class="tiempo">3:45</span>
-						<button class="deletesong">delete song</button>
-					</li>
-					<li>Moriría por vos
-						<span class="tiempo">3:45</span>
-						<button class="deletesong">delete song</button>
-					</li>
-					<li>Estrella de mar
-						<span class="tiempo">3:45</span>
-						<button class="deletesong">delete song</button>
-					</li>
-					<li>Salir corriendo
-						<span class="tiempo">3:45</span>
-						<button class="deletesong">delete song</button>
-					</li>
-					<li>
+				<input type="text" value="insert the date" name="dates" onfocus="if (this.value=='insert the date') this.value='';"
+				onblur="if (this.value == '') this.value = 'insert the date';" class="set_album">
 
-						<button class="addsong" onclick="window.location.href='MuCr_mymusic_addsongs.php'">add a song</button>
+				<input type="text" value="insert the city" name="city" onfocus="if (this.value=='insert the city') this.value='';"
+				onblur="if (this.value == '') this.value = 'insert the city';" class="set_album">
 
-					</li>
-				</ul>
+				<input type="text" value="insert the price" name="price" onfocus="if (this.value=='insert the price') this.value='';"
+				onblur="if (this.value == '') this.value = 'insert the price';" class="set_album">
 
-			</div>
-			<button class="deletealbum">Delete album</button>
-		</div>
-		<div class="newstudio">
-			<img src="img/amaral/amaral4.jpg" alt="album">
-			<div class="listado">
-				<ul>
-					<li>
-						<h1>Estrellas en el mar4</h1>
-					</li>
-					<li>Sin ti no soy nada
-						<span class="tiempo">3:45</span>
-						<button class="deletesong">delete song</button>
-					</li>
-					<li>Te necesito
-						<span class="tiempo">3:45</span>
-						<button class="deletesong">delete song</button>
-					</li>
-					<li>Toda la noche en la calle
-						<span class="tiempo">3:45</span>
-						<button class="deletesong">delete song</button>
-					</li>
-					<li>Moriría por vos
-						<span class="tiempo">3:45</span>
-						<button class="deletesong">delete song</button>
-					</li>
-					<li>Estrella de mar
-						<span class="tiempo">3:45</span>
-						<button class="deletesong">delete song</button>
-					</li>
-					<li>Salir corriendo
-						<span class="tiempo">3:45</span>
-						<button class="deletesong">delete song</button>
-					</li>
-					<li>Sin ti no soy nada
-						<span class="tiempo">3:45</span>
-						<button class="deletesong">delete song</button>
-					</li>
-					<li>Te necesito
-						<span class="tiempo">3:45</span>
-						<button class="deletesong">delete song</button>
-					</li>
-					<li>Toda la noche en la calle
-						<span class="tiempo">3:45</span>
-						<button class="deletesong">delete song</button>
-					</li>
-					<li>Moriría por vos
-						<span class="tiempo">3:45</span>
-						<button class="deletesong">delete song</button>
-					</li>
-					<li>Estrella de mar
-						<span class="tiempo">3:45</span>
-						<button class="deletesong">delete song</button>
-					</li>
-					<li>Salir corriendo
-						<span class="tiempo">3:45</span>
-						<button class="deletesong">delete song</button>
-					</li>
-					<li>
-						<button class="addsong" onclick="window.location.href='MuCr_mymusic_addsongs.php'">add a song</button>
-					</li>
-				</ul>
+				<input type="submit" name="search_artist" value="Go" class="submit_datos">
+		</form>
+	</div>
 
-			</div>
-			<button class="deletealbum">Delete album</button>
-		</div>
-		<div class="newstudio">
-			<img src="img/amaral/amaral5.jpg" alt="album">
-			<div class="listado">
-				<ul>
-					<li>
-						<h1>Estrellas en el mar5</h1>
-					</li>
-					<li>Sin ti no soy nada
-						<span class="tiempo">3:45</span>
-						<button class="deletesong">delete song</button>
-					</li>
-					<li>Te necesito
-						<span class="tiempo">3:45</span>
-						<button class="deletesong">delete song</button>
-					</li>
-					<li>Toda la noche en la calle
-						<span class="tiempo">3:45</span>
-						<button class="deletesong">delete song</button>
-					</li>
-					<li>Moriría por vos
-						<span class="tiempo">3:45</span>
-						<button class="deletesong">delete song</button>
-					</li>
-					<li>Estrella de mar
-						<span class="tiempo">3:45</span>
-						<button class="deletesong">delete song</button>
-					</li>
-					<li>Salir corriendo
-						<span class="tiempo">3:45</span>
-						<button class="deletesong">delete song</button>
-					</li>
-					<li>Sin ti no soy nada
-						<span class="tiempo">3:45</span>
-						<button class="deletesong">delete song</button>
-					</li>
-					<li>Te necesito
-						<span class="tiempo">3:45</span>
-						<button class="deletesong">delete song</button>
-					</li>
-					<li>Toda la noche en la calle
-						<span class="tiempo">3:45</span>
-						<button class="deletesong">delete song</button>
-					</li>
-					<li>Moriría por vos
-						<span class="tiempo">3:45</span>
-						<button class="deletesong">delete song</button>
-					</li>
-					<li>Estrella de mar
-						<span class="tiempo">3:45</span>
-						<button class="deletesong">delete song</button>
-					</li>
-					<li>Salir corriendo
-						<span class="tiempo">3:45</span>
-						<button class="deletesong">delete song</button>
-					</li>
-					<li>
+	<div class="uploaded_albums">
+		<div class="uploaded_ti">Uploaded Albums</div>
+		<div class="escenario">
+			<?php
+				include 'php/connect_db.php';
+				$email=$_COOKIE['email'];
+				$sql_order="SELECT * from albums_NV WHERE user='$email'";
+				$result = mysqli_query($conn, $sql_order);
+				$row = mysqli_fetch_all($result);
 
-						<button class="addsong" onclick="window.location.href='MuCr_mymusic_addsongs.php'">add a song</button>
+				$max=count($row)-1;
+				for($i=0;$i<$max;$i++){
+					echo "<div class=\"muestra\">";
+					echo "<div class=\"casillaM1\">".$row[$i][0]."</div>
+					<div class=\"casillaM1\">".$row[$i][1]."</div>
+					<div class=\"casillaM1\">".$row[$i][2]."</div>
+					<div class=\"casillaM1\">".$row[$i][3]."</div>";
+					echo "</div>";
+				}
 
-				</ul>
-
-			</div>
-			<button class="deletealbum">Delete album</button>
+				?>
 		</div>
 	</div>
-	<div class="mitad_dcha">
-		<div class="centrado">Upload a new album</div>
-		<div class="abajo">
-			The Title of the album:
-			<input type=text class="casilla1">
-		</div>
-		<div class="abajo">
-			Select a Cover:
-			<input type="file">
-		</div>
-		<div class="abajo">
 
-			<button class="Addasong" onclick="window.location.href='MuCr_mymusic_addsongs.php'">Add Songs</button>
+	<div class="uploaded_concerts">
+		<div class="uploaded_ti">Uploaded Concerts</div>
+		<div class="escenario">
+			<?php
+				include 'php/connect_db.php';
+				$email=$_COOKIE['email'];
+				$sql_order="SELECT * from concerts_NV WHERE user='$email'";
+				$result = mysqli_query($conn, $sql_order);
+				$row = mysqli_fetch_all($result);
 
-		</div>
-		<div class="abajototal">
-			<ul>
-				<li>Sin ti no soy nada
-					<span class="tiempo">3:45</span>
-					<button class="deletesong">delete song</button>
-				</li>
-				<li>Te necesito
-					<span class="tiempo">3:45</span>
-					<button class="deletesong">delete song</button>
-				</li>
-				<li>Toda la noche en la calle
-					<span class="tiempo">3:45</span>
-					<button class="deletesong">delete song</button>
-				</li>
-				<li>Moriría por vos
-					<span class="tiempo">3:45</span>
-					<button class="deletesong">delete song</button>
-				</li>
-				<li>Estrella de mar
-					<span class="tiempo">3:45</span>
-					<button class="deletesong">delete song</button>
-				</li>
-				<li>Salir corriendo
-					<span class="tiempo">3:45</span>
-					<button class="deletesong">delete song</button>
-				</li>
-				<li>Sin ti no soy nada
-					<span class="tiempo">3:45</span>
-					<button class="deletesong">delete song</button>
-				</li>
-				<li>Te necesito
-					<span class="tiempo">3:45</span>
-					<button class="deletesong">delete song</button>
-				</li>
-				<li>Toda la noche en la calle
-					<span class="tiempo">3:45</span>
-					<button class="deletesong">delete song</button>
-				</li>
-				<li>Moriría por vos
-					<span class="tiempo">3:45</span>
-					<button class="deletesong">delete song</button>
-				</li>
-				<li>Estrella de mar
-					<span class="tiempo">3:45</span>
-					<button class="deletesong">delete song</button>
-				</li>
-				<li>Salir corriendo
-					<span class="tiempo">3:45</span>
-					<button class="deletesong">delete song</button>
-				</li>
-			</ul>
+				$max=count($row)-1;
+				for($i=0;$i<$max;$i++){
+					echo "<div class=\"muestra\">";
+					echo "<div class=\"casillaM1\">".$row[$i][0]."</div>
+					<div class=\"casillaM1\">".$row[$i][1]."</div>
+					<div class=\"casillaM1\">".$row[$i][2]."</div>
+					<div class=\"casillaM1\">".$row[$i][3]."</div>";
+					echo "</div>";
+				}
 
+				?>
 		</div>
-		<button class="submit">Submit </button>
 	</div>
+
 </body>
 
 </html>
