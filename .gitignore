@@ -60,7 +60,6 @@ API_KEY_Bing.txt
 API_KEY_Imagenes.txt
 API_KEY_Ticketmaster.txt
 python/*
-.htaccess
 MuCr_concerts_1.php
 fill_artist.php
 fill_collection.php
