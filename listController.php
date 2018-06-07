@@ -14,30 +14,6 @@ class lista{
 	private $albumV6;
 	private $albumV7;
 
-	public function isInsidesql($titulo, $row){
-		$max = count($row);
-		for ($i = 0; $i < $max; $i++) {
-			if ($row[$i][0] == $titulo) {
-				return true;
-			}
-		}
-
-		return false;
-	}
-
-	public function isInside($titulo, $row){
-		$max = count($row);
-
-		for ($i = 0; $i < $max; $i++){
-			if ($row[$i] == $titulo){
-					return true;
-				}
-		}
-
-		return false;
-	}
-
-
 	public function searchrecommendations(&$albumvn,$added, $user){
 		include 'php/connect_db.php';
 
@@ -87,52 +63,6 @@ class lista{
 		array_push($added, $titulo_seleccionado);
 		$albumvn->createAlbumByTitle($titulo_seleccionado);
 	}
-
-	public function searchtopic2($user){
-		include 'php/connect_db.php';
-
-		$sql_order = "SELECT album_artist FROM U_like_A WHERE '$user' = user_email";
-		$result = $conn->query($sql_order);
-
-		$row = mysqli_fetch_all($result);
-
-		if (count($row) > 1) {
-			$numero = rand(0, count($row) - 1);
-			return $row[$numero][0];
-		}
-		else {
-			$sql_order = "SELECT album_artist FROM U_like_A";
-			$result = $conn->query($sql_order);
-
-			$row = mysqli_fetch_all($result);
-			$numero = rand(0, count($row) - 1);
-
-			return $row[$numero][0];
-		}
-	}
-
-	public function searchtopic3($user){
-		include 'php/connect_db.php';
-
-		$sql_order = "SELECT Genre FROM U_like_A WHERE '$user' = user_email";
-		$result = $conn->query($sql_order);
-		$row = mysqli_fetch_all($result);
-
-		if (count($row) > 1) {
-			$numero = rand(0, count($row) - 1);
-			return $row[$numero][0];
-		}
-		else {
-			$sql_order = "SELECT Genre FROM U_like_A";
-			$result = $conn->query($sql_order);
-
-			$row = mysqli_fetch_all($result);
-			$numero = rand(0, count($row) - 1);
-
-			return $row[$numero][0];
-		}
-	}
-
 
 	public function crearlstaB(&$albumvn, &$added, $user){
 	  	$albumvn = new album;
