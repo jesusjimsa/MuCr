@@ -12,6 +12,7 @@ require_once 'php/exit_unauthenticated.php';
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="js/MuCr.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
 </head>
 
 <body class="stage3">
@@ -125,7 +126,7 @@ require_once 'php/exit_unauthenticated.php';
 				$api_file = fopen("API_KEY_Lastfm.txt", "r");
 				$API_KEY = fread($api_file, filesize("API_KEY_Lastfm.txt"));
 				fclose($api_file);
-				
+
 				$artista=$_GET['artist'];
 				$artista=str_replace(" ","+",$artista);
 				$artista=str_replace("_","+",$artista);
@@ -1342,7 +1343,7 @@ require_once 'php/exit_unauthenticated.php';
 			</a>
 
 		</div>
-		
+
 		<div class="current_country">
 			<?php
 				if(isset($_GET['country']) && $_GET['country'] != ""){
