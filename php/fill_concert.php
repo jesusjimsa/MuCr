@@ -1,21 +1,26 @@
 <?php
-	function searchCityPicture($city, $country){
-		$api_file = fopen("API_KEY_Imagenes.txt", "r");
-		$API_KEY = fread($api_file, filesize("API_KEY_Imagenes.txt"));
+	function searchCityPicture($city){
+		$api_file = fopen("API_KEY_Bing.txt", "r");
+		$API_KEY = fread($api_file, filesize("API_KEY_Bing.txt"));
 		fclose($api_file);
 
-		$imagenes = "https://pixabay.com/api/?key=" . $API_KEY . "&q=" . $city . "+" . $country . "&image_type=photo&pretty=true&format=json";
+		$API_KEY = "Ocp-Apim-Subscription-Key: " . $API_KEY;
+		$options = array('Content-Type: multipart/form-data', $API_KEY);
+
+		$imagenes = "https://api.cognitive.microsoft.com/bing/v7.0/images/search?q=" . urlencode($city);
 
 		$ch = curl_init();
-		curl_setopt($ch, CURLOPT_URL, $imagenes);
+		curl_setopt($ch, CURLOPT_URL, $imagenes); 
+		curl_setopt($ch, CURLOPT_TIMEOUT, '1'); 
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-		curl_setopt($ch, CURLOPT_USERAGENT, 'CdBase');
-
-		$response = curl_exec($ch);
+		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+		curl_setopt($ch, CURLOPT_HTTPHEADER, $options);
+		
+		$response_image = curl_exec($ch);
 		curl_close($ch);
-		$response = json_decode($response, JSON_FORCE_OBJECT);
+		$response_image = json_decode($response_image, JSON_FORCE_OBJECT);
 
-		echo $response['hits'][0]['largeImageURL'];
+		return $urlcity = $response_image["value"][0]["contentUrl"];
 	}
 
 	function printConcerts($artist, $country_code){
@@ -38,11 +43,9 @@
 
 		for($i = 0; $i < count($response["_embedded"]["events"]); $i++){
 			$city = $response["_embedded"]["events"][$i]["_embedded"]["venues"][0]["city"]["name"];
-			$image = $response["_embedded"]["events"][$i]["images"][0]["url"];
+			$image = searchCityPicture($city);
 			$date = $response["_embedded"]["events"][$i]["dates"]["start"]["localDate"];
 			$tickets_url = $response["_embedded"]["events"][$i]["url"];
-
-
 
 			echo "<a href=\"" . $tickets_url . "\">";
 			echo "<FORM action=\"php/save_concert.php\" method=\"post\" class=\"hora\">";
@@ -53,7 +56,7 @@
 			echo  "<input type=\"hidden\" name=\"date\" value=\"".$date."\"></input>";
 			echo "<div class=\"nombre\">" . $city . "</div>";
 			echo "<div class=\"imagen\">";
-			echo "<img src=\"" . $image . "\" alt=\"ciudades\">";
+			echo "<img src=\"" . $image . "\" alt=\"" . $city . " image\">";
 			echo "</div>";
 			echo "<div class=\"time\">" . $date . "</div>";
 			echo "<div class=\"price\">".$response['_embedded']['events'][0]['priceRanges'][0]['min']."~".$response['_embedded']['events'][0]['priceRanges'][0]['max']." ".$response['_embedded']['events'][0]['priceRanges'][0]['currency']."</div>";

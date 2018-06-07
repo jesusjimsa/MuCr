@@ -67,7 +67,7 @@ require_once 'php/exit_unauthenticated.php';
 		</a>
 		<div class="collection">
 			<div class="orden">
-				<button class="especialized_back")>Sort by</button>
+				<button class="especialized_back">Sort by</button>
 				<button class="especialized" style="display:block;" onclick="writeClassification(1);">Music Style</button> <!-- 0 -->
 				<a href="MuCr_collection.php?title=Deluxe"><button class="especialized" style="display:block;">Deluxe</button> <!-- 27 --></a>
 				<button class="especialized_back" style="display:none;" onclick="writeClassification(0);">Back</button>
