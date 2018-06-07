@@ -6,6 +6,7 @@ class concert{
     private $country;
     private $API_KEY;
     private $API_KEY2;
+    
     public function __construct(){
         $api_file = fopen("API_KEY_Lastfm.txt", "r");
         $this->API_KEY = fread($api_file, filesize("API_KEY_Lastfm.txt"));
