@@ -195,14 +195,6 @@ require_once 'php/exit_unauthenticated.php';
 				<input id="boton2" type="submit" value="change">
 			</FORM>
 		</div>
-		<div class="region">
-			<p>country:
-				<input type="text" class="casilla">
-			</p>
-			<p>Languaje:
-				<input type="text" class="casilla">
-			</p>
-		</div>
 		<p></p>
 		<FORM action="php/delete_account.php" method="post">
 			<input class="boton3" type="submit" value="Delete account">
