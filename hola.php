@@ -19,5 +19,5 @@
 
 
 	echo $response['_embedded']['events'][0] ['priceRanges'][0]['min'];
-
 ?>
+
