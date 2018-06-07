@@ -168,7 +168,7 @@ require_once 'php/exit_unauthenticated.php';
 			<?php
 				$lista2 = new lista("foryou", $added, $email);
 			?>
-			<div class="title"><?php echo $lista2->getAlbumV1()->getArtista()?></div>
+			<div class="title">For you</div>
 			<div class="row_main">
 				<a href="MuCr_detailed_album.php?artist=<?php echo $lista2->getAlbumV1()->getArtista(); ?>&type=<?php echo $lista2->getAlbumV1()->getType();?>&deluxe=<?php echo $lista2->getAlbumV1()->getDeluxe();?>&album=<?php echo $lista2->getAlbumV1()->getTitulo();?>">
 					<div class="recom1">
