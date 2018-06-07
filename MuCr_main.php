@@ -67,7 +67,7 @@ require_once 'php/exit_unauthenticated.php';
 		</a>
 		<div class="collection">
 			<div class="orden">
-				<button class="especialized_back")>Sort by</button>
+				<button class="especialized_back">Sort by</button>
 				<button class="especialized" style="display:block;" onclick="writeClassification(1);">Music Style</button> <!-- 0 -->
 				<a href="MuCr_collection.php?title=Deluxe"><button class="especialized" style="display:block;">Deluxe</button> <!-- 27 --></a>
 				<button class="especialized_back" style="display:none;" onclick="writeClassification(0);">Back</button>
@@ -128,112 +128,112 @@ require_once 'php/exit_unauthenticated.php';
 			<div class="title">Recomendations</div>
 			<div class="row_main">
 				<a href="MuCr_detailed_album.php?artist=<?php echo $lista1->getAlbumV1()->getArtista(); ?>&type=<?php echo $lista1->getAlbumV1()->getType();?>&deluxe=<?php echo $lista1->getAlbumV1()->getDeluxe();?>&album=<?php echo $lista1->getAlbumV1()->getTitulo();?>">
-				<div class="recom1">
-					<img src="<?php echo ($lista1->getAlbumV1())->getImage();?>" alt="Album cover">
-				</div>
+					<div class="recom1">
+						<img src="<?php echo ($lista1->getAlbumV1())->getImage();?>" alt="Album cover">
+					</div>
 				</a>
 				<a href="MuCr_detailed_album.php?artist=<?php echo $lista1->getAlbumV2()->getArtista(); ?>&type=<?php echo $lista1->getAlbumV2()->getType();?>&deluxe=<?php echo $lista1->getAlbumV2()->getDeluxe();?>&album=<?php echo $lista1->getAlbumV2()->getTitulo();?>">
-				<div class="recom1">
-					<img src="<?php echo ($lista1->getAlbumV2())->getImage();?>" alt="Album cover">
+					<div class="recom1">
+						<img src="<?php echo ($lista1->getAlbumV2())->getImage();?>" alt="Album cover">
+					</div>
+				</a>
+				<a href="MuCr_detailed_album.php?artist=<?php echo $lista1->getAlbumV3()->getArtista(); ?>&type=<?php echo $lista1->getAlbumV3()->getType();?>&deluxe=<?php echo $lista1->getAlbumV3()->getDeluxe();?>&album=<?php echo $lista1->getAlbumV3()->getTitulo();?>">
+					<div class="recom1">
+						<img src="<?php echo ($lista1->getAlbumV3())->getImage();?>" alt="Album cover">
+					</div>
+				</a>
+				<a href="MuCr_detailed_album.php?artist=<?php echo $lista1->getAlbumV4()->getArtista(); ?>&type=<?php echo $lista1->getAlbumV4()->getType();?>&deluxe=<?php echo $lista1->getAlbumV4()->getDeluxe();?>&album=<?php echo $lista1->getAlbumV4()->getTitulo();?>">
+					<div class="recom1">
+						<img src="<?php echo ($lista1->getAlbumV4())->getImage();?>" alt="Album cover">
+					</div>
+				</a>
+				<a href="MuCr_detailed_album.php?artist=<?php echo $lista1->getAlbumV5()->getArtista(); ?>&type=<?php echo $lista1->getAlbumV5()->getType();?>&deluxe=<?php echo $lista1->getAlbumV5()->getDeluxe();?>&album=<?php echo $lista1->getAlbumV5()->getTitulo();?>">
+					<div class="recom1">
+						<img src="<?php echo ($lista1->getAlbumV5())->getImage();?>" alt="Album cover">
+					</div>
+				</a>
+				<a href="MuCr_detailed_album.php?artist=<?php echo $lista1->getAlbumV6()->getArtista(); ?>&type=<?php echo $lista1->getAlbumV6()->getType();?>&deluxe=<?php echo $lista1->getAlbumV6()->getDeluxe();?>&album=<?php echo $lista1->getAlbumV6()->getTitulo();?>">
+					<div class="recom1">
+						<img src="<?php echo ($lista1->getAlbumV6())->getImage();?>" alt="Album cover">
+					</div>
+				</a>
+				<a href="MuCr_detailed_album.php?artist=<?php echo $lista1->getAlbumV7()->getArtista(); ?>&type=<?php echo $lista1->getAlbumV7()->getType();?>&deluxe=<?php echo $lista1->getAlbumV7()->getDeluxe();?>&album=<?php echo $lista1->getAlbumV7()->getTitulo();?>">
+					<div class="recom1">
+						<img src="<?php echo ($lista1->getAlbumV7())->getImage();?>" alt="Album cover">
 				</div>
-			</a>
-			<a href="MuCr_detailed_album.php?artist=<?php echo $lista1->getAlbumV3()->getArtista(); ?>&type=<?php echo $lista1->getAlbumV3()->getType();?>&deluxe=<?php echo $lista1->getAlbumV3()->getDeluxe();?>&album=<?php echo $lista1->getAlbumV3()->getTitulo();?>">
-				<div class="recom1">
-					<img src="<?php echo ($lista1->getAlbumV3())->getImage();?>" alt="Album cover">
-				</div>
-			</a>
-			<a href="MuCr_detailed_album.php?artist=<?php echo $lista1->getAlbumV4()->getArtista(); ?>&type=<?php echo $lista1->getAlbumV4()->getType();?>&deluxe=<?php echo $lista1->getAlbumV4()->getDeluxe();?>&album=<?php echo $lista1->getAlbumV4()->getTitulo();?>">
-				<div class="recom1">
-					<img src="<?php echo ($lista1->getAlbumV4())->getImage();?>" alt="Album cover">
-				</div>
-			</a>
-			<a href="MuCr_detailed_album.php?artist=<?php echo $lista1->getAlbumV5()->getArtista(); ?>&type=<?php echo $lista1->getAlbumV5()->getType();?>&deluxe=<?php echo $lista1->getAlbumV5()->getDeluxe();?>&album=<?php echo $lista1->getAlbumV5()->getTitulo();?>">
-				<div class="recom1">
-					<img src="<?php echo ($lista1->getAlbumV5())->getImage();?>" alt="Album cover">
-				</div>
-			</a>
-			<a href="MuCr_detailed_album.php?artist=<?php echo $lista1->getAlbumV6()->getArtista(); ?>&type=<?php echo $lista1->getAlbumV6()->getType();?>&deluxe=<?php echo $lista1->getAlbumV6()->getDeluxe();?>&album=<?php echo $lista1->getAlbumV6()->getTitulo();?>">
-				<div class="recom1">
-					<img src="<?php echo ($lista1->getAlbumV6())->getImage();?>" alt="Album cover">
-				</div>
-			</a>
-			<a href="MuCr_detailed_album.php?artist=<?php echo $lista1->getAlbumV7()->getArtista(); ?>&type=<?php echo $lista1->getAlbumV7()->getType();?>&deluxe=<?php echo $lista1->getAlbumV7()->getDeluxe();?>&album=<?php echo $lista1->getAlbumV7()->getTitulo();?>">
-				<div class="recom1">
-					<img src="<?php echo ($lista1->getAlbumV7())->getImage();?>" alt="Album cover">
+				</a>
 			</div>
-			</a>
 		</div>
-	</div>
 		<div class="fila">
 			<?php
-				$lista2 = new lista("foryou",$added,$email);
+				$lista2 = new lista("foryou", $added, $email);
 			?>
 			<div class="title"><?php echo $lista2->getAlbumV1()->getArtista()?></div>
 			<div class="row_main">
 				<a href="MuCr_detailed_album.php?artist=<?php echo $lista2->getAlbumV1()->getArtista(); ?>&type=<?php echo $lista2->getAlbumV1()->getType();?>&deluxe=<?php echo $lista2->getAlbumV1()->getDeluxe();?>&album=<?php echo $lista2->getAlbumV1()->getTitulo();?>">
-				<div class="recom1">
-					<img src="<?php echo ($lista2->getAlbumV1())->getImage();?>" alt="Album cover">
-				</div>
+					<div class="recom1">
+						<img src="<?php echo ($lista2->getAlbumV1())->getImage();?>" alt="Album cover">
+					</div>
 				</a>
 				<a href="MuCr_detailed_album.php?artist=<?php echo $lista2->getAlbumV2()->getArtista(); ?>&type=<?php echo $lista2->getAlbumV2()->getType();?>&deluxe=<?php echo $lista2->getAlbumV2()->getDeluxe();?>&album=<?php echo $lista2->getAlbumV2()->getTitulo();?>">
-				<div class="recom1">
-					<img src="<?php echo ($lista2->getAlbumV2())->getImage();?>" alt="Album cover">
-				</div>
-			</a>
-			<a href="MuCr_detailed_album.php?artist=<?php echo $lista2->getAlbumV3()->getArtista(); ?>&type=<?php echo $lista2->getAlbumV3()->getType();?>&deluxe=<?php echo $lista2->getAlbumV3()->getDeluxe();?>&album=<?php echo $lista2->getAlbumV3()->getTitulo();?>">
-				<div class="recom1">
-					<img src="<?php echo ($lista2->getAlbumV3())->getImage();?>" alt="Album cover">
-				</div>
-			</a>
-			<a href="MuCr_detailed_album.php?artist=<?php echo $lista2->getAlbumV4()->getArtista(); ?>&type=<?php echo $lista2->getAlbumV4()->getType();?>&deluxe=<?php echo $lista2->getAlbumV4()->getDeluxe();?>&album=<?php echo $lista2->getAlbumV4()->getTitulo();?>">
-				<div class="recom1">
-					<img src="<?php echo ($lista2->getAlbumV4())->getImage();?>" alt="Album cover">
-				</div>
-			</a>
-			<a href="MuCr_detailed_album.php?artist=<?php echo $lista2->getAlbumV5()->getArtista(); ?>&type=<?php echo $lista2->getAlbumV5()->getType();?>&deluxe=<?php echo $lista2->getAlbumV5()->getDeluxe();?>&album=<?php echo $lista2->getAlbumV5()->getTitulo();?>">
-				<div class="recom1">
-					<img src="<?php echo ($lista2->getAlbumV5())->getImage();?>" alt="Album cover">
-				</div>
-			</a>
-			<a href="MuCr_detailed_album.php?artist=<?php echo $lista2->getAlbumV6()->getArtista(); ?>&type=<?php echo $lista2->getAlbumV6()->getType();?>&deluxe=<?php echo $lista2->getAlbumV6()->getDeluxe();?>&album=<?php echo $lista2->getAlbumV6()->getTitulo();?>">
-				<div class="recom1">
-					<img src="<?php echo ($lista2->getAlbumV6())->getImage();?>" alt="Album cover">
-				</div>
-			</a>
-			<a href="MuCr_detailed_album.php?artist=<?php echo $lista1->getAlbumV7()->getArtista(); ?>&type=<?php echo $lista2->getAlbumV7()->getType();?>&deluxe=<?php echo $lista1->getAlbumV7()->getDeluxe();?>&album=<?php echo $lista1->getAlbumV7()->getTitulo();?>">
-				<div class="recom1">
-					<img src="<?php echo ($lista2->getAlbumV7())->getImage();?>" alt="Album cover">
+					<div class="recom1">
+						<img src="<?php echo ($lista2->getAlbumV2())->getImage();?>" alt="Album cover">
+					</div>
+				</a>
+				<a href="MuCr_detailed_album.php?artist=<?php echo $lista2->getAlbumV3()->getArtista(); ?>&type=<?php echo $lista2->getAlbumV3()->getType();?>&deluxe=<?php echo $lista2->getAlbumV3()->getDeluxe();?>&album=<?php echo $lista2->getAlbumV3()->getTitulo();?>">
+					<div class="recom1">
+						<img src="<?php echo ($lista2->getAlbumV3())->getImage();?>" alt="Album cover">
+					</div>
+				</a>
+				<a href="MuCr_detailed_album.php?artist=<?php echo $lista2->getAlbumV4()->getArtista(); ?>&type=<?php echo $lista2->getAlbumV4()->getType();?>&deluxe=<?php echo $lista2->getAlbumV4()->getDeluxe();?>&album=<?php echo $lista2->getAlbumV4()->getTitulo();?>">
+					<div class="recom1">
+						<img src="<?php echo ($lista2->getAlbumV4())->getImage();?>" alt="Album cover">
+					</div>
+				</a>
+				<a href="MuCr_detailed_album.php?artist=<?php echo $lista2->getAlbumV5()->getArtista(); ?>&type=<?php echo $lista2->getAlbumV5()->getType();?>&deluxe=<?php echo $lista2->getAlbumV5()->getDeluxe();?>&album=<?php echo $lista2->getAlbumV5()->getTitulo();?>">
+					<div class="recom1">
+						<img src="<?php echo ($lista2->getAlbumV5())->getImage();?>" alt="Album cover">
+					</div>
+				</a>
+				<a href="MuCr_detailed_album.php?artist=<?php echo $lista2->getAlbumV6()->getArtista(); ?>&type=<?php echo $lista2->getAlbumV6()->getType();?>&deluxe=<?php echo $lista2->getAlbumV6()->getDeluxe();?>&album=<?php echo $lista2->getAlbumV6()->getTitulo();?>">
+					<div class="recom1">
+						<img src="<?php echo ($lista2->getAlbumV6())->getImage();?>" alt="Album cover">
+					</div>
+				</a>
+				<a href="MuCr_detailed_album.php?artist=<?php echo $lista2->getAlbumV7()->getArtista(); ?>&type=<?php echo $lista2->getAlbumV7()->getType();?>&deluxe=<?php echo $lista2->getAlbumV7()->getDeluxe();?>&album=<?php echo $lista2->getAlbumV7()->getTitulo();?>">
+					<div class="recom1">
+						<img src="<?php echo ($lista2->getAlbumV7())->getImage();?>" alt="Album cover">
+					</div>
+				</a>
 			</div>
-			</a>
 		</div>
-	</div>
 		<div class="fila">
 			<?php
-				$lista3 = new lista("artistvalored", $added, $email);
-
+				//$lista3 = new lista("artistvalored", $added, $email);
 
 				$api_file = fopen("API_KEY_Lastfm.txt", "r");
 				$API_KEY = fread($api_file, filesize("API_KEY_Lastfm.txt"));
 				fclose($api_file);
 
 				$email = $_COOKIE['email'];
+
 				include 'php/connect_db.php';
-				$sql_order="SELECT album_artist,user_email from U_like_A WHERE '$email'=user_email";
+				
+				$sql_order = "SELECT album_artist,user_email from U_like_A WHERE '$email' = user_email";
 				$result = mysqli_query($conn, $sql_order);
 				$row = mysqli_fetch_all($result);
 
-				if($row==NULL){
-					$sql_order="SELECT album_artist,user_email from U_like_A";
+				if($row == NULL){
+					$sql_order = "SELECT album_artist,user_email from U_like_A";
 					$result = mysqli_query($conn, $sql_order);
 					$row = mysqli_fetch_all($result);
 				}
 
-				$numero=rand(0,count($row)-1);
+				$numero = rand(0, count($row));
 
-				$artista_seleccionado=$row[$numero][0];
+				$artista_seleccionado = $row[$numero][0];
 
-
-				$imagenes="http://ws.audioscrobbler.com/2.0/?method=artist.getsimilar&artist=".$artista_seleccionado."&api_key=".$API_KEY."&format=json";
+				$imagenes = "http://ws.audioscrobbler.com/2.0/?method=artist.getsimilar&artist=" . $artista_seleccionado . "&api_key=" . $API_KEY . "&format=json";
 
 				$ch = curl_init();
 				curl_setopt($ch, CURLOPT_URL, $imagenes);
@@ -245,7 +245,7 @@ require_once 'php/exit_unauthenticated.php';
 				$response = json_decode($response, JSON_FORCE_OBJECT);
 
 			?>
-			<div class="title">For You</div>
+			<div class="title">Recommended artists</div>
 			<div class="row_main">
 				<a href="MuCr_artistcollection.php?artist=<?php echo $response['similarartists']['artist'][0]['name']; ?>">
 				<div class="recom1">

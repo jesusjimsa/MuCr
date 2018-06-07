@@ -1,23 +1,25 @@
 <?php
-	include 'php/fill_concert.php';
+	include 'php/connect_db.php';
 
-	$api_file = fopen("API_KEY_Ticketmaster.txt", "r");
-	$API_KEY = fread($api_file, filesize("API_KEY_Ticketmaster.txt"));
+	$api_file = fopen("API_KEY_Lastfm.txt", "r");
+	$API_KEY = fread($api_file, filesize("API_KEY_Lastfm.txt"));
 	fclose($api_file);
 
-	$url = "https://app.ticketmaster.com/discovery/v2/events.json?apikey=" . $API_KEY . "&keyword=Beyonce&size=50&countryCode=ES";
+	$user = "jesusjimsa@icloud.com";
 
+	if(rand(0, 50) < 25){
+		$sql_order = "SELECT DISTINCT album_artist FROM U_like_A WHERE '$user' = user_email";
+		$result = $conn->query($sql_order);
+		$rows = mysqli_fetch_all($result);
+	}
+	else{
+		$sql_order = "SELECT DISTINCT album_artist FROM U_listen_A WHERE '$user' = user_email";
+		$result = $conn->query($sql_order);
+		$rows = mysqli_fetch_all($result);
+	}
+	
+	$artista_seleccionado = $rows[rand(0, count($rows) - 1)][0];
 
-	$ch = curl_init();
-	curl_setopt($ch, CURLOPT_URL, $url);
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-	curl_setopt($ch, CURLOPT_USERAGENT, 'CdBase');
-
-	$response = curl_exec($ch);
-	curl_close($ch);
-	$response = json_decode($response, JSON_FORCE_OBJECT);
-
-
-	echo $response['_embedded']['events'][0] ['priceRanges'][0]['min'];
+	echo $artista_seleccionado
 ?>
 
