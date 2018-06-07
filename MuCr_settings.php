@@ -47,102 +47,41 @@ require_once 'php/exit_unauthenticated.php';
 			<div class="grupis">
 				<div class="imagenes">
 					<img src="<?php
-					 	$email=$_COOKIE['grupo'];
-						$sql_imagen="SELECT * FROM user WHERE email='$email'";
-						include 'php/connect_db.php';
-						$result = mysqli_query($conn, $sql_imagen);
-						$row = mysqli_fetch_assoc($result);
-							echo $row['URLimage'];
-					?>" alt="you">
+                        $email=$_COOKIE['grupo'];
+                        $sql_imagen="SELECT * FROM user WHERE email='$email'";
+                        include 'php/connect_db.php';
+                        $result = mysqli_query($conn, $sql_imagen);
+                        $row = mysqli_fetch_assoc($result);
+                            echo $row['URLimage'];
+                    ?>" alt="you">
 				</div>
 				<div class="nome">MYSELF</div>
 			</a>
 			</div>
 			<?php
-				include 'php/connect_db.php';
-				$email=$_COOKIE['grupo'];
-				$sql_show="SELECT * FROM U_group WHERE user_email='$email'";
+                include 'php/connect_db.php';
+                $email=$_COOKIE['grupo'];
+                $sql_show="SELECT * FROM U_group WHERE user_email='$email'";
 
-				$result = mysqli_query($conn, $sql_show);
-				$row = mysqli_fetch_all($result);
-				for($i=0;$i<count($row)-1;$i++){
-						$name=$row[$i][1];
-						$sql_image="SELECT * FROM grupo WHERE name='$name'";
-						$result = mysqli_query($conn, $sql_image);
-						$row2 = mysqli_fetch_assoc($result);
-						$image=$row2['URLimage'];
+                $result = mysqli_query($conn, $sql_show);
+                $row = mysqli_fetch_all($result);
+                for ($i=0;$i<count($row)-1;$i++) {
+                    $name=$row[$i][1];
+                    $sql_image="SELECT * FROM grupo WHERE name='$name'";
+                    $result = mysqli_query($conn, $sql_image);
+                    $row2 = mysqli_fetch_assoc($result);
+                    $image=$row2['URLimage'];
 
 
-						echo "<a href=\"php/change_user_to_group.php?user=".$name."\" >";
-						echo "<div class=\"grupis\">";
-						echo "<div class=\"imagenes\">";
-						echo "<img src=\"".$image."\" alt=\"group\">";
-						echo "</div>";
-						echo "<div class=\"nome\">".$name."</div></div></a>";
-				}
-			?>
+                    echo "<a href=\"php/change_user_to_group.php?user=".$name."\" >";
+                    echo "<div class=\"grupis\">";
+                    echo "<div class=\"imagenes\">";
+                    echo "<img src=\"".$image."\" alt=\"group\">";
+                    echo "</div>";
+                    echo "<div class=\"nome\">".$name."</div></div></a>";
+                }
+            ?>
 
-			<!-- <div class="grupis">
-				<div class="imagenes">
-					<img src="img/amy.jpg" alt="you">
-				</div>
-				<div class="nome">MYSELF</div>
-
-			</div>
-			<div class="grupis">
-				<div class="imagenes">
-					<img src="img/group.jpg" alt="group">
-				</div>
-				<div class="nome">#GROUP2</div>
-			</div>
-			<div class="grupis">
-				<div class="imagenes">
-					<img src="img/group.jpg" alt="group">
-				</div>
-				<div class="nome">#GROUP3</div>
-			</div>
-			<div class="grupis">
-				<div class="imagenes">
-					<img src="img/group.jpg" alt="group">
-				</div>
-				<div class="nome">#GROUP4</div>
-			</div>
-			<div class="grupis">
-				<div class="imagenes">
-					<img src="img/group.jpg" alt="group">
-				</div>
-				<div class="nome">#GROUP5</div>
-			</div>
-			<div class="grupis">
-				<div class="imagenes">
-					<img src="img/group.jpg" alt="group">
-				</div>
-				<div class="nome">#GROUP6</div>
-			</div>
-			<div class="grupis">
-				<div class="imagenes">
-					<img src="img/group.jpg" alt="group">
-				</div>
-				<div class="nome">#GROUP7</div>
-			</div>
-			<div class="grupis">
-				<div class="imagenes">
-					<img src="img/group.jpg" alt="group">
-				</div>
-				<div class="nome">#GROUP8</div>
-			</div>
-			<div class="grupis">
-				<div class="imagenes">
-					<img src="img/group.jpg" alt="group">
-				</div>
-				<div class="nome">#GROUP9</div>
-			</div>
-			<div class="grupis">
-				<div class="imagenes">
-					<img src="img/group.jpg" alt="group">
-				</div>
-				<div class="nome">#GROUP10</div>
-			</div> -->
 		</div>
 		</div>
 
@@ -159,25 +98,25 @@ require_once 'php/exit_unauthenticated.php';
 		<img id="ajustesimagen"
 			src=
 					<?php
-						include 'php/connect_db.php';
+                        include 'php/connect_db.php';
 
-						$email = $_COOKIE['email'];
+                        $email = $_COOKIE['email'];
 
-						$sql_query = "SELECT URLimage FROM user WHERE email = '$email'";
+                        $sql_query = "SELECT URLimage FROM user WHERE email = '$email'";
 
-						$result = mysqli_query($conn, $sql_query);
-						$row = mysqli_fetch_assoc($result);
+                        $result = mysqli_query($conn, $sql_query);
+                        $row = mysqli_fetch_assoc($result);
 
 
-						echo $row['URLimage'];
-						ob_flush();
-						flush();
-					?>
+                        echo $row['URLimage'];
+                        ob_flush();
+                        flush();
+                    ?>
 		 alt="Profile picture">
 		<div class="nombre">
 			<?php
-				include 'php/write_username.php'
-			?>
+                include 'php/write_username.php'
+            ?>
 		</div>
 		<input type="button" class="cambiarimagen" value="cambiar imagen" onclick="open_images(0)">
 		<div class="cambiarcontrasena">
