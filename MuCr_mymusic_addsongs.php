@@ -12,6 +12,7 @@ require_once 'php/exit_unauthenticated.php';
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="js/MuCr.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
 </head>
 
 <body class="stage6">
@@ -70,7 +71,7 @@ require_once 'php/exit_unauthenticated.php';
 				<a href="MuCr_Milist.php?mylist=seen"><button class="especialized" style="display:block;">My albums</button> <!-- 27 --></a>
 				<a href="MuCr_Milist.php?mylist=like"><button class="especialized" style="display:block;">My likes</button> <!-- 28 --></a>
 			</div>
-	
+
 			<form action="php/search_by_artist.php" class="search_artist" method="POST">
 				<input type="text" value="Search by artist" name="artist_search" onfocus="if (this.value=='Search by artist') this.value='';"
 				onblur="if (this.value == '') this.value = 'Search by artist';" class="search_artist_box">
