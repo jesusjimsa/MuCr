@@ -257,7 +257,6 @@
 	function renderizeData($keys, $values){
 		switch ($_SERVER['REQUEST_METHOD']) {
 			case 'POST':
-				# code...
 				foreach ($keys as $key => $value) {
 					if ($key == count($keys) - 1) {
 						$str = $str . $value . ") VALUES (";
