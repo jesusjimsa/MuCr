@@ -12,7 +12,7 @@ $email=$_POST['email'];
 
 
 
- $location = "Location: " . "../MuCr_Concerts.php?artist=".$artist."&country=".$country_code;
+ $location = "Location: " . "../Orpheus_Concerts.php?artist=".$artist."&country=".$country_code;
  header($location);
 
  ?>

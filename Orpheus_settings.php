@@ -23,7 +23,7 @@ require_once 'php/exit_unauthenticated.php';
 			</div>
 			<div class="titulo">LIRA</div>
 		</div>
-		<a class="blanco" href="MuCr_main.php">
+		<a class="blanco" href="Orpheus_main.php">
 			<div class="options">
 				<img id="cuadrado" src="img/icons/home.png" alt="home">Home
 			</div>
@@ -32,12 +32,12 @@ require_once 'php/exit_unauthenticated.php';
 
 
 	<nav class="musica">
-		<a href="MuCr_main.php">
+		<a href="Orpheus_main.php">
 			<div class="boton_derecha">
 				<img src="img/icons/music.jpg" alt="Music icon">Music
 			</div>
 		</a>
-		<a href="MuCr_concert_artist.php">
+		<a href="Orpheus_concert_artist.php">
 			<div class="boton_izquierda">
 				<img src="img/icons/concierto.png" alt="Concert icon">Concerts
 			</div>

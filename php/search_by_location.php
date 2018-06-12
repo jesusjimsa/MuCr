@@ -21,7 +21,7 @@
 	curl_close($ch);
 	$response = json_decode($response, JSON_FORCE_OBJECT);
 
-	$location = "Location: ../MuCr_concert_near.php";
+	$location = "Location: ../Orpheus_concert_near.php";
 
 	// muestra country si es un pais y locality si es una ciudad
 	if ($response['results'][0]['address_components'][0]['types'][0] == "country") {
@@ -30,7 +30,7 @@
 		$city = $response['results'][0]['address_components'][0]['short_name'];
 		
 		
-		$location = "Location: " . "../MuCr_concert_near.php?type=country&lat=" . $latitud . "&lng=" . $longitud . "&country=" . $city . "&radius=" . $radius;
+		$location = "Location: " . "../Orpheus_concert_near.php?type=country&lat=" . $latitud . "&lng=" . $longitud . "&country=" . $city . "&radius=" . $radius;
 	}
 	else {
 		if ($response['results'][0]['address_components'][0]['types'][0] == "locality") {
@@ -50,7 +50,7 @@
 			$latitud = $response['results'][0]['geometry']['location']['lat'];
 			$longitud = $response['results'][0]['geometry']['location']['lng'];
 			
-			$location = "Location: " . "../MuCr_concert_near.php?type=locality&lat=" . $latitud . "&lng=" . $longitud . "&country=" . $country . "&city=" . $city . "&radius=" . $radius;
+			$location = "Location: " . "../Orpheus_concert_near.php?type=locality&lat=" . $latitud . "&lng=" . $longitud . "&country=" . $country . "&city=" . $city . "&radius=" . $radius;
 		}
 	}
 

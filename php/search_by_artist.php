@@ -18,6 +18,6 @@
 
 	$searched = $response["results"]["artistmatches"]["artist"][0]["name"];
 
-	$location = "Location: " . "../MuCr_artistcollection.php?artist=" . urldecode($searched);
+	$location = "Location: " . "../Orpheus_artistcollection.php?artist=" . urldecode($searched);
 	header($location);
 ?>

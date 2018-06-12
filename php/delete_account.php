@@ -21,7 +21,7 @@ if($result->num_rows > 0){
 	}
 }
 else{
-	header('Location: ../MuCr_settings.php');
+	header('Location: ../Orpheus_settings.php');
 }
 
 $conn->close();

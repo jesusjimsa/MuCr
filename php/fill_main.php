@@ -76,7 +76,7 @@
 				$rand_album_deluxe = "0";	// 0 = false
 			}
 
-			echo "<a href=\"MuCr_detailed_album.php?artist=" . $rand_album_artist . "&type=All&deluxe=" . $rand_album_deluxe . "&album=" . $rand_album_name . "\">\n";
+			echo "<a href=\"Orpheus_detailed_album.php?artist=" . $rand_album_artist . "&type=All&deluxe=" . $rand_album_deluxe . "&album=" . $rand_album_name . "\">\n";
 			echo "<div class=\"recom1\">\n";
 			echo "<img src=\"" . $rand_album_image . "\" alt=\"Album cover\">\n";
 			echo "</div>\n";
@@ -150,7 +150,7 @@
 				$rand_album_deluxe = "0";	// 0 = false
 			}
 
-			echo "<a href=\"MuCr_detailed_album.php?artist=" . $rand_album_artist . "&type=All&deluxe=" . $rand_album_deluxe . "&album=" . $rand_album_name . "\">\n";
+			echo "<a href=\"Orpheus_detailed_album.php?artist=" . $rand_album_artist . "&type=All&deluxe=" . $rand_album_deluxe . "&album=" . $rand_album_name . "\">\n";
 			echo "<div class=\"recom1\">\n";
 			echo "<img src=\"" . $rand_album_image . "\" alt=\"Album cover\">\n";
 			echo "</div>\n";

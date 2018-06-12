@@ -16,7 +16,7 @@ function checkUser($email, $password1){
 			setcookie("password", $password1, time() + (86400 * 30), "/");	// 86400 = 1 day
 			setcookie("grupo", $email, time() + (86400 * 30), "/");	// 86400 = 1 day
 
-			header('Location: ../MuCr_main.php');
+			header('Location: ../Orpheus_main.php');
 		}
 	}
 

@@ -10,10 +10,10 @@ if ($conn->query($sql_insert_img) == TRUE){
 	ob_start();
 	include 'change_Image.php';
 
-	header('Location: ../MuCr_settings.php');
+	header('Location: ../Orpheus_settings.php');
 	ob_end_flush();
 }
 else{
-	header('Location: ../MuCr_settings.php');
+	header('Location: ../Orpheus_settings.php');
 }
 ?>
