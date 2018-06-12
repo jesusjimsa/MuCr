@@ -2,11 +2,11 @@
 
 function checkuser($email){
 	include 'connect_db.php';	// Connect to database
-	echo $email;
+
 	$sql_checking="SELECT * from user WHERE '$email'=email";
 	$result = $conn->query($sql_checking);
 	$row = mysqli_fetch_assoc($result);
-	var_dump($row);
+
 	if(count($row)!=0){return TRUE;}
 	else{return false;}
 
