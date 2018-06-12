@@ -8,7 +8,7 @@ header('Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,
 
 
 include_once '../../config/Database.php';
-include_once '../../models/post.php';
+include_once '../../models/albums.php';
 
 
 //instantiate DB & conncet
@@ -21,20 +21,16 @@ $db=$database->connect();
 
 //instatiate post object
 
-$post=new Post($db);
+$salbum=new album($db);
 
 
 //get the Data
 
-$data=json_decode(file_get_contents("php://input"));
+$data=json_decode(file_get_contents("php://input"),true);
 
+$salbum->construct($data["title"],$data["artist"],null, null,null,null,null);
 
-
-
-$post->artist=$data->artist;
-
-
-if($post->delete()){
+if($salbum->deletealbum()){
 echo json_encode(
   array('message'=>'Album delete')
 );

@@ -2,28 +2,31 @@
 
 class Database{
 
-private $host='localhost';
+
+//the database parameters
+private $host='db4free.net';
 private $db_name='orfeo_mucr';
-private $username='root';
-private $password='';
+private $username='jmrodriguez';
+private $password='9uk6vw6e';
+
+
+//the field to the connection
 private $conn;
 
 
 //DB connect
-public function connect(){
-  $this->conn=null;
+    public function connect(){
+        $this->conn=null;
+        $this->conn = new mysqli($this->host, $this->username, $this->password, $this->db_name);
 
-  try{
-    $this->conn=new PDO('mysql:host=' .$this->host.';dbname='.$this->db_name,
-    $this->username, $this->password);
+        // Check connection
+        if ($this->conn->connect_error) {
+        	die("Connection failed: " . $conn->connect_error);
+        	echo "Error connecting to database";
+        }
 
-    $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-  }catch(PDOException $e){
-    echo 'connecion Error: '.$e->getMessage();
-  }
-  return $this->conn;
-}
+      return $this->conn;
+    }
 }
 
 
