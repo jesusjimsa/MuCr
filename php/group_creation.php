@@ -65,6 +65,6 @@ if($result->num_rows == 0){
 	$conn->query($sql_insert_into_user);
 
 }
-$location = "Location: " . "../MuCr_settings.php";
+$location = "Location: " . "../Orpheus_settings.php";
 header($location);
 ?>

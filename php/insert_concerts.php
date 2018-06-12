@@ -12,7 +12,7 @@ $sql_order="INSERT INTO concerts_NV(artist,dates,city,price,user) VALUES ('$arti
 if ($conn->query($sql_order) == TRUE){
 
 
-  $location = "Location: " . "../MuCr_mymusic.php";
+  $location = "Location: " . "../Orpheus_mymusic.php";
 	header($location);
 }
 

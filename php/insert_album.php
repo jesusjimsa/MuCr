@@ -11,7 +11,7 @@ $sql_order="INSERT INTO albums_NV(artist,title,style,type,user) VALUES ('$artist
 
 if ($conn->query($sql_order) == TRUE){
 
-  $location = "Location: " . "../MuCr_mymusic.php";
+  $location = "Location: " . "../Orpheus_mymusic.php";
 	header($location);
 }
 

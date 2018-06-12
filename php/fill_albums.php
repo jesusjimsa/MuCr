@@ -34,7 +34,7 @@
 
 			$album_deluxe = $album->isDeluxe($album_name);
 
-			echo "<a href=\"MuCr_detailed_album.php?artist=" . urlencode($artist_name) . "&type=All&deluxe=" . $album_deluxe . "&album=" . urlencode($album_name) . "\">\n<div class=\"itemo\">\n<img src=\"" . $album_image . "\" alt=\"album cover\">\n</div>\n</a>";
+			echo "<a href=\"Orpheus_detailed_album.php?artist=" . urlencode($artist_name) . "&type=All&deluxe=" . $album_deluxe . "&album=" . urlencode($album_name) . "\">\n<div class=\"itemo\">\n<img src=\"" . $album_image . "\" alt=\"album cover\">\n</div>\n</a>";
 		}
 	}
 
@@ -86,7 +86,7 @@
 				$rand_album_deluxe = "0";	// 0 = false
 			}
 
-			echo "<a href=\"MuCr_detailed_album.php?artist=" . urlencode($rand_album_artist) . "&type=" . urlencode($tag) . "&deluxe=" . $rand_album_deluxe . "&album=" . urlencode($rand_album_name) . "\">\n<div class=\"itemo\">\n<img src=\"" . $rand_album_image . "\" alt=\"artist\">\n</div>\n</a>";
+			echo "<a href=\"Orpheus_detailed_album.php?artist=" . urlencode($rand_album_artist) . "&type=" . urlencode($tag) . "&deluxe=" . $rand_album_deluxe . "&album=" . urlencode($rand_album_name) . "\">\n<div class=\"itemo\">\n<img src=\"" . $rand_album_image . "\" alt=\"artist\">\n</div>\n</a>";
 		}
 
 		return $all_rand_albums;
@@ -119,7 +119,7 @@
 
 			$album_deluxe = $album->isDeluxe($album_name);
 
-			echo "<a href=\"MuCr_detailed_album.php?artist=" . urlencode($album_artist) . "&type=All&deluxe=" . $album_deluxe . "&album=" . urlencode($album_name) . "\">\n<div class=\"elem\">\n<img src=\"" . $album->getImage() . "\">\n</div>\n</a>";
+			echo "<a href=\"Orpheus_detailed_album.php?artist=" . urlencode($album_artist) . "&type=All&deluxe=" . $album_deluxe . "&album=" . urlencode($album_name) . "\">\n<div class=\"elem\">\n<img src=\"" . $album->getImage() . "\">\n</div>\n</a>";
 		}
 	}
 
@@ -158,7 +158,7 @@
 			curl_close($ch);
 			$response = json_decode($response, JSON_FORCE_OBJECT);
 
-			echo "<a href=\"MuCr_artistcollection.php?artist=" . urlencode($album_artist) . "\">\n<div class=\"elem\">\n<img src=\"" . $response["artist"]["image"][4]["#text"] . "\">\n</div>\n</a>";
+			echo "<a href=\"Orpheus_artistcollection.php?artist=" . urlencode($album_artist) . "\">\n<div class=\"elem\">\n<img src=\"" . $response["artist"]["image"][4]["#text"] . "\">\n</div>\n</a>";
 		}
 	}
 ?>
