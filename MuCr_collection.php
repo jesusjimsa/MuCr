@@ -6,7 +6,7 @@ require_once 'php/exit_unauthenticated.php';
 
 <head>
 	<meta charset="utf-8">
-	<title>MuCr - Collection</title>
+	<title><?php echo urldecode($_GET['title']); ?></title>
 	<link rel="stylesheet" href="MuCr.css">
 	<link rel="shortcut icon" href="img/MuCr.png">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -122,11 +122,11 @@ require_once 'php/exit_unauthenticated.php';
 
 	<div class="genre">
 		<?php
-		$url = $_GET['title'];
- 		$url = str_replace("_"," ",$url);
-		$url = str_replace("come","'",$url);
+			$url = $_GET['title'];
+			$url = str_replace("_"," ",$url);
+			$url = str_replace("come","'",$url);
 
-		echo $url;
+			echo $url;
  		?>
 	</div>
 

@@ -6,7 +6,7 @@ require_once 'php/exit_unauthenticated.php';
 
 <head>
 	<meta charset="utf-8">
-	<title>MuCr - Concert</title>
+	<title>Concerts by <?php echo urldecode($_GET['artist']); ?></title>
 	<link rel="stylesheet" href="MuCr.css">
 	<link rel="shortcut icon" href="img/MuCr.png">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -127,9 +127,9 @@ require_once 'php/exit_unauthenticated.php';
 				$API_KEY = fread($api_file, filesize("API_KEY_Lastfm.txt"));
 				fclose($api_file);
 
-				$artista=$_GET['artist'];
-				$artista=str_replace(" ","+",$artista);
-				$artista=str_replace("_","+",$artista);
+				$artista = $_GET['artist'];
+				$artista = str_replace(" ","+",$artista);
+				$artista = str_replace("_","+",$artista);
 
 				$imagenes="http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=".$artista."&api_key=".$API_KEY."&format=json";
 

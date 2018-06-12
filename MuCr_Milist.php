@@ -6,7 +6,7 @@ require_once 'php/exit_unauthenticated.php';
 
 <head>
 	<meta charset="utf-8">
-	<title>MuCr - Collection</title>
+	<title><?php include 'php/write_username.php'; ?>'s collection</title>
 	<link rel="stylesheet" href="MuCr.css">
 	<link rel="shortcut icon" href="img/MuCr.png">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -40,7 +40,7 @@ require_once 'php/exit_unauthenticated.php';
 			</div>
 			<div class="titulo">
 				<?php
-					include 'php/write_username.php'
+					include 'php/write_username.php';
 				?>
 			</div>>
 		</div>

@@ -6,7 +6,7 @@ require_once 'php/exit_unauthenticated.php';
 
 <head>
 	<meta charset="utf-8">
-	<title>MuCr - Collection</title>
+	<title><?php echo urldecode($_GET['artist']); ?></title>
 	<link rel="stylesheet" href="MuCr.css">
 	<link rel="shortcut icon" href="img/MuCr.png">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -123,26 +123,26 @@ require_once 'php/exit_unauthenticated.php';
 	<div class="imagenArtista">
 			<img src="
 			<?php
-			$api_file = fopen("API_KEY_Lastfm.txt", "r");
+				$api_file = fopen("API_KEY_Lastfm.txt", "r");
 				$API_KEY = fread($api_file, filesize("API_KEY_Lastfm.txt"));
-			fclose($api_file);
-			$artista=$_GET['artist'];
-			$artista=str_replace(" ","+",$artista);
-			$artista=str_replace("_","+",$artista);
+				fclose($api_file);
 
-			$imagenes="http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=".$artista."&api_key=".$API_KEY."&format=json";
+				$artista = $_GET['artist'];
+				$artista = str_replace(" ","+",$artista);
+				$artista = str_replace("_","+",$artista);
 
-			$ch = curl_init();
-			curl_setopt($ch, CURLOPT_URL, $imagenes);
-			curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-			curl_setopt($ch, CURLOPT_USERAGENT, 'CdBase');
+				$imagenes="http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=".$artista."&api_key=".$API_KEY."&format=json";
 
-			$response = curl_exec($ch);
-			curl_close($ch);
-			$response = json_decode($response, JSON_FORCE_OBJECT);
+				$ch = curl_init();
+				curl_setopt($ch, CURLOPT_URL, $imagenes);
+				curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+				curl_setopt($ch, CURLOPT_USERAGENT, 'CdBase');
 
-			echo $response['artist']['image'][3]['#text'];
+				$response = curl_exec($ch);
+				curl_close($ch);
+				$response = json_decode($response, JSON_FORCE_OBJECT);
 
+				echo $response['artist']['image'][3]['#text'];
 			 ?>
 		" alt="artist_picture">
 
