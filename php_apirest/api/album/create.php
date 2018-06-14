@@ -14,9 +14,8 @@ $database=new Database();
 $db=$database->connect();
 $albumNew=new album($db);
 
-
 $data=json_decode(file_get_contents('php://input'),true);
-//var_dump(file_get_contents("php://input"));
+
 $albumNew->construct($data["albumname"],$data["artist"],$data["length"], $data["style"],$data["type"],$data["deluxe"],$data["year"]);
 
 if($albumNew->createAlbum()){

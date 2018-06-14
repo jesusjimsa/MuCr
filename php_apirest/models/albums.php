@@ -57,6 +57,7 @@
           $tyear=$this->year;
 
           $query="INSERT INTO album(name,artist,length,style,type,deluxe,year) VALUES ('$talbums','$tartist','$tlength','$tstyle','$ttype','$tdeluxe','$tyear')";
+ 
           return mysqli_query($this->conn, $query);
       }
 

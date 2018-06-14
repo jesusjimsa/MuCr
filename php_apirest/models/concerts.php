@@ -22,7 +22,7 @@ class Concert{
 
     // get
     public function read(){
-        $query = 'SELECT user_email, concert_artist, concert_date, concert_city FROM U_attended_C';
+        $query = 'SELECT concert_artist, concert_date, concert_city FROM U_attended_C';
 
         $result = mysqli_query($this->conn, $query);
         $rows = mysqli_fetch_all($result);
@@ -32,7 +32,7 @@ class Concert{
 
     // get single concert
     public function read_single_concert($search){
-        $query = "SELECT user_email, concert_artist, concert_date, concert_city FROM U_attended_C " . $search;
+        $query = "SELECT concert_artist, concert_date, concert_city FROM U_attended_C " . $search;
 
         $result = mysqli_query($this->conn, $query);
         $rows = mysqli_fetch_all($result);

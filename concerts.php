@@ -15,6 +15,7 @@ class concert{
         $this->API_KEY2 = fread($api_file2, filesize("API_KEY_Ticketmaster.txt"));
         fclose($api_file2);
     }
+    
     public function getArtist(){
         return $this->artista;
     }
